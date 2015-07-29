@@ -219,6 +219,7 @@ a {
         margin: 0 0 30px;
         padding: 0 0;
         &.nav-categories {
+          margin-bottom: 0;
           li {
             a {
               font-family: "helvetica-light", sans-serif;
@@ -482,4 +483,31 @@ a {
   }
 }
 
+.mCSB_scrollTools {
+  width: 18px!important;
+}
+.mCS-rounded-dots {
+  .mCSB_dragger {
+    width: 18px;
+    height: 18px!important;
+    background: #E0ECF6;
+    @include border-radius(50%);
+    .mCSB_dragger_bar {
+      display: none;
+    }
+  }
+  .mCSB_draggerRail {
+    @include opacity(0.42);
+    width: 7px!important;
+    background: #E0ECF6;
+    @include border-radius(10px);
+  }
+}
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail, .mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail {
+  @include opacity(0.42);
+  width: 8px!important;
+  margin: 0 5px;
+  background: #E0ECF6;
+  @include border-radius(10px);
+}
 
