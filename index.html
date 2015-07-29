@@ -1,10 +1,225 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OZERO</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
-<p></p>
+
+    <div class="header fixed" id="b-header">
+        <div class="topbar">
+            <div class="row">
+                <div class="box-logo">
+                    <a href="#"><img src="img/logo.jpg" alt="Ozero.ru"/></a>
+                </div>
+                <div class="box-menu">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a href="#">Стиль</a>
+                        </li>
+                        <li>
+                            <a href="#">Дом</a>
+                        </li>
+                        <li>
+                            <a href="#">Город</a>
+                        </li>
+                        <li>
+                            <a href="#">Weekend</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tools">
+                    <!--<i class="fa fa-bars"></i>-->
+                    <a class="right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
+                    <div id="sb-search" class="sb-search">
+                        <form>
+                            <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="fa fa-search sb-icon-search"></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <!-- Off Canvas Menu -->
+            <aside class="right-off-canvas-menu">
+                <!-- whatever you want goes here -->
+                <ul class="main-nav">
+                    <li>
+                        <a href="#"><i class="fa fa-newspaper-o"></i> Новости</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-th-list"></i> Афиша</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cutlery"></i> Еда</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-briefcase"></i> Бизнес</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users"></i> Персоны</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-star"></i> Стиль</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-home"></i> Дом</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-building"></i> Город</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-futbol-o"></i> Weekend</a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-newspaper-o"></i> Новости</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-th-list"></i> Афиша</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cutlery"></i> Еда</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-briefcase"></i> Бизнес</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users"></i> Персоны</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-star"></i> Стиль</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-home"></i> Дом</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-building"></i> Город</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-futbol-o"></i> Weekend</a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-newspaper-o"></i> Новости</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-th-list"></i> Афиша</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cutlery"></i> Еда</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-briefcase"></i> Бизнес</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users"></i> Персоны</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-star"></i> Стиль</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-home"></i> Дом</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-building"></i> Город</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-futbol-o"></i> Weekend</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- main content goes here -->
+            <section class="main-section">
+
+
+            </section>
+
+            <!-- close the off-canvas menu -->
+            <a class="exit-off-canvas"></a>
+        </div>
+    </div>
+
+    <div class="page">
+
+        <div class="row">
+            <div class="large-12 columns">
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+                <h1>Welcome to Ozero.ru</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-12 columns">
+                <div class="list-group">
+                    <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
+                    <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Library</a>
+                    <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Applications</a>
+                    <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <!--<script src="bower_components/foundation/js/foundation.js"></script>-->
+    <!--<script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>-->
+    <script src="js/classie.js"></script>
+    <script src="js/uisearch.js"></script>
+    <script>
+        new UISearch(document.getElementById('sb-search' ));
+    </script>
+    <script src="js/app.js"></script>
 </body>
 </html>
