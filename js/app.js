@@ -39,4 +39,9 @@ $(document).ready(function(){
         });
     })();
 
+
+    $('#drop-menu').click(function() {
+       alert('111');
+    });
+
 });
