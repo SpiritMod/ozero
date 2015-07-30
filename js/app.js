@@ -14,6 +14,9 @@ $(document)
         $('#header').removeClass('move-left');
     });
 
+new UISearch(document.getElementById('sb-search' ));
+new UISearch(document.getElementById('sb-search-scroll' ));
+
 $(document).ready(function(){
     (function () {
         var flag;
@@ -46,6 +49,15 @@ $(document).ready(function(){
     });
     $('.drop-menu-container .close-drop-menu-container').click(function() {
         $('#header').find('#drop-menu-container').slideUp("slow");
+    });
+
+    //scroll-bar
+    $('#drop-menu-scroll').click(function() {
+        //alert('111');
+        $('.scroll-bar').find('.drop-menu-container').slideDown("slow");
+    });
+    $('.drop-menu-container .close-drop-menu-container').click(function() {
+        $('.scroll-bar').find('.drop-menu-container').slideUp("slow");
     });
 
 
