@@ -39,4 +39,18 @@ $(document).ready(function(){
         });
     })();
 
+
+    $('#drop-menu').click(function() {
+       alert('111');
+    });
+
+    (function($){
+        $(window).load(function(){
+            $('#drop-menu-container').mCustomScrollbar({
+                theme:"rounded-dots",
+                axis:"y",
+                scrollInertia: 200
+            });
+        });
+    })(jQuery);
 });
