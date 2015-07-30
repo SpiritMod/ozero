@@ -2,135 +2,143 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OZERO</title>
+
+    <!--[if gte IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
     <link rel="stylesheet" href="stylesheets/app.css" />
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <script src="bower_components/modernizr/modernizr.js"></script>
+
 </head>
 <body>
+    <section class="wrapper">
+        <header role="presentation" class="header" id="b-header">
+            <div class="topbar">
+                <div class="row">
+                    <nav role="navigation" class="box-menu">
+                        <ul class="main-nav">
+                            <li>
+                                <a href="#">Новости</a>
+                            </li>
+                            <li>
+                                <a href="#">Афиша</a>
+                            </li>
+                            <li>
+                                <a href="#">Дневники</a>
+                            </li>
+                        </ul>
+                        <ul class="nav-categories">
+                            <li>
+                                <a href="#">Карьера</a>
+                            </li>
+                            <li>
+                                <a href="#">Бизнес</a>
+                            </li>
+                            <li>
+                                <a href="#">Авто</a>
+                            </li>
+                            <li>
+                                <a href="#">Отдых</a>
+                            </li>
 
-    <div class="header" id="b-header">
-        <div class="topbar">
-            <div class="row">
-                <div class="box-menu">
-                    <ul class="main-nav">
-                        <li>
-                            <a href="#">Новости</a>
-                        </li>
-                        <li>
-                            <a href="#">Афиша</a>
-                        </li>
-                        <li>
-                            <a href="#">Дневники</a>
-                        </li>
-                    </ul>
-                    <ul class="nav-categories">
-                        <li>
-                            <a href="#">Карьера</a>
-                        </li>
-                        <li>
-                            <a href="#">Бизнес</a>
-                        </li>
-                        <li>
-                            <a href="#">Авто</a>
-                        </li>
-                        <li>
-                            <a href="#">Отдых</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Общество</a>
-                        </li>
-                        <li>
-                            <a href="#">Персоны</a>
-                        </li>
-                        <li>
-                            <a class="active" href="#">Еда</a>
-                        </li>
-                        <li>
-                            <a href="#">Отношения</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="tools">
-                    <a id="drop-menu" class="drop-menu" href="#" ><i class="fa fa-bars"></i></a>
-                    <div id="sb-search" class="sb-search">
-                        <form>
-                            <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search" id="search">
-                            <input class="sb-search-submit" type="submit" value="">
-                            <span class="fa fa-search sb-icon-search"></span>
-                        </form>
+                            <li>
+                                <a href="#">Общество</a>
+                            </li>
+                            <li>
+                                <a href="#">Персоны</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">Еда</a>
+                            </li>
+                            <li>
+                                <a href="#">Отношения</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="tools">
+                        <a id="drop-menu" class="drop-menu" href="#" ><i class="fa fa-bars"></i></a>
+                        <div id="sb-search" class="sb-search">
+                            <form>
+                                <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search" id="search">
+                                <input class="sb-search-submit" type="submit" value="">
+                                <span class="fa fa-search sb-icon-search"></span>
+                            </form>
+                        </div>
+                        <div class="my-ozero">
+                            <a class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>
+                            <!--<a class="cabinet" href="#" >Мое озеро<span>9</span></a>-->
+                        </div>
                     </div>
-                    <div class="my-ozero">
-                        <a class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>
-                        <!--<a class="cabinet" href="#" >Мое озеро<span>9</span></a>-->
-                    </div>
-                </div>
-                <div class="drop-menu-container" id="drop-menu-container">
-                    <ul class="main-nav">
-                        <li>
-                            <a href="#">Новости</a>
-                        </li>
-                        <li>
-                            <a href="#">Афиша</a>
-                        </li>
-                        <li>
-                            <a href="#">Дневники</a>
-                        </li>
-                    </ul>
-                    <ul class="nav-categories">
-                        <li>
-                            <a href="#">Карьера</a>
-                        </li>
-                        <li>
-                            <a href="#">Бизнес</a>
-                        </li>
-                        <li>
-                            <a href="#">Авто</a>
-                        </li>
-                        <li>
-                            <a href="#">Отдых</a>
-                        </li>
+                    <div class="drop-menu-container" id="drop-menu-container">
+                        <ul class="main-nav">
+                            <li>
+                                <a href="#">Новости</a>
+                            </li>
+                            <li>
+                                <a href="#">Афиша</a>
+                            </li>
+                            <li>
+                                <a href="#">Дневники</a>
+                            </li>
+                        </ul>
+                        <ul class="nav-categories">
+                            <li>
+                                <a href="#">Карьера</a>
+                            </li>
+                            <li>
+                                <a href="#">Бизнес</a>
+                            </li>
+                            <li>
+                                <a href="#">Авто</a>
+                            </li>
+                            <li>
+                                <a href="#">Отдых</a>
+                            </li>
 
-                        <li>
-                            <a href="#">Общество</a>
-                        </li>
-                        <li>
-                            <a href="#">Персоны</a>
-                        </li>
-                        <li>
-                            <a class="active" href="#">Еда</a>
-                        </li>
-                        <li>
-                            <a href="#">Отношения</a>
-                        </li>
-                    </ul>
+                            <li>
+                                <a href="#">Общество</a>
+                            </li>
+                            <li>
+                                <a href="#">Персоны</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">Еда</a>
+                            </li>
+                            <li>
+                                <a href="#">Отношения</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="bottom">
-            <div class="row">
-                <div class="small-12 columns">
-                    <div class="logo">
-                        <a href="#"><img src="img/logo.png" alt="ozero"/></a>
-                    </div>
-                    <div class="block-pulse">
-                        <div class="items-pulse">5</div>
-                        <div class="box-right">
-                            <div class="item">
-                                <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
-                                <div class="box-info">
-                                    <div class="date-time">
-                                        <div class="date">17.07</div>
-                                        <div class="time">18:34</div>
-                                    </div>
-                                    <div class="puls-tegs">
-                                        <a href="#">#ночь</a>
-                                        <a href="#">#кража</a>
-                                        <a href="#">#дороги</a>
+            <div class="bottom">
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="logo">
+                            <a href="#"><img src="img/logo.png" alt="ozero"/></a>
+                        </div>
+                        <div class="block-pulse">
+                            <div class="items-pulse">5</div>
+                            <div class="box-right">
+                                <div class="item">
+                                    <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
+                                    <div class="box-info">
+                                        <div class="date-time">
+                                            <div class="date">17.07</div>
+                                            <div class="time">18:34</div>
+                                        </div>
+                                        <div class="puls-tegs">
+                                            <a href="#">#ночь</a>
+                                            <a href="#">#кража</a>
+                                            <a href="#">#дороги</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -138,8 +146,13 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </header>
+        <main role="main">
+            <div class="container">
+
+            </div>
+        </main>
+    </section>
 
     <div class="page">
 
@@ -184,14 +197,15 @@
         </div>
     </div>
 
-
-
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <!--<script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>-->
     <script src="js/classie.js"></script>
     <script src="js/uisearch.js"></script>
+
     <script>
         new UISearch(document.getElementById('sb-search' ));
     </script>
