@@ -34,6 +34,15 @@ $(document).ready(function(){
         // is mobile device
         $('#header .scroll-bar').addClass('mobile');
         //alert('width < 767 ==== ' + $(window).width());
+        $('#show-widget').click(function(){
+            $('#header .scroll-bar .widget').fadeIn("slow");
+            return false;
+        });
+        $('#close-widget').click(function(){
+            $('#header .scroll-bar .widget').fadeOut("slow");
+            return false;
+        });
+
     }
 
     if ($(window).width() >= 768) {
@@ -48,8 +57,6 @@ $(document).ready(function(){
             }
         });
     }
-
-
 
 
     $('#drop-menu').click(function() {

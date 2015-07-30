@@ -520,6 +520,15 @@ a {
         }
       }
     }
+    &.btn-close {
+      .circle {
+        .close-ico {
+          background: url('../icons/sprite.png') no-repeat -187px -18px;
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
     &.radio {
       .circle {
         background: transparent;
@@ -1020,6 +1029,9 @@ a {
         &.home {
           display: none;
         }
+        &.btn-close {
+          display: none;
+        }
       }
     }
     .tools {
@@ -1408,6 +1420,9 @@ a {
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
+  body {
+    padding-top: 66px;
+  }
   .scroll-bar {
     .topbar-scroll {
       > .row {
@@ -1482,6 +1497,22 @@ a {
       }
       .widget {
         display: none;
+        position: absolute;
+        left: 54px;
+        right: 0;
+        top: 0;
+        background: #014183;
+        margin: 0 0;
+        height: 66px;
+        padding: 10px 0 10px 10px;
+        .item {
+          &.home {
+            display: block;
+          }
+          &.btn-close {
+            display: block;
+          }
+        }
       }
       .tools {
         display: block;
@@ -1500,5 +1531,11 @@ a {
     .bottom {
       display: none;
     }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 360px) {
+  .widget .item {
+    margin: 0 5px 0 0;
   }
 }
