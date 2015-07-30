@@ -1,0 +1,226 @@
+form
+  .form-header
+    font-size: 24px
+    display: block
+  .form-group
+    display: block
+    font-size: 0
+    margin-bottom: 20px
+    @include placeholder(#686868, $firstColor)
+    .checked-custom
+      @include border-radius(2px)
+      border: 1px solid $secondColor
+      position: relative
+      display: block
+      padding: 4px 10px 4px 99px
+      min-height: 70px
+      width: 100%
+      img
+        position: absolute
+        left: 30px
+        border: 1px solid #e5e5e5
+        max-width: 50px
+        max-height: 50px
+        top: 9px
+      .w-icons-bloom1
+        position: absolute
+        right: -11px
+        top: -12px
+      .w-icons-bloom7
+        position: absolute
+        left: -12px
+        bottom: -10px
+      .checkboxes
+        label
+          color: #393939
+          display: block
+          font-size: 14px
+          line-height: 1.2
+          span
+            display: block
+            font-size: 12px
+            color: #7d7d7d
+            line-height: 19px
+            padding-top: 3px
+    .control-label
+      font-size: 14px
+      color: #393939
+      .small
+        display: block
+        font-size: 12px
+        color: #7d7d7d
+        line-height: 18px
+        padding-top: 15px
+        padding-right: 15px
+      .red
+        color: $secondColor
+    .form-control
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="password"],
+      textarea
+        border: 1px solid #e5e5e5
+        @include border-radius(2px)
+        background: #ffffff
+        outline: 0
+        color: #333333
+        font-size: 14px
+        text-align: left
+        width: 100%
+        @include transition(all .1s linear 0s)
+        &:focus
+          border:
+            color: $firstColor
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="password"]
+        height: 30px
+        padding: 0 10px
+      textarea
+        resize: none
+        padding: 10px
+        height: 140px
+.cart-layout
+  .form-inline
+    &.faq-form
+      max-width: 700px
+      margin: 0 auto
+.form-inline
+  &.faq-form
+    padding: 20px 50px 5px
+    .cart-layout &
+      max-width: 700px
+      margin: 0 auto
+    .form-group
+      .control-label
+        width: 32%
+        padding: 7px 0
+      .form-control
+        width: 68%
+        .btn
+          padding: 0 9px
+          .help
+            font-size: 12px
+  &.thin
+    .form-group
+      padding: 0 20px
+  .form-group
+    padding: 0 50px
+    .control-label
+      float: left
+      width: 28%
+      padding: 5px 0
+    .form-control
+      float: right
+      width: 72%
+      .btn
+        padding: 0 17px
+        min-width: 0
+        margin-right: 30px
+.form-aside
+  h3
+    padding-top: 5px
+  .btn-holder
+    margin-bottom: 19px
+    li
+      width: 46%
+      .btn
+        width: 100%
+  .gallery-preview
+    padding-top: 21px
+    .previews
+      padding: 4px 0 0
+      li
+        float: left
+        width: 50%
+        padding: 5px
+        img
+          display: block
+          width: 100%
+        &:nth-child(2n+1)
+          clear: both
+  .form-group
+    border-top: 1px solid #e5e5e5
+    padding-top: 12px
+    margin-bottom: 19px
+    .checkboxes
+      &.half
+        li
+          width: 59%
+          float: left
+          margin-bottom: 16px
+          &:last-child
+            margin-bottom: 0
+          &:nth-child(2n)
+            width: 41%
+          &:nth-child(2n+1)
+            clear: both
+          &.wide
+            width: 100%
+    .form-control
+      display: block
+      position: relative
+    .control-label
+      font-weight: 700
+      color: #393939
+      display: block
+      font-size: 14px
+      line-height: 19px
+      margin-bottom: 9px
+.form-search
+  @include placeholder(#686868, #73b66a)
+  position: relative
+  .form-group
+    position: relative
+    button
+      position: absolute
+      right: 0
+      top: 0
+      height: 100%
+      width: 40px
+      padding: 0
+      outline: 0
+      border: 0
+      background: #73b66a
+      @extend %vertical
+    input
+      width: 100%
+      @include appearance(none)
+      @include border-radius(0)
+      @include box-shadow(0 0 0 #ffffff)
+      height: 30px
+      border: 1px solid #e5e5e5
+      outline: 0
+      @include transition(all .1s linear 0s)
+      padding: 0 10px
+      line-height: 1.2
+      font-size: 14px
+      &:focus
+        @include box-shadow(0 0 5px rgba(115,182,106,1))
+        color: #000000
+        border:
+          color: #73b66a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

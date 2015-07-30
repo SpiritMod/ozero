@@ -1,0 +1,48 @@
+.btn
+  display: inline-block
+  vertical-align: middle
+  text-decoration: none
+  position: relative
+  cursor: pointer
+  outline: 0
+  text-align: center
+  @include vertical
+  @include border-radius(2px)
+  @include transition(all .1s linear 0s)
+  padding: 0 17px
+  height: 30px
+.btn-bordered
+  border: 1px solid #000000
+  background: transparent
+  &.green
+    border:
+      color: $firstColor
+    .help
+      color: $firstColor
+    &:hover
+      background: $firstColor
+      .help
+        color: #ffffff
+  .help
+    color: #000000
+    font-size: 12px
+.btn-painted
+  border: 0
+  min-width: 101px
+  background: #ffffff
+  .help
+    color: #000000
+    font-size: 14px
+  &.green
+    background: $firstColor
+    .help
+      color: #ffffff
+    &:hover
+      background: #5b9e54
+
+
+
+
+
+
+
