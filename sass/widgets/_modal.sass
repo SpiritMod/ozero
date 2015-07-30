@@ -1,0 +1,133 @@
+//Modal stylesheets
+/*!
+ * Bootstrap v3.3.2 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap_modal/blob/master/LICENSE)
+ */
+
+.fade
+  opacity: 0
+  -webkit-transition: opacity 0.15s linear
+  -o-transition: opacity 0.15s linear
+  transition: opacity 0.15s linear
+  &.in
+    opacity: 1
+.modal-open
+  overflow: hidden
+  .modal
+    overflow-x: hidden
+    overflow-y: auto
+.modal-backdrop
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  z-index: 1000
+  background-color: #000000
+  &.fade
+    opacity: 0
+    filter: alpha(opacity=0)
+  &.in
+    opacity: 0.3
+    filter: alpha(opacity=3)
+.hide
+  display: none !important
+.show
+  display: block !important
+.invisible
+  visibility: hidden
+.hidden
+  display: none !important
+  visibility: hidden !important
+.affix
+  position: fixed
+.modal
+  display: none
+  overflow: hidden
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1040
+  -webkit-overflow-scrolling: touch
+  outline: 0
+  .close
+    z-index: 1000
+    right: 0
+    top: 0
+    outline: 0
+    position: absolute
+    opacity: .8
+    border: 0
+    display: block
+    cursor: pointer
+    text-decoration: none
+    font:
+      size: 0
+    padding: 0
+    &:hover
+      opacity: 1
+  &.fade
+    .modal-dialog
+      -webkit-transform: translate(0, -25%)
+      -ms-transform: translate(0, -25%)
+      -o-transform: translate(0, -25%)
+      transform: translate(0, -25%)
+      -webkit-transition: -webkit-transform 0.3s ease-out
+      -o-transition: -o-transform 0.3s ease-out
+      transition: transform 0.3s ease-out
+  &.in
+    .modal-dialog
+      -webkit-transform: translate(0, 0)
+      -ms-transform: translate(0, 0)
+      -o-transform: translate(0, 0)
+      transform: translate(0, 0)
+  .modal-dialog
+    position: relative
+    margin: 40px auto 0
+    background-color: #f3f3f3 // layer fill content
+    @include box-shadow(0 2px 3px rgba(1,1,1,.3)) // drop shadow
+    max-width: 560px
+    @include border-radius(2px)
+    width: 100%
+    //overflow: hidden
+    padding: 0
+    z-index: 1001
+
+    .modal-content
+      position: relative
+      background: #f4f4f4
+      -webkit-background-clip: padding-box
+      background-clip: padding-box
+      outline: 0
+      padding: 10px
+      .modal-body
+        position: relative
+        padding: 30px 0 0
+        .confirm
+          text-align: center
+          padding-bottom: 40px
+          img
+            max-width: 100%
+            display: inline-block
+            margin-bottom: 15px
+          .title
+            color: #000000
+            font-size: 20px
+
+            display: block
+      .modal-header
+        display: block
+        border-bottom: 1px solid #e5e5e5
+        padding-bottom: 13px
+        padding-top: 8px
+        position: relative
+        text-align: center
+        h4
+          color: #393939
+          font-size: 18px
+          font-weight: 700
+          margin: 0
+          padding: 0

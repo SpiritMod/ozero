@@ -1,0 +1,41 @@
+.Zebra_Accordion dd
+  display: none
+.Zebra_Accordion dt
+  cursor: pointer
+.Zebra_Accordion
+  padding-top: 8px
+  display: block
+  text-align: left
+  margin-bottom: 46px
+  dt
+    position: relative
+    display: block
+    color: #393939
+    background: #f4f4f4
+    padding: 13px 40px 13px 9px
+    font:
+      size: 14px
+      weight: 700
+    &.white
+      background: #ffffff
+    &:after
+      content: ""
+      position: absolute
+      background: url("../icons/sprite.png") no-repeat -323px -78px scroll transparent
+      width: 16px
+      height: 16px
+      right: 12px
+      top: 50%
+      margin-top: -8px
+    &.Zebra_Accordion_Expanded
+      &:after
+        background:
+          position: -308px -98px
+  dd
+    border: 1px solid #e5e5e5
+    p
+      padding: 17px 9px 20px
+      margin: 0
+      font-size: 14px
+      line-height: 24px
+      color: #393939
