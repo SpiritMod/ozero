@@ -6,12 +6,12 @@ $(document)
     .on('open.fndtn.offcanvas', '[data-offcanvas]', function() {
         $('html').css('overflow', 'hidden');
         $('.page').addClass('move-left');
-        $('#b-header').addClass('move-left');
+        $('#header').addClass('move-left');
     })
     .on('close.fndtn.offcanvas', '[data-offcanvas]', function() {
         $('html').css('overflow', 'auto');
         $('.page').removeClass('move-left');
-        $('#b-header').removeClass('move-left');
+        $('#header').removeClass('move-left');
     });
 
 $(document).ready(function(){
@@ -41,12 +41,17 @@ $(document).ready(function(){
 
 
     $('#drop-menu').click(function() {
-       alert('111');
+        //alert('111');
+        $('#header').find('#drop-menu-container').slideDown("slow");
     });
+    $('.drop-menu-container .close-drop-menu-container').click(function() {
+        $('#header').find('#drop-menu-container').slideUp("slow");
+    });
+
 
     (function($){
         $(window).load(function(){
-            $('#drop-menu-container').mCustomScrollbar({
+            $('#drop-menu-container .menu-wrapper').mCustomScrollbar({
                 theme:"rounded-dots",
                 axis:"y",
                 scrollInertia: 200

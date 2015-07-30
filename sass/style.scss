@@ -204,7 +204,7 @@ a {
     }
     .drop-menu-container {
       background: #014183;
-      display: block;
+      display: none;
       position: absolute;
       right: 0;
       top: 101%;
@@ -212,6 +212,87 @@ a {
       height: 400px;
       padding: 48px 15px 80px 15px;
       z-index: 100;
+      .close-drop-menu-container {
+        display: block;
+        position: absolute;
+        left: 25px;
+        top: 17px;
+        width: 16px;
+        height: 16px;
+        background: url("../img/close-btn.png") no-repeat 0 0 transparent;
+      }
+      .search-form {
+        display: block;
+        position: absolute;
+        left: 15px;
+        bottom: 28px;
+        width: 154px;
+        height: 28px;
+        form {
+          width: 100%;
+          position: relative;
+          .sb-search-input {
+            width: 100%;
+            height: 28px;
+            padding: 0 32px 0 10px;
+            background: #fff;
+            border: none;
+            @include box-shadow(0 0 0 #fff);
+            @include border-radius(20px);
+            margin: 0 0;
+            &::-webkit-input-placeholder {
+              color: #014183;
+            }
+            &::-moz-placeholder {
+              color: #014183;
+              opacity: 1;
+            }
+            &:-moz-placeholder {
+              color: #014183;
+            }
+            &:-ms-input-placeholder {
+              color: #014183;
+            }
+          }
+          .sb-search-submit {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 28px;
+            height: 28px;
+            z-index: 10;
+            @include border-radius(0 20px 20px 0);
+            border: none;
+            background: #fff; /* IE needs this */
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+            filter: alpha(opacity=0); /* IE 5-7 */
+            opacity: 0;
+            color: transparent;
+            outline: none;
+            padding: 0 0;
+            cursor: pointer;
+          }
+          .search-btn {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 28px;
+            height: 28px;
+            @include border-radius(0 20px 20px 0);
+            z-index: 0;
+            color: #ccc;
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+          }
+        }
+      }
+      .menu-wrapper {
+        width: 100%;
+        height: 272px;
+      }
       ul {
         display: inline-block;
         width: 100%;
@@ -356,6 +437,21 @@ a {
 
       }
 
+    }
+    .widget {
+      float: right;
+    }
+  }
+}
+
+.widget {
+  display: block;
+  .item {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    &:last-child {
+      margin: 0 0;
     }
   }
 }
