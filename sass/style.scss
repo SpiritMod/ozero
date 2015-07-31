@@ -1228,6 +1228,70 @@ a {
   @include border-radius(10px);
 }
 
+footer {
+  padding: 40px 0 30px;
+  min-height: 170px;
+  .first {
+    padding-left: 0;
+  }
+  .second {
+    padding-right: 0;
+  }
+  .copyright {
+    p {
+      @include opacity(0.6);
+      color: #2D0014;
+      font-family: "helvetica-light", sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.8;
+      margin: 0 0 0;
+    }
+  }
+  .site-info {
+    p {
+      @include opacity(0.6);
+      color: #2D0014;
+      font-family: "helvetica-light", sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.8;
+      margin: 0 0 0;
+    }
+  }
+  .footer-menu {
+    padding: 22px 0 0 0;
+    @include column-count(2);
+    @include column-gap(40px);
+    li {
+      margin-bottom: 10px;
+      line-height: 1;
+      a {
+        @include opacity(0.6);
+        color: #2D0014;
+        font-family: "helvetica-light", sans-serif;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 300;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1366px) {
+  footer {
+    .first {
+      padding-left: 10px;
+    }
+    .second {
+      padding-right: 10px;
+    }
+  }
+}
+
 @media only screen and (min-width: 1000px) and (max-width: 1200px) {
   .scroll-bar {
     .topbar-scroll {
@@ -1241,6 +1305,15 @@ a {
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  footer {
+    .footer-menu {
+      @include column-count(1);
+      @include column-gap(0);
     }
   }
 }
@@ -1414,6 +1487,28 @@ a {
       .widget {
         float: right;
         margin: 16px 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+  footer {
+    .copyright {
+      text-align: center;
+    }
+    .site-info {
+      text-align: center;
+    }
+    .footer-menu {
+      padding: 22px 0 0 0;
+      @include column-count(1);
+      @include column-gap(0);
+      li {
+        text-align: center;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
