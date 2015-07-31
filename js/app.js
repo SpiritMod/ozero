@@ -2,20 +2,11 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-$(document)
-    .on('open.fndtn.offcanvas', '[data-offcanvas]', function() {
-        $('html').css('overflow', 'hidden');
-        $('.page').addClass('move-left');
-        $('#b-header').addClass('move-left');
-    })
-    .on('close.fndtn.offcanvas', '[data-offcanvas]', function() {
-        $('html').css('overflow', 'auto');
-        $('.page').removeClass('move-left');
-        $('#b-header').removeClass('move-left');
-    });
+new UISearch(document.getElementById('sb-search' ));
+new UISearch(document.getElementById('sb-search-scroll'));
 
 $(document).ready(function(){
-    (function () {
+   /* (function () {
         var flag;
 
         $(function () {
@@ -37,16 +28,58 @@ $(document).ready(function(){
                 }
             }).trigger('scroll');
         });
-    })();
+    })();*/
+
+    if ($(window).width() <= 767) {
+        // is mobile device
+        $('#header .scroll-bar').addClass('mobile');
+        //alert('width < 767 ==== ' + $(window).width());
+        $('#show-widget').click(function(){
+            $('#header .scroll-bar .widget').fadeIn("slow");
+            return false;
+        });
+        $('#close-widget').click(function(){
+            $('#header .scroll-bar .widget').fadeOut("slow");
+            return false;
+        });
+
+    }
+
+    if ($(window).width() >= 768) {
+        $('#header .scroll-bar').removeClass('mobile');
+        var $menu = $('#header .scroll-bar');
+        $(window).scroll(function(){
+            if ( $(this).scrollTop() > 144 ){
+                $menu.fadeIn(600);
+                $menu.addClass('fade');
+            } else if($(this).scrollTop() <= 144 ) {
+                $menu.removeClass('fade');
+            }
+        });
+    }
 
 
     $('#drop-menu').click(function() {
-       alert('111');
+        $('#drop-menu-container').slideDown("slow");
+        return false;
     });
+    $('#close-drop-menu-container').click(function() {
+        $('#drop-menu-container').slideUp("slow");
+    });
+
+    //scroll-bar
+    $('#drop-menu-scroll').click(function() {
+        $('#scroll-drop-menu-container').slideDown("slow");
+        return false;
+    });
+    $('#close-scroll-drop-menu-container').click(function() {
+        $('#scroll-drop-menu-container').slideUp("slow");
+    });
+
 
     (function($){
         $(window).load(function(){
-            $('#drop-menu-container').mCustomScrollbar({
+            $('.drop-menu-container .menu-wrapper').mCustomScrollbar({
                 theme:"rounded-dots",
                 axis:"y",
                 scrollInertia: 200
