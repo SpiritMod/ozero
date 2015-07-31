@@ -1,0 +1,80 @@
+.block-grid
+  background: #ffffff
+  .masSection
+    position: relative
+    float: left
+    width: 62%
+  .right-aside
+    float: left
+    width: 19.5%
+    padding: 19px 5px 22px 20px
+  .left-aside
+    float: left
+    width: 18.5%
+    padding: 10px 20px 25px 29px
+.masonry
+  margin: 0 auto
+  .m-item,
+  .grid-sizer
+    width:  33.3333%
+    font-size: 0
+  .m-item:not(.no-effects)
+    img
+      @include transition(all 2s linear 0s)
+    &:hover
+      .caption
+        .title
+          text-decoration: underline
+      img
+        @include transform(scale(1.1))
+      z-index: 101
+  .m-item
+    overflow: hidden
+    position: relative
+    z-index: 100
+    &.m-large
+      width: 66.6666%
+      .caption
+        padding: 25px 39px 41px 39px
+        .title
+          font-size: 24px
+          margin-bottom: 16px
+
+    img
+      width: 100%
+      display: block
+    .statistic
+      position: absolute
+      top: 26px
+      left: 45px
+      color: inherit
+      font-size: 11px
+      .fa
+        font-size: 14px
+        margin-right: 6px
+    .caption
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      line-height: 1.2
+      text-align: left
+      @extend %light
+      padding: 15px 21px 29px 31px
+      display: block
+      .title
+        display: block
+        color: inherit
+        font-size: 18px
+        text-decoration: none
+
+      .info
+        display: block
+        color: inherit
+        font-size: 14px
+
+        margin: 0
+    &.white
+      color: #ffffff
+    &.black
+      color: #000000

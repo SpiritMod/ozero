@@ -54,3 +54,12 @@ $(document).ready(function(){
         });
     })(jQuery);
 });
+$(window).load(function(){
+    var container = document.querySelector('.masonry');
+    var msnry = new Masonry( container, {
+//            gutter: "6px",
+        columnWidth: ".grid-sizer",
+        itemSelector: ".m-item"
+        //isFitWidth: true,
+    });
+});
