@@ -341,20 +341,20 @@ h2 a:hover {
   width: 33.3333%;
   font-size: 0;
 }
-.masonry .m-item:not(.no-effects) img {
+.masonry .m-item:not(.high) img {
   -moz-transition: all 2s linear 0s;
   -o-transition: all 2s linear 0s;
   -webkit-transition: all 2s linear;
   -webkit-transition-delay: 0s;
   transition: all 2s linear 0s;
 }
-.masonry .m-item:not(.no-effects):hover {
-  z-index: 101;
+.masonry .m-item:not(.high):hover {
+  z-index: 91;
 }
-.masonry .m-item:not(.no-effects):hover .caption .title {
+.masonry .m-item:not(.high):hover .caption .title {
   text-decoration: underline;
 }
-.masonry .m-item:not(.no-effects):hover img {
+.masonry .m-item:not(.high):hover img {
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -363,7 +363,52 @@ h2 a:hover {
 .masonry .m-item {
   overflow: hidden;
   position: relative;
-  z-index: 100;
+  z-index: 90;
+}
+.masonry .m-item.high.bottomTheme .description:after {
+  content: "";
+  margin-left: -26px;
+  bottom: -26px;
+  width: 0;
+  z-index: 10;
+  left: 50%;
+  position: absolute;
+  height: 0;
+  border-style: solid;
+  border-width: 26px 26px 0 26px;
+  border-color: #f2f2f2 transparent transparent transparent;
+}
+.masonry .m-item.high.topTheme .description:after {
+  content: "";
+  margin-left: -26px;
+  left: 50%;
+  z-index: 10;
+  top: -26px;
+  width: 0;
+  position: absolute;
+  height: 0;
+  border-style: solid;
+  border-width: 0 26px 26px 26px;
+  border-color: transparent transparent #f2f2f2 transparent;
+}
+.masonry .m-item.high .img {
+  position: relative;
+  display: block;
+}
+.masonry .m-item.high .description {
+  position: relative;
+  color: #000000;
+  display: block;
+  background: #f2f2f2;
+  font-size: 14px;
+}
+.masonry .m-item.high .description .caption {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.masonry .m-item.high .description .caption .title {
+  margin-bottom: 10px;
 }
 .masonry .m-item.m-large {
   width: 66.6666%;
@@ -412,10 +457,10 @@ h2 a:hover {
   font-size: 14px;
   margin: 0;
 }
-.masonry .m-item.white {
+.masonry .white {
   color: #ffffff;
 }
-.masonry .m-item.black {
+.masonry .black {
   color: #000000;
 }
 
@@ -434,11 +479,7 @@ html {
   position: relative;
 }
 
-.mCustomScrollbar {
-  display: none !important;
-}
-
-.masonry .m-item .caption, .all-posts a {
+.masonry .m-item.high .description, .masonry .m-item .caption, .all-posts a {
   font-family: "helvetica-light", sans-serif;
 }
 
