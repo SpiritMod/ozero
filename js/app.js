@@ -2,7 +2,7 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-new UISearch(document.getElementById('sb-search' ));
+new UISearch(document.getElementById('sb-search'));
 new UISearch(document.getElementById('sb-search-scroll'));
 
 $(document).ready(function(){
