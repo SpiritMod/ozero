@@ -11,6 +11,7 @@
 //@import "widgets/modal"
 @import "widgets/normalize"
 @import "widgets/massonry"
+@import "widgets/slick"
 //@import "widgets/btn"
 //@import "widgets/grid"
 //@import "widgets/checkbox"
@@ -19,7 +20,6 @@
 
 //@import "widgets/zebra"
 //@import "widgets/modal"
-//@import "widgets/slick"
 //@import "widgets/select_box"
 //@import "widgets/noUi_slider"
 
@@ -72,26 +72,34 @@ html
       text-decoration: none
       color: #000000
       line-height: 1
+      &:hover
+        .title
+          color: #000000
+          text-decoration: none
+          span
+            text-decoration: underline
+            color: #014183
       .title
         display: block
-        font-size: 14px
-        @extend %roman
         padding: 0 15px 0 21px
+        @extend %bold
+        font-size: 11px
         line-height: 1.2
+        text-transform: uppercase
         span
-          @extend %bold
-          font-size: 11px
+          text-transform: none
+          font-size: 14px
+          @extend %roman
           display: block
-          text-transform: uppercase
       img
         margin: 0 auto 16px
         max-width: 100%
 
 .news-list
-  padding: 14px 0 13px
-  li
+  padding: 14px 0 0
+  .item
     display: block
-    margin-bottom: 43px
+    margin-bottom: 46px
     a
       display: block
       text-decoration: none
@@ -124,10 +132,185 @@ html
         .text
           color: #014183
           text-decoration: underline
+.authors
+  background: #0000ff
+  font-size: 0
+  padding: 36px 0 38px
+  text-align: center
+  .authors-list
+    display: inline-block
+    vertical-align: middle
+    font-size: 0
+    li
+      display: inline-block
+      margin: 0 10px
+      vertical-align: middle
+      a
+        display: block
+        text-decoration: none
+      img
+        @include border-radius(50%)
+        display: block
+  .title
+    display: inline-block
+    vertical-align: middle
+    padding-right: 30px
+    p
+      margin: 0
+      display: inline-block
+      vertical-align: middle
+      color: #ffffff
+      font-size: 18px
+    img
+      display: inline-block
+      vertical-align: middle
+      margin-right: 19px
+      border: 2px solid #ffffff
+.control-panel
+  padding: 42px 0 34px
+  font-size: 0
+  p
+    font-size: 24px
+    @extend %light
+    color: #2d0014
+    display: inline-block
+    vertical-align: middle
+    margin: 0 40px 0 0
+  .tags-list
+    vertical-align: middle
+    display: inline-block
+    font-size: 0
+    li
+      display: inline-block
+      vertical-align: middle
+      &.active
+        a
+          border:
+            color: rgba(0,0,0,.1)
+      a
+        text-decoration: none
+        display: block
+        border: 1px solid transparent
+        @include border-radius(13px)
+        min-height: 26px
+        padding: 6px 10px
+        font-size: 14px
+        @extend %light
+        color: #2d0014
+.double-link
+  background: #ffffff
+  text-decoration: none
+  position: relative
+  @extend %light
+  min-height: 520px
+  display: block
+  line-height: 1
+  .caption
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    color: #ffffff
+    padding: 25px
+  .img
+    display: block
+    img
+      width: 100%
+      display: block
+  .sub-title
+    display: block
+    font-size: 11px
+    @extend %bold
+    text-transform: uppercase
+  .title
+    display: block
+    font-size: 20px
+    margin-bottom: 10px
+  .info
+    display: block
+    font-size: 14px
+  .description
+    padding: 20px 30px 45px
+    display: block
+    color: #000000
+  .statistic
+    position: absolute
+    bottom: 20px
+    padding: 0 30px
+    left: 0
+    width: 100%
+    color: inherit
+    font-size: 11px
+    .fa
+      font-size: 14px
+      margin-right: 6px
+.newest-publications
+  margin: 0 -20px
+  clear: both
+  .item
+    width: 25%
+    float: left
+    padding: 0 20px
 
+@media (max-width: 1100px)
+  .block-grid
+    .left-aside
+      width: 23%
+      .news-list
+        .item
+          margin-bottom: 31px
+    .masSection
+      width: 77%
+    .right-aside
+      width: 100%
+      padding-bottom: 40px
+      clear: both
+      .all-posts
+        text-align: left
+      h2
+        text-align: left
 
-
-
+      .blog-list
+        text-align: left
+        font-size: 0
+        li
+          width: 33.3333%
+          display: inline-block
+          vertical-align: top
+          padding-right: 40px
+          margin-bottom: 30px
+          a
+            img
+              margin-bottom: 0
+          .title
+            display: inline-block
+            vertical-align: middle
+            width: 68%
+            text-align: center
+          .img
+            width: 32%
+            display: inline-block
+            vertical-align: middle
+@media (max-width: 768px)
+  .block-grid
+    .left-aside
+      padding-right: 0
+      width: 100%
+      .news-list
+        .slick-list
+          padding-right: 30px
+        .item
+          margin-bottom: 20px
+          padding-right: 30px
+    .masSection
+      width: 100%
+    .right-aside
+      .blog-list
+        li
+          padding-right: 0
+          a
+            .title
+              padding: 0 10px 0 10px
 
 
 

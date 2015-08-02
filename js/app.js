@@ -86,13 +86,34 @@ $(document).ready(function(){
             });
         });
     })(jQuery);
+
+
+    $(function(){
+        var mgl = window.matchMedia('(max-width: 768px)');
+        if (mgl.matches) {
+            $(".news-list").slick({
+                slide: '.item',
+                arrows: false,
+                dots: true,
+                slidesToShow: 3,
+                slidesToScroll: 1
+
+            })
+        }
+
+    });
 });
 $(window).load(function(){
-    var container = document.querySelector('.masonry');
-    var msnry = new Masonry( container, {
-//            gutter: "6px",
+    var container1 = document.querySelector('.masonry');
+    var container2 = document.querySelector('.w-masonry');
+
+    var msnry = new Masonry( container1, {
         columnWidth: ".grid-sizer",
         itemSelector: ".m-item"
-        //isFitWidth: true,
+    });
+
+    var w_msnry = new Masonry( container2, {
+        columnWidth: ".grid-sizer",
+        itemSelector: ".m-item"
     });
 });
