@@ -88,20 +88,53 @@ $(document).ready(function(){
     })(jQuery);
 
 
-    $(function(){
-        var mgl = window.matchMedia('(max-width: 768px)');
-        if (mgl.matches) {
+
+    $(window).resize(function() {
+        $('.news-list').unslick();
+        $('#newest-publications-1').unslick();
+        $('#newest-publications-2').unslick();
+        if ($(window).width() <= 768) {
             $(".news-list").slick({
                 slide: '.item',
                 arrows: false,
                 dots: true,
                 slidesToShow: 3,
                 slidesToScroll: 1
-
-            })
+            });
+            $("#newest-publications-1").slick({
+                slide: '.slick-item',
+                centerMode: true,
+                centerPadding: '230px',
+                customPaging: '20px',
+                arrows: false,
+                slidesToShow: 1
+            });
+            $("#newest-publications-2").slick({
+                slide: '.slick-item',
+                centerMode: true,
+                centerPadding: '230px',
+                arrows: false,
+                customPaging: '20px',
+                slidesToShow: 1
+            });
         }
 
+
+
+
+
     });
+    //$(function(){
+    //    var mgl = window.matchMedia('(max-width: 768px)');
+    //    var lgl = window.matchMedia('(min-width: 769px)');
+    //    if (mgl.matches) {
+    //
+    //    }
+    //    if (lgl.matches) {
+    //
+    //    }
+    //
+    //});
 });
 $(window).load(function(){
     var container1 = document.querySelector('.masonry');

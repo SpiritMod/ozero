@@ -10,17 +10,17 @@
 }
 
 .slick-prev,
-.slick-next {
+.slick-next, .tabulation .tabs li a {
   font-size: 0;
   text-align: center;
 }
 .slick-prev .help,
-.slick-next .help {
+.slick-next .help, .tabulation .tabs li a .help {
   display: inline-block;
   vertical-align: middle;
 }
 .slick-prev:after,
-.slick-next:after {
+.slick-next:after, .tabulation .tabs li a:after {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -96,6 +96,40 @@
     -ms-transform: translate(0px, 0px);
   }
 }
+[class*="w-icons"] {
+  background-image: url("../icons/sprite.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-attachment: scroll;
+  display: inline-block;
+  vertical-align: middle;
+}
+[class*="w-icons"].w-icons-soc-1 {
+  background-position: -230px 0;
+  width: 24px;
+  height: 24px;
+}
+[class*="w-icons"].w-icons-soc-2 {
+  background-position: -259px 0;
+  width: 24px;
+  height: 24px;
+}
+[class*="w-icons"].w-icons-soc-3 {
+  background-position: -288px 0;
+  width: 24px;
+  height: 24px;
+}
+[class*="w-icons"].w-icons-soc-4 {
+  background-position: -317px 0;
+  width: 24px;
+  height: 24px;
+}
+[class*="w-icons"].w-icons-soc-5 {
+  background-position: -346px 0;
+  width: 25px;
+  height: 24px;
+}
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   height: 100%;
@@ -366,7 +400,6 @@ h2 a:hover {
   padding-left: 25px;
 }
 .board-advertise aside .social-shared-tab {
-  padding: 10px;
   background: #ffffff;
 }
 
@@ -413,6 +446,9 @@ h2 a:hover {
 .masonry .m-item.high.bottomTheme:hover .description:after {
   bottom: -30px;
 }
+.masonry .m-item.high.bottomTheme .description .caption {
+  padding: 15px 15px 29px 25px;
+}
 .masonry .m-item.high.bottomTheme .description:after {
   content: "";
   margin-left: -30px;
@@ -433,6 +469,9 @@ h2 a:hover {
 }
 .masonry .m-item.high.topTheme:hover .description:after {
   top: -30px;
+}
+.masonry .m-item.high.topTheme .description .caption {
+  padding: 25px 15px 29px 25px;
 }
 .masonry .m-item.high.topTheme .description:after {
   content: "";
@@ -470,7 +509,8 @@ h2 a:hover {
   width: 100%;
 }
 .masonry .m-item.high .description .caption .title {
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 16px;
 }
 .masonry .m-item.m-large {
   width: 66.6666%;
@@ -803,7 +843,7 @@ html {
   position: relative;
 }
 
-.masonry .m-item.high .description, .masonry .m-item .caption, .w-masonry .m-item .caption, .all-posts a, .control-panel p, .control-panel .tags-list li a, .double-link {
+.masonry .m-item.high .description, .masonry .m-item .caption, .w-masonry .m-item .caption, .all-posts a, .control-panel p, .control-panel .tags-list li a, .double-link, .social-shared-tab p {
   font-family: "helvetica-light", sans-serif;
 }
 
@@ -916,7 +956,7 @@ html {
 .authors {
   background: #0000ff;
   font-size: 0;
-  padding: 36px 0 38px;
+  padding: 39px 0 38px;
   text-align: center;
 }
 .authors .authors-list {
@@ -926,7 +966,7 @@ html {
 }
 .authors .authors-list li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 15px;
   vertical-align: middle;
 }
 .authors .authors-list li a {
@@ -942,24 +982,24 @@ html {
 .authors .title {
   display: inline-block;
   vertical-align: middle;
-  padding-right: 30px;
+  padding-right: 38px;
 }
 .authors .title p {
   margin: 0;
   display: inline-block;
   vertical-align: middle;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 29px;
 }
 .authors .title img {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 19px;
+  margin-right: 18px;
   border: 2px solid #ffffff;
 }
 
 .control-panel {
-  padding: 42px 0 34px;
+  padding: 32px 0 32px 2px;
   font-size: 0;
 }
 .control-panel p {
@@ -973,6 +1013,7 @@ html {
   vertical-align: middle;
   display: inline-block;
   font-size: 0;
+  padding: 4px 0 0 3px;
 }
 .control-panel .tags-list li {
   display: inline-block;
@@ -988,8 +1029,8 @@ html {
   -moz-border-radius: 13px;
   -webkit-border-radius: 13px;
   border-radius: 13px;
-  min-height: 26px;
-  padding: 6px 10px;
+  min-height: 20px;
+  padding: 2px 10px 2px 11px;
   font-size: 14px;
   color: #2d0014;
 }
@@ -1000,7 +1041,7 @@ html {
   position: relative;
   min-height: 520px;
   display: block;
-  line-height: 1;
+  line-height: 1.2;
 }
 .double-link .caption {
   position: absolute;
@@ -1020,25 +1061,26 @@ html {
 .double-link .sub-title {
   display: block;
   font-size: 11px;
+  margin-bottom: 3px;
   text-transform: uppercase;
 }
 .double-link .title {
   display: block;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 .double-link .info {
   display: block;
   font-size: 14px;
 }
 .double-link .description {
-  padding: 20px 30px 45px;
+  padding: 20px 30px 35px;
   display: block;
   color: #000000;
 }
 .double-link .statistic {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   padding: 0 30px;
   left: 0;
   width: 100%;
@@ -1051,7 +1093,7 @@ html {
 }
 
 .newest-publications {
-  margin: 0 -20px;
+  margin: 0 -20px 20px;
   clear: both;
 }
 .newest-publications .item {
@@ -1059,8 +1101,104 @@ html {
   float: left;
   padding: 0 20px;
 }
+.newest-publications .item img {
+  width: 100%;
+}
+.newest-publications .item.slick-item {
+  padding: 0 20px;
+}
+
+.social-shared-tab {
+  padding: 40px 0 10px;
+}
+.social-shared-tab p {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #2d0014;
+}
+.social-shared-tab .tabs-content {
+  padding-top: 40px;
+}
+.social-shared-tab .tabs {
+  font-size: 0;
+  text-align: center;
+  width: 100%;
+}
+.social-shared-tab .tabs .tab-title {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+.social-shared-tab .tabs .tab-title + .tab-title {
+  margin-left: 5px;
+}
+.social-shared-tab .tabs .tab-title.active a span {
+  opacity: 1;
+}
+.social-shared-tab .tabs .tab-title a {
+  padding: 0;
+  display: block;
+  background: transparent !important;
+}
+.social-shared-tab .tabs .tab-title a span {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.tabulation .tabs-content {
+  background: #ffffff;
+}
+.tabulation .tabs {
+  width: 100%;
+  background: transparent;
+  padding-bottom: 24px;
+}
+.tabulation .tabs li {
+  width: 50%;
+}
+.tabulation .tabs li:last-child.active a, .tabulation .tabs li:last-child:hover a {
+  background: #55acee;
+}
+.tabulation .tabs li:first-child.active a, .tabulation .tabs li:first-child:hover a {
+  background: #014183;
+}
+.tabulation .tabs li.active a, .tabulation .tabs li:hover a {
+  color: #ffffff;
+}
+.tabulation .tabs li.active a .fa, .tabulation .tabs li:hover a .fa {
+  color: #ffffff;
+}
+.tabulation .tabs li a {
+  text-decoration: none;
+  height: 41px;
+  background: #ffffff;
+  padding: 0;
+  display: block;
+  font-weight: 300;
+  color: #000000;
+  font-size: 17px;
+  line-height: 1;
+}
+.tabulation .tabs li .help {
+  padding-top: 2px;
+}
+.tabulation .tabs li .fa {
+  margin-right: 5px;
+  color: #d9d9d9;
+  font-size: 24px;
+  vertical-align: middle;
+  display: inline-block;
+}
 
 @media (max-width: 1100px) {
+  .row {
+    overflow: hidden;
+  }
+
   .block-grid .left-aside {
     width: 23%;
   }
@@ -1107,7 +1245,39 @@ html {
     vertical-align: middle;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+  .authors .title {
+    margin: 0 0 20px;
+  }
+
+  .double-link {
+    min-height: 517px;
+  }
+
+  .board-advertise .w-masonry {
+    width: 100%;
+  }
+  .board-advertise aside {
+    width: 100%;
+    padding: 0;
+  }
+  .board-advertise aside .tabs {
+    text-align: left;
+    padding: 0 30px;
+  }
+
+  .social-shared-tab p {
+    text-align: left;
+    padding: 0 30px;
+  }
+
+  .newest-publications .item {
+    padding: 0;
+  }
+  .newest-publications .tabulation {
+    display: none;
+  }
+
   .block-grid .left-aside {
     padding-right: 0;
     width: 100%;
@@ -1127,5 +1297,22 @@ html {
   }
   .block-grid .right-aside .blog-list li a .title {
     padding: 0 10px 0 10px;
+  }
+}
+@media (max-width: 767px) {
+  .block-grid .right-aside .blog-list li {
+    width: 100%;
+  }
+  .block-grid .right-aside .blog-list li .img {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .block-grid .right-aside .blog-list li .img img {
+    margin: 0 auto;
+  }
+  .block-grid .right-aside .blog-list li .title {
+    width: 100%;
+    display: block;
   }
 }

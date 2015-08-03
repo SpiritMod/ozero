@@ -23,7 +23,6 @@
     float: right
     padding-left: 25px
     .social-shared-tab
-      padding: 10px
       background: #ffffff
 
 .masonry
@@ -55,6 +54,7 @@
     &.high
       &:hover
         .description
+
           .title
             color: #014183
             text-decoration: underline
@@ -64,6 +64,8 @@
             &:after
               bottom: -30px
         .description
+          .caption
+            padding: 15px 15px 29px 25px
           &:after
             content: ""
             margin-left: -30px
@@ -83,6 +85,8 @@
             &:after
               top: -30px
         .description
+          .caption
+            padding: 25px 15px 29px 25px
           &:after
             content: ""
             @include transition(all .1s linear 0s)
@@ -109,8 +113,10 @@
         @extend %light
         .caption
           height: 100%
+
           .title
-            margin-bottom: 10px
+            font-size: 20px
+            margin-bottom: 16px
           position: absolute
           width: 100%
 
