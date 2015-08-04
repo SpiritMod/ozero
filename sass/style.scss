@@ -903,6 +903,7 @@ a {
   top: -66px;
   left: 0;
   right: 0;
+  z-index: 100;
   @include transition(all 0.4s ease 0s);
   &.fade {
     top: 0;
