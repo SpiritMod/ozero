@@ -907,11 +907,9 @@ a {
   @include transition(all 0.4s ease 0s);
   &.fade {
     top: 0;
-    z-index: 100;
   }
   &.mobile {
     top: 0;
-    z-index: 100;
     @include transition(all 0s ease 0s);
   }
   .topbar-scroll {
