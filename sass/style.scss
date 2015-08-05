@@ -54,6 +54,7 @@
 
 body {
   background: #f2f2f2;
+  position: relative;
   //height: 2000px;
   font-family: "helvetica-roman", sans-serif;
 }
@@ -155,137 +156,6 @@ a {
         margin: 18px 0 0;
         a.sign-in {
           margin-top: -8px;
-        }
-      }
-    }
-    .drop-menu-container {
-      background: #014183;
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 101%;
-      width: 214px;
-      height: 400px;
-      padding: 48px 15px 80px 15px;
-      z-index: 100;
-      .close-drop-menu-container {
-        display: block;
-        position: absolute;
-        left: 25px;
-        top: 17px;
-        width: 16px;
-        height: 16px;
-        background: url("../img/close-btn.png") no-repeat 0 0 transparent;
-      }
-      .search-form {
-        display: block;
-        position: absolute;
-        left: 15px;
-        bottom: 28px;
-        width: 154px;
-        height: 28px;
-        form {
-          width: 100%;
-          position: relative;
-          .sb-search-input {
-            width: 100%;
-            height: 28px;
-            padding: 0 32px 0 10px;
-            background: #fff;
-            border: none;
-            @include box-shadow(0 0 0 #fff);
-            @include border-radius(20px);
-            margin: 0 0;
-            &::-webkit-input-placeholder {
-              color: #014183;
-            }
-            &::-moz-placeholder {
-              color: #014183;
-              opacity: 1;
-            }
-            &:-moz-placeholder {
-              color: #014183;
-            }
-            &:-ms-input-placeholder {
-              color: #014183;
-            }
-          }
-          .sb-search-submit {
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 28px;
-            height: 28px;
-            z-index: 10;
-            @include border-radius(0 20px 20px 0);
-            border: none;
-            background: #fff; /* IE needs this */
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
-            filter: alpha(opacity=0); /* IE 5-7 */
-            opacity: 0;
-            color: transparent;
-            outline: none;
-            padding: 0 0;
-            cursor: pointer;
-          }
-          .search-btn {
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 28px;
-            height: 28px;
-            @include border-radius(0 20px 20px 0);
-            z-index: 0;
-            color: #ccc;
-            font-size: 16px;
-            line-height: 28px;
-            text-align: center;
-          }
-        }
-      }
-      .menu-wrapper {
-        width: 100%;
-        height: 272px;
-      }
-      ul {
-        display: inline-block;
-        width: 100%;
-        list-style: none;
-        margin: 0 0 30px;
-        padding: 0 0;
-        &.nav-categories {
-          margin-bottom: 0;
-          li {
-            a {
-              font-family: "helvetica-light", sans-serif;
-            }
-          }
-        }
-        li {
-          display: inline-block;
-          width: 100%;
-          border-bottom: 1px solid #3d6095;
-          a {
-            display: inline-block;
-            width: 100%;
-            padding: 0 10px;
-            height: 38px;
-            color: #FFF;
-            font-family: "helvetica-roman", sans-serif;
-            font-size: 15px;
-            line-height: 38px;
-            @include transition(all 0.4s ease 0s);
-            &:hover {
-              background: #e0ecf6;
-              color: #014183;
-            }
-            &.active {
-              background: #e0ecf6;
-              color: #014183;
-            }
-          }
         }
       }
     }
@@ -757,7 +627,7 @@ a {
     z-index: 90;
     background: #fff;
     @include border-radius(50%);
-    color: #ccc;
+    color: #014183;
   }
   .sb-search-submit  {
     width: 30px;
@@ -787,13 +657,13 @@ a {
   /* Open state */
   &.sb-search-open {
     .sb-search-input {
-      width: 200px;
+      width: 250px;
       position: absolute;
       opacity: 1;
     }
     .sb-icon-search {
       background: transparent;
-      color: #cccccc;
+      color: #014183;
       z-index: 11;
     }
     .sb-search-submit {
@@ -896,21 +766,25 @@ a {
   }
 }
 
-.scroll-bar {
+#scroll-bar {
   display: block;
   width: 100%;
   position: fixed;
   top: -66px;
   left: 0;
   right: 0;
-  z-index: 100;
-  @include transition(all 0.4s ease 0s);
+  z-index: 1000;
+  @include transition(all 0.5s ease 0s);
+  &.move-left {
+    -webkit-overflow-scrolling: touch;
+    @include transform(translateX(-250px));
+  }
   &.fade {
     top: 0;
   }
   &.mobile {
     top: 0;
-    @include transition(all 0s ease 0s);
+    //@include transition(all 0s ease 0s);
   }
   .topbar-scroll {
     > .row {
@@ -1183,6 +1057,196 @@ a {
   }
 }
 
+.wrapper {
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  width: 100%;
+  //overflow: hidden;
+  z-index: 999;
+  @include transition(transform 500ms ease);
+  &.move-left {
+    min-height: 100%;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    width: 100%;
+    @include transform(translateX(-250px));
+  }
+}
+
+.off-canvas-wrap {
+  background: transparent;
+  height: 100%;
+  width: 250px;
+  right: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  @include transition(transform 500ms ease);
+  &.move-left {
+    z-index: 1000;
+    @include transition(transform 500ms ease);
+  }
+  .inner-wrap {
+    height: 100%;
+  }
+}
+
+.right-off-canvas-menu {
+  background: #014183;
+  padding: 48px 15px 80px 15px;
+  z-index: 100;
+  display: block;
+  width: 250px;
+  height: 100vh;
+  //overflow: hidden;
+  box-sizing: border-box;
+  .exit-off-canvas {
+    display: block;
+    position: absolute;
+    left: 25px;
+    top: 17px;
+    width: 16px;
+    height: 16px;
+    background: url("../img/close-btn.png") no-repeat 0 0 transparent!important;
+  }
+  .drop-menu-container {
+    height: 100%;
+    .search-form {
+      display: block;
+      position: absolute;
+      left: 15px;
+      bottom: 28px;
+      width: 196px;
+      height: 28px;
+      form {
+        width: 100%;
+        position: relative;
+        .sb-search-input {
+          width: 100%;
+          height: 28px;
+          padding: 0 32px 0 10px;
+          background: #fff;
+          border: none;
+          @include box-shadow(0 0 0 #fff);
+          @include border-radius(20px);
+          margin: 0 0;
+          &::-webkit-input-placeholder {
+            color: #014183;
+          }
+          &::-moz-placeholder {
+            color: #014183;
+            opacity: 1;
+          }
+          &:-moz-placeholder {
+            color: #014183;
+          }
+          &:-ms-input-placeholder {
+            color: #014183;
+          }
+        }
+        .sb-search-submit {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 28px;
+          height: 28px;
+          z-index: 10;
+          @include border-radius(0 20px 20px 0);
+          border: none;
+          background: #fff; /* IE needs this */
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+          filter: alpha(opacity=0); /* IE 5-7 */
+          opacity: 0;
+          color: transparent;
+          outline: none;
+          padding: 0 0;
+          cursor: pointer;
+        }
+        .search-btn {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 28px;
+          height: 28px;
+          @include border-radius(0 20px 20px 0);
+          z-index: 0;
+          color: #014183;
+          font-size: 16px;
+          line-height: 28px;
+          text-align: center;
+        }
+      }
+    }
+    .menu-wrapper {
+      width: 100%;
+      //height: 300px;
+    }
+    ul {
+      display: inline-block;
+      width: 100%;
+      list-style: none;
+      margin: 0 0 30px;
+      padding: 0 0;
+      &.nav-categories {
+        margin-bottom: 0;
+        li {
+          a {
+            font-family: "helvetica-light", sans-serif;
+          }
+        }
+      }
+      li {
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px solid #3d6095;
+        a {
+          display: inline-block;
+          width: 100%;
+          padding: 0 10px;
+          height: 38px;
+          color: #FFF;
+          font-family: "helvetica-roman", sans-serif;
+          font-size: 15px;
+          line-height: 38px;
+          @include transition(all 0.4s ease 0s);
+          &:hover {
+            background: #e0ecf6;
+            color: #014183;
+          }
+          &.active {
+            background: #e0ecf6;
+            color: #014183;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.right-off-canvas-toggle {
+  width: 30px;
+  height: 30px;
+  display: block;
+  color: #fff!important;
+  float: left;
+  text-align: center;
+  line-height: 30px;
+  margin: 17px 8px;
+  &:hover {
+    color: #fff;
+  }
+}
+.move-left .exit-off-canvas {
+  background: rgba(0,0,0,0);
+  @include box-shadow(0 0 0 #FFF);
+  &:hover {
+    background: rgba(0,0,0,0);
+  }
+}
+
 .page {
   -webkit-backface-visibility: hidden;
   position: relative;
@@ -1292,7 +1356,7 @@ footer {
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1200px) {
-  .scroll-bar {
+  #scroll-bar {
     .topbar-scroll {
       .box-menu {
         ul {
@@ -1318,7 +1382,7 @@ footer {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
-  .scroll-bar {
+  #scroll-bar {
     .topbar-scroll {
       .box-menu {
         display: none;
@@ -1517,7 +1581,8 @@ footer {
   body {
     padding-top: 66px;
   }
-  .scroll-bar {
+  #scroll-bar {
+    top: 0;
     .topbar-scroll {
       > .row {
         height: 66px;

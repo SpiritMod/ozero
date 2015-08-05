@@ -105,27 +105,27 @@
   vertical-align: middle;
 }
 [class*="w-icons"].w-icons-soc-1 {
-  background-position: -230px 0;
+  background-position: -203px -18px;
   width: 24px;
   height: 24px;
 }
 [class*="w-icons"].w-icons-soc-2 {
-  background-position: -259px 0;
+  background-position: -232px -18px;
   width: 24px;
   height: 24px;
 }
 [class*="w-icons"].w-icons-soc-3 {
-  background-position: -288px 0;
+  background-position: -261px -18px;
   width: 24px;
   height: 24px;
 }
 [class*="w-icons"].w-icons-soc-4 {
-  background-position: -317px 0;
+  background-position: -290px -18px;
   width: 24px;
   height: 24px;
 }
 [class*="w-icons"].w-icons-soc-5 {
-  background-position: -346px 0;
+  background-position: -319px -18px;
   width: 25px;
   height: 24px;
 }
@@ -421,6 +421,12 @@ h2 a:hover {
 .masonry .m-item:not(.high).white:hover .caption .title {
   text-decoration: underline;
 }
+.masonry .m-item:not(.high).white:hover img {
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 .masonry .m-item:not(.high).black:hover {
   z-index: 91;
 }
@@ -574,28 +580,28 @@ h2 a:hover {
   width: 25%;
   font-size: 0;
 }
-.w-masonry .m-item:not(.high) img {
+.w-masonry .m-item:hover img {
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.w-masonry .m-item img {
   -moz-transition: all 2s linear 0s;
   -o-transition: all 2s linear 0s;
   -webkit-transition: all 2s linear;
   -webkit-transition-delay: 0s;
   transition: all 2s linear 0s;
 }
-.w-masonry .m-item:not(.high).white:hover .caption .title {
+.w-masonry .m-item.white:hover .caption .title {
   text-decoration: underline;
 }
-.w-masonry .m-item:not(.high).black:hover {
+.w-masonry .m-item.black:hover {
   z-index: 91;
 }
-.w-masonry .m-item:not(.high).black:hover .caption .title {
+.w-masonry .m-item.black:hover .caption .title {
   color: #014183;
   text-decoration: underline;
-}
-.w-masonry .m-item:not(.high).black:hover img {
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
 }
 .w-masonry .m-item {
   overflow: hidden;
@@ -866,6 +872,10 @@ html {
 }
 .all-posts a:hover {
   text-decoration: none;
+}
+
+.overflow {
+  overflow: hidden;
 }
 
 .blog-list {
@@ -1195,10 +1205,6 @@ html {
 }
 
 @media (max-width: 1100px) {
-  .row {
-    overflow: hidden;
-  }
-
   .block-grid .left-aside {
     width: 23%;
   }
@@ -1305,8 +1311,9 @@ html {
   }
   .block-grid .right-aside .blog-list li .img {
     width: auto;
+    text-align: center;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 15px;
   }
   .block-grid .right-aside .blog-list li .img img {
     margin: 0 auto;
@@ -1314,5 +1321,44 @@ html {
   .block-grid .right-aside .blog-list li .title {
     width: 100%;
     display: block;
+  }
+
+  .masonry .m-item, .masonry .grid-sizer {
+    width: 50%;
+  }
+  .masonry .m-item.m-large {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .masonry .m-item, .w-masonry .m-item {
+    width: 100% !important;
+  }
+  .masonry .m-item.high.topTheme .description, .masonry .m-item.high.bottomTheme .description, .w-masonry .m-item.high.topTheme .description, .w-masonry .m-item.high.bottomTheme .description {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .masonry .m-item.high.topTheme .description .caption, .masonry .m-item.high.bottomTheme .description .caption, .w-masonry .m-item.high.topTheme .description .caption, .w-masonry .m-item.high.bottomTheme .description .caption {
+    display: block;
+  }
+  .masonry .m-item.high.topTheme .description .title, .masonry .m-item.high.bottomTheme .description .title, .w-masonry .m-item.high.topTheme .description .title, .w-masonry .m-item.high.bottomTheme .description .title {
+    padding-top: 40px;
+  }
+  .masonry .m-item.high.topTheme .description .title, .masonry .m-item.high.topTheme .description .text, .masonry .m-item.high.bottomTheme .description .title, .masonry .m-item.high.bottomTheme .description .text, .w-masonry .m-item.high.topTheme .description .title, .w-masonry .m-item.high.topTheme .description .text, .w-masonry .m-item.high.bottomTheme .description .title, .w-masonry .m-item.high.bottomTheme .description .text {
+    color: #ffffff;
+  }
+  .masonry .m-item.high.topTheme .description:after, .masonry .m-item.high.bottomTheme .description:after, .w-masonry .m-item.high.topTheme .description:after, .w-masonry .m-item.high.bottomTheme .description:after {
+    display: none;
+  }
+  .masonry .m-item.high.topTheme .description img, .masonry .m-item.high.bottomTheme .description img, .w-masonry .m-item.high.topTheme .description img, .w-masonry .m-item.high.bottomTheme .description img {
+    display: none;
+  }
+  .masonry .m-item.m-large .caption .title, .w-masonry .m-item.m-large .caption .title {
+    font-size: 16px;
   }
 }

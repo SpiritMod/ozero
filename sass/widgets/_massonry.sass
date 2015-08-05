@@ -38,6 +38,8 @@
       .caption
         .title
           text-decoration: underline
+      img
+        @include transform(scale(1.1))
     &.black:hover
       .caption
         .title
@@ -170,7 +172,10 @@
   .grid-sizer
     width:  25%
     font-size: 0
-  .m-item:not(.high)
+  .m-item
+    &:hover
+      img
+        @include transform(scale(1.1))
     img
       @include transition(all 2s linear 0s)
     &.white:hover
@@ -182,8 +187,7 @@
         .title
           color: #014183
           text-decoration: underline
-      img
-        @include transform(scale(1.1))
+
       z-index: 91
   .m-item
     overflow: hidden

@@ -2,52 +2,40 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
+$(document)
+    .on('open.fndtn.offcanvas', '[data-offcanvas]', function() {
+        $('html').css('overflow', 'hidden');
+        $('.wrapper').addClass('move-left');
+        $('#scroll-bar').addClass('move-left');
+    })
+    .on('close.fndtn.offcanvas', '[data-offcanvas]', function() {
+        $('html').css('overflow', 'auto');
+        $('.wrapper').removeClass('move-left');
+        $('#scroll-bar').removeClass('move-left');
+    });
+
 new UISearch(document.getElementById('sb-search'));
 new UISearch(document.getElementById('sb-search-scroll'));
 
 $(document).ready(function(){
-   /* (function () {
-        var flag;
-
-        $(function () {
-            $(window).scroll(function () {
-                var strollTop = $(window).scrollTop();
-
-                if (strollTop > 100) {
-                    if (true !== flag) {
-                        flag = true;
-                        $('body').addClass('scrolled');
-                        //$('.header .main-nav').
-                    }
-                }
-                else {
-                    if (false !== flag) {
-                        flag = false;
-                        $('body').removeClass('scrolled');
-                    }
-                }
-            }).trigger('scroll');
-        });
-    })();*/
 
     if ($(window).width() <= 767) {
         // is mobile device
-        $('#header .scroll-bar').addClass('mobile');
+        $('#scroll-bar').addClass('mobile');
         //alert('width < 767 ==== ' + $(window).width());
         $('#show-widget').click(function(){
-            $('#header .scroll-bar .widget').fadeIn("slow");
+            $('#scroll-bar .widget').fadeIn("slow");
             return false;
         });
         $('#close-widget').click(function(){
-            $('#header .scroll-bar .widget').fadeOut("slow");
+            $('#scroll-bar .widget').fadeOut("slow");
             return false;
         });
-
     }
 
     if ($(window).width() >= 768) {
-        $('#header .scroll-bar').removeClass('mobile');
-        var $menu = $('#header .scroll-bar');
+        $('#scroll-bar').removeClass('mobile');
+        var $menu = $('#scroll-bar');
         $(window).scroll(function(){
             if ( $(this).scrollTop() > 144 ){
                 $menu.fadeIn(600);
@@ -58,72 +46,23 @@ $(document).ready(function(){
         });
     }
 
-
-    $('#drop-menu').click(function() {
-        $('#drop-menu-container').slideDown("slow");
-        return false;
-    });
-    $('#close-drop-menu-container').click(function() {
-        $('#drop-menu-container').slideUp("slow");
-    });
-
-    //scroll-bar
-    $('#drop-menu-scroll').click(function() {
-        $('#scroll-drop-menu-container').slideDown("slow");
-        return false;
-    });
-    $('#close-scroll-drop-menu-container').click(function() {
-        $('#scroll-drop-menu-container').slideUp("slow");
-    });
-
-
     (function($){
         $(window).load(function(){
+            //var heightWindow = window.innerHeight - 80 - 48 - 0;
+            //$('.drop-menu-container .menu-wrapper').css('height',heightWindow);
             $('.drop-menu-container .menu-wrapper').mCustomScrollbar({
                 theme:"rounded-dots",
                 axis:"y",
-                scrollInertia: 200
+                scrollInertia: 200,
+                setHeight: '87%',
+                mouseWheel:{ enable: true }
             });
         });
     })(jQuery);
 
 
 
-    $(window).resize(function() {
-        $('.news-list').unslick();
-        $('#newest-publications-1').unslick();
-        $('#newest-publications-2').unslick();
-        if ($(window).width() <= 768) {
-            $(".news-list").slick({
-                slide: '.item',
-                arrows: false,
-                dots: true,
-                slidesToShow: 3,
-                slidesToScroll: 1
-            });
-            $("#newest-publications-1").slick({
-                slide: '.slick-item',
-                centerMode: true,
-                centerPadding: '230px',
-                customPaging: '20px',
-                arrows: false,
-                slidesToShow: 1
-            });
-            $("#newest-publications-2").slick({
-                slide: '.slick-item',
-                centerMode: true,
-                centerPadding: '230px',
-                arrows: false,
-                customPaging: '20px',
-                slidesToShow: 1
-            });
-        }
 
-
-
-
-
-    });
     //$(function(){
     //    var mgl = window.matchMedia('(max-width: 768px)');
     //    var lgl = window.matchMedia('(min-width: 769px)');
@@ -135,18 +74,4 @@ $(document).ready(function(){
     //    }
     //
     //});
-});
-$(window).load(function(){
-    var container1 = document.querySelector('.masonry');
-    var container2 = document.querySelector('.w-masonry');
-
-    var msnry = new Masonry( container1, {
-        columnWidth: ".grid-sizer",
-        itemSelector: ".m-item"
-    });
-
-    var w_msnry = new Masonry( container2, {
-        columnWidth: ".grid-sizer",
-        itemSelector: ".m-item"
-    });
 });
