@@ -1097,6 +1097,7 @@ a {
   z-index: 1;
   @include transition(transform 500ms ease);
   &.move-left {
+    overflow: visible;
     z-index: 1000;
     @include transition(transform 500ms ease);
   }
@@ -1122,6 +1123,7 @@ a {
     width: 16px;
     height: 16px;
     background: url("../img/close-btn.png") no-repeat 0 0 transparent!important;
+    @include box-shadow(0 0 0 #fff);
   }
   .drop-menu-container {
     height: 100%;
@@ -1253,13 +1255,26 @@ a {
     color: #fff;
   }
 }
-.move-left .exit-off-canvas {
-  background: rgba(0,0,0,0);
-  @include box-shadow(0 0 0 #FFF);
-  &:hover {
-    background: rgba(0,0,0,0);
+.move-left {
+  .exit-off-canvas {
+    background: rgba(0,0,0,0.5);
+    &.layout {
+      background: rgba(0,0,0,0.5);
+      @include box-shadow(0 0 0 #FFF);
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: inherit;
+      right: 0px;
+      &:hover {
+        background: rgba(0,0,0,0.5);
+      }
+    }
   }
 }
+
+
 
 .page {
   -webkit-backface-visibility: hidden;
