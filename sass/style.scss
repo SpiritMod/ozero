@@ -577,6 +577,17 @@ a {
   -moz-transition: width 0.3s;
   transition: width 0.3s;
   -webkit-backface-visibility: hidden;
+  &:after {
+    content: '';
+    display: block;
+    background: #014183;
+    width: 0;
+    height: 17px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    @include transition(all 0.3s ease 0s);
+  }
   .sb-search-input {
     position: absolute;
     display: block;
@@ -656,6 +667,9 @@ a {
   }
   /* Open state */
   &.sb-search-open {
+    &:after {
+      width: 250px;
+    }
     .sb-search-input {
       width: 250px;
       position: absolute;
