@@ -112,6 +112,27 @@ $(document).ready(function(){
                     // instead of a settings object
                 ]
             });
+
+            $(".blog-list").slick({
+                slide: '.item',
+                arrows: false,
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 520,
+                        settings: {
+                            slide: '.item',
+                            arrows: false,
+                            dots: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+
+            });
         }
         //if (mgls2.matches) {
         //    $('.news-list').unslick();
