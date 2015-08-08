@@ -1189,6 +1189,36 @@
     <script src="js/uisearch.js"></script>
     <!--<script src="http://jek-fdrv.com/pixp/pixp.js" type="text/javascript"></script>-->
     <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
+    <!--<script src="js/main.js"></script>-->
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                var mgls2 = window.matchMedia("(max-width: 767px)");
+                if (mgls2.matches) {
+                    $(".blog-list").slick({
+                        slide: '.item',
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        responsive: [
+                            {
+                                breakpoint: 520,
+                                settings: {
+                                    slide: '.item',
+                                    arrows: false,
+                                    dots: true,
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1
+                                }
+                            }
+                        ]
+
+                    });
+                }
+            });
+
+        });
+    </script>
 </body>
 </html>
