@@ -264,14 +264,19 @@ html
       font-size: 14px
       margin-right: 6px
 .newest-publications
-  margin: 0 -20px 20px
+  margin: 0 -20px 10px
   clear: both
   //&.slick-slider
     padding: 0 30px
   .item
     width: 25%
+    margin-bottom: 20px
     float: left
     padding: 0 20px
+    &.wide
+      width: 50%
+    &:nth-child(4n+1)
+      clear: both
     img
       width: 100%
     &.slick-item
@@ -352,6 +357,23 @@ html
         vertical-align: middle
         display: inline-block
 @media (max-width: 1100px)
+  .newest-publications
+    margin: 0 -10px 10px
+    .item
+      width: 33.3333%
+      &.empty
+        margin-bottom: 0
+        height: 0
+      &:nth-child(4n+1)
+        clear: none
+      &:nth-child(3n+1)
+        clear: both
+      &.slick-item
+        padding: 0 10px
+
+        &.wide
+          display: none
+
   //.newest-publications
     margin: 0 -10px
     //&.slick-item
@@ -398,18 +420,11 @@ html
             display: inline-block
             vertical-align: middle
 @media (max-width: 800px)
-  //.newest-publications
-    .item
-      width: 50%
-      margin-bottom: 20px
-  //.double-link
-    min-height: 550px
-
   .authors
     .title
       margin: 0 0 20px
   .double-link
-    min-height: 517px
+    min-height: 570px
   .board-advertise
     .w-masonry
       width: 100%
@@ -425,6 +440,11 @@ html
   .newest-publications
     .item
       padding: 0
+      width: 50%
+      &:nth-child(3n+1)
+        clear: none
+      &:nth-child(2n+1)
+        clear: both
       //width: auto
     .tabulation
       display: none
@@ -449,6 +469,11 @@ html
               padding: 0 10px 0 10px
 
 @media (max-width: 767px)
+  .slick-dots
+    padding-right: 29px
+  .newest-publications
+    .item
+      clear: none !important
   .block-grid
     .right-aside
       .blog-list

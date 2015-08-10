@@ -14,6 +14,10 @@ $(document).ready(function(){
     //});
     $(function(){
         var mgls2 = window.matchMedia("(max-width: 767px)");
+        var mgl = window.matchMedia("(max-width: 1024px)");
+        if (mgl.matches) {
+            $(".newest-publications .item.empty, .newest-publications .item.poster").remove()
+        }
         if (mgls2.matches) {
             $(".news-list").slick({
                 slide: '.item',
@@ -61,7 +65,7 @@ $(document).ready(function(){
                             centerMode: true,
                             centerPadding: '0',
                             customPaging: '20px',
-                            arrows: true,
+                            //arrows: true,
                             slidesToShow: 1
                         }
                     }
@@ -95,7 +99,7 @@ $(document).ready(function(){
                             //dots: true,
                             centerPadding: '0',
                             customPaging: '20px',
-                            arrows: true,
+                            //arrows: true,
                             slidesToShow: 1
                         }
                     }
@@ -112,7 +116,6 @@ $(document).ready(function(){
                     // instead of a settings object
                 ]
             });
-
             $(".blog-list").slick({
                 slide: '.item',
                 arrows: false,
