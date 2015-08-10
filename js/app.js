@@ -46,6 +46,7 @@ $(document).ready(function(){
         });
     }
 
+    //init custome scroll
     (function($){
         $(window).load(function(){
             //var heightWindow = window.innerHeight - 80 - 48 - 0;
@@ -60,18 +61,43 @@ $(document).ready(function(){
         });
     })(jQuery);
 
+    //mobile slider blog in news-page
+    if (document.getElementById('blog-list-mobile')){
+        $("#blog-list-mobile").slick({
+            slide: '.item',
+            arrows: false,
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '20%',
+            responsive: [
+                {
+                    breakpoint: 440,
+                    settings: {
+                        centerPadding: '10%',
+                    }
+                }
+            ]
 
+        });
+    }
 
+});
 
-    //$(function(){
-    //    var mgl = window.matchMedia('(max-width: 768px)');
-    //    var lgl = window.matchMedia('(min-width: 769px)');
-    //    if (mgl.matches) {
-    //
-    //    }
-    //    if (lgl.matches) {
-    //
-    //    }
-    //
-    //});
+$(window).load(function(){
+    var container1 = document.querySelector('.block-news-container-1');
+    var container2 = document.querySelector('.block-news-container-2');
+    var container3 = document.querySelector('.block-news-container-3');
+
+    var msnry1 = new Masonry( container1, {
+        itemSelector: ".item"
+    });
+    var msnry2 = new Masonry( container2, {
+        itemSelector: ".item"
+    });
+    var msnry3 = new Masonry( container3, {
+        itemSelector: ".item"
+    });
+
 });
