@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="stylesheets/app.css" />
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="stylesheets/calendar.css" />
+    <link rel="stylesheet" href="stylesheets/custom_2.css" />
     <link rel="stylesheet" href="stylesheets/style.css" />
     <link rel="stylesheet" href="stylesheets/ozero.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -104,7 +106,7 @@
                 </div>
                 <div class="item weather">
                     <div class="circle">
-                        <span class="help weather-1"></span>
+                        <span class="help weather-thunder-dry"></span>
                     </div>
                     <div class="info">+32°</div>
                 </div>
@@ -283,7 +285,7 @@
                         </div>
                         <div class="item weather">
                             <div class="circle">
-                                <span class="help weather-1"></span>
+                                <span class="help weather-thunder-dry"></span>
                             </div>
                             <div class="info">+32°</div>
                         </div>
@@ -542,6 +544,24 @@
                     </div>
                     <div class="baner">
                         <a href="#"><img src="img/baner-1.jpg" alt="img"/></a>
+                    </div>
+                    <div class="block-calendar">
+                        <div class="custom-calendar-wrap">
+                            <div id="custom-inner" class="custom-inner">
+                                <div class="custom-header clearfix">
+                                    <div class="month-img">
+                                        <img src="img/calendar/9.jpg" alt="img"/>
+                                    </div>
+                                    <nav>
+                                        <span id="custom-prev" class="custom-prev"><i class="fa fa-angle-left"></i></span>
+                                        <span id="custom-next" class="custom-next"><i class="fa fa-angle-right"></i></span>
+                                    </nav>
+                                    <h2 id="custom-month" class="custom-month"></h2>
+                                    <h3 id="custom-year" class="custom-year"></h3>
+                                </div>
+                                <div id="calendar" class="fc-calendar-container"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="block-news-list">
                         <div class="row">
@@ -1072,6 +1092,24 @@
                 </div>
             </div>
             <aside class="right-sidebar">
+                <div class="block-calendar">
+                    <div class="custom-calendar-wrap">
+                        <div id="custom-inner" class="custom-inner">
+                            <div class="custom-header clearfix">
+                                <div class="month-img">
+                                    <img src="img/calendar/9.jpg" alt="img"/>
+                                </div>
+                                <nav>
+                                    <span id="custom-prev" class="custom-prev"><i class="fa fa-angle-left"></i></span>
+                                    <span id="custom-next" class="custom-next"><i class="fa fa-angle-right"></i></span>
+                                </nav>
+                                <h2 id="custom-month" class="custom-month"></h2>
+                                <h3 id="custom-year" class="custom-year"></h3>
+                            </div>
+                            <div id="calendar" class="fc-calendar-container"></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="block-blogs">
                     <h2 class="block-title">Блоги по теме</h2>
                     <div class="blog-list">
@@ -1300,8 +1338,9 @@
     <script src="js/classie.js"></script>
     <script src="js/uisearch.js"></script>
     <script src="js/app.js"></script>
-    <script>
+    <script type="text/javascript" src="js/jquery.calendario.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script src="js/calendar-init.js"></script>
 
-    </script>
 </body>
 </html>

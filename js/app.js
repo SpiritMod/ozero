@@ -61,21 +61,25 @@ $(document).ready(function(){
         });
     })(jQuery);
 
-    //mobile slider blog in news-page
-    if (document.getElementById('blog-list-mobile')){
-        $("#blog-list-mobile").slick({
+    //slider other news
+    if (document.getElementById('other-news-slider')){
+        $("#other-news-slider").slick({
             slide: '.item',
-            arrows: false,
-            dots: true,
-            slidesToShow: 1,
+            arrows: true,
+            dots: false,
+            slidesToShow: 3,
             slidesToScroll: 1,
-            centerMode: true,
-            centerPadding: '20%',
             responsive: [
                 {
-                    breakpoint: 440,
+                    breakpoint: 960,
                     settings: {
-                        centerPadding: '10%',
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 1
                     }
                 }
             ]
@@ -83,10 +87,95 @@ $(document).ready(function(){
         });
     }
 
+    //slider recommended-articles
+    if (document.getElementById('other-news-slider')){
+        $(function(){
+
+            if (window.matchMedia("(min-width: 940px)").matches) {
+                /* the viewport is at least >940 pixels wide */
+                $('#recommended-articles').unslick();
+            } else {
+                /* the viewport is less than <940 pixels wide */
+                $("#recommended-articles").slick({
+                    slide: '.item',
+                    adaptiveHeight: true,
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: '20%',
+                    responsive: [
+                        {
+                            breakpoint: 440,
+                            settings: {
+                                centerPadding: '10%'
+                            }
+                        }
+                    ]
+
+                });
+            }
+
+
+        });
+    }
+
+    //mobile slider blog in news-page
+    if (document.getElementById('blog-list-mobile')){
+        $(function(){
+
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                /* the viewport is at least >940 pixels wide */
+                $('#blog-list-mobile').unslick();
+            } else {
+                /* the viewport is less than <940 pixels wide */
+                $("#blog-list-mobile").slick({
+                    slide: '.item',
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: '20%',
+                    responsive: [
+                        {
+                            breakpoint: 440,
+                            settings: {
+                                centerPadding: '10%'
+                            }
+                        }
+                    ]
+
+                });
+            }
+
+
+        });
+    }
+
 });
 
+
 $(window).load(function(){
-    var container1 = document.querySelector('.block-news-container-1');
+    //news masonry
+    if ( $('.block-news-container-1').length ) {
+        $('.block-news-container-1').masonry({
+            itemSelector: '.item'
+        });
+    }
+    if ( $('.block-news-container-2').length ) {
+        $('.block-news-container-2').masonry({
+            itemSelector: '.item'
+        });
+    }
+    if ( $('.block-news-container-3').length ) {
+        $('.block-news-container-3').masonry({
+            itemSelector: '.item'
+        });
+    }
+
+   /* var container1 = document.querySelector('.block-news-container-1');
     var container2 = document.querySelector('.block-news-container-2');
     var container3 = document.querySelector('.block-news-container-3');
 
@@ -98,6 +187,6 @@ $(window).load(function(){
     });
     var msnry3 = new Masonry( container3, {
         itemSelector: ".item"
-    });
+    });*/
 
 });

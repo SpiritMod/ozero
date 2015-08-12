@@ -47,6 +47,7 @@ var codropsEvents = {
 	'08-08-2015' : '<a href="http://tympanus.net/codrops/2012/08/08/circle-hover-effects-with-css-transitions/">Circle Hover Effects with CSS Transitions</a>',
 	'08-07-2015' : '<a href="http://tympanus.net/codrops/2012/08/07/mythemeshop-responsive-wordpress-themes-giveaway/">MyThemeShop Responsive WordPress Themes Giveaway</a>',
 	'08-04-2015' : '<a href="http://tympanus.net/codrops/2012/08/04/the-designers-web-handbook-giveaway/">The Designer&#8217;s Web Handbook Giveaway</a><a href="http://tympanus.net/codrops/2012/08/04/freebie-soft-ui-kit-psd/">Freebie: Soft UI Kit (PSD)</a>',
+	'08-11-2015' : '<a href="http://tympanus.net/codrops/2012/08/04/the-designers-web-handbook-giveaway/">The Designer&#8217;s Web Handbook Giveaway</a><a href="http://tympanus.net/codrops/2012/08/04/freebie-soft-ui-kit-psd/">Freebie: Soft UI Kit (PSD)</a><a class="all-news" href="#">Все новости</a>',
 	'08-02-2015' : '<a href="http://tympanus.net/codrops/2012/08/02/animated-responsive-image-grid/">Animated Responsive Image Grid</a>',
 	'08-01-2015' : '<a href="http://tympanus.net/codrops/2012/08/01/photo-booth-strips-with-lightbox/">Photo Booth Strips with Lightbox</a>',				
 	'07-27-2015' : '<a href="http://tympanus.net/codrops/2012/07/27/examples-of-creative-and-modern-effects-in-web-design/">Examples of Creative and Modern Effects in Web Design</a>',
