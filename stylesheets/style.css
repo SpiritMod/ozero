@@ -2535,16 +2535,6 @@ main .right-sidebar .block-newest-publications .item {
     margin-bottom: 0;
   }
 
-  /*.block-blogs {
-    display: block;
-    margin: 20px 0;
-    .blog-list {
-      padding: 20px 0 0 0;
-      .item {
-        padding: 0 10px;
-      }
-    }
-  }*/
   .block-delivery-shared .delivery-form {
     width: 100%;
   }

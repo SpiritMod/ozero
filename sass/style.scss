@@ -2095,6 +2095,12 @@ main {
   }
 }
 
+.block-comments {
+  .block-title {
+
+  }
+}
+
 .tabs-content > .content {
   padding: 0 0;
 }
@@ -2614,16 +2620,6 @@ main {
       }
     }
   }
-  /*.block-blogs {
-    display: block;
-    margin: 20px 0;
-    .blog-list {
-      padding: 20px 0 0 0;
-      .item {
-        padding: 0 10px;
-      }
-    }
-  }*/
   .block-delivery-shared {
     .delivery-form {
       width: 100%;
