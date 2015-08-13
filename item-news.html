@@ -350,7 +350,7 @@
                             </li>
                         </ul>
                         <div class="discussion">
-                            <a href="#">обсуждение <span>(15)</span></a>
+                            <a href="#block-comments" id="scroll-to-comment">обсуждение <span>(15)</span></a>
                         </div>
                     </div>
                     <div class="block-delivery-shared">
@@ -465,29 +465,224 @@
                             </div>
                         </div>
                     </div>
-                    <div class="block-comments">
+                    <div class="block-comments" id="block-comments">
                         <h2 class="block-title">Комментарии пользователей</h2>
-                        <div class="comment-row">
-                            <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
-                            <div class="user-name"><a href="#">Ирина</a></div>
-                            <div class="text-comment">
-                                <p>Два дивана что за диваны?</p>
+                        <div class="all-comments">
+                            <div class="comment-row no-sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <div class="box-reply">
+                                    <a class="last-reply-user" href="#">
+                                        <span class="user-img"><img src="img/user/avatar-2.jpg" alt="img"/></span>
+                                        <span class="user-name">Ульяна</span>
+                                        <span class="desc">ответил(-а)</span>
+                                        <span class="item-reply"> - 2 ответа</span>
+                                    </a>
+                                </div>
                             </div>
-                            <ul class="post-meta">
-                                <li class="posted-time">10 июля в 12:44</li>
-                                <li>
-                                    <a href="#" class="comment-link">#</a>
-                                </li>
-                                <li role="comment-rating" class="item-meta meta-rating comment-rating">
-                                    <a href="#" class="entry-rating-action plus">+</a>
-                                    <i class="icon-rating"></i>
-                                    <span class="count">0</span>
-                                    <a href="#" class="entry-rating-action minus">-</a>
-                                </li>
-                                <li class="item-meta meta-actions reply">
-                                    <a href="#" class="comment-it">Ответить</a>
-                                </li>
-                            </ul>
+                            <div class="comment-row sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                                <div class="comment-sublevel">
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Юля_88</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Ирина</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-row sublevel active">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <div class="comment-sublevel">
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Юля_88</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Ирина</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-row no-sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box-btn">
+                            <a class="all-comments" href="#">Все коментарии (76)</a>
+                        </div>
+                        <div class="block-form-comment">
+                            <h2 class="block-title">Оставить комментарий</h2>
+                            <form action="#">
+                                <textarea></textarea>
+                                <button type="submit">Комментировать</button>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -33,6 +33,7 @@ $(function() {
         } ),
         $month = $( '#custom-month' ).html( cal.getMonthName() ),
         $year = $( '#custom-year' ).html( cal.getYear() );
+        $('#custom-inner .month-img img').attr('src','img/calendar/'+ cal.getMonth() +'.jpg');
 
     $( '#custom-next' ).on( 'click', function() {
         cal.gotoNextMonth( updateMonthYear );

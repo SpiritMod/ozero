@@ -2096,8 +2096,437 @@ main {
 }
 
 .block-comments {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+  background: #f9f9f9;
   .block-title {
+    color: #2D0014;
+    font-family: "helvetica-light", sans-serif;
+    font-size: 24px;
+    line-height: 1;
+    margin: 0 0 0;
+    padding: 30px;
+    border-bottom: 2px solid #e5e5e5;
+  }
+  .box-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 30px;
+    .all-comments {
+      background: #e0ecf6;
+      margin: 0 0 0;
+      padding: 0 15px;
+      height: 40px;
+      line-height: 40px;
+      display: inline-block;
+      color: #fff;
+      font-family: "helvetica-roman", sans-serif;
+      font-size: 15px;
+      text-transform: uppercase;
+      @include border-radius(5px);
+      @include transition(all 0.4s ease 0s);
+      &:hover {
+        background: #014183;
+        color: #fff;
+      }
+    }
+  }
+  .comment-row {
+    border-top: 1px solid #e5e5e5;
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0 15px 80px;
+    position: relative;
+    &:last-child {
+      border-bottom: 1px solid #e5e5e5;
+    }
+    &:after {
+      content: "";
+      background: #f9f9f9;
+      display: block;
+      width: 6px;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      bottom: 0;
+    }
+    &.no-sublevel {
+      &:hover {
+        .post-meta {
+          li {
+            a {
+              &.comment-it {
+                display: block;
+              }
+            }
+            &.comment-rating {
+              .entry-rating-action {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.sublevel {
+      &:hover {
+        > .post-meta {
+          li {
+            a {
+              &.comment-it {
+                display: block;
+              }
+            }
+            &.comment-rating {
+              .entry-rating-action {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      &.active {
+        background: #eaecee;
+        &:after {
+          content: "";
+          background: #a9c2d7;
+        }
+      }
+    }
 
+    .user-avatar {
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 25px;
+      left: 30px;
+      a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 2px solid transparent;
+        padding: 2px;
+        overflow: hidden;
+        @include border-radius(50%);
+        @include transition(all 0.4s ease 0s);
+        &:hover {
+          border-color: #014183;
+        }
+        img {
+          @include border-radius(50%);
+        }
+      }
+    }
+    .user-name-and-reply {
+      display: inline-block;
+      width: 100%;
+      line-height: 1;
+      margin: 0 0 10px;
+      padding: 0 15px 0 0;
+      a {
+        display: inline-block;
+        color: #000;
+        font-family: "helvetica-bold", sans-serif;
+        font-size: 12px;
+        line-height: 1;
+        @include transition(all 0.4s ease 0s);
+        &:hover {
+          color: #014183;
+        }
+        &.parent-user {
+          padding: 0 0 0 30px;
+          position: relative;
+          color: #A7A7A7;
+          &:after {
+            content: "";
+            background: url('../icon/sprite.png') no-repeat -366px -18px;
+            width: 16px;
+            height: 11px;
+            display: block;
+            position: absolute;
+            left: 6px;
+            top: 0;
+          }
+          &:hover {
+            color: #014183;
+          }
+        }
+      }
+    }
+    .text-comment {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 0;
+      padding: 0 15px 0 0;
+      p {
+        color: #000;
+        font-family: "helvetica-light";
+        font-size: 15px;
+        line-height: 1.2;
+        margin: 0 0 5px;
+      }
+    }
+    .post-meta {
+      padding: 0 15px 0 0;
+      li {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        z-index: 1;
+        color: #898989;
+        font-size: 12px;
+        font-family: "helvetica-roman", sans-serif;
+        a {
+          color: #898989;
+          @include transition(all 0.4s ease 0s);
+          &:hover {
+            color: #014183;
+          }
+          &.comment-it {
+            display: none;
+            font-family: "helvetica-bold", sans-serif;
+          }
+        }
+        &.comment-rating {
+          margin: 0 10px;
+          position: relative;
+          .entry-rating-action {
+            color: #898989;
+            background: #fff;
+            font-family: "helvetica-bold", sans-serif;
+            font-size: 8px;
+            text-transform: uppercase;
+            line-height: 20px;
+            text-align: center;
+            display: none;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #898989;
+            @include border-radius(50%);
+            @include transition(all 0.4s ease 0s);
+            &:hover {
+              border: 1px solid #000;
+              color: #000;
+            }
+            &.plus {
+              left: 0;
+              top: -1px;
+              z-index: 10;
+            }
+            &.minus {
+              right: 0;
+              top: -1px;
+              z-index: 10;
+            }
+          }
+          .count {
+            color: #a9c2d7;
+            margin: 0 24px;
+            font-family: "helvetica-bold", sans-serif;
+            &.count-negative {
+              color: #ed4a48;
+            }
+            &.count-positive {
+              color: #3ea875;
+            }
+          }
+          .icon-rating {
+            background: url('../icon/sprite.png') no-repeat -188px -34px;
+            width: 8px;
+            height: 8px;
+            display: block;
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            margin-top: -5px;
+          }
+        }
+      }
+    }
+    .form-reply {
+      padding: 10px 130px 10px 30px;
+      position: relative;
+      .reply-user-avatar {
+        width: 22px;
+        height: 22px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 14px;
+        a {
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          vertical-align: top;
+          img {
+            vertical-align: top;
+          }
+        }
+      }
+      input[type="text"] {
+        height: 30px;
+        padding: 0 10px;
+        margin: 0 0;
+        border: 1px solid transparent;
+        color: #000;
+        font-family: "helvetica-roman", sans-serif;
+        font-size: 12px;
+        background: transparent;
+        @include box-shadow(0 0 0 #fff);
+        @include input-placeholder {
+          color: #898989;
+        }
+        &:focus {
+          background: #fff;
+          border-color: #014183;
+        }
+      }
+      button[type="submit"] {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: #D2404A;
+        height: 30px;
+        padding: 0 20px;
+        margin: 0 0;
+        line-height: 30px;
+        color: #FFF;
+        font-family: "helvetica-roman", sans-serif;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        @include border-radius(15px);
+        @include transition(all 0.4s ease 0s);
+        &:hover {
+          background: #c51f2a;
+        }
+      }
+
+    }
+    .box-reply {
+      display: inline-block;
+      padding: 0 15px 0 0;
+      .last-reply-user {
+        padding: 0 0 0 25px;
+        position: relative;
+        display: inline-block;
+        &:after {
+          content: "";
+          background: url('../icon/sprite.png') no-repeat -348px -18px;
+          width: 16px;
+          height: 11px;
+          position: absolute;
+          display: block;
+          left: 0;
+          top: 50%;
+          margin-top: -5px;
+        }
+        &:hover {
+          span {
+            //text-decoration: underline;
+          }
+        }
+        span {
+          display: inline-block;
+          color: #014183;
+          font-family: "helvetica-roman", sans-serif;
+          font-size: 12px;
+          line-height: 22px;
+          &.user-img {
+            width: 22px;
+            img {
+            }
+          }
+        }
+      }
+    }
+    .comment-sublevel {
+      .comment-row {
+        padding: 15px 0 15px 60px;
+        &:last-child {
+          border-bottom: none;
+        }
+        &:after {
+          display: none;
+        }
+        &:hover {
+          > .post-meta {
+            li {
+              a {
+                &.comment-it {
+                  display: block;
+                }
+              }
+              &.comment-rating {
+                .entry-rating-action {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+        .post-meta {
+          li {
+            a {
+              &.comment-it {
+                display: none!important;
+              }
+            }
+          }
+        }
+        .user-avatar {
+          left: 6px;
+        }
+      }
+    }
+  }
+
+  .block-form-comment {
+    .block-title {
+      padding: 0 30px 30px;
+      border-bottom: none;
+    }
+    form {
+      padding: 0 30px 30px;
+      text-align: right;
+      textarea {
+        color: #000;
+        font-family: "helvetica-roman", sans-serif;
+        font-size: 14px;
+        padding: 10px;
+        margin: 0 0 20px;
+        resize: none;
+        text-align: left;
+        height: 100px;
+        border: 1px solid #e6e6e6;
+        @include box-shadow(0 0 0#fff);
+        @include border-radius(4px);
+        &:focus {
+          border-color: #014183;
+        }
+      }
+      button[type="submit"] {
+        display: inline-block;
+        background: #D2404A;
+        height: 48px;
+        padding: 0 30px;
+        line-height: 48px;
+        color: #FFF;
+        font-family: "helvetica-bold", sans-serif;
+        font-size: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        @include border-radius(24px);
+        @include transition(all 0.4s ease 0s);
+        &:hover {
+          background: #c51f2a;
+        }
+      }
+    }
   }
 }
 
@@ -2699,6 +3128,55 @@ main {
           padding: 0 10px;
         }
       }
+    }
+  }
+  .block-comments {
+    .block-title {
+      font-size: 20px;
+    }
+    .comment-row {
+      padding: 15px 0 15px 52px;
+      .user-avatar {
+        left: 8px;
+      }
+      .form-reply {
+        padding: 10px 15px 10px 30px;
+        position: relative;
+        input[type="text"] {
+          border: 1px solid #898989;
+          &:focus {
+            background: #fff;
+            border-color: #014183;
+          }
+        }
+        button[type="submit"] {
+          position: relative;
+          right: inherit;
+          top: inherit;
+          float: right;
+          margin: 10px 0 10px 0;
+        }
+      }
+      .comment-sublevel {
+        .comment-row {
+          padding: 15px 0 15px 52px;
+          .user-avatar {
+            left: 0px;
+          }
+        }
+      }
+    }
+  }
+  .block-hash-tags {
+    .list {
+      padding: 0 0;
+    }
+    .discussion {
+      display: block;
+      margin: 20px auto 0;
+      position: relative;
+      right: inherit;
+      top: inherit;
     }
   }
 }

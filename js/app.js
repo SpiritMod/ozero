@@ -154,6 +154,16 @@ $(document).ready(function(){
         });
     }
 
+    $('#scroll-to-comment').click(function() {
+        var id = $(this).attr("href");
+        $("html, body").stop().animate({
+            scrollTop: $(''+id+'').offset().top - 66 + "px"
+        }, {
+            duration: 1000
+        });
+        return false;
+    });
+
 });
 
 
