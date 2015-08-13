@@ -1950,7 +1950,8 @@ main .right-sidebar .block-newest-publications .item {
   font-family: "helvetica-light", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
-  margin: 20px 0;
+  margin: 20px 0 30px;
+  padding: 0 30px;
 }
 .block-other-news .other-news-slider {
   background: #fff;
@@ -2072,7 +2073,8 @@ main .right-sidebar .block-newest-publications .item {
   font-family: "helvetica-light", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
-  margin: 20px 0;
+  margin: 20px 0 30px;
+  padding: 0 30px;
 }
 .block-recommended-articles .recommended-articles {
   overflow: hidden;
@@ -2537,6 +2539,314 @@ main .right-sidebar .block-newest-publications .item {
   background: #c51f2a;
 }
 
+.page-pulse .page-info {
+  padding: 25px 30px;
+  background: #fff;
+  position: relative;
+}
+.page-pulse .page-info .page-title {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.node-pulse {
+  display: inline-block;
+  width: 100%;
+  padding: 0 30px 40px;
+  margin: 0 0 0;
+  background: #fff;
+  border-bottom: 2px solid #f2f2f2;
+}
+.node-pulse .body {
+  margin-bottom: 20px;
+}
+.node-pulse .body p {
+  color: #000;
+  font-family: "helvetica-light", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+.node-pulse .body p:last-child {
+  margin-bottom: 0;
+}
+.node-pulse .body img {
+  margin-bottom: 20px;
+}
+.node-pulse .body img.right {
+  margin-left: 20px;
+}
+.node-pulse .body img.left {
+  margin-right: 20px;
+}
+.node-pulse .box-author-date-category {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 0;
+}
+.node-pulse .box-author-date-category .fields {
+  font-family: "helvetica-bold", sans-serif;
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.node-pulse .box-author-date-category .fields .author {
+  margin-right: 5px;
+}
+.node-pulse .box-author-date-category .fields .statistic {
+  color: #898989;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.node-pulse .box-author-date-category .fields .statistic i {
+  margin-right: 5px;
+}
+.node-pulse .box-author-date-category .fields .statistic .views {
+  margin-right: 5px;
+}
+
+.block-all-posts {
+  display: inline-block;
+  width: 100%;
+  padding: 30px 30px;
+  background: #fff;
+  margin-bottom: 35px;
+}
+.block-all-posts .post {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 35px;
+  border: 1px solid #e7ebef;
+}
+.block-all-posts .post:last-child {
+  margin-bottom: 0;
+}
+.block-all-posts .post:hover .post-header .box-shared .buttons-shared {
+  color: #014183;
+}
+.block-all-posts .post .post-header {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #e7ebef;
+  padding: 20px 40px 20px 20px;
+}
+.block-all-posts .post .post-header .user-name {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 50px;
+}
+.block-all-posts .post .post-header .user-name:hover .user-avatar {
+  border-color: #014183;
+}
+.block-all-posts .post .post-header .user-name:hover .name {
+  color: #014183;
+}
+.block-all-posts .post .post-header .user-name .user-avatar {
+  display: block;
+  position: absolute;
+  left: -52px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+  padding: 2px;
+  overflow: hidden;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.block-all-posts .post .post-header .user-name .user-avatar img {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.block-all-posts .post .post-header .user-name .name {
+  font-family: "helvetica-bold", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 12px 0;
+  display: inline-block;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.block-all-posts .post .post-header .time-publication {
+  display: inline-block;
+  font-family: "HelveticaNeueCyr";
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #737373;
+}
+.block-all-posts .post .post-header .box-shared {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+  right: 20px;
+}
+.block-all-posts .post .post-header .box-shared .buttons-shared {
+  width: 20px;
+  height: 20px;
+  color: #b7b7b7;
+  font-size: 18px;
+}
+.block-all-posts .post .post-header .box-shared .f-dropdown {
+  width: 102px !important;
+  right: -7px !important;
+  left: inherit !important;
+  margin-top: 5px;
+  outline: none !important;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.block-all-posts .post .post-header .box-shared .f-dropdown li {
+  border-bottom: 1px solid #cccccc;
+  background: transparent !important;
+}
+.block-all-posts .post .post-header .box-shared .f-dropdown li:last-child {
+  border-bottom: none;
+}
+.block-all-posts .post .post-header .box-shared .f-dropdown li a {
+  color: #b7b7b7;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  background: transparent;
+}
+.block-all-posts .post .post-header .box-shared .f-dropdown li a:hover {
+  background: transparent;
+  color: #4a4a4a;
+}
+.block-all-posts .post .post-body {
+  padding: 25px 35px;
+  display: inline-block;
+  width: 100%;
+}
+.block-all-posts .post .post-body p {
+  color: #000;
+  font-family: "helvetica-light", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.block-all-posts .post .post-body p:last-child {
+  margin-bottom: 0;
+}
+.block-all-posts .post .post-body img {
+  width: 100%;
+}
+.block-all-posts .post .post-body iframe {
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+.block-all-posts .post .post-vk > div {
+  width: 100% !important;
+}
+.block-all-posts .post .attach-article {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 0;
+}
+.block-all-posts .post .attach-article .article {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #e7ebef;
+  padding: 15px;
+  background: #fafafa;
+}
+.block-all-posts .post .attach-article .article:hover .body .title {
+  color: #014183;
+}
+.block-all-posts .post .attach-article .article .img {
+  display: block;
+  float: left;
+  width: 20%;
+}
+.block-all-posts .post .attach-article .article .body {
+  display: block;
+  float: right;
+  width: 80%;
+  padding-left: 20px;
+}
+.block-all-posts .post .attach-article .article .body .title {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #000;
+  font-family: "helvetica-medium", sans-serif;
+  font-size: 16px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.block-all-posts .post .attach-article .article .body .text {
+  display: inline-block;
+  width: 100%;
+  color: #000;
+  font-family: "helvetica-light", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+.block-all-posts .post .attach-article .article .body .link {
+  display: inline-block;
+  color: #000;
+  font-family: "helvetica-bold", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.blokc-tags {
+  background: #fff;
+  display: inline-block;
+  width: 100%;
+  padding: 25px 15px 20px 15px;
+  margin-bottom: 30px;
+}
+.blokc-tags .block-title {
+  color: #014183;
+  font-family: "helvetica-light", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  text-decoration: underline;
+  padding: 0 0;
+  margin: 0 0 20px;
+  text-align: center;
+}
+.blokc-tags .list {
+  display: inline-block;
+  width: 100%;
+  line-height: 1;
+  text-align: center;
+  padding: 0 0;
+}
+.blokc-tags .list li {
+  line-height: 1;
+  display: inline-block;
+  margin: 0 10px 4px 0;
+}
+.blokc-tags .list li a {
+  color: #014183;
+  font-family: "helvetica-light", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.blokc-tags .list li a:hover {
+  text-decoration: underline;
+}
+
 .tabs-content > .content {
   padding: 0 0;
 }
@@ -2938,10 +3248,10 @@ main .right-sidebar .block-newest-publications .item {
     min-height: inherit;
   }
 
-  main.page-item-news .main-content .content {
+  main.page-item-news .main-content .content, main.page-pulse .main-content .content {
     padding: 0 0;
   }
-  main.page-item-news .right-sidebar {
+  main.page-item-news .right-sidebar, main.page-pulse .right-sidebar {
     background: transparent;
     float: left;
     margin-left: 0;
@@ -3077,6 +3387,9 @@ main .right-sidebar .block-newest-publications .item {
   .block-comments .comment-row .comment-sublevel .comment-row .user-avatar {
     left: 0px;
   }
+  .block-comments .block-form-comment form button[type="submit"] {
+    font-size: 12px;
+  }
 
   .block-hash-tags .list {
     padding: 0 0;
@@ -3087,6 +3400,46 @@ main .right-sidebar .block-newest-publications .item {
     position: relative;
     right: inherit;
     top: inherit;
+  }
+
+  .blokc-tags {
+    border-left: 20px solid #F2F2F2;
+    border-right: 20px solid #F2F2F2;
+    margin: 20px 0;
+  }
+
+  .page-pulse .block-calendar {
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 25px;
+    margin: 0 0 20px;
+    border-left: 20px solid #f2f2f2;
+    border-right: 20px solid #f2f2f2;
+  }
+  .page-pulse .blokc-tags {
+    border-left: 20px solid #F2F2F2;
+    border-right: 20px solid #F2F2F2;
+    margin: 0 0 20px;
+    display: block;
+    float: left;
+    width: 50%;
+  }
+
+  .block-all-posts {
+    padding: 20px;
+  }
+  .block-all-posts .post .post-header .user-name .name {
+    margin: 0 0 0;
+  }
+  .block-all-posts .post .post-header .time-publication {
+    margin: 0 0 0 50px;
+    position: relative;
+    top: -8px;
+    width: 100%;
+  }
+  .block-all-posts .post .post-body {
+    padding: 20px;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 767px) {
@@ -3300,6 +3653,14 @@ main .right-sidebar .block-newest-publications .item {
   .page-item-news .block-calendar {
     width: 100%;
     padding: 25px 25px;
+  }
+
+  .page-pulse .block-calendar {
+    width: 100%;
+    padding: 25px 25px;
+  }
+  .page-pulse .blokc-tags {
+    width: 100%;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 360px) {
