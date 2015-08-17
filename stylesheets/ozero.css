@@ -97,7 +97,7 @@
   }
 }
 [class*="w-icons"] {
-  background-image: url("../icons/sprite.png");
+  background-image: url("../icon/sprite.png");
   background-repeat: no-repeat;
   background-color: transparent;
   background-attachment: scroll;

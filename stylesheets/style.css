@@ -255,57 +255,57 @@ a {
   display: block;
 }
 .widget.white .item.weather .weather-sun-cloud {
-  background: url("../icons/sprite.png") no-repeat -216px 0;
+  background: url("../icon/sprite.png") no-repeat -216px 0;
 }
 .widget.white .item.weather .weather-bar {
-  background: url("../icons/sprite.png") no-repeat -234px 0;
+  background: url("../icon/sprite.png") no-repeat -234px 0;
 }
 .widget.white .item.weather .weather-wind {
-  background: url("../icons/sprite.png") no-repeat -252px 0;
+  background: url("../icon/sprite.png") no-repeat -252px 0;
 }
 .widget.white .item.weather .weather-clear {
-  background: url("../icons/sprite.png") no-repeat -271px 0;
+  background: url("../icon/sprite.png") no-repeat -271px 0;
 }
 .widget.white .item.weather .weather-thunder {
-  background: url("../icons/sprite.png") no-repeat -289px 0;
+  background: url("../icon/sprite.png") no-repeat -289px 0;
 }
 .widget.white .item.weather .weather-snow {
-  background: url("../icons/sprite.png") no-repeat -309px 0;
+  background: url("../icon/sprite.png") no-repeat -309px 0;
 }
 .widget.white .item.weather .weather-rain-snow {
-  background: url("../icons/sprite.png") no-repeat -329px 0;
+  background: url("../icon/sprite.png") no-repeat -329px 0;
 }
 .widget.white .item.weather .weather-cloud {
-  background: url("../icons/sprite.png") no-repeat -348px 0;
+  background: url("../icon/sprite.png") no-repeat -348px 0;
 }
 .widget.white .item.weather .weather-clear-night {
-  background: url("../icons/sprite.png") no-repeat -367px 0;
+  background: url("../icon/sprite.png") no-repeat -367px 0;
 }
 .widget.white .item.weather .weather-thunder-dry {
-  background: url("../icons/sprite.png") no-repeat -382px 0;
+  background: url("../icon/sprite.png") no-repeat -382px 0;
 }
 .widget.white .item.currency .circle .dollar {
-  background: url("../icons/sprite.png") no-repeat -402px 0;
+  background: url("../icon/sprite.png") no-repeat -402px 0;
 }
 .widget.white .item.currency .circle .euro {
-  background: url("../icons/sprite.png") no-repeat -412px 0;
+  background: url("../icon/sprite.png") no-repeat -412px 0;
 }
 .widget.white .item.currency .circle .jpy {
-  background: url("../icons/sprite.png") no-repeat -422px 0;
+  background: url("../icon/sprite.png") no-repeat -422px 0;
   width: 9px;
   height: 10px;
 }
 .widget.white .item.fuel .circle .fuel-92 {
-  background: url("../icons/sprite.png") no-repeat 0 -18px;
+  background: url("../icon/sprite.png") no-repeat 0 -18px;
 }
 .widget.white .item.fuel .circle .fuel-95 {
-  background: url("../icons/sprite.png") no-repeat -20px -18px;
+  background: url("../icon/sprite.png") no-repeat -20px -18px;
 }
 .widget.white .item.fuel .circle .fuel-98 {
-  background: url("../icons/sprite.png") no-repeat -40px -18px;
+  background: url("../icon/sprite.png") no-repeat -40px -18px;
 }
 .widget.white .item.fuel .circle .fuel-dp {
-  background: url("../icons/sprite.png") no-repeat -60px -18px;
+  background: url("../icon/sprite.png") no-repeat -60px -18px;
 }
 .widget.white .item .circle {
   background: #fff;
@@ -327,7 +327,7 @@ a {
   font-size: 16px;
 }
 .widget .item.btn-close .circle .close-ico {
-  background: url("../icons/sprite.png") no-repeat -187px -18px;
+  background: url("../icon/sprite.png") no-repeat -187px -18px;
   width: 10px;
   height: 10px;
 }
@@ -335,7 +335,7 @@ a {
   background: transparent;
 }
 .widget .item.radio .circle .radio-ico {
-  background: url("../icons/sprite.png") no-repeat -159px -18px;
+  background: url("../icon/sprite.png") no-repeat -159px -18px;
   width: 27px;
   height: 29px;
 }
@@ -343,52 +343,52 @@ a {
   color: #E31E24;
 }
 .widget .item.weather .weather-sun-cloud {
-  background: url("../icons/sprite.png") no-repeat 0 0;
+  background: url("../icon/sprite.png") no-repeat 0 0;
   width: 17px;
   height: 13px;
 }
 .widget .item.weather .weather-bar {
-  background: url("../icons/sprite.png") no-repeat -18px 0;
+  background: url("../icon/sprite.png") no-repeat -18px 0;
   width: 16px;
   height: 15px;
 }
 .widget .item.weather .weather-wind {
-  background: url("../icons/sprite.png") no-repeat -36px 0;
+  background: url("../icon/sprite.png") no-repeat -36px 0;
   width: 18px;
   height: 12px;
 }
 .widget .item.weather .weather-clear {
-  background: url("../icons/sprite.png") no-repeat -55px 0;
+  background: url("../icon/sprite.png") no-repeat -55px 0;
   width: 16px;
   height: 16px;
 }
 .widget .item.weather .weather-thunder {
-  background: url("../icons/sprite.png") no-repeat -73px 0;
+  background: url("../icon/sprite.png") no-repeat -73px 0;
   width: 18px;
   height: 15px;
 }
 .widget .item.weather .weather-snow {
-  background: url("../icons/sprite.png") no-repeat -93px 0;
+  background: url("../icon/sprite.png") no-repeat -93px 0;
   width: 18px;
   height: 13px;
 }
 .widget .item.weather .weather-rain-snow {
-  background: url("../icons/sprite.png") no-repeat -113px 0;
+  background: url("../icon/sprite.png") no-repeat -113px 0;
   width: 18px;
   height: 14px;
 }
 .widget .item.weather .weather-cloud {
-  background: url("../icons/sprite.png") no-repeat -132px 0;
+  background: url("../icon/sprite.png") no-repeat -132px 0;
   width: 18px;
   height: 12px;
 }
 .widget .item.weather .weather-clear-night {
-  background: url("../icons/sprite.png") no-repeat -151px 0;
+  background: url("../icon/sprite.png") no-repeat -151px 0;
   width: 13px;
   height: 13px;
 }
 .widget .item.weather .weather-thunder-dry {
-  background: url("../icons/sprite.png") no-repeat -166px 0;
+  background: url("../icon/sprite.png") no-repeat -166px 0;
   width: 18px;
   height: 15px;
 }
@@ -419,37 +419,37 @@ a {
   text-align: center;
 }
 .widget .item.currency .circle .dollar {
-  background: url("../icons/sprite.png") no-repeat -186px 0;
+  background: url("../icon/sprite.png") no-repeat -186px 0;
   width: 8px;
   height: 12px;
 }
 .widget .item.currency .circle .euro {
-  background: url("../icons/sprite.png") no-repeat -196px 0;
+  background: url("../icon/sprite.png") no-repeat -196px 0;
   width: 8px;
   height: 11px;
 }
 .widget .item.currency .circle .jpy {
-  background: url("../icons/sprite.png") no-repeat -206px 0;
+  background: url("../icon/sprite.png") no-repeat -206px 0;
   width: 8px;
   height: 11px;
 }
 .widget .item.fuel .circle .fuel-92 {
-  background: url("../icons/sprite.png") no-repeat 0 -40px;
+  background: url("../icon/sprite.png") no-repeat 0 -40px;
   width: 18px;
   height: 20px;
 }
 .widget .item.fuel .circle .fuel-95 {
-  background: url("../icons/sprite.png") no-repeat -20px -40px;
+  background: url("../icon/sprite.png") no-repeat -20px -40px;
   width: 18px;
   height: 20px;
 }
 .widget .item.fuel .circle .fuel-98 {
-  background: url("../icons/sprite.png") no-repeat -40px -40px;
+  background: url("../icon/sprite.png") no-repeat -40px -40px;
   width: 18px;
   height: 20px;
 }
 .widget .item.fuel .circle .fuel-dp {
-  background: url("../icons/sprite.png") no-repeat -60px -40px;
+  background: url("../icon/sprite.png") no-repeat -60px -40px;
   width: 18px;
   height: 20px;
 }
@@ -2487,15 +2487,16 @@ main .right-sidebar .block-newest-publications .item {
 .block-comments .comment-row .comment-sublevel .comment-row .user-avatar {
   left: 6px;
 }
-.block-comments .block-form-comment .block-title {
+
+.block-form-comment .block-title {
   padding: 0 30px 30px;
   border-bottom: none;
 }
-.block-comments .block-form-comment form {
+.block-form-comment form {
   padding: 0 30px 30px;
   text-align: right;
 }
-.block-comments .block-form-comment form textarea {
+.block-form-comment form textarea {
   color: #000;
   font-family: "helvetica-roman", sans-serif;
   font-size: 14px;
@@ -2512,10 +2513,10 @@ main .right-sidebar .block-newest-publications .item {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-.block-comments .block-form-comment form textarea:focus {
+.block-form-comment form textarea:focus {
   border-color: #014183;
 }
-.block-comments .block-form-comment form button[type="submit"] {
+.block-form-comment form button[type="submit"] {
   display: inline-block;
   background: #D2404A;
   height: 48px;
@@ -2535,7 +2536,7 @@ main .right-sidebar .block-newest-publications .item {
   -webkit-transition-delay: 0s;
   transition: all 0.4s ease 0s;
 }
-.block-comments .block-form-comment form button[type="submit"]:hover {
+.block-form-comment form button[type="submit"]:hover {
   background: #c51f2a;
 }
 
@@ -2806,6 +2807,122 @@ main .right-sidebar .block-newest-publications .item {
   font-size: 11px;
   text-transform: uppercase;
 }
+.block-all-posts .post .post-footer {
+  background: #fff;
+  display: inline-block;
+  width: 100%;
+}
+.block-all-posts .post .post-footer .post-tags {
+  padding: 0 35px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.block-all-posts .post .post-footer .post-tags .list {
+  display: inline-block;
+  width: 100%;
+  line-height: 1;
+  text-align: left;
+  padding: 0 0;
+}
+.block-all-posts .post .post-footer .post-tags .list li {
+  line-height: 1;
+  display: inline-block;
+  margin: 0 10px 4px 0;
+}
+.block-all-posts .post .post-footer .post-tags .list li a {
+  color: #014183;
+  font-family: "helvetica-light", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.block-all-posts .post .post-footer .post-tags .list li a:hover {
+  text-decoration: underline;
+}
+.block-all-posts .post .post-footer .controls-comments-post {
+  padding: 15px 35px 25px;
+}
+.block-all-posts .post .post-footer .controls-comments-post .statistic {
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 12px;
+  color: #8F8F8F;
+  line-height: 28px;
+}
+.block-all-posts .post .post-footer .controls-comments-post .statistic .field {
+  margin-right: 10px;
+}
+.block-all-posts .post .post-footer .controls-comments-post .btn-show-comments,
+.block-all-posts .post .post-footer .controls-comments-post .btn-hide-comments {
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 12px;
+  color: #014183;
+  text-decoration: underline;
+}
+.block-all-posts .post .post-footer .controls-comments-post .btn-show-comments:hover,
+.block-all-posts .post .post-footer .controls-comments-post .btn-hide-comments:hover {
+  text-decoration: none;
+}
+.block-all-posts .post .post-footer .controls-comments-post .show-form-comment {
+  display: block;
+  float: right;
+  padding: 0 15px;
+  color: #FFF;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 12px;
+  line-height: 28px;
+  height: 28px;
+  background: #014183;
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  border-radius: 14px;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.block-all-posts .post .post-footer .controls-comments-post .show-form-comment:hover {
+  opacity: 0.7;
+}
+.block-all-posts .post .post-footer .block-form-comment .block-title {
+  padding: 0 30px 30px;
+  border-bottom: none;
+}
+.block-all-posts .post .post-footer .block-form-comment form {
+  padding: 0 30px 30px;
+  text-align: right;
+}
+.block-all-posts .post .post-footer .block-form-comment form textarea {
+  color: #000;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  margin: 0 0 20px;
+  resize: none;
+  text-align: left;
+  height: 100px;
+  border: 1px solid #e6e6e6;
+  -moz-box-shadow: 0 0 0 #fff;
+  -webkit-box-shadow: 0 0 0 #fff;
+  box-shadow: 0 0 0 #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.block-all-posts .post .post-footer .block-form-comment form textarea:focus {
+  border-color: #014183;
+}
+.block-all-posts .post .post-footer .block-form-comment form button[type="submit"] {
+  height: 28px;
+  width: 160px;
+  line-height: 28px;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 12px;
+}
+.block-all-posts .post .post-footer .block-form-comment form button[type="submit"]:hover {
+  background: #c51f2a;
+}
 
 .blokc-tags {
   background: #fff;
@@ -2845,6 +2962,113 @@ main .right-sidebar .block-newest-publications .item {
 }
 .blokc-tags .list li a:hover {
   text-decoration: underline;
+}
+
+form .NFI-wrapper {
+  display: block !important;
+  width: 100%;
+  position: relative;
+}
+form .NFI-wrapper .NFI-button {
+  display: block;
+  position: absolute !important;
+  padding: 0 10px;
+  left: 1px;
+  top: 1px;
+  height: 32px;
+  line-height: 34px;
+  text-align: center;
+  background: #014183;
+  color: #fff;
+  cursor: pointer;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+form .NFI-wrapper .NFI-button:hover {
+  background: #b4cedf;
+}
+form .NFI-wrapper .NFI-filename {
+  width: 100%;
+  height: 34px;
+  color: #6d6d6d;
+  padding: 0px 5px 0 75px !important;
+  background: transparent;
+  border: 1px solid #014183;
+  -moz-box-shadow: 0 0 0 #fff;
+  -webkit-box-shadow: 0 0 0 #fff;
+  box-shadow: 0 0 0 #fff;
+}
+
+.block-submit-news {
+  background: #fff;
+  display: inline-block;
+  width: 100%;
+  padding: 20px 20px;
+  margin-bottom: 30px;
+}
+.block-submit-news .block-title {
+  text-align: center;
+  line-height: 1.2;
+  padding: 0 0;
+  margin: 0 0 20px;
+}
+.block-submit-news form .item {
+  margin-bottom: 15px;
+}
+.block-submit-news form .item:last-child {
+  margin-bottom: 0;
+  text-align: center;
+}
+.block-submit-news form input[type="text"] {
+  width: 100%;
+  height: 34px;
+  color: #000;
+  font-size: 13px;
+  padding: 0px 10px;
+  background: transparent;
+  border: 1px solid #014183;
+  -moz-box-shadow: 0 0 0 #fff;
+  -webkit-box-shadow: 0 0 0 #fff;
+  box-shadow: 0 0 0 #fff;
+}
+.block-submit-news form textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  color: #000;
+  font-size: 13px;
+  padding: 10px 10px;
+  background: transparent;
+  border: 1px solid #014183;
+  -moz-box-shadow: 0 0 0 #fff;
+  -webkit-box-shadow: 0 0 0 #fff;
+  box-shadow: 0 0 0 #fff;
+}
+.block-submit-news form button[type="submit"] {
+  display: inline-block;
+  background: #D2404A;
+  height: 38px;
+  padding: 0 30px;
+  line-height: 38px;
+  color: #FFF;
+  font-family: "helvetica-bold", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  -moz-border-radius: 24px;
+  -webkit-border-radius: 24px;
+  border-radius: 24px;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.block-submit-news form button[type="submit"]:hover {
+  background: #c51f2a;
 }
 
 .tabs-content > .content {
@@ -3441,6 +3665,16 @@ main .right-sidebar .block-newest-publications .item {
   .block-all-posts .post .post-body {
     padding: 20px;
   }
+
+  .block-submit-news {
+    background: #fff;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+    border-left: 20px solid #F2F2F2;
+    border-right: 20px solid #F2F2F2;
+  }
 }
 @media only screen and (min-width: 300px) and (max-width: 767px) {
   body {
@@ -3491,7 +3725,7 @@ main .right-sidebar .block-newest-publications .item {
     right: 0;
     top: 0;
     bottom: 0;
-    background: url("../icons/shadow-block-pulse.png") no-repeat 0 0 transparent;
+    background: url("../icon/shadow-block-pulse.png") no-repeat 0 0 transparent;
     /*background: rgba(255,255,255,0);
     background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(1,66,131,1) 62%, rgba(1,66,131,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(62%, rgba(1,66,131,1)), color-stop(100%, rgba(1,66,131,1)));

@@ -164,6 +164,36 @@ $(document).ready(function(){
         return false;
     });
 
+
+
+    if ( $('input[type=file]').length ) {
+        $("input[type=file].foto").nicefileinput({
+            label : 'Фото...' // Spanish label
+        });
+    }
+
+    $('.post .controls-comments-post a.show-form-comment').click(function(){
+       $(this).parent().parent().find('.block-form-comment').slideToggle('slow');
+       $(this).hide('show');
+       return false;
+    });
+
+    $('.post .controls-comments-post a.btn-show-comments').click(function(){
+       $(this).parent().parent().find('.block-comments').slideToggle('slow');
+       $(this).parent().find('.btn-hide-comments').show('slow');
+       $(this).hide('');
+       return false;
+    });
+
+    $('.post .controls-comments-post a.btn-hide-comments').click(function(){
+        $(this).parent().parent().find('.block-comments').slideToggle('slow');
+        $(this).parent().find('.btn-show-comments').show('slow');
+        $(this).hide('');
+        return false;
+    });
+
+
+
 });
 
 
