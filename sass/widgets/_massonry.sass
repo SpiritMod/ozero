@@ -236,3 +236,145 @@
     color: #ffffff
   .black
     color: #000000
+
+.s-masonry
+  margin: 0 auto
+  .m-item,
+  .grid-sizer
+    width:  25%
+    font-size: 0
+  .m-item
+    &:hover
+      img
+        @include transform(scale(1.1))
+    img
+      @include transition(all 2s linear 0s)
+    &.white:hover
+      .caption
+        .title
+          text-decoration: underline
+    &.black:hover
+      .caption
+        .title
+          color: #014183
+          text-decoration: underline
+
+      z-index: 91
+  .m-item
+    overflow: hidden
+    position: relative
+    z-index: 90
+    &.m-large
+      width: 50%
+      .caption
+        padding: 25px 39px 41px 39px
+        .title
+          font-size: 24px
+          margin-bottom: 16px
+    img
+      width: 100%
+      display: block
+    .statistic
+      position: absolute
+      top: 26px
+      left: 45px
+      color: inherit
+      font-size: 11px
+      .fa
+        font-size: 14px
+        margin-right: 6px
+    .caption
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      line-height: 1.2
+      text-align: left
+      @extend %light
+      padding: 15px 21px 29px 31px
+      display: block
+      .title
+        display: block
+        color: inherit
+        font-size: 18px
+        text-decoration: none
+      .text
+        display: block
+        color: inherit
+        font-size: 14px
+        margin: 0
+  .white
+    color: #ffffff
+  .black
+    color: #000000
+
+.t-masonry
+  margin: 0 auto
+  .m-item,
+  .grid-sizer
+    width:  25%
+    font-size: 0
+  .m-item
+    &:hover
+      img
+        @include transform(scale(1.1))
+    img
+      @include transition(all 2s linear 0s)
+    &.white:hover
+      .caption
+        .title
+          text-decoration: underline
+    &.black:hover
+      .caption
+        .title
+          color: #014183
+          text-decoration: underline
+
+      z-index: 91
+  .m-item
+    overflow: hidden
+    position: relative
+    z-index: 90
+    &.m-large
+      width: 50%
+      .caption
+        padding: 25px 39px 41px 39px
+        .title
+          font-size: 24px
+          margin-bottom: 16px
+    img
+      width: 100%
+      display: block
+    .statistic
+      position: absolute
+      top: 26px
+      left: 45px
+      color: inherit
+      font-size: 11px
+      .fa
+        font-size: 14px
+        margin-right: 6px
+    .caption
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      line-height: 1.2
+      text-align: left
+      @extend %light
+      padding: 15px 21px 29px 31px
+      display: block
+      .title
+        display: block
+        color: inherit
+        font-size: 18px
+        text-decoration: none
+      .text
+        display: block
+        color: inherit
+        font-size: 14px
+        margin: 0
+  .white
+    color: #ffffff
+  .black
+    color: #000000

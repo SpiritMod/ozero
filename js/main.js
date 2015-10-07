@@ -149,6 +149,8 @@ $(document).ready(function(){
 $(window).load(function(){
     var container1 = document.querySelector('.masonry');
     var container2 = document.querySelector('.w-masonry');
+    var container3 = document.querySelector('.s-masonry');
+    var container4 = document.querySelector('.t-masonry');
 
     var msnry = new Masonry( container1, {
         columnWidth: ".grid-sizer",
@@ -156,6 +158,16 @@ $(window).load(function(){
     });
 
     var w_msnry = new Masonry( container2, {
+        columnWidth: ".grid-sizer",
+        itemSelector: ".m-item"
+    });
+
+    var s_msnry = new Masonry( container2, {
+        columnWidth: ".grid-sizer",
+        itemSelector: ".m-item"
+    });
+
+    var t_msnry = new Masonry( container2, {
         columnWidth: ".grid-sizer",
         itemSelector: ".m-item"
     });

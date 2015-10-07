@@ -1,0 +1,1008 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>OZERO</title>
+
+    <!--[if gte IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="stylesheets/calendar.css" />
+    <link rel="stylesheet" href="stylesheets/custom_2.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="js/sliderPro/css/slider-pro.min.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="stylesheets/ozero.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<div class="scroll-bar" id="scroll-bar">
+    <div class="topbar-scroll">
+        <div class="row">
+            <div class="box-logo">
+                <a id="show-widget" class="logo" href="/"></a>
+            </div>
+            <nav role="navigation" class="box-menu">
+                <ul class="main-nav">
+                    <li>
+                        <a href="#">Новости</a>
+                    </li>
+                    <li>
+                        <a href="#">Афиша</a>
+                    </li>
+                    <li>
+                        <a href="#">Дневники</a>
+                    </li>
+                </ul>
+                <ul class="nav-categories">
+                    <li>
+                        <a href="#">Карьера</a>
+                    </li>
+                    <li>
+                        <a href="#">Бизнес</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="box-btn-menu">
+                <!--<a id="drop-menu-scroll" class="drop-menu-scroll" href="#" ><i class="fa fa-bars"></i></a>-->
+                <a class="drop-menu-scroll right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="block-pulse white">
+                <div class="items-pulse">5</div>
+                <div class="box-right">
+                    <div class="item">
+                        <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
+                        <div class="box-info">
+                            <div class="date-time">
+                                <div class="date">17.07</div>
+                                <div class="time">18:34</div>
+                            </div>
+                            <div class="puls-tegs">
+                                <a href="#">#ночь</a>
+                                <a href="#">#кража</a>
+                                <a href="#">#дороги</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tools">
+                <div id="sb-search-scroll" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="fa fa-search sb-icon-search"></span>
+                    </form>
+                </div>
+                <div class="my-ozero">
+                    <!--<a class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>-->
+                    <!--<a class="cabinet" href="#" >Мое озеро<span>9</span></a>-->
+                    <a class="user-cabinet">
+                                <span class="box-photo-message">
+                                    <img class="user-photo" src="img/user.jpg" alt="user"/>
+                                    <span class="item-message">9</span>
+                                </span>
+                        <span class="title">Кабинет</span>
+                    </a>
+                </div>
+            </div>
+            <div class="widget white">
+                <div class="item home">
+                    <a class="circle" href="#">
+                        <span class="help home-ico"><i class="fa fa-home"></i></span>
+                    </a>
+                </div>
+                <div class="item radio">
+                    <div class="circle">
+                        <span class="help radio-ico"></span>
+                    </div>
+                    <div class="info">mcm</div>
+                </div>
+                <div class="item weather">
+                    <div class="circle">
+                        <span class="help weather-thunder-dry"></span>
+                    </div>
+                    <div class="info">+32°</div>
+                </div>
+                <div class="item points">
+                    <div class="circle">
+                                <span class="help color green">
+                                    <span class="number">6</span>
+                                </span>
+                    </div>
+                    <div class="info">баллов</div>
+                </div>
+                <div class="item currency">
+                    <div class="circle">
+                        <span class="help dollar"></span>
+                    </div>
+                    <div class="info">56.25</div>
+                </div>
+                <div class="item fuel">
+                    <div class="circle">
+                        <span class="help fuel-92"></span>
+                    </div>
+                    <div class="info">35.21</div>
+                </div>
+                <div class="item btn-close">
+                    <a id="close-widget" class="circle">
+                        <span class="help close-ico"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="drop-menu-container" id="scroll-drop-menu-container">
+                <span class="close-drop-menu-container" id="close-scroll-drop-menu-container"></span>
+                <div class="search-form">
+                    <form action="#">
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="search-btn"><i class="fa fa-search"></i></span>
+                    </form>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <header role="presentation" class="header" id="header">
+        <div class="topbar">
+            <div class="row">
+                <nav role="navigation" class="box-menu">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="tools">
+                    <!--<a class="drop-menu right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>-->
+                    <a class="drop-menu right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
+                    <div id="sb-search" class="sb-search">
+                        <form>
+                            <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="fa fa-search sb-icon-search"></span>
+                        </form>
+                    </div>
+                    <div class="my-ozero">
+                        <!--<a class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>-->
+                        <a class="cabinet" href="#" >Мое озеро<span>9</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo.png" alt="ozero"/></a>
+                    </div>
+                    <div class="block-pulse">
+                        <div class="items-pulse">5</div>
+                        <div class="box-right">
+                            <div class="item">
+                                <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
+                                <div class="box-info">
+                                    <div class="date-time">
+                                        <div class="date">17.07</div>
+                                        <div class="time">18:34</div>
+                                    </div>
+                                    <div class="puls-tegs">
+                                        <a href="#">#ночь</a>
+                                        <a href="#">#кража</a>
+                                        <a href="#">#дороги</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="item radio">
+                            <div class="circle">
+                                <span class="help radio-ico"></span>
+                            </div>
+                            <div class="info">mcm</div>
+                        </div>
+                        <div class="item weather">
+                            <div class="circle">
+                                <span class="help weather-thunder-dry"></span>
+                            </div>
+                            <div class="info">+32°</div>
+                        </div>
+                        <div class="item points">
+                            <div class="circle">
+                                <span class="help color green">
+                                    <span class="number">6</span>
+                                </span>
+                            </div>
+                            <div class="info">баллов</div>
+                        </div>
+                        <div class="item currency">
+                            <div class="circle">
+                                <span class="help dollar"></span>
+                            </div>
+                            <div class="info">56.25</div>
+                        </div>
+                        <div class="item fuel">
+                            <div class="circle">
+                                <span class="help fuel-92"></span>
+                            </div>
+                            <div class="info">35.21</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" class="page-poster-event">
+        <div class="row">
+            <div class="main-content">
+                <div class="content">
+                    <div class="poster-category">
+                        <div class="control-panel">
+                            <ul class="tags-list">
+                                <li class="active"><a href="#">Концерты</a></li>
+                                <li><a href="#">В Городе</a></li>
+                                <li><a href="#">Спектакли</a></li>
+                                <li><a href="#">Вечеринки</a></li>
+                                <li><a href="#">Выставки</a></li>
+                                <li>
+                                    <a data-dropdown="drop-1" aria-controls="drop" aria-expanded="false" class="round button dropdown">Другое</a>
+                                    <ul id="drop-1" data-dropdown-content class="f-dropdown" role="menu" aria-hidden="false" tabindex="-1">
+                                        <li><a href="#">This is a link</a></li>
+                                        <li><a href="#">This is another</a></li>
+                                        <li><a href="#">Yet another</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <article class="node-event">
+                        <div class="node-event-top">
+                            <div class="field-slider">
+                                <div id="slider-event" class="slider-pro">
+                                    <div class="sp-slides">
+                                        <div class="sp-slide">
+                                            <div class="sp-layer">
+                                                <a class="sp-video" href="//www.youtube.com/watch?v=oaDkph9yQBs">
+                                                    <img src="img/event/slide-1.jpg"/>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="sp-slide">
+                                            <img src="img/event/slide-2.jpg"/>
+                                        </div>
+                                        <div class="sp-slide">
+                                            <img src="img/event/slide-3.jpg"/>
+                                        </div>
+                                        <div class="sp-slide">
+                                            <img src="img/event/slide-2.jpg"/>
+                                        </div>
+                                    </div>
+                                    <div class="sp-thumbnails">
+                                        <img class="sp-thumbnail" src="img/event/slide-1m.jpg"/>
+                                        <img class="sp-thumbnail" src="img/event/slide-2m.jpg"/>
+                                        <img class="sp-thumbnail" src="img/event/slide-3m.jpg"/>
+                                        <img class="sp-thumbnail" src="img/event/slide-2m.jpg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-event-fields">
+                                <div class="field-title">
+                                    <h2 class="title" href="#">Безумный макс</h2>
+                                    <span class="year red">16+</span>
+                                </div>
+                                <div class="box-info">
+                                    <div class="field-location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span>г. Иркутск, Кинотеатр “Байкал”, ул. Красивая, 32</span>
+                                    </div>
+                                    <div class="field-date">
+                                        <i class="fa fa-calendar"></i>
+                                        <span class="date">26 Марта <strong>ПН</strong>, 2015</span>, <i class="fa fa-clock-o"></i> <span class="time">18:00</span> <span class="icon-wallet"></span> <span class="price">билет <strong>от 250 руб.</strong></span>
+                                    </div>
+                                </div>
+                                <div class="box-btn-read-reviews">
+                                    <a id="scroll-to-comment" class="btn" href="#block-comments">читать отзывы (15)</a>
+                                </div>
+                                <div class="field-description">
+                                    <p>Преследуемый призраками беспокойного прошлого, Макс уверен, что лучший способ выжить — скитаться в одиночестве. Несмотря на это, он присоединяется к бунтарям, бегущим через всю пустыню на боевой фуре, под предводительством военачальника Фуриосы. Они пытаются сбежать из Цитадели, страдающей от тирании Несмертного Джо, у которого они забрали кое-что очень ценное. Разъярённый военачальник бросает все свои силы на погоню за мятежниками, ступая на дорогу войны — дорогу ярости.</p>
+                                </div>
+                                <div class="field-cast">
+                                    <h5 class="title">В ролях:</h5>
+                                    <p>Том Харди, Шарлиз Терон, Николас Холт, Хью Кияс-Бёрн, Райли Кио, Роузи Хантингтон-Уайтли, Зои Кравиц, Эбби Ли...</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="node-event-body">
+                            <p>Съёмки фильма чуть не начались в 2003 году в Намибии. Тогда предполагалось, что главную роль исполнит Мэл Гибсон. Однако проект был приостановлен по соображениям безопасности, после того как США ужесточили условия транспортировки и ограничили возможность путешествий в данный регион. После начала войны в Ираке проект был заморожен. В итоге Гибсон заинтересовался фильмом «Страсти Христовы» (2004) и покинул проект.Фильм здоровский, к просмотру рекомендую. Конечно же для Кинотеатра, т. к. его главная фишка — зрелищность. С сюжетом тоже более менее всё ясно кроме того, что не рассказывают как Макс оказался в начале данного фильма, после какого эпизода или после какой части серий с Мелом Гибсоном. Видимо после первой, но как то всё мутно и не разъяснено. Также видно что сценаристы — режиссёры пытались создать какую-то определённую тонкую философию. С точки зрения Драматизма фильм совсем не получился. К главному</p>
+                        </div>
+                    </article>
+                    <div class="block-timetable">
+                        <div class="block-poster-date">
+                            <div class="old-event">
+                                <a href="#">Прошлое</a>
+                            </div>
+                            <ul class="date-list" id="date-slider">
+                                <li class="today active">
+                                    <a href="#"><span>Сегодня</span><strong>1 октября</strong></a>
+                                </li>
+                                <li class="">
+                                    <a href="#"><span>Пт</span><strong>2</strong></a>
+                                </li>
+                                <li class="weekend">
+                                    <a href="#"><span>Сб</span><strong>3</strong></a>
+                                </li>
+                                <li class="weekend">
+                                    <a href="#"><span>Вс</span><strong>4</strong></a>
+                                </li>
+                                <li class="">
+                                    <a href="#"><span>Пн</span><strong>5</strong></a>
+                                </li>
+                                <li class="">
+                                    <a href="#"><span>Вт</span><strong>6</strong></a>
+                                </li>
+                                <li class="">
+                                    <a href="#"><span>Ср</span><strong>7</strong></a>
+                                </li>
+                                <li class="">
+                                    <a href="#"><span>Чт</span><strong>8</strong></a>
+                                </li>
+                            </ul>
+                            <form class="form-date" action="#">
+                                <input type="text" id="datepicker">
+                            </form>
+                        </div>
+                        <div class="timetable">
+                            <div class="timetable-row">
+                                <div class="field-cinema">
+                                    <div class="vertical">
+                                        <a href="#">КиноКвартал</a>
+                                    </div>
+                                </div>
+                                <div class="field-time">
+                                    <div class="vertical">
+                                        <span>17:20</span>
+                                        <span>19:00</span>
+                                        <span>20:40</span>
+                                        <span>22:20</span>
+                                    </div>
+                                </div>
+                                <div class="field-price">
+                                    <div class="vertical">
+                                        <p><strong>100—220 руб.</strong> (до 16:00)</p>
+                                        <p><strong>250 руб.</strong> (после 16:00)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timetable-row">
+                                <div class="field-cinema">
+                                    <div class="vertical">
+                                        <a href="#">Карамель</a>
+                                    </div>
+                                </div>
+                                <div class="field-time">
+                                    <div class="vertical">
+                                        <span>17:20</span>
+                                        <span>18:15</span>
+                                        <span>20:10</span>
+                                        <span>21:25</span>
+                                        <span>22:05</span>
+                                        <span>23:15</span>
+                                    </div>
+                                </div>
+                                <div class="field-price">
+                                    <div class="vertical">
+                                        <p><strong>100—220 руб.</strong> (до 16:00)</p>
+                                        <p><strong>250 руб.</strong> (после 16:00)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timetable-row">
+                                <div class="field-cinema">
+                                    <div class="vertical">
+                                        <a href="#">Чайка</a>
+                                    </div>
+                                </div>
+                                <div class="field-time">
+                                    <div class="vertical">
+                                        <span>17:20</span>
+                                        <span>19:00</span>
+                                        <span>20:40</span>
+                                        <span>22:20</span>
+                                    </div>
+                                </div>
+                                <div class="field-price">
+                                    <div class="vertical">
+                                        <p><strong>200—250 руб.</strong> (до 18:00)</p>
+                                        <p><strong>250—300 руб.</strong> (после 18:00)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timetable-row">
+                                <div class="field-cinema">
+                                    <div class="vertical">
+                                        <a href="#">Чайка</a>
+                                    </div>
+                                </div>
+                                <div class="field-time">
+                                    <div class="vertical">
+                                        <span>17:20</span>
+                                        <span>19:00</span>
+                                        <span>20:40</span>
+                                        <span>22:20</span>
+                                    </div>
+                                </div>
+                                <div class="field-price">
+                                    <div class="vertical">
+                                        <p><strong>200—250 руб.</strong> (до 18:00)</p>
+                                        <p><strong>250—300 руб.</strong> (после 18:00)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-last-publications-posters" id="last-news-slider">
+                        <div class="last-publications clearfix" id="last-publications">
+                            <div class="item slick-item poster">
+                                <a href="#" class="double-link">
+                                    <img src="./img/items/poster.jpg" alt=""/>
+                                    <span class="caption">
+                                        <span class="sub-title">Спецпроект</span>
+                                        <span class="title">Безумный макс – разбор полетов</span>
+                                        <span class="info">Кабинет на тёплой лоджии, мебель по авторским эскизам архитектора и яркая ванная комната в отделке из травертина</span>
+                                        <span class="statistic">
+                                            <i class="fa fa-comment-o"></i>27
+                                            <i class="fa fa-eye"></i>1937
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="item slick-item poster">
+                                <a href="#" class="double-link">
+                                    <img src="./img/items/poster-2.jpg" alt=""/>
+                                    <span class="caption">
+                                        <span class="sub-title">Спецпроект</span>
+                                        <span class="title">Безумный макс – разбор полетов</span>
+                                        <span class="info">Кабинет на тёплой лоджии, мебель по авторским эскизам архитектора и яркая ванная комната в отделке из травертина</span>
+                                        <span class="statistic">
+                                            <i class="fa fa-comment-o"></i>27
+                                            <i class="fa fa-eye"></i>1937
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="item slick-item poster">
+                                <a href="#" class="double-link">
+                                    <img src="./img/items/poster-3.jpg" alt=""/>
+                                    <span class="caption">
+                                        <span class="sub-title">Спецпроект</span>
+                                        <span class="title">Безумный макс – разбор полетов</span>
+                                        <span class="info">Кабинет на тёплой лоджии, мебель по авторским эскизам архитектора и яркая ванная комната в отделке из травертина</span>
+                                        <span class="statistic">
+                                            <i class="fa fa-comment-o"></i>27
+                                            <i class="fa fa-eye"></i>1937
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-comments" id="block-comments">
+                        <h2 class="block-title">Отзывы</h2>
+                        <div class="all-comments">
+                            <div class="comment-row no-sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                                <div class="box-reply">
+                                    <a class="last-reply-user" href="#">
+                                        <span class="user-img"><img src="img/user/avatar-2.jpg" alt="img"/></span>
+                                        <span class="user-name">Ульяна</span>
+                                        <span class="desc">ответил(-а)</span>
+                                        <span class="item-reply"> - 2 ответа</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="comment-row sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                                <div class="comment-sublevel">
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Юля_88</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Ирина</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-row sublevel active">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                                <div class="comment-sublevel">
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Юля_88</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Ирина</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-row no-sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="box-btn">
+                            <a class="all-comments" href="#">Все коментарии (76)</a>
+                        </div>
+                        <div class="block-form-comment">
+                            <h2 class="block-title">Оставить комментарий</h2>
+                            <form action="#">
+                                <textarea></textarea>
+                                <button type="submit">Комментировать</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="right-sidebar">
+                <div class="block-blogs">
+                    <h2 class="block-title">Блоги</h2>
+                    <div class="blog-list" id="blog-list-mobile">
+                        <div class="item">
+                            <div class="img">
+                                <a href="#"><img src="./img/blog-img-1.jpg" alt=""/></a>
+                            </div>
+                            <div class="info">город без пробок</div>
+                            <a class="title" href="#">Чем расплачиваться в интернете</a>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#"><img src="./img/blog-img-2.jpg" alt=""/></a>
+                            </div>
+                            <div class="info">город без пробок</div>
+                            <a class="title" href="#">Что можно сделать из рыбьей, куриной и свиной</a>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#"><img src="./img/blog-img-3.jpg" alt=""/></a>
+                            </div>
+                            <div class="info">город без пробок</div>
+                            <a class="title" href="#">Чем расплачиваться в интернете</a>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#"><img src="./img/blog-img-2.jpg" alt=""/></a>
+                            </div>
+                            <div class="info">город без пробок</div>
+                            <a class="title" href="#">Что можно сделать из рыбьей, куриной и свиной</a>
+                        </div>
+                    </div>
+                    <div class="all-posts"><a href="#">Все записи в блогах</a></div>
+                </div>
+                <div class="tabulation">
+                    <ul class="tabs" data-tab>
+                        <li class="tab-title active"><a href="#panel1-1"><i class="fa fa-instagram"></i><span class="help"> Инста дня</span></a></li>
+                        <li class="tab-title"><a href="#panel1-2"><i class="fa fa-twitter"></i> <span class="help">Tweet дня</span></a></li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel1-1">
+                            <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+                        </div>
+                        <div class="content" id="panel1-2">
+                            <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+</div>
+
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+        <!-- Off Canvas Menu -->
+        <aside class="right-off-canvas-menu">
+            <!-- whatever you want goes here -->
+            <div class="drop-menu-container" id="drop-menu-container">
+                <a class="exit-off-canvas"></a>
+                <div class="search-form">
+                    <form action="#">
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="search-btn"><i class="fa fa-search"></i></span>
+                    </form>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- main content goes here -->
+        <section class="main-section">
+
+
+        </section>
+
+        <!-- close the off-canvas menu -->
+        <a class="exit-off-canvas layout"></a>
+    </div>
+</div>
+
+<footer role="contentinfo" id="footer">
+    <div class="row">
+        <div class="first small-12 medium-7 columns">
+            <div class="copyright">
+                <p>© 2010–2015 Ozero.ru</p>
+            </div>
+            <div class="site-info">
+                <p>Новости Москвы, Санкт-Петербурга, Киева. Люди, места, события. Использование материалов The Village разрешено только с предварительного согласия правообладателей. Все права на картинки и тексты в разделе Новости принадлежат их авторам.</p>
+            </div>
+        </div>
+        <div class="second small-12 medium-4 columns">
+            <ul class="footer-menu">
+                <li>
+                    <a href="#">Расписание электричек и автобусов</a>
+                </li>
+                <li>
+                    <a href="#">Online табло аэропорта</a>
+                </li>
+                <li>
+                    <a href="#">Заказ тура</a>
+                </li>
+                <li>
+                    <a href="#">Водный транспорт</a>
+                </li>
+                <li>
+                    <a href="#">Клуб путешественников</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+    <script src="js/plugins/slick-1.3.15/slick/slick.min.js"></script>
+    <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/sliderPro/js/jquery.sliderPro.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/uisearch.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="js/app.js"></script>
+    <!--<script src="js/main.js"></script>-->
+    <!--<script type="text/javascript" src="js/jquery.calendario.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>-->
+    <!--<script src="js/calendar-init.js"></script>
+    <script type="text/javascript" src="js/share42/share42.js"></script>-->
+</body>
+</html>

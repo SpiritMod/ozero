@@ -1,0 +1,761 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OZERO</title>
+    <!--[if gte IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="stylesheets/calendar.css" />
+    <link rel="stylesheet" href="stylesheets/custom_2.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.skinHTML5.css" />
+    <link rel="stylesheet" href="stylesheets/ozero.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<div class="scroll-bar" id="scroll-bar">
+    <div class="topbar-scroll">
+        <div class="row">
+            <div class="box-logo">
+                <a id="show-widget" class="logo" href="/"></a>
+            </div>
+            <nav role="navigation" class="box-menu">
+                <ul class="main-nav">
+                    <li>
+                        <a href="#">Новости</a>
+                    </li>
+                    <li>
+                        <a href="#">Афиша</a>
+                    </li>
+                    <li>
+                        <a href="#">Дневники</a>
+                    </li>
+                </ul>
+                <ul class="nav-categories">
+                    <li>
+                        <a href="#">Карьера</a>
+                    </li>
+                    <li>
+                        <a href="#">Бизнес</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="box-btn-menu">
+                <!--<a id="drop-menu-scroll" class="drop-menu-scroll" href="#" ><i class="fa fa-bars"></i></a>-->
+                <a class="drop-menu-scroll right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="block-pulse white">
+                <div class="items-pulse">5</div>
+                <div class="box-right">
+                    <div class="item">
+                        <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
+                        <div class="box-info">
+                            <div class="date-time">
+                                <div class="date">17.07</div>
+                                <div class="time">18:34</div>
+                            </div>
+                            <div class="puls-tegs">
+                                <a href="#">#ночь</a>
+                                <a href="#">#кража</a>
+                                <a href="#">#дороги</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tools">
+                <div id="sb-search-scroll" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="fa fa-search sb-icon-search"></span>
+                    </form>
+                </div>
+                <div class="my-ozero">
+                    <!--<a class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>-->
+                    <!--<a class="cabinet" href="#" >Мое озеро<span>9</span></a>-->
+                    <a class="user-cabinet">
+                                <span class="box-photo-message">
+                                    <img class="user-photo" src="img/user.jpg" alt="user"/>
+                                    <span class="item-message">9</span>
+                                </span>
+                        <span class="title">Кабинет</span>
+                    </a>
+                </div>
+            </div>
+            <div class="widget white">
+                <div class="item home">
+                    <a class="circle" href="#">
+                        <span class="help home-ico"><i class="fa fa-home"></i></span>
+                    </a>
+                </div>
+                <div class="item radio">
+                    <div class="circle">
+                        <span class="help radio-ico"></span>
+                    </div>
+                    <div class="info">mcm</div>
+                </div>
+                <div class="item weather">
+                    <div class="circle">
+                        <span class="help weather-thunder-dry"></span>
+                    </div>
+                    <div class="info">+32°</div>
+                </div>
+                <div class="item points">
+                    <div class="circle">
+                                <span class="help color green">
+                                    <span class="number">6</span>
+                                </span>
+                    </div>
+                    <div class="info">баллов</div>
+                </div>
+                <div class="item currency">
+                    <div class="circle">
+                        <span class="help dollar"></span>
+                    </div>
+                    <div class="info">56.25</div>
+                </div>
+                <div class="item fuel">
+                    <div class="circle">
+                        <span class="help fuel-92"></span>
+                    </div>
+                    <div class="info">35.21</div>
+                </div>
+                <div class="item btn-close">
+                    <a id="close-widget" class="circle">
+                        <span class="help close-ico"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="drop-menu-container" id="scroll-drop-menu-container">
+                <span class="close-drop-menu-container" id="close-scroll-drop-menu-container"></span>
+                <div class="search-form">
+                    <form action="#">
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="search-btn"><i class="fa fa-search"></i></span>
+                    </form>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <header role="presentation" class="header" id="header">
+        <div class="topbar">
+            <div class="row">
+                <nav role="navigation" class="box-menu">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="tools">
+                    <!--<a class="drop-menu right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>-->
+                    <a class="drop-menu right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
+                    <div id="sb-search" class="sb-search">
+                        <form>
+                            <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="fa fa-search sb-icon-search"></span>
+                        </form>
+                    </div>
+                    <div class="my-ozero">
+                        <!--<a class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>-->
+                        <a class="cabinet" href="#" >Мое озеро<span>9</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo.png" alt="ozero"/></a>
+                    </div>
+                    <div class="block-pulse">
+                        <div class="items-pulse">5</div>
+                        <div class="box-right">
+                            <div class="item">
+                                <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
+                                <div class="box-info">
+                                    <div class="date-time">
+                                        <div class="date">17.07</div>
+                                        <div class="time">18:34</div>
+                                    </div>
+                                    <div class="puls-tegs">
+                                        <a href="#">#ночь</a>
+                                        <a href="#">#кража</a>
+                                        <a href="#">#дороги</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="item radio">
+                            <div class="circle">
+                                <span class="help radio-ico"></span>
+                            </div>
+                            <div class="info">mcm</div>
+                        </div>
+                        <div class="item weather">
+                            <div class="circle">
+                                <span class="help weather-thunder-dry"></span>
+                            </div>
+                            <div class="info">+32°</div>
+                        </div>
+                        <div class="item points">
+                            <div class="circle">
+                                <span class="help color green">
+                                    <span class="number">6</span>
+                                </span>
+                            </div>
+                            <div class="info">баллов</div>
+                        </div>
+                        <div class="item currency">
+                            <div class="circle">
+                                <span class="help dollar"></span>
+                            </div>
+                            <div class="info">56.25</div>
+                        </div>
+                        <div class="item fuel">
+                            <div class="circle">
+                                <span class="help fuel-92"></span>
+                            </div>
+                            <div class="info">35.21</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" class="page-poster-category">
+        <div class="row">
+            <div class="main-content">
+                <div class="content">
+                    <div class="block-poster-date">
+                        <div class="old-event">
+                            <a href="#">Прошлое</a>
+                        </div>
+                        <ul class="date-list" id="date-slider">
+                            <li class="today active">
+                                <a href="#"><span>Сегодня</span><strong>1 октября</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span>Пт</span><strong>2</strong></a>
+                            </li>
+                            <li class="weekend">
+                                <a href="#"><span>Сб</span><strong>3</strong></a>
+                            </li>
+                            <li class="weekend">
+                                <a href="#"><span>Вс</span><strong>4</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span>Пн</span><strong>5</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span>Вт</span><strong>6</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span>Ср</span><strong>7</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span>Чт</span><strong>8</strong></a>
+                            </li>
+                        </ul>
+                        <form class="form-date" action="#">
+                            <input type="text" id="datepicker">
+                        </form>
+                    </div>
+                    <div class="poster-category-wrapper">
+                        <div class="poster-category">
+                            <div class="filter-time">
+                                <div class="box-label">
+                                    Время: с <span id="from-time">9</span> до <span id="to-time">24</span>
+                                </div>
+                                <input type="text" id="time" name="example_name" value=""/>
+                                <div class="box-bottom-label">
+                                    <span class="left">утро</span>
+                                    <span class="right">вечер</span>
+                                </div>
+                            </div>
+                            <ul class="filter-event">
+                                <li>
+                                    <a href="#">Концерт</a>
+                                </li>
+                                <li>
+                                    <a class="active" href="#">В городе</a>
+                                </li>
+                                <li>
+                                    <a href="#">Спектакли</a>
+                                </li>
+                                <li>
+                                    <a href="#">Вечеринки</a>
+                                </li>
+                                <li>
+                                    <a href="#">Выставки</a>
+                                </li>
+                                <li>
+                                    <a data-dropdown="drop-1" aria-controls="drop" aria-expanded="false" class="round button dropdown">Другое</a>
+                                    <ul id="drop-1" data-dropdown-content class="f-dropdown" role="menu" aria-hidden="false" tabindex="-1">
+                                        <li><a href="#">This is a link</a></li>
+                                        <li><a href="#">This is another</a></li>
+                                        <li><a href="#">Yet another</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box-list-poster">
+                            <ul class="poster-list">
+                                <li class="poster">
+                                    <a class="img" href="#" style="background-image: url('img/poster/poster-1.jpg')">
+                                        <span class="view">
+                                            <i class="fa fa-search"></i>
+                                            <span class="text">Просмотреть<br/>событие</span>
+                                        </span>
+                                    </a>
+                                    <div class="poster-container">
+                                        <div class="field-title">
+                                            <a class="title" href="#">Безумный макс</a>
+                                            <span class="year red">16+</span>
+                                        </div>
+                                        <div class="field-location">
+                                            <i class="fa fa-map-marker"></i>
+                                            <span>г. Иркутск, Кинотеатр “Байкал”, ул. Красивая, 32</span>
+                                        </div>
+                                        <div class="field-date">
+                                            <i class="fa fa-calendar"></i>
+                                            <span class="date">26 Марта <strong>ПН</strong>, 2015</span>, <i class="fa fa-clock-o"></i> <span class="time">18:00</span> <span class="icon-wallet"></span> <span class="price">билет <strong>от 250 руб.</strong></span>
+                                        </div>
+                                        <div class="field-description">
+                                            <p>Преследуемый призраками беспокойного прошлого, Макс уверен, что лучший способ выжить — скитаться в одиночестве. Несмотря на это, он присоединяется к бунтарям, бегущим через всю пустыню на боевой фуре, под...</p>
+                                        </div>
+                                        <div class="statistic">
+                                            <span class="field">
+                                                <i class="fa fa-eye"></i> 1345
+                                            </span>
+                                            <span class="field">
+                                                <i class="fa fa-comment-o"></i> <a href="#">Коментариев <span>8</span></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="poster">
+                                    <a class="img" href="#" style="background-image: url('img/poster/poster-1.jpg')">
+                                        <span class="view">
+                                            <i class="fa fa-search"></i>
+                                            <span class="text">Просмотреть<br/>событие</span>
+                                        </span>
+                                    </a>
+                                    <div class="poster-container">
+                                        <div class="field-title">
+                                            <a class="title" href="#">Безумный макс</a>
+                                            <span class="year red">16+</span>
+                                        </div>
+                                        <div class="field-location">
+                                            <i class="fa fa-map-marker"></i>
+                                            <span>г. Иркутск, Кинотеатр “Байкал”, ул. Красивая, 32</span>
+                                        </div>
+                                        <div class="field-date">
+                                            <i class="fa fa-calendar"></i>
+                                            <span class="date">26 Марта ПН, 2015</span>, <i class="fa fa-clock-o"></i> <span class="time">18:00</span>
+                                        </div>
+                                        <div class="field-description">
+                                            <p>Преследуемый призраками беспокойного прошлого, Макс уверен, что лучший способ выжить — скитаться в одиночестве. Несмотря на это, он присоединяется к бунтарям, бегущим через всю пустыню на боевой фуре, под...</p>
+                                        </div>
+                                        <div class="statistic">
+                                            <span class="field">
+                                                <i class="fa fa-eye"></i> 1345
+                                            </span>
+                                            <span class="field">
+                                                <i class="fa fa-comment-o"></i> <a href="#">Коментариев <span>8</span></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="poster">
+                                    <a class="img" href="#" style="background-image: url('img/poster/poster-1.jpg')">
+                                        <span class="view">
+                                            <i class="fa fa-search"></i>
+                                            <span class="text">Просмотреть<br/>событие</span>
+                                        </span>
+                                    </a>
+                                    <div class="poster-container">
+                                        <div class="field-title">
+                                            <a class="title" href="#">Безумный макс</a>
+                                            <span class="year red">16+</span>
+                                        </div>
+                                        <div class="field-location">
+                                            <i class="fa fa-map-marker"></i>
+                                            <span>г. Иркутск, Кинотеатр “Байкал”, ул. Красивая, 32</span>
+                                        </div>
+                                        <div class="field-date">
+                                            <i class="fa fa-calendar"></i>
+                                            <span class="date">26 Марта ПН, 2015</span>, <i class="fa fa-clock-o"></i> <span class="time">18:00</span>
+                                        </div>
+                                        <div class="field-description">
+                                            <p>Преследуемый призраками беспокойного прошлого, Макс уверен, что лучший способ выжить — скитаться в одиночестве. Несмотря на это, он присоединяется к бунтарям, бегущим через всю пустыню на боевой фуре, под...</p>
+                                        </div>
+                                        <div class="statistic">
+                                            <span class="field">
+                                                <i class="fa fa-eye"></i> 1345
+                                            </span>
+                                            <span class="field">
+                                                <i class="fa fa-comment-o"></i> <a href="#">Коментариев <span>8</span></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="poster">
+                                    <a class="img" href="#" style="background-image: url('img/poster/poster-1.jpg')">
+                                        <span class="view">
+                                            <i class="fa fa-search"></i>
+                                            <span class="text">Просмотреть<br/>событие</span>
+                                        </span>
+                                    </a>
+                                    <div class="poster-container">
+                                        <div class="field-title">
+                                            <a class="title" href="#">Безумный макс</a>
+                                            <span class="year red">16+</span>
+                                        </div>
+                                        <div class="field-location">
+                                            <i class="fa fa-map-marker"></i>
+                                            <span>г. Иркутск, Кинотеатр “Байкал”, ул. Красивая, 32</span>
+                                        </div>
+                                        <div class="field-date">
+                                            <i class="fa fa-calendar"></i>
+                                            <span class="date">26 Марта ПН, 2015</span>, <i class="fa fa-clock-o"></i> <span class="time">18:00</span>
+                                        </div>
+                                        <div class="field-description">
+                                            <p>Преследуемый призраками беспокойного прошлого, Макс уверен, что лучший способ выжить — скитаться в одиночестве. Несмотря на это, он присоединяется к бунтарям, бегущим через всю пустыню на боевой фуре, под...</p>
+                                        </div>
+                                        <div class="statistic">
+                                            <span class="field">
+                                                <i class="fa fa-eye"></i> 1345
+                                            </span>
+                                            <span class="field">
+                                                <i class="fa fa-comment-o"></i> <a href="#">Коментариев <span>8</span></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="poster">
+                                    <a class="img" href="#" style="background-image: url('img/poster/poster-1.jpg')">
+                                        <span class="view">
+                                            <i class="fa fa-search"></i>
+                                            <span class="text">Просмотреть<br/>событие</span>
+                                        </span>
+                                    </a>
+                                    <div class="poster-container">
+                                        <div class="field-title">
+                                            <a class="title" href="#">Безумный макс</a>
+                                            <span class="year red">16+</span>
+                                        </div>
+                                        <div class="field-location">
+                                            <i class="fa fa-map-marker"></i>
+                                            <span>г. Иркутск, Кинотеатр “Байкал”, ул. Красивая, 32</span>
+                                        </div>
+                                        <div class="field-date">
+                                            <i class="fa fa-calendar"></i>
+                                            <span class="date">26 Марта ПН, 2015</span>, <i class="fa fa-clock-o"></i> <span class="time">18:00</span>
+                                        </div>
+                                        <div class="field-description">
+                                            <p>Преследуемый призраками беспокойного прошлого, Макс уверен, что лучший способ выжить — скитаться в одиночестве. Несмотря на это, он присоединяется к бунтарям, бегущим через всю пустыню на боевой фуре, под...</p>
+                                        </div>
+                                        <div class="statistic">
+                                            <span class="field">
+                                                <i class="fa fa-eye"></i> 1345
+                                            </span>
+                                            <span class="field">
+                                                <i class="fa fa-comment-o"></i> <a href="#">Коментариев <span>8</span></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="right-sidebar">
+                <div class="block-blogs">
+                    <h2 class="block-title">Блоги</h2>
+                    <div class="blog-list" id="blog-list-mobile">
+                        <div class="item">
+                            <div class="img">
+                                <a href="#"><img src="./img/blog-img-1.jpg" alt=""/></a>
+                            </div>
+                            <div class="info">город без пробок</div>
+                            <a class="title" href="#">Чем расплачиваться в интернете</a>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#"><img src="./img/blog-img-2.jpg" alt=""/></a>
+                            </div>
+                            <div class="info">город без пробок</div>
+                            <a class="title" href="#">Что можно сделать из рыбьей, куриной и свиной</a>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#"><img src="./img/blog-img-3.jpg" alt=""/></a>
+                            </div>
+                            <div class="info">город без пробок</div>
+                            <a class="title" href="#">Чем расплачиваться в интернете</a>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#"><img src="./img/blog-img-2.jpg" alt=""/></a>
+                            </div>
+                            <div class="info">город без пробок</div>
+                            <a class="title" href="#">Что можно сделать из рыбьей, куриной и свиной</a>
+                        </div>
+                    </div>
+                    <div class="all-posts"><a href="#">Все записи в блогах</a></div>
+                </div>
+                <div class="tabulation">
+                    <ul class="tabs" data-tab>
+                        <li class="tab-title active"><a href="#panel1-1"><i class="fa fa-instagram"></i><span class="help"> Инста дня</span></a></li>
+                        <li class="tab-title"><a href="#panel1-2"><i class="fa fa-twitter"></i> <span class="help">Tweet дня</span></a></li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel1-1">
+                            <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+                        </div>
+                        <div class="content" id="panel1-2">
+                            <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+</div>
+
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+        <!-- Off Canvas Menu -->
+        <aside class="right-off-canvas-menu">
+            <!-- whatever you want goes here -->
+            <div class="drop-menu-container" id="drop-menu-container">
+                <a class="exit-off-canvas"></a>
+                <div class="search-form">
+                    <form action="#">
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="search-btn"><i class="fa fa-search"></i></span>
+                    </form>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- main content goes here -->
+        <section class="main-section">
+
+
+        </section>
+
+        <!-- close the off-canvas menu -->
+        <a class="exit-off-canvas layout"></a>
+    </div>
+</div>
+
+<footer role="contentinfo" id="footer">
+    <div class="row">
+        <div class="first small-12 medium-7 columns">
+            <div class="copyright">
+                <p>© 2010–2015 Ozero.ru</p>
+            </div>
+            <div class="site-info">
+                <p>Новости Москвы, Санкт-Петербурга, Киева. Люди, места, события. Использование материалов The Village разрешено только с предварительного согласия правообладателей. Все права на картинки и тексты в разделе Новости принадлежат их авторам.</p>
+            </div>
+        </div>
+        <div class="second small-12 medium-4 columns">
+            <ul class="footer-menu">
+                <li>
+                    <a href="#">Расписание электричек и автобусов</a>
+                </li>
+                <li>
+                    <a href="#">Online табло аэропорта</a>
+                </li>
+                <li>
+                    <a href="#">Заказ тура</a>
+                </li>
+                <li>
+                    <a href="#">Водный транспорт</a>
+                </li>
+                <li>
+                    <a href="#">Клуб путешественников</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+    <script src="js/plugins/slick-1.3.15/slick/slick.min.js"></script>
+    <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/uisearch.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="js/ion.rangeSlider-2.1.1/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
+    <script src="js/app.js"></script>
+    <!--<script src="js/main.js"></script>-->
+    <!--<script type="text/javascript" src="js/jquery.calendario.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>-->
+    <!--<script src="js/calendar-init.js"></script>
+    <script type="text/javascript" src="js/share42/share42.js"></script>-->
+</body>
+</html>
