@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?gemd5x');
-	src:url('fonts/icomoon.eot?gemd5x#iefix') format('embedded-opentype'),
-		url('fonts/icomoon.ttf?gemd5x') format('truetype'),
-		url('fonts/icomoon.woff?gemd5x') format('woff'),
-		url('fonts/icomoon.svg?gemd5x#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?kt3rfv');
+	src:url('fonts/icomoon.eot?kt3rfv#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?kt3rfv') format('truetype'),
+		url('fonts/icomoon.woff?kt3rfv') format('woff'),
+		url('fonts/icomoon.svg?kt3rfv#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -25,5 +25,8 @@
 
 .icon-wallet:before {
 	content: "\e016";
+}
+.icon-Celsius:before {
+	content: "\e800";
 }
 

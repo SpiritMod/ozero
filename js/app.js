@@ -185,12 +185,29 @@ $(document).ready(function(){
         });
     }
 
+    //afisha datepicker
     if (document.getElementById('datepicker')){
         $(function() {
             $( "#datepicker" ).datepicker();
         });
     }
 
+    //event rating init
+    if (document.getElementById('event-rating')){
+        $(function() {
+            $('#event-rating').rating({
+                fx: 'full',
+                image: 'js/jquery.rating/images/stars-small.png',
+                loader: 'js/jquery.rating/images/ajax-loader.gif',
+                //url: 'rating.php',
+                callback: function(responce){
+                    this.vote_success.fadeOut(2000);
+                }
+            });
+        });
+    }
+
+    //mobile slider blog in event
     if (document.getElementById('slider-event')){
         $(function() {
             $( '#slider-event' ).sliderPro({
@@ -235,46 +252,6 @@ $(document).ready(function(){
             });
         });
     }
-
-    /*$(window).resize(function() {
-        //$("body").prepend("<div>" + $(window ).width() + "</div>");
-        if ($(window).width() > 768) {
-            $('#date-slider').unslick();
-        } else {
-            *//* the viewport is less than <940 pixels wide *//*
-            $("#date-slider").slick({
-                slide: 'li',
-                arrows: true,
-                dots: false,
-                infinite: false,
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                prevArrow: '<a data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left"></i></a>',
-                nextArrow: '<a data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right"></i> </a>',
-                responsive: [
-                    {
-                        breakpoint: 540,
-                        settings: {
-                            slidesToShow: 4
-                        }
-                    },
-                    {
-                        breakpoint: 440,
-                        settings: {
-                            slidesToShow: 3
-                        }
-                    },
-                    {
-                        breakpoint: 380,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    }
-                ]
-
-            });
-        }
-    });*/
 
     //Date-slider
     if (document.getElementById('date-slider')){
@@ -329,13 +306,105 @@ $(document).ready(function(){
         return false;
     });
 
-
-
     if ( $('input[type=file]').length ) {
         $("input[type=file].foto").nicefileinput({
             label : 'Фото...' // Spanish label
         });
     }
+    //weather-bottom
+    /*$('#weather-bottom').click(function(){
+        //$(this).addClass('active-informer');
+        $(this).find('#weather-informer').toggle().parent().toggleClass('active-informer');
+        $('#widget-overlay').show();
+        $('#widget-overlay').click(function(){
+            $('#weather-informer').hide().parent().removeClass('active-informer');
+            $(this).hide();
+        });
+    });*/
+
+    // Weather-informer
+    $('.weather-wrapper').click(function(){
+        $(this).parent().find('.weather-informer').toggle().parent().toggleClass('active-informer');
+        $('#widget-overlay').show();
+        $('#widget-overlay-scroll-bar').show();
+        $('#widget-overlay').click(function(){
+            $('.weather-informer').hide().parent().removeClass('active-informer');
+            $('#widget-overlay-scroll-bar').hide();
+            $(this).hide();
+        });
+        $('#widget-overlay-scroll-bar').click(function(){
+            $('.weather-informer').hide().parent().removeClass('active-informer');
+            $('#widget-overlay').hide();
+            $(this).hide();
+        });
+    });
+    // Traffic-informer
+    $('.traffic-wrapper').click(function(){
+        $(this).parent().find('.traffic-informer').toggle().parent().toggleClass('active-informer');
+        $('#widget-overlay').show();
+        $('#widget-overlay-scroll-bar').show();
+        $('#widget-overlay').click(function(){
+            $('.traffic-informer').hide().parent().removeClass('active-informer');
+            $('#widget-overlay-scroll-bar').hide();
+            $(this).hide();
+        });
+        $('#widget-overlay-scroll-bar').click(function(){
+            $('.traffic-informer').hide().parent().removeClass('active-informer');
+            $('#widget-overlay').hide();
+            $(this).hide();
+        });
+    });
+    // Cash-informer
+    $('.cash-wrapper').click(function(){
+        $(this).parent().find('.cash-informer').toggle().parent().toggleClass('active-informer');
+        $('#widget-overlay').show();
+        $('#widget-overlay-scroll-bar').show();
+        $('#widget-overlay').click(function(){
+            $('.cash-informer').hide().parent().removeClass('active-informer');
+            $('#widget-overlay-scroll-bar').hide();
+            $(this).hide();
+        });
+        $('#widget-overlay-scroll-bar').click(function(){
+            $('.cash-informer').hide().parent().removeClass('active-informer');
+            $('#widget-overlay').hide();
+            $(this).hide();
+        });
+    });
+    // Fuel-informer
+    $('.fuel-wrapper').click(function(){
+        $(this).parent().find('.fuel-informer').toggle().parent().toggleClass('active-informer');
+        $('#widget-overlay').show();
+        $('#widget-overlay-scroll-bar').show();
+        $('#widget-overlay').click(function(){
+            $('.fuel-informer').hide().parent().removeClass('active-informer');
+            $('#widget-overlay-scroll-bar').hide();
+            $(this).hide();
+        });
+        $('#widget-overlay-scroll-bar').click(function(){
+            $('.fuel-informer').hide().parent().removeClass('active-informer');
+            $('#widget-overlay').hide();
+            $(this).hide();
+        });
+    });
+
+    // Sing-in
+    $('a.sign-in').click(function(){
+        $(this).parent().find('.box-form-login').toggle();
+        $('#widget-overlay').show();
+        $('#widget-overlay-scroll-bar').show();
+        $('#widget-overlay').click(function(){
+            $('.box-form-login').hide();
+            $('#widget-overlay-scroll-bar').hide();
+            $(this).hide();
+        });
+        $('#widget-overlay-scroll-bar').click(function(){
+            $('.box-form-login').hide();
+            $('#widget-overlay').hide();
+            $(this).hide();
+        });
+        return false;
+    });
+
 
     $('.post .controls-comments-post a.show-form-comment').click(function(){
        $(this).parent().parent().find('.block-form-comment').slideToggle('slow');
