@@ -1267,8 +1267,6 @@ a {
   }
 }
 
-
-
 #scroll-bar {
   display: block;
   width: 100%;
@@ -4199,7 +4197,7 @@ form {
     float: left;
     width: 174px;
     margin: 0 0 0 -174px;
-    padding: 0 20px 0 0;
+    padding: 0 20px 0 2px;
     ul {
       list-style: none;
       margin: 0 0 50px;
@@ -4279,6 +4277,424 @@ form {
   .box-list-places {
     float: left;
     width: 100%;
+  }
+}
+
+.places-category {
+  .control-panel {
+    .tags-list {
+      padding-left: 0;
+    }
+  }
+}
+
+.block-search-form {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 20px;
+  form {
+    display: block;
+    float: left;
+    label {
+      display: block;
+      float: left;
+      line-height: 28px;
+      cursor: default;
+      color: #000;
+      font-family: "helvetica-roman", sans-serif;
+      font-size: 14px;
+      margin: 0 10px 0 0;
+    }
+    .item {
+      display: block;
+      float: left;
+      width: 200px;
+      position: relative;
+      input[type="search"] {
+        height: 28px;
+        padding: 0 28px 0 10px;
+        margin: 0 0 0;
+        background: #fff;
+        @include border-radius(14px);
+        font-family: "helvetica-roman", sans-serif;
+        font-size: 14px;
+        color: #014183;
+        border: 1px solid #fff;
+        @include box-shadow(0 0 0 #fff);
+        @include transition(all 0.4s ease 0s);
+        &:focus {
+          border: 1px solid #014183;
+        }
+      }
+      button[type="submit"] {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        color: #cccccc;
+        font-size: 16px;
+        padding: 0 0;
+        margin: 0 0 0;
+        background: transparent;
+        @include transition(all 0.4s ease 0s);
+        &:hover {
+          color: #014183;
+        }
+      }
+    }
+  }
+}
+
+.block-sorting {
+  display: block;
+  float: right;
+  .sorting-label {
+    display: block;
+    float: left;
+    line-height: 28px;
+    cursor: default;
+    color: #000;
+    font-family: "helvetica-roman", sans-serif;
+    font-size: 14px;
+    margin: 0 10px 0 0;
+  }
+  ul.sorting {
+    display: block;
+    float: left;
+    li {
+      display: block;
+      float: left;
+      line-height: 28px;
+      margin: 0 10px 0 0;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        display: inline-block;
+        font-family: "helvetica-roman", sans-serif;
+        font-size: 14px;
+        color: #264380;
+        line-height: 1;
+        border-bottom: 1px dashed #264380;
+        &:hover {
+          border-bottom: 1px dashed transparent;
+        }
+        &.active {
+          border-bottom: 1px dashed transparent;
+          color: #000;
+          font-family: "helvetica-bold", sans-serif;
+        }
+      }
+    }
+  }
+}
+
+.list-places {
+  padding: 30px;
+  background: #fff;
+  list-style: none;
+  margin: 0 0 20px;
+  li {
+    padding: 20px 20px 20px 44px;
+    border: 1px solid #e7ebef;
+    margin: 0 0 30px;
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .place {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+      position: relative;
+      .number {
+        color: #000;
+        font-family: "helvetica-roman", sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        display: block;
+        position: absolute;
+        left: -24px;
+        top: 0;
+        width: 24px;
+        text-align: left;
+      }
+      .field-title {
+        line-height: 1.2;
+        .title {
+          display: inline-block;
+          margin: 0 5px 0 0;
+          font-family: "helvetica-bold", sans-serif;
+          color: #264380;
+          font-size: 14px;
+          font-weight: 700;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .field-comment {
+          font-family: "helvetica-roman", sans-serif;
+          color: #8F8F8F;
+          font-size: 12px;
+        }
+      }
+      .field-rating {
+        line-height: 1.2;
+        color: #2A001A;
+        font-family: "helvetica-roman", sans-serif;
+        font-size: 12px;
+        margin: 5px 0;
+        .rating-results {
+          display: block;
+          float: left;
+          margin: 0 8px 0 0;
+          .box-stars {
+            &.stars-1 {
+              .star {
+                &:nth-child(1) {
+                  background: url("../img/stars-small.png") no-repeat 0 -12px transparent;
+                }
+              }
+            }
+            &.stars-2 {
+              .star {
+                &:nth-child(1), &:nth-child(2) {
+                  background: url("../img/stars-small.png") no-repeat 0 -12px transparent;
+                }
+              }
+            }
+            &.stars-3 {
+              .star {
+                &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                  background: url("../img/stars-small.png") no-repeat 0 -12px transparent;
+                }
+              }
+            }
+            &.stars-4 {
+              .star {
+                &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                  background: url("../img/stars-small.png") no-repeat 0 -12px transparent;
+                }
+              }
+            }
+            &.stars-5 {
+              .star {
+                background: url("../img/stars-small.png") no-repeat 0 -12px transparent;
+              }
+            }
+            .star {
+              display: block;
+              float: left;
+              width: 12px;
+              height: 12px;
+              margin: 0 2px 0 0;
+              background: url("../img/stars-small.png") no-repeat 0 0 transparent;
+            }
+          }
+        }
+      }
+      .body {
+        p {
+          font-family: "helvetica-roman", sans-serif;
+          color: #000;
+          font-size: 14px;
+          line-height: 1.5;
+          margin: 0 0 0;
+          span {
+            color: #264380;
+          }
+        }
+      }
+    }
+  }
+}
+
+.places-restaurants-wrapper {
+  display: inline-block;
+  width: 100%;
+  padding: 30px 30px 0 30px;
+  background: #fff;
+  list-style: none;
+  margin: 0 0 20px;
+}
+
+.list-places-restaurants {
+  margin: 0 -15px;
+  li {
+    padding: 0 15px 30px;
+    .restaurant {
+      padding: 25px;
+      border: 1px solid #e7ebef;
+      .box-title {
+        display: inline-block;
+        width: 100%;
+        line-height: 1.2;
+        .title {
+          display: block;
+          float: left;
+          font-family: "helvetica-bold", sans-serif;
+          color: #264380;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 1.2;
+          margin: 0 0 5px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .field-comment {
+          display: block;
+          float: right;
+          font-family: "helvetica-roman", sans-serif;
+          color: #8F8F8F;
+          font-size: 12px;
+          line-height: 1.2;
+          margin: 2px 0 0;
+        }
+      }
+      .field-address {
+        p {
+          font-family: "helvetica-roman", sans-serif;
+          color: #264380;
+          font-size: 14px;
+          line-height: 1.5;
+          margin: 0 0 0;
+        }
+      }
+      .field-phones {
+        p {
+          font-family: "helvetica-roman", sans-serif;
+          color: #000;
+          font-size: 14px;
+          line-height: 1.5;
+          margin: 0 0 0;
+        }
+      }
+      .field-img {
+        display: inline-block;
+        width: 100%;
+        margin: 10px 0;
+        font-size: 0;
+        a {
+          display: inline-block;
+          width: 100%;
+          overflow: hidden;
+          img {
+            width: 100%;
+            @include transition(all 2s linear 0s);
+          }
+          &:hover {
+            img {
+              @include transform(scale(1.1));
+            }
+          }
+        }
+      }
+      .field-cuisine {
+        line-height: 1.5;
+        ul {
+          margin: 0 0 0;
+          li {
+            padding: 0 0 0;
+            margin: 0 0;
+            display: inline;
+            font-family: "helvetica-roman", sans-serif;
+            color: #000;
+            font-size: 14px;
+            line-height: 1.5;
+            &:after {
+              content: ",";
+            }
+            &:last-child {
+              &:after {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+      .field-worktime {
+        p {
+          font-family: "helvetica-roman", sans-serif;
+          color: #000;
+          font-size: 14px;
+          line-height: 1.5;
+          margin: 0 0 0;
+        }
+      }
+      .restaurant-services {
+        margin: 0 0;
+        line-height: 18px;
+        li {
+          display: inline;
+          padding: 0 0;
+          margin-right: 4px;
+          color: #264380;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .field-rating {
+        line-height: 1.2;
+        color: #2A001A;
+        font-family: "helvetica-roman", sans-serif;
+        font-size: 12px;
+        margin: 5px 0;
+        .rating-results {
+          display: block;
+          float: left;
+          margin: 0 8px 0 0;
+          .box-stars {
+            &.stars-1 {
+              .star {
+                &:nth-child(1) {
+                  background: url("../img/stars-small.png") no-repeat 0 -12px transparent;
+                }
+              }
+            }
+            &.stars-2 {
+              .star {
+                &:nth-child(1), &:nth-child(2) {
+                  background: url("../img/stars-small.png") no-repeat 0 -12px transparent;
+                }
+              }
+            }
+            &.stars-3 {
+              .star {
+                &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                  background: url("../img/stars-small.png") no-repeat 0 -12px transparent;
+                }
+              }
+            }
+            &.stars-4 {
+              .star {
+                &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                  background: url("../img/stars-small.png") no-repeat 0 -12px transparent;
+                }
+              }
+            }
+            &.stars-5 {
+              .star {
+                background: url("../img/stars-small.png") no-repeat 0 -12px transparent;
+              }
+            }
+            .star {
+              display: block;
+              float: left;
+              width: 12px;
+              height: 12px;
+              margin: 0 2px 0 0;
+              background: url("../img/stars-small.png") no-repeat 0 0 transparent;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -4629,6 +5045,125 @@ form {
   }
 }
 
+.node-place-light {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 20px;
+  .place-top-wrapper {
+    background: #fff;
+    padding: 30px;
+    .box-title {
+      display: inline-block;
+      width: 100%;
+      padding: 0 150px 0 0;
+      position: relative;
+      margin: 0 0 25px;
+      h2.title {
+        font-family: "helvetica-medium", sans-serif;
+        color: #000;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        padding: 0 0 0;
+      }
+      .field-rating {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+    .place-info {
+      display: inline-block;
+      width: 100%;
+      padding: 30px;
+      border: 1px solid #e7ebef;
+      position: relative;
+      .field-img {
+        margin: 0 10px 0 0;
+        img {
+          width: 100%;
+        }
+      }
+      .box-items {
+        display: inline-block;
+        width: 100%;
+        .field-item {
+          display: inline-block;
+          width: 100%;
+          margin: 0 0 5px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .field-label {
+            display: block;
+            float: left;
+            width: 25%;
+            color: #000;
+            font-family: "helvetica-roman", sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+          }
+          .field-info {
+            display: block;
+            float: left;
+            width: 75%;
+            font-family: "helvetica-roman", sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            a {
+              color: #264380;
+              text-decoration: underline;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .place-bottom-wrapper {
+    display: inline-block;
+    width: 100%;
+    margin: 30px 0 0 0;
+    .tabs {
+      border-bottom: 1px solid #014183;
+      .tab-title {
+        background: transparent;
+        &.active {
+          a {
+            background: #014183;
+            color: #fff;
+            &:hover {
+              background: #014183;
+              color: #fff;
+            }
+          }
+        }
+        a {
+          font-family: "helvetica-roman", sans-serif;
+          font-size: 14px;
+          color: #000;
+          line-height: 48px;
+          padding: 0 25px;
+          background: transparent;
+          @include transition(all 0.4s ease 0s);
+          &:hover {
+            background: #e3ebf5;
+          }
+        }
+      }
+    }
+    .tabs-content {
+      margin: 25px 0 20px;
+      .content {
+        padding: 0 0;
+      }
+    }
+  }
+}
+
 .tabs-content > .content {
   padding: 0 0;
 }
@@ -4703,6 +5238,44 @@ form {
       float: none;
       width: 100%;
     }
+  }
+  .page-places-list, .page-places-restaurants-list {
+    .places-category {
+      padding: 0 10px;
+    }
+  }
+  .places-wrapper {
+    display: inline-block;
+    width: 100%;
+    padding: 0 0 0 0;
+    .places-category {
+      display: inline-block;
+      float: none;
+      width: 100%;
+      margin: 0 0 0 0;
+      padding: 0 10px;
+      ul {
+        list-style: none;
+        margin: 0 0 20px;
+        display: inline-block;
+        width: 100%;
+        li {
+          display: block;
+          width: auto;
+          float: left;
+          margin: 0 10px 10px 0;
+          text-align: left;
+          font-size: 0;
+        }
+      }
+    }
+    .box-list-places {
+      float: none;
+      width: 100%;
+    }
+  }
+  .block-search-form {
+    padding: 0 24px;
   }
 }
 
@@ -4879,6 +5452,29 @@ form {
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+  .node-place-light {
+    .place-top-wrapper {
+      .place-info {
+        .field-img {
+          margin: 0 0 0 0;
+        }
+        .box-items {
+          margin: 25px 0 0 0;
+          .field-item {
+            .field-label {
+              width: 28%;
+            }
+            .field-info {
+              width: 72%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 940px) {
   .block-poster-date {
     .date-list {
@@ -4890,6 +5486,11 @@ form {
           }
         }
       }
+    }
+  }
+  .list-places-restaurants {
+    li {
+      width: 100%;
     }
   }
 }
@@ -5483,6 +6084,21 @@ form {
       }
     }
   }
+  .page-places-list,
+  .page-places-restaurants-list {
+    .right-sidebar {
+      background: transparent;
+      float: left;
+      margin-left: 0px;
+      position: relative;
+      width: 100%;
+    }
+    .main-content {
+      .content {
+        padding: 0 0 0 0;
+      }
+    }
+  }
   .node-event {
     .node-event-top {
       display: inline-block;
@@ -5498,6 +6114,66 @@ form {
         width: 100%;
         padding: 0 20px;
         margin: 30px 0 0;
+      }
+    }
+  }
+  .places-restaurants-wrapper {
+    padding: 24px 24px 0 24px;
+  }
+  .list-places-restaurants {
+    margin: 0 -12px;
+    li {
+      padding: 0 12px 24px;
+      .restaurant {
+        padding: 20px;
+      }
+    }
+  }
+  .page-place-light {
+    .right-sidebar {
+      background: transparent;
+      float: left;
+      margin-left: 0px;
+      position: relative;
+      width: 100%;
+    }
+    .main-content {
+      .content {
+        padding: 0 0 0 0;
+      }
+    }
+  }
+  .node-place-light {
+    .place-top-wrapper {
+      padding: 20px;
+      .box-title {
+        padding: 0 0 0 0;
+        .field-rating {
+          display: block;
+          position: relative;
+          right: inherit;
+          top: inherit;
+          float: left;
+          margin: 5px 0 0;
+        }
+      }
+      .place-info {
+        padding: 20px;
+        .field-img {
+          margin: 0 0 0 0;
+        }
+        .box-items {
+          margin: 25px 0 0 0;
+          .field-item {
+            .field-label {
+              width: 100%;
+              font-family: "helvetica-medium", sans-serif;
+            }
+            .field-info {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
@@ -5674,6 +6350,11 @@ form {
           }
         }
       }
+    }
+  }
+  .list-places-restaurants {
+    li {
+      width: 100%;
     }
   }
 }

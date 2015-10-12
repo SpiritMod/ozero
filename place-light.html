@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="stylesheets/calendar.css" />
     <link rel="stylesheet" href="stylesheets/custom_2.css" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="js/jquery.rating/styles/jquery.rating.css" media="screen"/>
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.css" />
-    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.skinHTML5.css" />
+    <!--<link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.skinHTML5.css" />-->
     <link rel="stylesheet" href="stylesheets/ozero.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -668,16 +669,17 @@
             </div>
         </div>
     </header>
-    <main role="main" class="page-places-list">
+    <main role="main" class="page-place-light">
         <div class="row">
             <div class="main-content">
                 <div class="content">
                     <div class="places-category">
                         <div class="control-panel">
                             <ul class="tags-list">
-                                <li class="active"><a href="#">Концерты</a></li>
+                                <li><a href="#">Концерты</a></li>
                                 <li><a href="#">В Городе</a></li>
                                 <li><a href="#">Спектакли</a></li>
+                                <li class="active"><a href="#">Кино</a></li>
                                 <li><a href="#">Вечеринки</a></li>
                                 <li><a href="#">Выставки</a></li>
                                 <li>
@@ -691,366 +693,79 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="places-wrapper">
-                        <div class="places-category">
-                            <ul class="filter">
-                                <li>
-                                    <a href="#">Кинотеатры</a>
-                                </li>
-                                <li>
-                                    <a class="active" href="#">Театры</a>
-                                </li>
-                                <li>
-                                    <a href="#">Для детей</a>
-                                </li>
-                                <li>
-                                    <a href="#">Бани и сауны</a>
-                                </li>
-                                <li>
-                                    <a href="#">Выставки</a>
-                                </li>
-                                <li>
-                                    <a href="#">Бассейны</a>
-                                </li>
-                                <li>
-                                    <a href="#">Библиотеки</a>
-                                </li>
-                                <li>
-                                    <a href="#">Бильярдные залы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Боулинг</a>
-                                </li>
-                                <li>
-                                    <a href="#">Гостиницы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Зоопарки</a>
-                                </li>
-                                <li>
-                                    <a href="#">Загородный отдых</a>
-                                </li>
-                                <li>
-                                    <a href="#">Интернет-клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Конные клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Концертные залы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Лыжные комплексы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Лазертаг</a>
-                                </li>
-                                <li>
-                                    <a href="#">Музеи и галереи</a>
-                                </li>
-                                <li>
-                                    <a href="#">Музыкальные студии</a>
-                                </li>
-                                <li>
-                                    <a href="#">Ночные клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Парки и скверы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Пейнтбол</a>
-                                </li>
-                                <li>
-                                    <a href="#">Реалити-квест</a>
-                                </li>
-                                <li>
-                                    <a href="#">Спортивные клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Торговые центры</a>
-                                </li>
-                                <li>
-                                    <a href="#">Фитнес-клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Wi-Fi</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="box-list-places">
-                            <div class="block-search-form">
-                                <form action="#">
-                                    <label for="search-plases">Найти</label>
-                                    <div class="item">
-                                        <input type="search" id="search-plases"/>
-                                        <button type="submit"><span class="fa fa-search"></span></button>
+                    <article class="node-place-light">
+                        <div class="place-top-wrapper">
+                            <div class="box-title">
+                                <h2 class="title">Звездный, кинотеатр</h2>
+                                <div class="field-rating">
+                                    <div id="place-light-rating">
+                                        <input name="vote-id" value="1" type="hidden">
                                     </div>
-                                </form>
+                                </div>
                             </div>
-                            <ul class="list-places">
-                                <li>
-                                    <div class="place">
-                                        <span class="number">1.</span>
-                                        <div class="field-title">
-                                            <a class="title" href="#">Баргузин, кинотеатр</a>
-                                            <span class="field-comment">
-                                                <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                            </span>
-                                        </div>
-                                        <div class="field-rating">
-                                            <div class="rating-results">
-                                                <div class="box-stars stars-1">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </div>
-                                            <span class="all-votes">24 голоса</span>
-                                        </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                            <div class="place-info">
+                                <div class="row">
+                                    <div class="small-12 medium-12 large-4 columns">
+                                        <div class="field-img">
+                                            <img src="img/restaurants/restaurant-2.jpg" alt="img"/>
                                         </div>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="place">
-                                        <span class="number">2.</span>
-                                        <div class="field-title">
-                                            <a class="title" href="#">Баргузин, кинотеатр</a>
-                                            <span class="field-comment">
-                                                <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                            </span>
-                                        </div>
-                                        <div class="field-rating">
-                                            <div class="rating-results">
-                                                <div class="box-stars stars-2">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
+                                    <div class="small-12 medium-12 large-8 columns">
+                                        <div class="box-items">
+                                            <div class="field-item">
+                                                <div class="field-label">Адрес:</div>
+                                                <div class="field-info">Иркутск, Декабрьских Событий, 102/1 Октябрьский район, ост. «Площадь декабристов»</div>
+                                            </div>
+                                            <div class="field-item">
+                                                <div class="field-label">Телефоны:</div>
+                                                <div class="field-info">(3952) 30-33-03 (автоответчик), 20-94-80 (заказ билетов)</div>
+                                            </div>
+                                            <div class="field-item">
+                                                <div class="field-label">Эл. почта:</div>
+                                                <div class="field-info">
+                                                    <a href="mailto:info@303303.ru">info@303303.ru</a>
                                                 </div>
                                             </div>
-                                            <span class="all-votes">24 голоса</span>
-                                        </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="place">
-                                        <span class="number">3.</span>
-                                        <div class="field-title">
-                                            <a class="title" href="#">Баргузин, кинотеатр</a>
-                                            <span class="field-comment">
-                                                <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                            </span>
-                                        </div>
-                                        <div class="field-rating">
-                                            <div class="rating-results">
-                                                <div class="box-stars stars-3">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
+                                            <div class="field-item">
+                                                <div class="field-label">Сайт:</div>
+                                                <div class="field-info">
+                                                    <a href="#" target="_blank">http://www.303303.ru</a>
                                                 </div>
                                             </div>
-                                            <span class="all-votes">24 голоса</span>
-                                        </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="place">
-                                        <span class="number">4.</span>
-                                        <div class="field-title">
-                                            <a class="title" href="#">Баргузин, кинотеатр</a>
-                                            <span class="field-comment">
-                                                <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                            </span>
-                                        </div>
-                                        <div class="field-rating">
-                                            <div class="rating-results">
-                                                <div class="box-stars stars-4">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
+                                            <div class="field-item">
+                                                <div class="field-label">Режим работы:</div>
+                                                <div class="field-info">10:30-22:30</div>
                                             </div>
-                                            <span class="all-votes">24 голоса</span>
-                                        </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
                                         </div>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="place">
-                                        <span class="number">5.</span>
-                                        <div class="field-title">
-                                            <a class="title" href="#">Баргузин, кинотеатр</a>
-                                            <span class="field-comment">
-                                                <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                            </span>
-                                        </div>
-                                        <div class="field-rating">
-                                            <div class="rating-results">
-                                                <div class="box-stars stars-5">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </div>
-                                            <span class="all-votes">24 голоса</span>
-                                        </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="place">
-                                        <span class="number">6.</span>
-                                        <div class="field-title">
-                                            <a class="title" href="#">Баргузин, кинотеатр</a>
-                                            <span class="field-comment">
-                                                <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                            </span>
-                                        </div>
-                                        <div class="field-rating">
-                                            <div class="rating-results">
-                                                <div class="box-stars stars-3">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </div>
-                                            <span class="all-votes">24 голоса</span>
-                                        </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="place">
-                                        <span class="number">7.</span>
-                                        <div class="field-title">
-                                            <a class="title" href="#">Баргузин, кинотеатр</a>
-                                            <span class="field-comment">
-                                                <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                            </span>
-                                        </div>
-                                        <div class="field-rating">
-                                            <div class="rating-results">
-                                                <div class="box-stars stars-4">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </div>
-                                            <span class="all-votes">24 голоса</span>
-                                        </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="place">
-                                        <span class="number">8.</span>
-                                        <div class="field-title">
-                                            <a class="title" href="#">Баргузин, кинотеатр</a>
-                                            <span class="field-comment">
-                                                <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                            </span>
-                                        </div>
-                                        <div class="field-rating">
-                                            <div class="rating-results">
-                                                <div class="box-stars stars-5">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </div>
-                                            <span class="all-votes">24 голоса</span>
-                                        </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="place">
-                                        <span class="number">9.</span>
-                                        <div class="field-title">
-                                            <a class="title" href="#">Баргузин, кинотеатр</a>
-                                            <span class="field-comment">
-                                                <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                            </span>
-                                        </div>
-                                        <div class="field-rating">
-                                            <div class="rating-results">
-                                                <div class="box-stars stars-4">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </div>
-                                            <span class="all-votes">24 голоса</span>
-                                        </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="place">
-                                        <span class="number">10.</span>
-                                        <div class="field-title">
-                                            <a class="title" href="#">Баргузин, кинотеатр</a>
-                                            <span class="field-comment">
-                                                <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                            </span>
-                                        </div>
-                                        <div class="field-rating">
-                                            <div class="rating-results">
-                                                <div class="box-stars stars-2">
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </div>
-                                            <span class="all-votes">24 голоса</span>
-                                        </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                </div>
+
+
+                            </div>
                         </div>
-                    </div>
+                        <div class="place-bottom-wrapper">
+                            <ul class="tabs" data-tab>
+                                <li class="tab-title active"><a href="#panel11">Расписание</a></li>
+                                <li class="tab-title"><a href="#panel21">Описание</a></li>
+                                <li class="tab-title"><a href="#panel31">Отзывы <span>(232)</span></a></li>
+                                <li class="tab-title"><a href="#panel41">Схемы залов</a></li>
+                            </ul>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel11">
+                                    <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+                                </div>
+                                <div class="content" id="panel21">
+                                    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                                </div>
+                                <div class="content" id="panel31">
+                                    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+                                </div>
+                                <div class="content" id="panel41">
+                                    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
             <aside class="right-sidebar">
@@ -1238,13 +953,14 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+    <!--<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>-->
     <script src="js/plugins/slick-1.3.15/slick/slick.min.js"></script>
     <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/uisearch.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="js/ion.rangeSlider-2.1.1/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
+    <!--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+    <!--<script src="js/ion.rangeSlider-2.1.1/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>-->
+    <script src="js/jquery.rating/js/jquery.rating-2.0.min.js"></script>
     <script src="js/app.js"></script>
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>

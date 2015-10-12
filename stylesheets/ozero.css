@@ -1209,6 +1209,9 @@ html {
   display: inline-block;
   vertical-align: middle;
 }
+.control-panel .tags-list li.active a {
+  border-color: rgba(0, 0, 0, 0.1);
+}
 .control-panel .tags-list li a {
   text-decoration: none;
   display: block;

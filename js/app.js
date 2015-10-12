@@ -206,6 +206,20 @@ $(document).ready(function(){
             });
         });
     }
+    if (document.getElementById('place-light-rating')){
+        $(function() {
+            $('#place-light-rating').rating({
+                fx: 'full',
+                image: 'js/jquery.rating/images/stars-small.png',
+                loader: 'js/jquery.rating/images/ajax-loader.gif',
+                //url: 'rating.php',
+                callback: function(responce){
+                    this.vote_success.fadeOut(2000);
+                }
+            });
+        });
+    }
+    //end rating init
 
     //mobile slider blog in event
     if (document.getElementById('slider-event')){
