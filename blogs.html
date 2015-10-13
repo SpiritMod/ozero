@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="stylesheets/calendar.css" />
     <link rel="stylesheet" href="stylesheets/custom_2.css" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="js/jquery.rating/styles/jquery.rating.css" media="screen"/>
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.css" />
-    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.skinHTML5.css" />
+    <!--<link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.skinHTML5.css" />-->
     <link rel="stylesheet" href="stylesheets/ozero.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -668,655 +669,333 @@
             </div>
         </div>
     </header>
-    <main role="main" class="page-places-restaurants-list">
+    <main role="main" class="page-blogs">
         <div class="row">
             <div class="main-content">
                 <div class="content">
-                    <div class="places-category">
+                    <div class="blogs-category">
                         <div class="control-panel">
                             <ul class="tags-list">
-                                <li class="active"><a href="#">Концерты</a></li>
-                                <li><a href="#">В Городе</a></li>
-                                <li><a href="#">Спектакли</a></li>
-                                <li><a href="#">Вечеринки</a></li>
-                                <li><a href="#">Выставки</a></li>
-                                <li>
-                                    <a data-dropdown="drop-1" aria-controls="drop" aria-expanded="false" class="round button dropdown">Другое</a>
-                                    <ul id="drop-1" data-dropdown-content class="f-dropdown" role="menu" aria-hidden="false" tabindex="-1">
-                                        <li><a href="#">This is a link</a></li>
-                                        <li><a href="#">This is another</a></li>
-                                        <li><a href="#">Yet another</a></li>
-                                    </ul>
-                                </li>
+                                <li class="active"><a href="#">Популярные Записи</a></li>
+                                <li><a href="#">Мои Дневники</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="places-wrapper">
-                        <div class="places-category">
-                            <ul class="filter">
-                                <li>
-                                    <a href="#">Кинотеатры</a>
-                                </li>
-                                <li>
-                                    <a class="active" href="#">Театры</a>
-                                </li>
-                                <li>
-                                    <a href="#">Для детей</a>
-                                </li>
-                                <li>
-                                    <a href="#">Бани и сауны</a>
-                                </li>
-                                <li>
-                                    <a href="#">Выставки</a>
-                                </li>
-                                <li>
-                                    <a href="#">Бассейны</a>
-                                </li>
-                                <li>
-                                    <a href="#">Библиотеки</a>
-                                </li>
-                                <li>
-                                    <a href="#">Бильярдные залы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Боулинг</a>
-                                </li>
-                                <li>
-                                    <a href="#">Гостиницы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Зоопарки</a>
-                                </li>
-                                <li>
-                                    <a href="#">Загородный отдых</a>
-                                </li>
-                                <li>
-                                    <a href="#">Интернет-клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Конные клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Концертные залы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Лыжные комплексы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Лазертаг</a>
-                                </li>
-                                <li>
-                                    <a href="#">Музеи и галереи</a>
-                                </li>
-                                <li>
-                                    <a href="#">Музыкальные студии</a>
-                                </li>
-                                <li>
-                                    <a href="#">Ночные клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Парки и скверы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Пейнтбол</a>
-                                </li>
-                                <li>
-                                    <a href="#">Реалити-квест</a>
-                                </li>
-                                <li>
-                                    <a href="#">Спортивные клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Торговые центры</a>
-                                </li>
-                                <li>
-                                    <a href="#">Фитнес-клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Wi-Fi</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="box-list-places">
-                            <div class="block-search-form">
-                                <form action="#">
-                                    <label for="search-plases">Найти</label>
-                                    <div class="item">
-                                        <input type="search" id="search-plases"/>
-                                        <button type="submit"><span class="fa fa-search"></span></button>
+                    <div class="blogs-list">
+                        <article class="blog-post">
+                            <div class="row">
+                                <div class="small-12 medium-12 large-4 columns">
+                                    <div class="field-img">
+                                        <a href="#"><img src="img/blogs/blog-img-1.jpg" alt="img"/></a>
                                     </div>
-                                </form>
-                                <div class="block-sorting">
-                                    <span class="sorting-label">Сортировать:</span>
-                                    <ul class="sorting">
-                                        <li>
-                                            <a class="active" href="#">А-Я</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">по рейтингу</a>
-                                        </li>
-                                    </ul>
+                                </div>
+                                <div class="small-12 medium-12 large-8 columns">
+                                    <header>
+                                        <a class="post-title" href="#">Погода в походах и не только</a>
+                                        <ul class="category-post">
+                                            <li><a href="#">Путешествия</a></li>
+                                            <li><a href="#">Отдых</a></li>
+                                        </ul>
+                                        <div class="box-shared">
+                                            <a class="buttons-shared" data-dropdown="sharedLink3" aria-controls="autoCloseExample" aria-expanded="false"><i class="fa fa-share-square-o"></i></a>
+                                            <ul id="sharedLink3" class="f-dropdown" data-dropdown-content tabindex="-1" aria-hidden="true" aria-autoclose="false" tabindex="-1">
+                                                <li>
+                                                    <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-vk"></i> VK</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-link"></i> Ссылка</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </header>
+                                    <div class="body">
+                                        <p>Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="places-restaurants-wrapper">
-                                <ul class="list-places-restaurants small-block-grid-2">
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
+                            <div class="post-footer row">
+                                <div class="small-12 columns">
+                                    <div class="bloger-info">
+                                        <a class="user-name" href="#">
+                                            <span class="user-avatar"><img src="img/user/avatar-1.jpg" alt="img"></span>
+                                            <span class="name">Вася Петров</span>
+                                        </a>
+                                        <i class="fa fa-chevron-right"></i>
+                                        <a class="island" href="#">Пешие походы</a>
+                                    </div>
+                                    <div class="statistic">
+                                        <span class="field">
+                                            <i class="fa fa-eye"></i> 1345
+                                        </span>
+                                        <span class="field">
+                                            <i class="fa fa-comment-o"></i> Коментариев <span>8</span>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </article>
+                        <article class="blog-post">
+                            <div class="row">
+                                <div class="small-12 medium-12 large-4 columns">
+                                    <div class="field-img">
+                                        <a href="#"><img src="img/blogs/blog-img-2.jpg" alt="img"/></a>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-12 large-8 columns">
+                                    <header>
+                                        <a class="post-title" href="#">Погода в походах и не только</a>
+                                        <ul class="category-post">
+                                            <li><a href="#">Путешествия</a></li>
+                                            <li><a href="#">Отдых</a></li>
+                                        </ul>
+                                        <div class="box-shared">
+                                            <a class="buttons-shared" data-dropdown="sharedLink2" aria-controls="autoCloseExample" aria-expanded="false"><i class="fa fa-share-square-o"></i></a>
+                                            <ul id="sharedLink2" class="f-dropdown" data-dropdown-content tabindex="-1" aria-hidden="true" aria-autoclose="false" tabindex="-1">
+                                                <li>
+                                                    <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-vk"></i> VK</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-link"></i> Ссылка</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </header>
+                                    <div class="body">
+                                        <p>Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-footer row">
+                                <div class="small-12 columns">
+                                    <div class="bloger-info">
+                                        <a class="user-name" href="#">
+                                            <span class="user-avatar"><img src="img/user/avatar-1.jpg" alt="img"></span>
+                                            <span class="name">Вася Петров</span>
+                                        </a>
+                                        <i class="fa fa-chevron-right"></i>
+                                        <a class="island" href="#">Пешие походы</a>
+                                    </div>
+                                    <div class="statistic">
+                                        <span class="field">
+                                            <i class="fa fa-eye"></i> 1345
+                                        </span>
+                                        <span class="field">
+                                            <i class="fa fa-comment-o"></i> Коментариев <span>8</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="blog-post">
+                            <div class="row">
+                                <div class="small-12 medium-12 large-4 columns">
+                                    <div class="field-img">
+                                        <a href="#"><img src="img/blogs/blog-img-1.jpg" alt="img"/></a>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-12 large-8 columns">
+                                    <header>
+                                        <a class="post-title" href="#">Погода в походах и не только</a>
+                                        <ul class="category-post">
+                                            <li><a href="#">Путешествия</a></li>
+                                            <li><a href="#">Отдых</a></li>
+                                        </ul>
+                                        <div class="box-shared">
+                                            <a class="buttons-shared" data-dropdown="sharedLink1" aria-controls="autoCloseExample" aria-expanded="false"><i class="fa fa-share-square-o"></i></a>
+                                            <ul id="sharedLink1" class="f-dropdown" data-dropdown-content tabindex="-1" aria-hidden="true" aria-autoclose="false" tabindex="-1">
+                                                <li>
+                                                    <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-vk"></i> VK</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-link"></i> Ссылка</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </header>
+                                    <div class="body">
+                                        <p>Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-footer row">
+                                <div class="small-12 columns">
+                                    <div class="bloger-info">
+                                        <a class="user-name" href="#">
+                                            <span class="user-avatar"><img src="img/user/avatar-1.jpg" alt="img"></span>
+                                            <span class="name">Вася Петров</span>
+                                        </a>
+                                        <i class="fa fa-chevron-right"></i>
+                                        <a class="island" href="#">Пешие походы</a>
+                                    </div>
+                                    <div class="statistic">
+                                        <span class="field">
+                                            <i class="fa fa-eye"></i> 1345
+                                        </span>
+                                        <span class="field">
+                                            <i class="fa fa-comment-o"></i> Коментариев <span>8</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
             <aside class="right-sidebar">
-                <div class="block-blogs">
-                    <h2 class="block-title">Блоги</h2>
-                    <div class="blog-list" id="blog-list-mobile">
+                <div class="block-popular-island">
+                    <h2 class="block-title">Популярные острова</h2>
+                    <div class="list-popular-island" id="list-popular-island">
                         <div class="item">
-                            <div class="img">
-                                <a href="#"><img src="./img/blog-img-1.jpg" alt=""/></a>
+                            <a class="img" href="#"><img src="img/blogs/island-1.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="info">город без пробок</div>
-                            <a class="title" href="#">Чем расплачиваться в интернете</a>
                         </div>
                         <div class="item">
-                            <div class="img">
-                                <a href="#"><img src="./img/blog-img-2.jpg" alt=""/></a>
+                            <a class="img" href="#"><img src="img/blogs/island-2.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="info">город без пробок</div>
-                            <a class="title" href="#">Что можно сделать из рыбьей, куриной и свиной</a>
                         </div>
                         <div class="item">
-                            <div class="img">
-                                <a href="#"><img src="./img/blog-img-3.jpg" alt=""/></a>
+                            <a class="img" href="#"><img src="img/blogs/island-3.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="info">город без пробок</div>
-                            <a class="title" href="#">Чем расплачиваться в интернете</a>
                         </div>
                         <div class="item">
-                            <div class="img">
-                                <a href="#"><img src="./img/blog-img-2.jpg" alt=""/></a>
+                            <a class="img" href="#"><img src="img/blogs/island-4.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="info">город без пробок</div>
-                            <a class="title" href="#">Что можно сделать из рыбьей, куриной и свиной</a>
                         </div>
                     </div>
-                    <div class="all-posts"><a href="#">Все записи в блогах</a></div>
                 </div>
-                <div class="tabulation">
-                    <ul class="tabs" data-tab>
-                        <li class="tab-title active"><a href="#panel1-1"><i class="fa fa-instagram"></i><span class="help"> Инста дня</span></a></li>
-                        <li class="tab-title"><a href="#panel1-2"><i class="fa fa-twitter"></i> <span class="help">Tweet дня</span></a></li>
-                    </ul>
-                    <div class="tabs-content">
-                        <div class="content active" id="panel1-1">
-                            <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+                <div class="block-popular-authors">
+                    <h2 class="block-title">Популярные авторы</h2>
+                    <div class="list-popular-authors" id="list-popular-authors">
+                        <div class="item">
+                            <div class="field-photo">
+                                <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                            </div>
+                            <a class="author" href="#">Дмитрий блогов</a>
+                            <div class="description">
+                                <p>“Слово моё как топор”</p>
+                            </div>
+                            <div class="author-info">
+                                <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                            </div>
                         </div>
-                        <div class="content" id="panel1-2">
-                            <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                        <div class="item">
+                            <div class="field-photo">
+                                <a class="img" href="#"><img src="img/blogs/author-2.jpg" alt="img"/></a>
+                            </div>
+                            <a class="author" href="#">Дмитрий блогов</a>
+                            <div class="description">
+                                <p>“Слово моё как топор”</p>
+                            </div>
+                            <div class="author-info">
+                                <span class="views"><a class="red" href="#">3</a>/<a href="#">10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-photo">
+                                <a class="img" href="#"><img src="img/blogs/author-3.jpg" alt="img"/></a>
+                            </div>
+                            <a class="author" href="#">Дмитрий блогов</a>
+                            <div class="description">
+                                <p>“Слово моё как топор”</p>
+                            </div>
+                            <div class="author-info">
+                                <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="block-popular-themes">
+                    <h2 class="block-title">Популярные темы</h2>
+                    <ul class="list-themes small-block-grid-2">
+                        <li>
+                            <a class="theme" href="#">Автомобили</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Юмор</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Путешествия</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Творчество</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Политика</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Автомобили</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Путешествия</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Творчество</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Политика</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Автомобили</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                    </ul>
                 </div>
             </aside>
         </div>
@@ -1454,13 +1133,14 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+    <!--<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>-->
     <script src="js/plugins/slick-1.3.15/slick/slick.min.js"></script>
     <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/uisearch.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="js/ion.rangeSlider-2.1.1/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
+    <!--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+    <!--<script src="js/ion.rangeSlider-2.1.1/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>-->
+    <script src="js/jquery.rating/js/jquery.rating-2.0.min.js"></script>
     <script src="js/app.js"></script>
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>

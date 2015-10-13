@@ -745,23 +745,401 @@
                         </div>
                         <div class="place-bottom-wrapper">
                             <ul class="tabs" data-tab>
-                                <li class="tab-title active"><a href="#panel11">Расписание</a></li>
-                                <li class="tab-title"><a href="#panel21">Описание</a></li>
-                                <li class="tab-title"><a href="#panel31">Отзывы <span>(232)</span></a></li>
-                                <li class="tab-title"><a href="#panel41">Схемы залов</a></li>
+                                <li class="tab-title active"><a href="#panel11"><span>Расписание</span></a></li>
+                                <li class="tab-title"><a href="#panel21"><span>Описание</span></a></li>
+                                <li class="tab-title"><a href="#panel31"><span>Отзывы (232)</span></a></li>
+                                <li class="tab-title"><a href="#panel41"><span>Схемы залов</span></a></li>
                             </ul>
                             <div class="tabs-content">
                                 <div class="content active" id="panel11">
-                                    <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+                                    <div class="block-timetable">
+                                        <div class="block-place-date">
+                                            <ul class="date-list" id="date-place-slider">
+                                                <li class="today active">
+                                                    <a href="#"><span>Сегодня</span><strong>1 октября</strong></a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#"><span>Пт</span><strong>2</strong></a>
+                                                </li>
+                                                <li class="weekend">
+                                                    <a href="#"><span>Сб</span><strong>3</strong></a>
+                                                </li>
+                                                <li class="weekend">
+                                                    <a href="#"><span>Вс</span><strong>4</strong></a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#"><span>Пн</span><strong>5</strong></a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#"><span>Вт</span><strong>6</strong></a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#"><span>Ср</span><strong>7</strong></a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#"><span>Чт</span><strong>8</strong></a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#"><span>Пт</span><strong>9</strong></a>
+                                                </li>
+                                            </ul>
+                                            <div class="block-sorting">
+                                                <span class="sorting-label">Показать:</span>
+                                                <ul class="sorting">
+                                                    <li>
+                                                        <a class="active" href="#">Все</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">2D</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">3D</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">по залам</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="timetable">
+                                            <div class="timetable-row">
+                                                <div class="field-cinema">
+                                                    <div class="vertical">
+                                                        <a href="#">КиноКвартал</a>
+                                                    </div>
+                                                </div>
+                                                <div class="field-time">
+                                                    <div class="vertical">
+                                                        <span>17:20</span>
+                                                        <span>19:00</span>
+                                                        <span>20:40</span>
+                                                        <span>22:20</span>
+                                                    </div>
+                                                </div>
+                                                <div class="field-price">
+                                                    <div class="vertical">
+                                                        <p><strong>100—220 руб.</strong> (до 16:00)</p>
+                                                        <p><strong>250 руб.</strong> (после 16:00)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timetable-row">
+                                                <div class="field-cinema">
+                                                    <div class="vertical">
+                                                        <a href="#">Карамель</a>
+                                                    </div>
+                                                </div>
+                                                <div class="field-time">
+                                                    <div class="vertical">
+                                                        <span>17:20</span>
+                                                        <span>18:15</span>
+                                                        <span>20:10</span>
+                                                        <span>21:25</span>
+                                                        <span>22:05</span>
+                                                        <span>23:15</span>
+                                                    </div>
+                                                </div>
+                                                <div class="field-price">
+                                                    <div class="vertical">
+                                                        <p><strong>100—220 руб.</strong> (до 16:00)</p>
+                                                        <p><strong>250 руб.</strong> (после 16:00)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timetable-row">
+                                                <div class="field-cinema">
+                                                    <div class="vertical">
+                                                        <a href="#">Чайка</a>
+                                                    </div>
+                                                </div>
+                                                <div class="field-time">
+                                                    <div class="vertical">
+                                                        <span>17:20</span>
+                                                        <span>19:00</span>
+                                                        <span>20:40</span>
+                                                        <span>22:20</span>
+                                                    </div>
+                                                </div>
+                                                <div class="field-price">
+                                                    <div class="vertical">
+                                                        <p><strong>200—250 руб.</strong> (до 18:00)</p>
+                                                        <p><strong>250—300 руб.</strong> (после 18:00)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timetable-row">
+                                                <div class="field-cinema">
+                                                    <div class="vertical">
+                                                        <a href="#">Чайка</a>
+                                                    </div>
+                                                </div>
+                                                <div class="field-time">
+                                                    <div class="vertical">
+                                                        <span>17:20</span>
+                                                        <span>19:00</span>
+                                                        <span>20:40</span>
+                                                        <span>22:20</span>
+                                                    </div>
+                                                </div>
+                                                <div class="field-price">
+                                                    <div class="vertical">
+                                                        <p><strong>200—250 руб.</strong> (до 18:00)</p>
+                                                        <p><strong>250—300 руб.</strong> (после 18:00)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="content" id="panel21">
-                                    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                                    <div class="description">
+                                        <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example. This is the second panel of the basic tab example. This is the second panel of the basic tab example. This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                                        <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                                        <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                                        <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                                    </div>
                                 </div>
                                 <div class="content" id="panel31">
-                                    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+                                    <div class="block-comments" id="block-comments">
+                                        <h2 class="block-title">Отзывы</h2>
+                                        <div class="all-comments">
+                                            <div class="comment-row no-sublevel">
+                                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                                <div class="text-comment">
+                                                    <p>Два дивана что за диваны?</p>
+                                                </div>
+                                                <ul class="post-meta">
+                                                    <li class="posted-time">10 июля в 12:44</li>
+                                                    <li>
+                                                        <a href="#" class="comment-link">#</a>
+                                                    </li>
+                                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                        <i class="icon-rating"></i>
+                                                        <span class="count">0</span>
+                                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                    </li>
+                                                    <li class="item-meta meta-actions reply">
+                                                        <a href="#" class="comment-it">Ответить</a>
+                                                    </li>
+                                                </ul>
+                                                <form class="form-reply" action="#">
+                                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                                    <input type="text" placeholder="Ваш ответ..."/>
+                                                    <button type="submit">Ответить</button>
+                                                </form>
+                                                <div class="box-reply">
+                                                    <a class="last-reply-user" href="#">
+                                                        <span class="user-img"><img src="img/user/avatar-2.jpg" alt="img"/></span>
+                                                        <span class="user-name">Ульяна</span>
+                                                        <span class="desc">ответил(-а)</span>
+                                                        <span class="item-reply"> - 2 ответа</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="comment-row sublevel">
+                                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                                <div class="text-comment">
+                                                    <p>Два дивана что за диваны?</p>
+                                                </div>
+                                                <ul class="post-meta">
+                                                    <li class="posted-time">10 июля в 12:44</li>
+                                                    <li>
+                                                        <a href="#" class="comment-link">#</a>
+                                                    </li>
+                                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                        <i class="icon-rating"></i>
+                                                        <span class="count">0</span>
+                                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                    </li>
+                                                    <li class="item-meta meta-actions reply">
+                                                        <a href="#" class="comment-it">Ответить</a>
+                                                    </li>
+                                                </ul>
+                                                <form class="form-reply" action="#">
+                                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                                    <input type="text" placeholder="Ваш ответ..."/>
+                                                    <button type="submit">Ответить</button>
+                                                </form>
+                                                <div class="comment-sublevel">
+                                                    <div class="comment-row">
+                                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                                        <div class="user-name-and-reply">
+                                                            <a class="user" href="#">Юля_88</a>
+                                                            <a href="#" class="parent-user">Ирина</a>
+                                                        </div>
+                                                        <div class="text-comment">
+                                                            <p>Два дивана что за диваны?</p>
+                                                        </div>
+                                                        <ul class="post-meta">
+                                                            <li class="posted-time">10 июля в 12:44</li>
+                                                            <li>
+                                                                <a href="#" class="comment-link">#</a>
+                                                            </li>
+                                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                                <i class="icon-rating"></i>
+                                                                <span class="count">0</span>
+                                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                            </li>
+                                                            <li class="item-meta meta-actions reply">
+                                                                <a href="#" class="comment-it">Ответить</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="comment-row">
+                                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                                        <div class="user-name-and-reply">
+                                                            <a class="user" href="#">Ирина</a>
+                                                            <a href="#" class="parent-user">Ирина</a>
+                                                        </div>
+                                                        <div class="text-comment">
+                                                            <p>Два дивана что за диваны?</p>
+                                                        </div>
+                                                        <ul class="post-meta">
+                                                            <li class="posted-time">10 июля в 12:44</li>
+                                                            <li>
+                                                                <a href="#" class="comment-link">#</a>
+                                                            </li>
+                                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                                <i class="icon-rating"></i>
+                                                                <span class="count">0</span>
+                                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                            </li>
+                                                            <li class="item-meta meta-actions reply">
+                                                                <a href="#" class="comment-it">Ответить</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-row sublevel active">
+                                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                                <div class="text-comment">
+                                                    <p>Два дивана что за диваны?</p>
+                                                </div>
+                                                <ul class="post-meta">
+                                                    <li class="posted-time">10 июля в 12:44</li>
+                                                    <li>
+                                                        <a href="#" class="comment-link">#</a>
+                                                    </li>
+                                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                        <i class="icon-rating"></i>
+                                                        <span class="count">0</span>
+                                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                    </li>
+                                                    <li class="item-meta meta-actions reply">
+                                                        <a href="#" class="comment-it">Ответить</a>
+                                                    </li>
+                                                </ul>
+                                                <form class="form-reply" action="#">
+                                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                                    <input type="text" placeholder="Ваш ответ..."/>
+                                                    <button type="submit">Ответить</button>
+                                                </form>
+                                                <div class="comment-sublevel">
+                                                    <div class="comment-row">
+                                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                                        <div class="user-name-and-reply">
+                                                            <a class="user" href="#">Юля_88</a>
+                                                            <a href="#" class="parent-user">Ирина</a>
+                                                        </div>
+                                                        <div class="text-comment">
+                                                            <p>Два дивана что за диваны?</p>
+                                                        </div>
+                                                        <ul class="post-meta">
+                                                            <li class="posted-time">10 июля в 12:44</li>
+                                                            <li>
+                                                                <a href="#" class="comment-link">#</a>
+                                                            </li>
+                                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                                <i class="icon-rating"></i>
+                                                                <span class="count">0</span>
+                                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                            </li>
+                                                            <li class="item-meta meta-actions reply">
+                                                                <a href="#" class="comment-it">Ответить</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="comment-row">
+                                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                                        <div class="user-name-and-reply">
+                                                            <a class="user" href="#">Ирина</a>
+                                                            <a href="#" class="parent-user">Ирина</a>
+                                                        </div>
+                                                        <div class="text-comment">
+                                                            <p>Два дивана что за диваны?</p>
+                                                        </div>
+                                                        <ul class="post-meta">
+                                                            <li class="posted-time">10 июля в 12:44</li>
+                                                            <li>
+                                                                <a href="#" class="comment-link">#</a>
+                                                            </li>
+                                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                                <i class="icon-rating"></i>
+                                                                <span class="count">0</span>
+                                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                            </li>
+                                                            <li class="item-meta meta-actions reply">
+                                                                <a href="#" class="comment-it">Ответить</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-row no-sublevel">
+                                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                                <div class="text-comment">
+                                                    <p>Два дивана что за диваны?</p>
+                                                </div>
+                                                <ul class="post-meta">
+                                                    <li class="posted-time">10 июля в 12:44</li>
+                                                    <li>
+                                                        <a href="#" class="comment-link">#</a>
+                                                    </li>
+                                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                        <i class="icon-rating"></i>
+                                                        <span class="count">0</span>
+                                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                    </li>
+                                                    <li class="item-meta meta-actions reply">
+                                                        <a href="#" class="comment-it">Ответить</a>
+                                                    </li>
+                                                </ul>
+                                                <form class="form-reply" action="#">
+                                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                                    <input type="text" placeholder="Ваш ответ..."/>
+                                                    <button type="submit">Ответить</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="box-btn">
+                                            <a class="all-comments" href="#">Все коментарии (76)</a>
+                                        </div>
+                                        <div class="block-form-comment">
+                                            <h2 class="block-title">Оставить комментарий</h2>
+                                            <form action="#">
+                                                <textarea></textarea>
+                                                <button type="submit">Комментировать</button>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="content" id="panel41">
-                                    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+                                    <div class="schemes">
+                                        123
+                                    </div>
                                 </div>
                             </div>
                         </div>

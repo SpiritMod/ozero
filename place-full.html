@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="stylesheets/calendar.css" />
     <link rel="stylesheet" href="stylesheets/custom_2.css" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="js/jquery.rating/styles/jquery.rating.css" media="screen"/>
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.css" />
-    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.skinHTML5.css" />
+    <!--<link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.skinHTML5.css" />-->
     <link rel="stylesheet" href="stylesheets/ozero.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -668,16 +669,17 @@
             </div>
         </div>
     </header>
-    <main role="main" class="page-places-restaurants-list">
+    <main role="main" class="page-place-full">
         <div class="row">
             <div class="main-content">
                 <div class="content">
                     <div class="places-category">
                         <div class="control-panel">
                             <ul class="tags-list">
-                                <li class="active"><a href="#">Концерты</a></li>
+                                <li><a href="#">Концерты</a></li>
                                 <li><a href="#">В Городе</a></li>
                                 <li><a href="#">Спектакли</a></li>
+                                <li class="active"><a href="#">Кино</a></li>
                                 <li><a href="#">Вечеринки</a></li>
                                 <li><a href="#">Выставки</a></li>
                                 <li>
@@ -691,582 +693,358 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="places-wrapper">
-                        <div class="places-category">
-                            <ul class="filter">
-                                <li>
-                                    <a href="#">Кинотеатры</a>
-                                </li>
-                                <li>
-                                    <a class="active" href="#">Театры</a>
-                                </li>
-                                <li>
-                                    <a href="#">Для детей</a>
-                                </li>
-                                <li>
-                                    <a href="#">Бани и сауны</a>
-                                </li>
-                                <li>
-                                    <a href="#">Выставки</a>
-                                </li>
-                                <li>
-                                    <a href="#">Бассейны</a>
-                                </li>
-                                <li>
-                                    <a href="#">Библиотеки</a>
-                                </li>
-                                <li>
-                                    <a href="#">Бильярдные залы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Боулинг</a>
-                                </li>
-                                <li>
-                                    <a href="#">Гостиницы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Зоопарки</a>
-                                </li>
-                                <li>
-                                    <a href="#">Загородный отдых</a>
-                                </li>
-                                <li>
-                                    <a href="#">Интернет-клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Конные клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Концертные залы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Лыжные комплексы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Лазертаг</a>
-                                </li>
-                                <li>
-                                    <a href="#">Музеи и галереи</a>
-                                </li>
-                                <li>
-                                    <a href="#">Музыкальные студии</a>
-                                </li>
-                                <li>
-                                    <a href="#">Ночные клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Парки и скверы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Пейнтбол</a>
-                                </li>
-                                <li>
-                                    <a href="#">Реалити-квест</a>
-                                </li>
-                                <li>
-                                    <a href="#">Спортивные клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Торговые центры</a>
-                                </li>
-                                <li>
-                                    <a href="#">Фитнес-клубы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Wi-Fi</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="box-list-places">
-                            <div class="block-search-form">
-                                <form action="#">
-                                    <label for="search-plases">Найти</label>
-                                    <div class="item">
-                                        <input type="search" id="search-plases"/>
-                                        <button type="submit"><span class="fa fa-search"></span></button>
-                                    </div>
-                                </form>
-                                <div class="block-sorting">
-                                    <span class="sorting-label">Сортировать:</span>
-                                    <ul class="sorting">
-                                        <li>
-                                            <a class="active" href="#">А-Я</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">по рейтингу</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="places-restaurants-wrapper">
-                                <ul class="list-places-restaurants small-block-grid-2">
+                    <article class="node-place-full">
+                        <div class="place-top-wrapper">
+                            <div class="box-title">
+                                <h2 class="title">Рио-грандэ, ресторан</h2>
+                                <ul class="place-categories">
                                     <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <a href="#">доставка</a>
                                     </li>
                                     <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
+                                        <a href="#">рестораны</a>
                                     </li>
                                 </ul>
+                                <div class="field-rating">
+                                    <div id="place-light-rating">
+                                        <input name="vote-id" value="1" type="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="place-info">
+                                <div class="row">
+                                    <div class="small-12 medium-12 large-4 columns">
+                                        <div class="field-img">
+                                            <img src="img/restaurants/restaurant-2.jpg" alt="img"/>
+                                        </div>
+                                    </div>
+                                    <div class="small-12 medium-12 large-8 columns">
+                                        <div class="box-items">
+                                            <div class="field-item">
+                                                <div class="field-label">Адрес:</div>
+                                                <div class="field-info">Российская, 17</div>
+                                            </div>
+                                            <div class="field-item">
+                                                <div class="field-label">Телефоны:</div>
+                                                <div class="field-info">(3952) 24-29-71, 24-35-88</div>
+                                            </div>
+                                            <div class="field-item">
+                                                <div class="field-label">Эл. почта:</div>
+                                                <div class="field-info">
+                                                    <a href="mailto:info@303303.ru">info@303303.ru</a>
+                                                </div>
+                                            </div>
+                                            <div class="field-item">
+                                                <div class="field-label">Сайт:</div>
+                                                <div class="field-info">
+                                                    <a href="#" target="_blank">http://www.rio-grandeirk.ru</a>
+                                                </div>
+                                            </div>
+                                            <div class="field-item">
+                                                <div class="field-label">Средний чек:</div>
+                                                <div class="field-info">от 1000 до 1500 р.</div>
+                                            </div>
+                                            <div class="field-item">
+                                                <div class="field-label">Кухня:</div>
+                                                <div class="field-info">мексиканская</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="small-12 columns">
+                                        <ul class="restaurant-services">
+                                            <li>
+                                                <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                            </li>
+                                            <li>
+                                                <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
+                                            </li>
+                                            <li>
+                                                <span title="Танцпол"><i class="fa fa-music"></i></span>
+                                            </li>
+                                            <li>
+                                                <span title="Караоке"><i class="fa fa-microphone"></i></span>
+                                            </li>
+                                            <li>
+                                                <span title="Парковка"><i class="fa fa-road"></i></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
-                    </div>
+                        <div class="place-bottom-wrapper">
+                            <ul class="tabs" data-tab>
+                                <li class="tab-title active"><a href="#panel11"><span>Фото</span></a></li>
+                                <li class="tab-title"><a href="#panel21"><span>Меню</span></a></li>
+                                <li class="tab-title"><a href="#panel31"><span>О заведении</span></a></li>
+                                <li class="tab-title"><a href="#panel41"><span>3D тур</span></a></li>
+                                <li class="tab-title"><a href="#panel51"><span>События</span></a></li>
+                                <li class="tab-title"><a href="#panel61"><span>Акции</span></a></li>
+                                <li class="tab-title"><a href="#panel71"><span>Отзывы</span></a></li>
+                            </ul>
+                            <div class="tabs-content">
+                                <div class="content active" id="panel11">
+                                    111
+                                </div>
+                                <div class="content" id="panel21">
+                                    222
+                                </div>
+                                <div class="content" id="panel31">
+                                    333
+                                </div>
+                                <div class="content" id="panel41">
+                                    444
+                                </div>
+                                <div class="content" id="panel51">
+                                    555
+                                </div>
+                                <div class="content" id="panel61">
+                                    666
+                                </div>
+                                <div class="content" id="panel71">
+                                    <div class="block-comments" id="block-comments">
+                                        <h2 class="block-title">Отзывы</h2>
+                                        <div class="all-comments">
+                                            <div class="comment-row no-sublevel">
+                                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                                <div class="text-comment">
+                                                    <p>Два дивана что за диваны?</p>
+                                                </div>
+                                                <ul class="post-meta">
+                                                    <li class="posted-time">10 июля в 12:44</li>
+                                                    <li>
+                                                        <a href="#" class="comment-link">#</a>
+                                                    </li>
+                                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                        <i class="icon-rating"></i>
+                                                        <span class="count">0</span>
+                                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                    </li>
+                                                    <li class="item-meta meta-actions reply">
+                                                        <a href="#" class="comment-it">Ответить</a>
+                                                    </li>
+                                                </ul>
+                                                <form class="form-reply" action="#">
+                                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                                    <input type="text" placeholder="Ваш ответ..."/>
+                                                    <button type="submit">Ответить</button>
+                                                </form>
+                                                <div class="box-reply">
+                                                    <a class="last-reply-user" href="#">
+                                                        <span class="user-img"><img src="img/user/avatar-2.jpg" alt="img"/></span>
+                                                        <span class="user-name">Ульяна</span>
+                                                        <span class="desc">ответил(-а)</span>
+                                                        <span class="item-reply"> - 2 ответа</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="comment-row sublevel">
+                                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                                <div class="text-comment">
+                                                    <p>Два дивана что за диваны?</p>
+                                                </div>
+                                                <ul class="post-meta">
+                                                    <li class="posted-time">10 июля в 12:44</li>
+                                                    <li>
+                                                        <a href="#" class="comment-link">#</a>
+                                                    </li>
+                                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                        <i class="icon-rating"></i>
+                                                        <span class="count">0</span>
+                                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                    </li>
+                                                    <li class="item-meta meta-actions reply">
+                                                        <a href="#" class="comment-it">Ответить</a>
+                                                    </li>
+                                                </ul>
+                                                <form class="form-reply" action="#">
+                                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                                    <input type="text" placeholder="Ваш ответ..."/>
+                                                    <button type="submit">Ответить</button>
+                                                </form>
+                                                <div class="comment-sublevel">
+                                                    <div class="comment-row">
+                                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                                        <div class="user-name-and-reply">
+                                                            <a class="user" href="#">Юля_88</a>
+                                                            <a href="#" class="parent-user">Ирина</a>
+                                                        </div>
+                                                        <div class="text-comment">
+                                                            <p>Два дивана что за диваны?</p>
+                                                        </div>
+                                                        <ul class="post-meta">
+                                                            <li class="posted-time">10 июля в 12:44</li>
+                                                            <li>
+                                                                <a href="#" class="comment-link">#</a>
+                                                            </li>
+                                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                                <i class="icon-rating"></i>
+                                                                <span class="count">0</span>
+                                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                            </li>
+                                                            <li class="item-meta meta-actions reply">
+                                                                <a href="#" class="comment-it">Ответить</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="comment-row">
+                                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                                        <div class="user-name-and-reply">
+                                                            <a class="user" href="#">Ирина</a>
+                                                            <a href="#" class="parent-user">Ирина</a>
+                                                        </div>
+                                                        <div class="text-comment">
+                                                            <p>Два дивана что за диваны?</p>
+                                                        </div>
+                                                        <ul class="post-meta">
+                                                            <li class="posted-time">10 июля в 12:44</li>
+                                                            <li>
+                                                                <a href="#" class="comment-link">#</a>
+                                                            </li>
+                                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                                <i class="icon-rating"></i>
+                                                                <span class="count">0</span>
+                                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                            </li>
+                                                            <li class="item-meta meta-actions reply">
+                                                                <a href="#" class="comment-it">Ответить</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-row sublevel active">
+                                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                                <div class="text-comment">
+                                                    <p>Два дивана что за диваны?</p>
+                                                </div>
+                                                <ul class="post-meta">
+                                                    <li class="posted-time">10 июля в 12:44</li>
+                                                    <li>
+                                                        <a href="#" class="comment-link">#</a>
+                                                    </li>
+                                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                        <i class="icon-rating"></i>
+                                                        <span class="count">0</span>
+                                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                    </li>
+                                                    <li class="item-meta meta-actions reply">
+                                                        <a href="#" class="comment-it">Ответить</a>
+                                                    </li>
+                                                </ul>
+                                                <form class="form-reply" action="#">
+                                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                                    <input type="text" placeholder="Ваш ответ..."/>
+                                                    <button type="submit">Ответить</button>
+                                                </form>
+                                                <div class="comment-sublevel">
+                                                    <div class="comment-row">
+                                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                                        <div class="user-name-and-reply">
+                                                            <a class="user" href="#">Юля_88</a>
+                                                            <a href="#" class="parent-user">Ирина</a>
+                                                        </div>
+                                                        <div class="text-comment">
+                                                            <p>Два дивана что за диваны?</p>
+                                                        </div>
+                                                        <ul class="post-meta">
+                                                            <li class="posted-time">10 июля в 12:44</li>
+                                                            <li>
+                                                                <a href="#" class="comment-link">#</a>
+                                                            </li>
+                                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                                <i class="icon-rating"></i>
+                                                                <span class="count">0</span>
+                                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                            </li>
+                                                            <li class="item-meta meta-actions reply">
+                                                                <a href="#" class="comment-it">Ответить</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="comment-row">
+                                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                                        <div class="user-name-and-reply">
+                                                            <a class="user" href="#">Ирина</a>
+                                                            <a href="#" class="parent-user">Ирина</a>
+                                                        </div>
+                                                        <div class="text-comment">
+                                                            <p>Два дивана что за диваны?</p>
+                                                        </div>
+                                                        <ul class="post-meta">
+                                                            <li class="posted-time">10 июля в 12:44</li>
+                                                            <li>
+                                                                <a href="#" class="comment-link">#</a>
+                                                            </li>
+                                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                                <i class="icon-rating"></i>
+                                                                <span class="count">0</span>
+                                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                            </li>
+                                                            <li class="item-meta meta-actions reply">
+                                                                <a href="#" class="comment-it">Ответить</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-row no-sublevel">
+                                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                                <div class="text-comment">
+                                                    <p>Два дивана что за диваны?</p>
+                                                </div>
+                                                <ul class="post-meta">
+                                                    <li class="posted-time">10 июля в 12:44</li>
+                                                    <li>
+                                                        <a href="#" class="comment-link">#</a>
+                                                    </li>
+                                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                        <i class="icon-rating"></i>
+                                                        <span class="count">0</span>
+                                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                                    </li>
+                                                    <li class="item-meta meta-actions reply">
+                                                        <a href="#" class="comment-it">Ответить</a>
+                                                    </li>
+                                                </ul>
+                                                <form class="form-reply" action="#">
+                                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                                    <input type="text" placeholder="Ваш ответ..."/>
+                                                    <button type="submit">Ответить</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="box-btn">
+                                            <a class="all-comments" href="#">Все коментарии (76)</a>
+                                        </div>
+                                        <div class="block-form-comment">
+                                            <h2 class="block-title">Оставить комментарий</h2>
+                                            <form action="#">
+                                                <textarea></textarea>
+                                                <button type="submit">Комментировать</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
             <aside class="right-sidebar">
@@ -1454,13 +1232,14 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+    <!--<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>-->
     <script src="js/plugins/slick-1.3.15/slick/slick.min.js"></script>
     <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/uisearch.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="js/ion.rangeSlider-2.1.1/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
+    <!--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+    <!--<script src="js/ion.rangeSlider-2.1.1/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>-->
+    <script src="js/jquery.rating/js/jquery.rating-2.0.min.js"></script>
     <script src="js/app.js"></script>
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>

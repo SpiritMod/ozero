@@ -155,7 +155,6 @@ $(document).ready(function(){
     //mobile slider blog in news-page
     if (document.getElementById('blog-list-mobile')){
         $(function(){
-
             if (window.matchMedia("(min-width: 768px)").matches) {
                 /* the viewport is at least >940 pixels wide */
                 $('#blog-list-mobile').unslick();
@@ -180,8 +179,62 @@ $(document).ready(function(){
 
                 });
             }
+        });
+    }
 
+    //mobile slider list-popular-island
+    if (document.getElementById('list-popular-island')){
+        $(function(){
+            if (window.matchMedia("(min-width: 769px)").matches) {
+                /* the viewport is at least >940 pixels wide */
+                $('#list-popular-island').unslick();
+            } else {
+                /* the viewport is less than <940 pixels wide */
+                $("#list-popular-island").slick({
+                    slide: '.item',
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
 
+                });
+            }
+        });
+    }
+
+    //mobile slider list-popular-authors
+    if (document.getElementById('list-popular-authors')){
+        $(function(){
+            if (window.matchMedia("(min-width: 769px)").matches) {
+                $('#list-popular-authors').unslick();
+            } else {
+                $("#list-popular-authors").slick({
+                    slide: '.item',
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: '22%',
+                    responsive: [
+                        {
+                            breakpoint: 440,
+                            settings: {
+                                centerPadding: '10%'
+                            }
+                        }
+                    ]
+
+                });
+            }
         });
     }
 
@@ -307,6 +360,49 @@ $(document).ready(function(){
 
                 });
             }
+        });
+    }
+
+    //Date-place-slider
+    if (document.getElementById('date-place-slider')){
+        $(function() {
+            $("#date-place-slider").slick({
+                slide: 'li',
+                arrows: true,
+                dots: false,
+                infinite: false,
+                slidesToShow: 7,
+                slidesToScroll: 1,
+                prevArrow: '<a data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="fa fa-angle-left"></i></a>',
+                nextArrow: '<a data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="fa fa-angle-right"></i> </a>',
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 6
+                        }
+                    },
+                    {
+                        breakpoint: 540,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 440,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 380,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }
+                ]
+
+            });
         });
     }
 
