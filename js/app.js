@@ -1,5 +1,6 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
+Foundation.global.namespace = '';
 $(document).foundation();
 
 $(document)
@@ -274,7 +275,7 @@ $(document).ready(function(){
     }
     //end rating init
 
-    //mobile slider blog in event
+    //slider in page poster-event
     if (document.getElementById('slider-event')){
         $(function() {
             $( '#slider-event' ).sliderPro({
@@ -291,6 +292,28 @@ $(document).ready(function(){
                 autoplay: false,
                 startSlide: 0,
                 thumbnailWidth: 186,
+                thumbnailHeight: 118
+            });
+        });
+    }
+
+    //slider in page place-full
+    if (document.getElementById('slider-place-foto')){
+        $(function() {
+            $( '#slider-place-foto' ).sliderPro({
+                width: '100%',
+                height: 420,
+                autoHeight: true,
+                fade: true,
+                arrows: true,
+                buttons: false,
+                //fullScreen: false,
+                //shuffle: true,
+                responsive: true,
+                thumbnailArrows: true,
+                autoplay: false,
+                startSlide: 0,
+                thumbnailWidth: 188,
                 thumbnailHeight: 118
             });
         });
@@ -407,6 +430,15 @@ $(document).ready(function(){
     }
 
     $('#scroll-to-comment').click(function() {
+        var id = $(this).attr("href");
+        $("html, body").stop().animate({
+            scrollTop: $(''+id+'').offset().top - 66 + "px"
+        }, {
+            duration: 1000
+        });
+        return false;
+    });
+    $('#scroll-to-comments').click(function() {
         var id = $(this).attr("href");
         $("html, body").stop().animate({
             scrollTop: $(''+id+'').offset().top - 66 + "px"

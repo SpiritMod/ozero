@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="stylesheets/calendar.css" />
     <link rel="stylesheet" href="stylesheets/custom_2.css" />
+    <link rel="stylesheet" href="js/sliderPro/css/slider-pro.min.css" media="screen"/>
     <link rel="stylesheet" href="js/jquery.rating/styles/jquery.rating.css" media="screen"/>
     <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
     <link rel="stylesheet" href="stylesheets/style.css" />
@@ -55,7 +56,7 @@
                 <a class="drop-menu-scroll right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
             </div>
             <div class="block-pulse white">
-                <div class="items-pulse">5</div>
+                <div class="items-pulse pulse">5</div>
                 <div class="box-right">
                     <div class="item">
                         <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
@@ -478,7 +479,7 @@
                         <a href="#"><img src="img/logo.png" alt="ozero"/></a>
                     </div>
                     <div class="block-pulse">
-                        <div class="items-pulse">5</div>
+                        <div class="items-pulse pulse">5</div>
                         <div class="box-right">
                             <div class="item">
                                 <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
@@ -788,22 +789,265 @@
                             </ul>
                             <div class="tabs-content">
                                 <div class="content active" id="panel11">
-                                    111
+                                    <h2 class="tab-title">Фото</h2>
+                                    <div class="tab-content">
+                                        <div id="slider-place-foto" class="slider-pro">
+                                            <div class="sp-slides">
+                                                <div class="sp-slide">
+                                                    <img src="img/restaurants/restaurant-foto-1.jpg"/>
+                                                </div>
+                                                <div class="sp-slide">
+                                                    <img src="img/restaurants/restaurant-foto-2.jpg"/>
+                                                </div>
+                                                <div class="sp-slide">
+                                                    <img src="img/restaurants/restaurant-foto-3.jpg"/>
+                                                </div>
+                                                <div class="sp-slide">
+                                                    <img src="img/restaurants/restaurant-foto-1.jpg"/>
+                                                </div>
+                                                <div class="sp-slide">
+                                                    <img src="img/restaurants/restaurant-foto-2.jpg"/>
+                                                </div>
+                                                <div class="sp-slide">
+                                                    <img src="img/restaurants/restaurant-foto-3.jpg"/>
+                                                </div>
+                                            </div>
+                                            <div class="sp-thumbnails">
+                                                <img class="sp-thumbnail" src="img/restaurants/restaurant-foto-1m.jpg"/>
+                                                <img class="sp-thumbnail" src="img/restaurants/restaurant-foto-2m.jpg"/>
+                                                <img class="sp-thumbnail" src="img/restaurants/restaurant-foto-3m.jpg"/>
+                                                <img class="sp-thumbnail" src="img/restaurants/restaurant-foto-1m.jpg"/>
+                                                <img class="sp-thumbnail" src="img/restaurants/restaurant-foto-2m.jpg"/>
+                                                <img class="sp-thumbnail" src="img/restaurants/restaurant-foto-3m.jpg"/>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="content" id="panel21">
-                                    222
+                                    <h2 class="tab-title">Меню</h2>
+                                    <div class="tab-content">
+                                        <ul class="restaurant-menu small-block-grid-2 medium-block-grid-2 large-block-grid-3">
+                                            <li>
+                                                <a href="#">
+                                                    <img src="img/restaurants/menu-category-1.jpg" alt="img"/>
+                                                    <span class="title">Закуски \ Салаты</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="img/restaurants/menu-category-2.jpg" alt="img"/>
+                                                    <span class="title">Первые блюда</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="img/restaurants/menu-category-3.jpg" alt="img"/>
+                                                    <span class="title">Горячие блюда</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="img/restaurants/menu-category-4.jpg" alt="img"/>
+                                                    <span class="title">Мангал меню</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="img/restaurants/menu-category-5.jpg" alt="img"/>
+                                                    <span class="title">Фирменная выпечка</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="img/restaurants/menu-category-6.jpg" alt="img"/>
+                                                    <span class="title">Японская кухня</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="img/restaurants/menu-category-7.jpg" alt="img"/>
+                                                    <span class="title">Десерты</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="img/restaurants/menu-category-8.jpg" alt="img"/>
+                                                    <span class="title">Напитки</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="img/restaurants/menu-category-9.jpg" alt="img"/>
+                                                    <span class="title">Бар</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="content" id="panel31">
-                                    333
+                                    <h2 class="tab-title">О заведении</h2>
+                                    <div class="tab-content">
+                                        <div class="place-about">
+                                            <div class="field">
+                                                <h5 class="field-title">Бизнес-ланч</h5>
+                                                <div class="field-content">
+                                                    <p>Цена: от 350 руб.</p>
+                                                    <p>Время: 12:00-16:00</p>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <h5 class="field-title">Вход</h5>
+                                                <div class="field-content">
+                                                    <p>cвободный</p>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <h5 class="field-title">Парковка</h5>
+                                                <div class="field-content">
+                                                    <p>собственная, на территории кафе</p>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <h5 class="field-title">Описание</h5>
+                                                <div class="field-content">
+                                                    <p>Кафе европейской кухни с панорамным видом на Ангару.</p>
+                                                    <p>Удачный шанс побыть в тишине, не выезжая из центра. После прогулки по Набережной очень кстати будет семга в сливочно-икорном соусе и Шеф-салат, куриное филе с виноградом или десерт, рецепт которого привезен из путешествия по Италии, а в дополнение - чашечка ароматного кофе или чая и все это - по приемлемым ценам!</p>
+                                                    <p>Особенности меню: Единственное место в центре города, где можно отведать мясо, приготовленное на живом огне! , В нашем меню представлены как популярные блюда европейской кухни,так и блюда, выполненные по авторским рецептам.</p>
+                                                    <p>Ланч по будням - 200 руб.</p>
+                                                    <p>Музыка: фоновая</p>
+                                                    <p>Залы: 2 зала: верхний на 60 чел., нижний на 20 чел. Открыта летняя панорамная площадка с прекрасным видом на Ангару и Набережную,а также нижняя терраса.</p>
+                                                    <p>Спец. услуги: Праздники любого бюджета, подарки юбилярам и молодоженам. Площадка для выездной регистрации. Предоставляем залы для проведения презентаций, музыкальных вечеров, семинаров. Зона Wi-Fi. Хорошо для: семейных пар, романтических встреч, банкетов, детских праздников, фотосессий</p>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <h5 class="field-title">Тэги</h5>
+                                                <ul class="tags-list">
+                                                    <li><a href="#">#завтрак</a></li>
+                                                    <li><a href="#">#Бизнес-ланч</a></li>
+                                                    <li><a href="#">#Банкетный зал</a></li>
+                                                    <li><a href="#">#Живая музыка</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="content" id="panel41">
-                                    444
+                                    <h2 class="tab-title">3D тур</h2>
+                                    <div class="tab-content">
+                                        <div class="place-tour">
+                                            <img src="img/restaurants/restaurant-foto-1.jpg" alt="tour"/>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="content" id="panel51">
-                                    555
+                                    <h2 class="tab-title">События</h2>
+                                    <div class="tab-content">
+                                        <ul class="events small-block-grid-2 medium-block-grid-2 large-block-grid-3">
+                                            <li>
+                                                <div class="img">
+                                                    <a href="#"><img src="img/poster/place-poster-1.jpg" alt="img"/></a>
+                                                </div>
+                                                <div class="title">
+                                                    <a href="#">ВСТРЕЧНАЯ ПОЛОСА</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <a href="#"><img src="img/poster/place-poster-1.jpg" alt="img"/></a>
+                                                </div>
+                                                <div class="title">
+                                                    <a href="#">ВСТРЕЧНАЯ ПОЛОСА</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <a href="#"><img src="img/poster/place-poster-1.jpg" alt="img"/></a>
+                                                </div>
+                                                <div class="title">
+                                                    <a href="#">ВСТРЕЧНАЯ ПОЛОСА</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <a href="#"><img src="img/poster/place-poster-1.jpg" alt="img"/></a>
+                                                </div>
+                                                <div class="title">
+                                                    <a href="#">ВСТРЕЧНАЯ ПОЛОСА</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <a href="#"><img src="img/poster/place-poster-1.jpg" alt="img"/></a>
+                                                </div>
+                                                <div class="title">
+                                                    <a href="#">ВСТРЕЧНАЯ ПОЛОСА</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img">
+                                                    <a href="#"><img src="img/poster/place-poster-1.jpg" alt="img"/></a>
+                                                </div>
+                                                <div class="title">
+                                                    <a href="#">ВСТРЕЧНАЯ ПОЛОСА</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="content" id="panel61">
-                                    666
+                                    <h2 class="tab-title">Акции</h2>
+                                    <div class="tab-content">
+                                        <ul class="share small-block-grid-2 medium-block-grid-2 large-block-grid-3">
+                                            <li>
+                                                <div class="item">
+                                                    <a class="img" href="#"><img src="img/restaurants/share-1.jpg" alt="img"/></a>
+                                                    <div class="field-detail">
+                                                        <a href="#">подробнее...</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item">
+                                                    <a class="img" href="#"><img src="img/restaurants/share-1.jpg" alt="img"/></a>
+                                                    <div class="field-detail">
+                                                        <a href="#">подробнее...</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item">
+                                                    <a class="img" href="#"><img src="img/restaurants/share-1.jpg" alt="img"/></a>
+                                                    <div class="field-detail">
+                                                        <a href="#">подробнее...</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item">
+                                                    <a class="img" href="#"><img src="img/restaurants/share-1.jpg" alt="img"/></a>
+                                                    <div class="field-detail">
+                                                        <a href="#">подробнее...</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item">
+                                                    <a class="img" href="#"><img src="img/restaurants/share-1.jpg" alt="img"/></a>
+                                                    <div class="field-detail">
+                                                        <a href="#">подробнее...</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item">
+                                                    <a class="img" href="#"><img src="img/restaurants/share-1.jpg" alt="img"/></a>
+                                                    <div class="field-detail">
+                                                        <a href="#">подробнее...</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="content" id="panel71">
                                     <div class="block-comments" id="block-comments">
@@ -1239,6 +1483,7 @@
     <script src="js/uisearch.js"></script>
     <!--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
     <!--<script src="js/ion.rangeSlider-2.1.1/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>-->
+    <script src="js/sliderPro/js/jquery.sliderPro.min.js"></script>
     <script src="js/jquery.rating/js/jquery.rating-2.0.min.js"></script>
     <script src="js/app.js"></script>
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
