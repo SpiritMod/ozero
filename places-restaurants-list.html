@@ -672,24 +672,147 @@
         <div class="row">
             <div class="main-content">
                 <div class="content">
-                    <div class="places-category">
-                        <div class="control-panel">
-                            <ul class="tags-list">
-                                <li class="active"><a href="#">Концерты</a></li>
-                                <li><a href="#">В Городе</a></li>
-                                <li><a href="#">Спектакли</a></li>
-                                <li><a href="#">Вечеринки</a></li>
-                                <li><a href="#">Выставки</a></li>
-                                <li>
-                                    <a data-dropdown="drop-1" aria-controls="drop" aria-expanded="false" class="round button dropdown">Другое</a>
-                                    <ul id="drop-1" data-dropdown-content class="f-dropdown" role="menu" aria-hidden="false" tabindex="-1">
-                                        <li><a href="#">This is a link</a></li>
-                                        <li><a href="#">This is another</a></li>
-                                        <li><a href="#">Yet another</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="places-restaurants-filter">
+                        <form action="#">
+                            <div class="switch round small">
+                                <input id="switch1" type="checkbox">
+                                <label for="switch1"></label>
+                                <p>Сейчас работает</p>
+                            </div>
+                            <div class="switch round small">
+                                <input id="switch2" type="checkbox">
+                                <label for="switch2"></label>
+                                <p>Есть фото</p>
+                            </div>
+                            <div class="switch round small">
+                                <input id="switch3" type="checkbox">
+                                <label for="switch3"></label>
+                                <p>Расчет по картам</p>
+                            </div>
+                            <div class="switch round small">
+                                <input id="switch4" type="checkbox">
+                                <label for="switch4"></label>
+                                <p>Есть сайт</p>
+                            </div>
+                            <div class="switch round small">
+                                <input id="switch5" type="checkbox">
+                                <label for="switch5"></label>
+                                <p>Есть Wi-Fi</p>
+                            </div>
+                            <div class="switch round small">
+                                <input id="switch6" type="checkbox">
+                                <label for="switch6"></label>
+                                <p>Парковка</p>
+                            </div>
+                            <div class="switch round small">
+                                <input id="switch7" type="checkbox">
+                                <label for="switch7"></label>
+                                <p>Бизнес-ланч</p>
+                            </div>
+                            <div class="filter-check">
+                                <p>Средний чек:</p>
+                                <input type="text" id="check" name="example_name" value=""/>
+                            </div>
+                            <div class="box-cuisine">
+                                <a id="btn-cuisine" href="#">Кухня</a>
+                            </div>
+                            <div class="box-additionally">
+                                <a id="btn-additionally" href="#">Дополнительно</a>
+                            </div>
+                            <div class="btn-reset">
+                                <button type="reset">Очистить</button>
+                            </div>
+                            <div id="cuisine-wrapper">
+                                <h5>Кухня</h5>
+                                <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-4">
+                                    <li>
+                                        <input id="id_types_0" name="types" type="checkbox" value="1">
+                                        <label for="id_types_0">Американская</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_1" name="types" type="checkbox" value="2">
+                                        <label for="id_types_1">Бурятская</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_2" name="types" type="checkbox" value="3">
+                                        <label for="id_types_2">Восточная</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_3" name="types" type="checkbox" value="4">
+                                        <label for="id_types_3">Вегетарианская</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_4" name="types" type="checkbox" value="5">
+                                        <label for="id_types_4">Европейская</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_5" name="types" type="checkbox" value="6">
+                                        <label for="id_types_5">Китайская</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_6" name="types" type="checkbox" value="7">
+                                        <label for="id_types_6">Кавказская</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_7" name="types" type="checkbox" value="8">
+                                        <label for="id_types_7">Мексиканская</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_8" name="types" type="checkbox" value="9">
+                                        <label for="id_types_8">Славянская</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_9" name="types" type="checkbox" value="10">
+                                        <label for="id_types_9">Японская</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_10" name="types" type="checkbox" value="11">
+                                        <label for="id_types_10">Авторская</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_11" name="types" type="checkbox" value="12">
+                                        <label for="id_types_11">Fusion</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="additionally-wrapper">
+                                <h5>Дополнительно</h5>
+                                <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-4">
+                                    <li>
+                                        <input id="id_types_01" name="types" type="checkbox" value="1">
+                                        <label for="id_types_01">Wi-Fi</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_011" name="types" type="checkbox" value="2">
+                                        <label for="id_types_011">Детская комната</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_022" name="types" type="checkbox" value="3">
+                                        <label for="id_types_022">Банкетный зал</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_033" name="types" type="checkbox" value="4">
+                                        <label for="id_types_033">Будет открыто еще 2 часа</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_044" name="types" type="checkbox" value="5">
+                                        <label for="id_types_044">Танцпол</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_055" name="types" type="checkbox" value="6">
+                                        <label for="id_types_055">Живая музыка</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_066" name="types" type="checkbox" value="7">
+                                        <label for="id_types_066">Развлекательная программа</label>
+                                    </li>
+                                    <li>
+                                        <input id="id_types_077" name="types" type="checkbox" value="8">
+                                        <label for="id_types_077">Караоке</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
                     </div>
                     <div class="places-wrapper">
                         <div class="places-category">
@@ -787,56 +910,172 @@
                                     </div>
                                 </form>
                                 <div class="block-sorting">
-                                    <span class="sorting-label">Сортировать:</span>
-                                    <ul class="sorting">
-                                        <li>
-                                            <a class="active" href="#">А-Я</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">по рейтингу</a>
-                                        </li>
-                                    </ul>
+                                    <span class="sorting-label">Сортировать по:</span>
+                                    <div class="box-drop">
+                                        <a data-dropdown="sorting" aria-controls="sorting" aria-expanded="false">Алфавиту <i class="fa fa-arrow-down"></i></a>
+                                        <ul id="sorting" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <li><a href="#">Алфавиту <i class="fa fa-arrow-down"></i></a></li>
+                                            <li><a href="#">Алфавиту <i class="fa fa-arrow-up"></i></a></li>
+                                            <li><a href="#">По пулярности</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="places-restaurants-wrapper">
                                 <ul class="list-places-restaurants small-block-grid-2">
                                     <li>
                                         <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
+                                            <div class="field box-title">
+                                                <span class="working">
+                                                    <!--<span class="icon-clock2"></span>-->
+                                                    <span class="icon-blocked"></span>
                                                 </span>
+                                                <a class="title" href="#">Медвежий угол</a>
                                             </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
+                                            <div class="field field-address">
+                                                <span class="icon">
+                                                    <i class="fa fa-map-signs"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p><a href="#" data-reveal-id="place-map-1">Иркутск, Байкальская, 107</a></p>
+                                                </div>
                                             </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
+                                            <div class="field field-phones">
+                                                <span class="icon">
+                                                    <i class="fa fa-phone"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>8 (3952) 34-23-70</p>
+                                                    <p>8 (3952) 57-74-44</p>
+                                                </div>
                                             </div>
                                             <div class="field-img">
                                                 <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
                                             </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
+                                            <div class="field field-cuisine">
+                                                <span class="icon">
+                                                    <i class="fa fa-cutlery"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <ul>
+                                                        <li>Европейская</li>
+                                                        <li>славянская</li>
+                                                    </ul>
                                                 </div>
-                                                <span class="all-votes">24 голоса</span>
+                                            </div>
+                                            <div class="field field-worktime">
+                                                <span class="icon">
+                                                    <span class="icon-clock"></span>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>Ежедневно с 9:00 до 22:00</p>
+                                                </div>
+                                            </div>
+                                            <div class="field-rating-comment">
+                                                <div class="field-rating">
+                                                    <div class="rating-results">
+                                                        <div class="box-stars stars-4">
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="all-votes">24 голоса</span>
+                                                </div>
+                                                <span class="field-comment">
+                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
+                                                </span>
+                                            </div>
+                                            <ul class="restaurant-services">
+                                                <li>
+                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Бизнес-ланч"><i class="fa fa-coffee"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Парковка"><i class="fa fa-car"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Децкая комната"><i class="fa fa-child"></i><i class="fa fa-child"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="restaurant">
+                                            <div class="field box-title">
+                                                <span class="working">
+                                                    <span class="icon-clock2"></span>
+                                                </span>
+                                                <a class="title" href="#">Медвежий угол</a>
+                                            </div>
+                                            <div class="field field-address">
+                                                <span class="icon">
+                                                    <i class="fa fa-map-signs"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p><a href="#" data-reveal-id="place-map-1">Иркутск, Байкальская, 107</a></p>
+                                                </div>
+                                            </div>
+                                            <div class="field field-phones">
+                                                <span class="icon">
+                                                    <i class="fa fa-phone"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>8 (3952) 34-23-70</p>
+                                                    <p>8 (3952) 57-74-44</p>
+                                                </div>
+                                            </div>
+                                            <div class="field-img">
+                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
+                                            </div>
+                                            <div class="field field-cuisine">
+                                                <span class="icon">
+                                                    <i class="fa fa-cutlery"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <ul>
+                                                        <li>Европейская</li>
+                                                        <li>славянская</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="field field-worktime">
+                                                <span class="icon">
+                                                    <span class="icon-clock"></span>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>Ежедневно с 9:00 до 22:00</p>
+                                                </div>
+                                            </div>
+                                            <div class="field-rating-comment">
+                                                <div class="field-rating">
+                                                    <div class="rating-results">
+                                                        <div class="box-stars stars-4">
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="all-votes">24 голоса</span>
+                                                </div>
+                                                <span class="field-comment">
+                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
+                                                </span>
                                             </div>
                                             <ul class="restaurant-services">
                                                 <li>
@@ -859,41 +1098,68 @@
                                     </li>
                                     <li>
                                         <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
+                                            <div class="field box-title">
+                                                <span class="working">
+                                                    <!--<span class="icon-clock2"></span>-->
+                                                    <span class="icon-blocked"></span>
                                                 </span>
+                                                <a class="title" href="#">Медвежий угол</a>
                                             </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
+                                            <div class="field field-address">
+                                                <span class="icon">
+                                                    <i class="fa fa-map-signs"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p><a href="#" data-reveal-id="place-map-1">Иркутск, Байкальская, 107</a></p>
+                                                </div>
                                             </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
+                                            <div class="field field-phones">
+                                                <span class="icon">
+                                                    <i class="fa fa-phone"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>8 (3952) 34-23-70</p>
+                                                    <p>8 (3952) 57-74-44</p>
+                                                </div>
                                             </div>
                                             <div class="field-img">
                                                 <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
                                             </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
+                                            <div class="field field-cuisine">
+                                                <span class="icon">
+                                                    <i class="fa fa-cutlery"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <ul>
+                                                        <li>Европейская</li>
+                                                        <li>славянская</li>
+                                                    </ul>
                                                 </div>
-                                                <span class="all-votes">24 голоса</span>
+                                            </div>
+                                            <div class="field field-worktime">
+                                                <span class="icon">
+                                                    <span class="icon-clock"></span>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>Ежедневно с 9:00 до 22:00</p>
+                                                </div>
+                                            </div>
+                                            <div class="field-rating-comment">
+                                                <div class="field-rating">
+                                                    <div class="rating-results">
+                                                        <div class="box-stars stars-4">
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="all-votes">24 голоса</span>
+                                                </div>
+                                                <span class="field-comment">
+                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
+                                                </span>
                                             </div>
                                             <ul class="restaurant-services">
                                                 <li>
@@ -911,47 +1177,72 @@
                                                 <li>
                                                     <span title="Парковка"><i class="fa fa-road"></i></span>
                                                 </li>
-
                                             </ul>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
+                                            <div class="field box-title">
+                                                <span class="working">
+                                                    <span class="icon-clock2"></span>
                                                 </span>
+                                                <a class="title" href="#">Медвежий угол</a>
                                             </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
+                                            <div class="field field-address">
+                                                <span class="icon">
+                                                    <i class="fa fa-map-signs"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p><a href="#" data-reveal-id="place-map-1">Иркутск, Байкальская, 107</a></p>
+                                                </div>
                                             </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
+                                            <div class="field field-phones">
+                                                <span class="icon">
+                                                    <i class="fa fa-phone"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>8 (3952) 34-23-70</p>
+                                                    <p>8 (3952) 57-74-44</p>
+                                                </div>
                                             </div>
                                             <div class="field-img">
                                                 <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
                                             </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
+                                            <div class="field field-cuisine">
+                                                <span class="icon">
+                                                    <i class="fa fa-cutlery"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <ul>
+                                                        <li>Европейская</li>
+                                                        <li>славянская</li>
+                                                    </ul>
                                                 </div>
-                                                <span class="all-votes">24 голоса</span>
+                                            </div>
+                                            <div class="field field-worktime">
+                                                <span class="icon">
+                                                    <span class="icon-clock"></span>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>Ежедневно с 9:00 до 22:00</p>
+                                                </div>
+                                            </div>
+                                            <div class="field-rating-comment">
+                                                <div class="field-rating">
+                                                    <div class="rating-results">
+                                                        <div class="box-stars stars-4">
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="all-votes">24 голоса</span>
+                                                </div>
+                                                <span class="field-comment">
+                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
+                                                </span>
                                             </div>
                                             <ul class="restaurant-services">
                                                 <li>
@@ -969,47 +1260,73 @@
                                                 <li>
                                                     <span title="Парковка"><i class="fa fa-road"></i></span>
                                                 </li>
-
                                             </ul>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
+                                            <div class="field box-title">
+                                                <span class="working">
+                                                    <!--<span class="icon-clock2"></span>-->
+                                                    <span class="icon-blocked"></span>
                                                 </span>
+                                                <a class="title" href="#">Медвежий угол</a>
                                             </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
+                                            <div class="field field-address">
+                                                <span class="icon">
+                                                    <i class="fa fa-map-signs"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p><a href="#" data-reveal-id="place-map-1">Иркутск, Байкальская, 107</a></p>
+                                                </div>
                                             </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
+                                            <div class="field field-phones">
+                                                <span class="icon">
+                                                    <i class="fa fa-phone"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>8 (3952) 34-23-70</p>
+                                                    <p>8 (3952) 57-74-44</p>
+                                                </div>
                                             </div>
                                             <div class="field-img">
                                                 <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
                                             </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
+                                            <div class="field field-cuisine">
+                                                <span class="icon">
+                                                    <i class="fa fa-cutlery"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <ul>
+                                                        <li>Европейская</li>
+                                                        <li>славянская</li>
+                                                    </ul>
                                                 </div>
-                                                <span class="all-votes">24 голоса</span>
+                                            </div>
+                                            <div class="field field-worktime">
+                                                <span class="icon">
+                                                    <span class="icon-clock"></span>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>Ежедневно с 9:00 до 22:00</p>
+                                                </div>
+                                            </div>
+                                            <div class="field-rating-comment">
+                                                <div class="field-rating">
+                                                    <div class="rating-results">
+                                                        <div class="box-stars stars-4">
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="all-votes">24 голоса</span>
+                                                </div>
+                                                <span class="field-comment">
+                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
+                                                </span>
                                             </div>
                                             <ul class="restaurant-services">
                                                 <li>
@@ -1027,47 +1344,72 @@
                                                 <li>
                                                     <span title="Парковка"><i class="fa fa-road"></i></span>
                                                 </li>
-
                                             </ul>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
+                                            <div class="field box-title">
+                                                <span class="working">
+                                                    <span class="icon-clock2"></span>
                                                 </span>
+                                                <a class="title" href="#">Медвежий угол</a>
                                             </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
+                                            <div class="field field-address">
+                                                <span class="icon">
+                                                    <i class="fa fa-map-signs"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p><a href="#" data-reveal-id="place-map-1">Иркутск, Байкальская, 107</a></p>
+                                                </div>
                                             </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
+                                            <div class="field field-phones">
+                                                <span class="icon">
+                                                    <i class="fa fa-phone"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>8 (3952) 34-23-70</p>
+                                                    <p>8 (3952) 57-74-44</p>
+                                                </div>
                                             </div>
                                             <div class="field-img">
                                                 <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
                                             </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
+                                            <div class="field field-cuisine">
+                                                <span class="icon">
+                                                    <i class="fa fa-cutlery"></i>
+                                                </span>
+                                                <div class="field-content">
+                                                    <ul>
+                                                        <li>Европейская</li>
+                                                        <li>славянская</li>
+                                                    </ul>
                                                 </div>
-                                                <span class="all-votes">24 голоса</span>
+                                            </div>
+                                            <div class="field field-worktime">
+                                                <span class="icon">
+                                                    <span class="icon-clock"></span>
+                                                </span>
+                                                <div class="field-content">
+                                                    <p>Ежедневно с 9:00 до 22:00</p>
+                                                </div>
+                                            </div>
+                                            <div class="field-rating-comment">
+                                                <div class="field-rating">
+                                                    <div class="rating-results">
+                                                        <div class="box-stars stars-4">
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="all-votes">24 голоса</span>
+                                                </div>
+                                                <span class="field-comment">
+                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
+                                                </span>
                                             </div>
                                             <ul class="restaurant-services">
                                                 <li>
@@ -1085,181 +1427,6 @@
                                                 <li>
                                                     <span title="Парковка"><i class="fa fa-road"></i></span>
                                                 </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="restaurant">
-                                            <div class="box-title">
-                                                <a class="title" href="#">Медвежий угол</a>
-                                                <span class="field-comment">
-                                                    <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
-                                                </span>
-                                            </div>
-                                            <div class="field-address">
-                                                <p>Богдана Хмельницкого, 3</p>
-                                            </div>
-                                            <div class="field-phones">
-                                                <p>8 (3952) 34-23-70,<br/> 8 (3952) 57-74-44</p>
-                                            </div>
-                                            <div class="field-img">
-                                                <a href="#"><img src="img/restaurants/restaurant-1.jpg" alt="img"/></a>
-                                            </div>
-                                            <div class="field-cuisine">
-                                                <ul>
-                                                    <li>Европейская</li>
-                                                    <li>славянская</li>
-                                                </ul>
-                                            </div>
-                                            <div class="field-worktime">
-                                                <p>Ежедневно с 9:00 до 22:00</p>
-                                            </div>
-                                            <div class="field-rating">
-                                                <div class="rating-results">
-                                                    <div class="box-stars stars-4">
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                        <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                <span class="all-votes">24 голоса</span>
-                                            </div>
-                                            <ul class="restaurant-services">
-                                                <li>
-                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Есть Wi-Fi"><i class="fa fa-wifi"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Танцпол"><i class="fa fa-music"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Караоке"><i class="fa fa-microphone"></i></span>
-                                                </li>
-                                                <li>
-                                                    <span title="Парковка"><i class="fa fa-road"></i></span>
-                                                </li>
-
                                             </ul>
                                         </div>
                                     </li>
@@ -1450,6 +1617,13 @@
 
 <div id="widget-overlay"></div>
 <div id="widget-overlay-scroll-bar"></div>
+
+<div id="place-map-1" class="reveal-modal place-map" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <div class="map">
+        <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=WzGn_wz3v33WxhRGyzBNk5uBZUKFLpoe&width=100%&height=400&lang=ru_UA&sourceType=constructor"></script>
+    </div>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/modernizr/modernizr.js"></script>

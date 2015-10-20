@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?kt3rfv');
-	src:url('fonts/icomoon.eot?kt3rfv#iefix') format('embedded-opentype'),
-		url('fonts/icomoon.ttf?kt3rfv') format('truetype'),
-		url('fonts/icomoon.woff?kt3rfv') format('woff'),
-		url('fonts/icomoon.svg?kt3rfv#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?j168eg');
+	src:url('fonts/icomoon.eot?j168eg#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?j168eg') format('truetype'),
+		url('fonts/icomoon.woff?j168eg') format('woff'),
+		url('fonts/icomoon.svg?j168eg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -26,7 +26,19 @@
 .icon-wallet:before {
 	content: "\e016";
 }
+.icon-blocked:before {
+	content: "\e801";
+}
 .icon-Celsius:before {
 	content: "\e800";
+}
+.icon-clock:before {
+	content: "\e802";
+}
+.icon-clock2:before {
+	content: "\e803";
+}
+.icon-local_parking:before {
+	content: "\e1e7";
 }
 

@@ -153,6 +153,37 @@ $(document).ready(function(){
         });
     }
 
+    //slider last-photo-report
+    if (document.getElementById('last-photo-report')){
+        $(function(){
+            if (window.matchMedia("(min-width: 980px)").matches) {
+                /* the viewport is at least >980 pixels wide */
+                $('#last-photo-report').unslick();
+            } else {
+                /* the viewport is less than <980 pixels wide */
+                $("#last-photo-report").slick({
+                    slide: '.item',
+                    adaptiveHeight: true,
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: '20%',
+                    responsive: [
+                        {
+                            breakpoint: 440,
+                            settings: {
+                                centerPadding: '10%'
+                            }
+                        }
+                    ]
+
+                });
+            }
+        });
+    }
+
     //mobile slider blog in news-page
     if (document.getElementById('blog-list-mobile')){
         $(function(){
@@ -273,6 +304,19 @@ $(document).ready(function(){
             });
         });
     }
+    if (document.getElementById('photo-report-rating')){
+        $(function() {
+            $('#photo-report-rating').rating({
+                fx: 'full',
+                image: 'js/jquery.rating/images/stars-small.png',
+                loader: 'js/jquery.rating/images/ajax-loader.gif',
+                //url: 'rating.php',
+                callback: function(responce){
+                    this.vote_success.fadeOut(2000);
+                }
+            });
+        });
+    }
     //end rating init
 
     //slider in page poster-event
@@ -293,6 +337,45 @@ $(document).ready(function(){
                 startSlide: 0,
                 thumbnailWidth: 186,
                 thumbnailHeight: 118
+            });
+        });
+    }
+
+    //slider in page poster-photo-report
+    if (document.getElementById('photo-report')){
+        $(function() {
+            $('#photo-report').sliderPro({
+                width: '100%',
+                height: 500,
+                autoHeight: true,
+                fade: true,
+                arrows: true,
+                buttons: false,
+                fullScreen: true,
+                shuffle: true,
+                thumbnailArrows: true,
+                thumbnailWidth: 170,
+                autoplay: false,
+                init: function( event ) {
+                    //console.log( event.index );
+                    //$('#select-slide').html(event.index + 1);
+                    $('#total-slides').html(this.getTotalSlides());
+                },
+                gotoSlide: function( event ) {
+                    //console.log( event.index );
+                    $('#select-slide').html(event.index + 1);
+                    $('#total-slides').html(this.getTotalSlides());
+                }
+
+            });
+            $( "#full-screen" ).on( "click", function() {
+                $('#photo-report .sp-full-screen-button').trigger( "click" );
+            });
+            $( "#photo-report-left" ).on( "click", function() {
+                $('#photo-report .sp-slides-container .sp-arrows .sp-previous-arrow').trigger( "click" );
+            });
+            $( "#photo-report-right" ).on( "click", function() {
+                $('#photo-report .sp-slides-container .sp-arrows .sp-next-arrow').trigger( "click" );
             });
         });
     }
@@ -339,6 +422,22 @@ $(document).ready(function(){
                 $('#from-time').html(value[0]);
                 $('#to-time').html(value[1]);
                 console.log(value[0] + " - " + value[1]);
+            });
+        });
+    }
+    //range
+    if (document.getElementById('check')){
+        $(function() {
+            var $range = $("#check");
+
+            $range.ionRangeSlider({
+                type: "double",
+                min: 500,
+                max: 2500,
+                from: 500,
+                to: 2500,
+                step: 500,
+                hide_min_max: true
             });
         });
     }
@@ -547,6 +646,16 @@ $(document).ready(function(){
         return false;
     });
 
+    // show cuisine-wrapper in places-restaurants-list page
+    $('#btn-cuisine').click(function(){
+        $('#cuisine-wrapper').toggle();
+        return false;
+    });
+    // show cuisine-additionally in places-restaurants-list page
+    $('#btn-additionally').click(function(){
+        $('#additionally-wrapper').toggle();
+        return false;
+    });
 
     $('.post .controls-comments-post a.show-form-comment').click(function(){
        $(this).parent().parent().find('.block-form-comment').slideToggle('slow');

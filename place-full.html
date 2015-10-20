@@ -723,7 +723,7 @@
                                         <div class="box-items">
                                             <div class="field-item">
                                                 <div class="field-label">Адрес:</div>
-                                                <div class="field-info">Российская, 17</div>
+                                                <div class="field-info"><a href="#" data-reveal-id="place-map-1">Российская, 17</a></div>
                                             </div>
                                             <div class="field-item">
                                                 <div class="field-label">Телефоны:</div>
@@ -1472,6 +1472,13 @@
 
 <div id="widget-overlay"></div>
 <div id="widget-overlay-scroll-bar"></div>
+
+<div id="place-map-1" class="reveal-modal place-map" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <div class="map">
+        <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=WzGn_wz3v33WxhRGyzBNk5uBZUKFLpoe&width=100%&height=400&lang=ru_UA&sourceType=constructor"></script>
+    </div>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/modernizr/modernizr.js"></script>

@@ -2644,13 +2644,52 @@ main .right-sidebar .block-newest-publications .item {
   padding: 30px;
   border-bottom: 2px solid #e5e5e5;
 }
+.block-comments .comment-title {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  height: 86px;
+  padding: 20px 30px;
+  border-bottom: 2px solid #e5e5e5;
+}
+.block-comments .comment-title .block-title {
+  border: none;
+  padding: 0 0;
+  display: block;
+  float: left;
+  margin: 10px 0;
+}
+.block-comments .comment-title .btn-subscribe {
+  display: block;
+  float: right;
+  background: #a9c2d7;
+  margin: 2px 0;
+  padding: 0 25px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  font-family: "helvetica-bold", sans-serif;
+  font-size: 16px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.block-comments .comment-title .btn-subscribe:hover {
+  background: #014183;
+  color: #fff;
+}
 .block-comments .box-btn {
   display: inline-block;
   width: 100%;
   padding: 30px;
 }
 .block-comments .box-btn .all-comments {
-  background: #e0ecf6;
+  background: #a9c2d7;
   margin: 0 0 0;
   padding: 0 15px;
   height: 40px;
@@ -4488,6 +4527,34 @@ form .NFI-wrapper .NFI-filename {
   font-size: 14px;
   margin: 0 10px 0 0;
 }
+.block-sorting .box-drop {
+  display: block;
+  float: left;
+}
+.block-sorting .box-drop > a {
+  color: #000;
+  font-family: "helvetica-bold", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.block-sorting .box-drop > a .fa {
+  font-size: 12px;
+  font-weight: 400;
+}
+.block-sorting .box-drop .f-dropdown {
+  margin-top: 5px;
+  outline: none;
+}
+.block-sorting .box-drop .f-dropdown li a {
+  color: #264380;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+}
+.block-sorting .box-drop .f-dropdown li a .fa {
+  font-size: 12px;
+  font-weight: 400;
+}
 .block-sorting ul.sorting {
   display: block;
   float: left;
@@ -4551,8 +4618,53 @@ form .NFI-wrapper .NFI-filename {
   width: 24px;
   text-align: left;
 }
+.list-places li .place .field {
+  position: relative;
+  padding: 0 0 0 24px;
+  margin: 0 0 5px;
+}
+.list-places li .place .field:last-child {
+  margin-bottom: 0;
+}
+.list-places li .place .field .icon {
+  display: block;
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  color: #9f9f9f;
+  width: 15px;
+  text-align: center;
+}
+.list-places li .place .field .field-content p {
+  font-family: "helvetica-roman", sans-serif;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 0;
+}
+.list-places li .place .field .field-content p span {
+  color: #264380;
+}
+.list-places li .place .field .field-content p a {
+  color: #264380;
+}
+.list-places li .place .field .field-content p a:hover {
+  text-decoration: underline;
+}
 .list-places li .place .field-title {
   line-height: 1.2;
+}
+.list-places li .place .field-title .working, .list-places li .place .field-title .closed {
+  color: #b5424b;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  width: 15px;
+}
+.list-places li .place .field-title .working .icon-blocked, .list-places li .place .field-title .closed .icon-blocked {
+  font-size: 18px;
 }
 .list-places li .place .field-title .title {
   display: inline-block;
@@ -4605,15 +4717,19 @@ form .NFI-wrapper .NFI-filename {
   margin: 0 2px 0 0;
   background: url("../img/stars-small.png") no-repeat 0 0 transparent;
 }
-.list-places li .place .body p {
-  font-family: "helvetica-roman", sans-serif;
-  color: #000;
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 0 0 0;
+.list-places li .place .services-list {
+  margin: 10px 0 0;
+  line-height: 18px;
 }
-.list-places li .place .body p span {
+.list-places li .place .services-list li {
+  display: inline;
+  padding: 0 0;
+  margin-right: 4px;
+  border: none;
   color: #264380;
+}
+.list-places li .place .services-list li:last-child {
+  margin-right: 0;
 }
 
 .places-restaurants-wrapper {
@@ -4635,10 +4751,52 @@ form .NFI-wrapper .NFI-filename {
   padding: 25px;
   border: 1px solid #e7ebef;
 }
+.list-places-restaurants li .restaurant .field {
+  padding: 0 0 0 25px;
+  position: relative;
+}
+.list-places-restaurants li .restaurant .field .icon {
+  display: block;
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  color: #9f9f9f;
+  width: 15px;
+  text-align: center;
+}
+.list-places-restaurants li .restaurant .field .field-content p {
+  font-family: "helvetica-roman", sans-serif;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 0;
+}
+.list-places-restaurants li .restaurant .field .field-content p span {
+  color: #264380;
+}
+.list-places-restaurants li .restaurant .field .field-content p a {
+  color: #264380;
+}
+.list-places-restaurants li .restaurant .field .field-content p a:hover {
+  text-decoration: underline;
+}
 .list-places-restaurants li .restaurant .box-title {
   display: inline-block;
   width: 100%;
   line-height: 1.2;
+  margin-bottom: 0;
+}
+.list-places-restaurants li .restaurant .box-title .working, .list-places-restaurants li .restaurant .box-title .closed {
+  color: #b5424b;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  width: 18px;
+}
+.list-places-restaurants li .restaurant .box-title .working .icon-blocked, .list-places-restaurants li .restaurant .box-title .closed .icon-blocked {
+  font-size: 18px;
 }
 .list-places-restaurants li .restaurant .box-title .title {
   display: block;
@@ -4648,19 +4806,13 @@ form .NFI-wrapper .NFI-filename {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 5px;
+  margin: 0 0;
 }
 .list-places-restaurants li .restaurant .box-title .title:hover {
   text-decoration: underline;
 }
-.list-places-restaurants li .restaurant .box-title .field-comment {
-  display: block;
-  float: right;
-  font-family: "helvetica-roman", sans-serif;
-  color: #8F8F8F;
-  font-size: 12px;
-  line-height: 1.2;
-  margin: 2px 0 0;
+.list-places-restaurants li .restaurant .field-address {
+  margin-bottom: 5px;
 }
 .list-places-restaurants li .restaurant .field-address p {
   font-family: "helvetica-roman", sans-serif;
@@ -4731,6 +4883,8 @@ form .NFI-wrapper .NFI-filename {
 }
 .list-places-restaurants li .restaurant .restaurant-services {
   margin: 0 0;
+  display: inline-block;
+  width: 100%;
   line-height: 18px;
 }
 .list-places-restaurants li .restaurant .restaurant-services li {
@@ -4742,7 +4896,23 @@ form .NFI-wrapper .NFI-filename {
 .list-places-restaurants li .restaurant .restaurant-services li:last-child {
   margin-right: 0;
 }
+.list-places-restaurants li .restaurant .field-rating-comment {
+  display: inline-block;
+  width: 100%;
+  margin: 8px 0 0;
+}
+.list-places-restaurants li .restaurant .field-rating-comment .field-comment {
+  display: block;
+  float: right;
+  font-family: "helvetica-roman", sans-serif;
+  color: #8F8F8F;
+  font-size: 12px;
+  line-height: 1.2;
+  margin: 4px 0 0;
+}
 .list-places-restaurants li .restaurant .field-rating {
+  display: block;
+  float: left;
   line-height: 1.2;
   color: #2A001A;
   font-family: "helvetica-roman", sans-serif;
@@ -6302,6 +6472,832 @@ form .NFI-wrapper .NFI-filename {
   margin-bottom: 0;
 }
 
+.places-list-filter {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 25px;
+  margin: 0 0 20px;
+  background-color: #F7F7F7;
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+}
+.places-list-filter form .switch {
+  display: block;
+  float: left;
+  line-height: 0;
+  padding: 7px 7px;
+  margin: 5px 15px 5px 0;
+  height: 34px;
+  background: transparent;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.places-list-filter form .switch:hover {
+  background: #fff;
+}
+.places-list-filter form .switch:hover.round input:checked + label {
+  background-color: #E07A81;
+  -moz-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+}
+.places-list-filter form .switch:hover.round label {
+  background-color: #E3EBF5;
+  -moz-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+}
+.places-list-filter form .switch.small input:checked + label:after {
+  left: 23px;
+}
+.places-list-filter form .switch input:checked + label {
+  background-color: #E07A81;
+  -moz-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+}
+.places-list-filter form .switch label {
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.places-list-filter form .switch label:after {
+  background: url("../img/switch-bg.png") no-repeat 0 0 transparent;
+  width: 22px;
+  height: 22px;
+  top: -1px;
+  left: 0;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.62), inset 0 0 0 5px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.62), inset 0 0 0 5px rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.62), inset 0 0 0 5px rgba(255, 255, 255, 0.75);
+}
+.places-list-filter form .switch.round label {
+  width: 45px;
+  height: 20px;
+  background-color: #FFF;
+  -moz-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+}
+.places-list-filter form .switch p {
+  color: #000;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  margin: 0 5px 0 8px;
+  line-height: 20px;
+  display: block;
+  float: right;
+}
+.places-list-filter form .btn-reset {
+  display: block;
+  float: right;
+  margin: 10px 0;
+}
+.places-list-filter form .btn-reset button[type="reset"] {
+  padding: 0 0;
+  background: transparent;
+  color: #264380;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+  outline: none;
+}
+.places-list-filter form .btn-reset button[type="reset"]:hover {
+  text-decoration: none;
+}
+
+.places-restaurants-filter {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 25px;
+  margin: 0 0 20px;
+  background-color: #F7F7F7;
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+}
+.places-restaurants-filter form .switch {
+  display: block;
+  float: left;
+  line-height: 0;
+  padding: 7px 7px;
+  margin: 5px 15px 5px 0;
+  height: 34px;
+  background: transparent;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.places-restaurants-filter form .switch:hover {
+  background: #fff;
+}
+.places-restaurants-filter form .switch:hover.round input:checked + label {
+  background-color: #E07A81;
+  -moz-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+}
+.places-restaurants-filter form .switch:hover.round label {
+  background-color: #E3EBF5;
+  -moz-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+}
+.places-restaurants-filter form .switch.small input:checked + label:after {
+  left: 23px;
+}
+.places-restaurants-filter form .switch input:checked + label {
+  background-color: #E07A81;
+  -moz-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+}
+.places-restaurants-filter form .switch label {
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.places-restaurants-filter form .switch label:after {
+  background: url("../img/switch-bg.png") no-repeat 0 0 transparent;
+  width: 22px;
+  height: 22px;
+  top: -1px;
+  left: 0;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.62), inset 0 0 0 5px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.62), inset 0 0 0 5px rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.62), inset 0 0 0 5px rgba(255, 255, 255, 0.75);
+}
+.places-restaurants-filter form .switch.round label {
+  width: 45px;
+  height: 20px;
+  background-color: #FFF;
+  -moz-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 1px 1.7px 2px rgba(0, 0, 0, 0.16);
+}
+.places-restaurants-filter form .switch p {
+  color: #000;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  margin: 0 5px 0 8px;
+  line-height: 20px;
+  display: block;
+  float: right;
+}
+.places-restaurants-filter form .btn-reset {
+  display: block;
+  float: right;
+  margin: 10px 0;
+}
+.places-restaurants-filter form .btn-reset button[type="reset"] {
+  padding: 0 0;
+  background: transparent;
+  color: #264380;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+  outline: none;
+}
+.places-restaurants-filter form .btn-reset button[type="reset"]:hover {
+  text-decoration: none;
+}
+.places-restaurants-filter form .filter-check {
+  display: block;
+  float: left;
+  line-height: 0;
+  padding: 7px 7px;
+  margin: 5px 15px 5px 0;
+  height: 34px;
+}
+.places-restaurants-filter form .filter-check p {
+  color: #000;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  margin: 0 8px 0 0;
+  line-height: 20px;
+  display: block;
+  float: left;
+}
+.places-restaurants-filter form .filter-check .box-bottom-label {
+  color: #1A1919;
+  font-family: "helvetica-light", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+}
+.places-restaurants-filter form .filter-check .irs {
+  display: block;
+  float: left;
+  width: 140px;
+  height: 20px;
+}
+.places-restaurants-filter form .filter-check .irs .irs-from, .places-restaurants-filter form .filter-check .irs .irs-to, .places-restaurants-filter form .filter-check .irs .irs-single {
+  color: #e07a81;
+  font-size: 13px;
+  line-height: 1;
+  text-shadow: none;
+  padding: 0 0;
+  top: 24px;
+  background: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.places-restaurants-filter form .filter-check .irs .irs-line {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  background: #d1404a;
+  top: 6px;
+}
+.places-restaurants-filter form .filter-check .irs .irs-bar {
+  top: 6px;
+  border: none;
+  background: #044d94;
+}
+.places-restaurants-filter form .filter-check .irs .irs-slider {
+  top: 0px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: url("../img/switch-bg.png") no-repeat 0 0 transparent;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.62), inset 0 0 0 5px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.62), inset 0 0 0 5px rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.62), inset 0 0 0 5px rgba(255, 255, 255, 0.75);
+}
+.places-restaurants-filter form .box-cuisine, .places-restaurants-filter form .box-additionally {
+  display: block;
+  float: left;
+  line-height: 0;
+  padding: 7px 7px;
+  margin: 5px 15px 5px 0;
+  height: 34px;
+}
+.places-restaurants-filter form .box-cuisine a, .places-restaurants-filter form .box-additionally a {
+  display: inline-block;
+  position: relative;
+  line-height: 20px;
+  padding: 0 20px 0 0;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  color: #264380;
+  text-decoration: underline;
+}
+.places-restaurants-filter form .box-cuisine a:hover, .places-restaurants-filter form .box-additionally a:hover {
+  text-decoration: none;
+}
+.places-restaurants-filter form .box-cuisine a:after, .places-restaurants-filter form .box-additionally a:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: #b5414b transparent transparent transparent;
+  display: block;
+  position: absolute;
+  right: 6px;
+  top: 10px;
+}
+.places-restaurants-filter form #cuisine-wrapper, .places-restaurants-filter form #additionally-wrapper {
+  display: none;
+  width: 100%;
+  clear: both;
+  padding: 25px 10px 0;
+}
+.places-restaurants-filter form #cuisine-wrapper h5, .places-restaurants-filter form #additionally-wrapper h5 {
+  margin: 0 0 15px;
+  font-family: "helvetica-bold", sans-serif;
+  color: #264380;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+.places-restaurants-filter form #cuisine-wrapper ul li, .places-restaurants-filter form #additionally-wrapper ul li {
+  line-height: 1;
+  padding-bottom: 10px;
+}
+.places-restaurants-filter form #cuisine-wrapper ul li input[type="checkbox"], .places-restaurants-filter form #additionally-wrapper ul li input[type="checkbox"] {
+  display: none;
+}
+.places-restaurants-filter form #cuisine-wrapper ul li input[type="checkbox"]:checked + label:before, .places-restaurants-filter form #additionally-wrapper ul li input[type="checkbox"]:checked + label:before {
+  display: block;
+}
+.places-restaurants-filter form #cuisine-wrapper ul li input[type="checkbox"] + label, .places-restaurants-filter form #additionally-wrapper ul li input[type="checkbox"] + label {
+  position: relative;
+  margin: 0 0 0 25px;
+  line-height: 18px;
+  color: #000;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+}
+.places-restaurants-filter form #cuisine-wrapper ul li input[type="checkbox"] + label:after, .places-restaurants-filter form #additionally-wrapper ul li input[type="checkbox"] + label:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: -25px;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+  border: 1px solid #a8a8a8;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.places-restaurants-filter form #cuisine-wrapper ul li input[type="checkbox"] + label:before, .places-restaurants-filter form #additionally-wrapper ul li input[type="checkbox"] + label:before {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  font-size: 12px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #264380;
+  display: none;
+  position: absolute;
+  left: -24px;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  line-height: 17px;
+  text-align: center;
+  z-index: 2;
+}
+
+.node-photo-report {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin: 0 0 30px;
+}
+.node-photo-report .title-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 0 170px 0 0;
+}
+.node-photo-report .title-wrapper .title {
+  display: block;
+  float: left;
+  color: #1A1919;
+  font-family: "helvetica-light", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.1;
+  text-decoration: underline;
+  margin: 0 18px 0 0;
+  padding: 0 0;
+}
+.node-photo-report .title-wrapper .field-report-info {
+  display: block;
+  float: left;
+  margin: 3px 0 0;
+}
+.node-photo-report .title-wrapper .field-report-info .year {
+  display: inline-block;
+  height: 20px;
+  margin: 0 15px 0 0;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  text-align: center;
+  color: #9e9e9e;
+  border: 1px solid #9e9e9e;
+  padding: 0 4px;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+.node-photo-report .title-wrapper .field-report-info .field-time {
+  line-height: 18px;
+  display: inline-block;
+  color: #2A001A;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 13px;
+  margin: 0 8px 0 0;
+}
+.node-photo-report .title-wrapper .field-report-info .field-time .fa {
+  color: #9f9f9f;
+  margin: 0 4px 0 0;
+}
+.node-photo-report .title-wrapper .field-report-info #photo-report-rating {
+  display: inline-block;
+  max-width: 150px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+.node-photo-report .title-wrapper .slider-controls {
+  display: block;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.node-photo-report .title-wrapper .slider-controls #full-screen {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: #014183;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.node-photo-report .title-wrapper .slider-controls #full-screen:hover {
+  background: #a9c2d7;
+}
+.node-photo-report .title-wrapper .slider-controls .number-slides {
+  display: block;
+  float: left;
+  margin: 0 10px;
+  width: 50px;
+  text-align: center;
+  line-height: 30px;
+  color: #2A001A;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 13px;
+}
+.node-photo-report .title-wrapper .slider-controls #photo-report-left,
+.node-photo-report .title-wrapper .slider-controls #photo-report-right {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: #014183;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  text-indent: 0;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.node-photo-report .title-wrapper .slider-controls #photo-report-left:hover,
+.node-photo-report .title-wrapper .slider-controls #photo-report-right:hover {
+  /*background: #fff;
+  color: #014183;*/
+  background: #a9c2d7;
+}
+.node-photo-report .title-wrapper .slider-controls #photo-report-right {
+  margin-left: 10px;
+  text-indent: 2px !important;
+}
+.node-photo-report .photo-wrapper {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: #fff;
+  margin: 0 0 30px;
+}
+.node-photo-report .photo-wrapper .slider-pro.sp-full-screen .sp-full-screen-button {
+  opacity: 1 !important;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-slide img {
+  width: 100%;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-full-screen-button {
+  opacity: 0 !important;
+  display: block;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+  background: #014183;
+  overflow: hidden;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transform: none;
+  -ms-transform: none;
+  -webkit-transform: none;
+  transform: none;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-full-screen-button:before {
+  display: none;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-full-screen-button:after {
+  content: "\f065";
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-arrows,
+.node-photo-report .photo-wrapper .slider-pro .sp-thumbnail-arrows {
+  margin-top: -18px;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-arrow,
+.node-photo-report .photo-wrapper .slider-pro .sp-thumbnail-arrow {
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #e2eaf0;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-arrow:before,
+.node-photo-report .photo-wrapper .slider-pro .sp-thumbnail-arrow:before {
+  display: none;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-arrow.sp-previous-arrow:after, .node-photo-report .photo-wrapper .slider-pro .sp-arrow.sp-previous-thumbnail-arrow:after,
+.node-photo-report .photo-wrapper .slider-pro .sp-thumbnail-arrow.sp-previous-arrow:after,
+.node-photo-report .photo-wrapper .slider-pro .sp-thumbnail-arrow.sp-previous-thumbnail-arrow:after {
+  content: "\f104";
+  font-family: "FontAwesome";
+  font-size: 29px;
+  text-indent: -3px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #014183;
+  line-height: 36px;
+  text-align: center;
+  display: block;
+  width: 36px;
+  height: 36px;
+  left: 0;
+  top: 0;
+  background: transparent;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transform: none;
+  -ms-transform: none;
+  -webkit-transform: none;
+  transform: none;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-arrow.sp-next-arrow:after, .node-photo-report .photo-wrapper .slider-pro .sp-arrow.sp-next-thumbnail-arrow:after,
+.node-photo-report .photo-wrapper .slider-pro .sp-thumbnail-arrow.sp-next-arrow:after,
+.node-photo-report .photo-wrapper .slider-pro .sp-thumbnail-arrow.sp-next-thumbnail-arrow:after {
+  content: "\f105";
+  font-family: "FontAwesome";
+  font-size: 29px;
+  text-indent: 4px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #014183;
+  line-height: 36px;
+  text-align: center;
+  display: block;
+  width: 36px;
+  height: 36px;
+  left: 0;
+  top: 0;
+  background: transparent;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transform: none;
+  -ms-transform: none;
+  -webkit-transform: none;
+  transform: none;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-thumbnails-container {
+  margin-top: 0;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-thumbnails-container .sp-thumbnail-container {
+  margin: 0 0 0 !important;
+  border: 0px solid #014183;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.3s ease 0s;
+}
+.node-photo-report .photo-wrapper .slider-pro .sp-thumbnails-container .sp-thumbnail-container.sp-selected-thumbnail {
+  border: 3px solid #014183;
+}
+.node-photo-report .photo-wrapper .box-info-wrapper {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  padding: 20px;
+}
+.node-photo-report .photo-wrapper .box-info-wrapper .box-share {
+  text-align: center;
+}
+.node-photo-report .photo-wrapper .box-info-wrapper .box-share:after {
+  content: "";
+  width: 1px;
+  background: #cdcece;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.node-photo-report .photo-wrapper .box-info-wrapper .box-share p {
+  color: #201F1F;
+  font-family: "helvetica-medium", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+.node-photo-report .photo-wrapper .box-info-wrapper .box-info:after {
+  content: "";
+  width: 1px;
+  background: #cdcece;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  bottom: 0;
+}
+.node-photo-report .photo-wrapper .box-info-wrapper .box-info h5 {
+  color: #201F1F;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 18px;
+  margin: 0 0 15px;
+  padding: 0 0;
+}
+.node-photo-report .photo-wrapper .box-info-wrapper .box-info p {
+  color: #201F1F;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  margin: 0 0;
+}
+.node-photo-report .bottom-wrapper {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: #fff;
+  margin: 0 0;
+}
+.node-photo-report .bottom-wrapper .body-report {
+  padding: 20px;
+}
+.node-photo-report .bottom-wrapper .body-report p {
+  color: #201F1F;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 15px;
+}
+.node-photo-report .bottom-wrapper .body-report p:last-child {
+  margin-bottom: 0;
+}
+.node-photo-report .bottom-wrapper .body-report p strong {
+  font-family: "helvetica-bold", sans-serif;
+}
+.node-photo-report .bottom-wrapper .article-info {
+  border-top: 3px solid #dddddd;
+  padding: 20px;
+}
+.node-photo-report .bottom-wrapper .article-info .author {
+  color: #000;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  margin: 7px 0;
+  line-height: 1.1;
+}
+.node-photo-report .bottom-wrapper .article-info .edit {
+  color: #888;
+  font-family: "helvetica-light", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.block-last-photo-report {
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 20px;
+}
+.block-last-photo-report .last-photo-report {
+  margin: 0 -20px;
+}
+.block-last-photo-report .last-photo-report .item {
+  padding: 0 20px;
+  width: 33.33333%;
+  display: block;
+  float: left;
+}
+.block-last-photo-report .last-photo-report .item a:hover .box-top .field-img img {
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.block-last-photo-report .last-photo-report .item a:hover .box-bottom .title {
+  text-decoration: underline;
+}
+.block-last-photo-report .last-photo-report .item a .box-top {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+.block-last-photo-report .last-photo-report .item a .box-top .field-img {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  vertical-align: top;
+}
+.block-last-photo-report .last-photo-report .item a .box-top .field-img img {
+  width: 100%;
+  -moz-transition: all 2s linear 0s;
+  -o-transition: all 2s linear 0s;
+  -webkit-transition: all 2s linear;
+  -webkit-transition-delay: 0s;
+  transition: all 2s linear 0s;
+}
+.block-last-photo-report .last-photo-report .item a .box-top .all-photo {
+  display: block;
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  color: #FFF;
+  font-family: "helvetica-bold", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+.block-last-photo-report .last-photo-report .item a .box-top .all-photo .fa {
+  margin-right: 5px;
+}
+.block-last-photo-report .last-photo-report .item a .box-bottom {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding: 20px 20px 40px;
+  vertical-align: top;
+  background: #fff;
+}
+.block-last-photo-report .last-photo-report .item a .box-bottom .title {
+  display: inline-block;
+  width: 100%;
+  color: #201F1F;
+  font-family: "helvetica-light", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+.block-last-photo-report .last-photo-report .item a .box-bottom .description {
+  color: #201F1F;
+  font-family: "helvetica-light", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  display: inline-block;
+  width: 100%;
+}
+.block-last-photo-report .last-photo-report .item a .box-bottom .comment {
+  display: block;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #8F8F8F;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+}
+.block-last-photo-report .last-photo-report .item a .box-bottom .comment .fa {
+  margin-right: 5px;
+}
+
 .tabs-content > .content {
   padding: 0 0;
 }
@@ -6320,12 +7316,38 @@ form .NFI-wrapper .NFI-filename {
   border-top-right-radius: 5px;
 }
 
+.reveal-modal.place-map {
+  padding: 0 0;
+  outline: none;
+}
+.reveal-modal.place-map .map {
+  min-height: 400px;
+}
+.reveal-modal.place-map .close-reveal-modal {
+  color: #014183;
+  cursor: pointer;
+  font-size: 37px;
+  font-weight: normal;
+  line-height: 21px;
+  position: absolute;
+  top: 40px;
+  right: 11px;
+  overflow: hidden;
+  width: 26px;
+  text-align: center;
+  height: 26px;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 1366px) {
   footer .first {
     padding-left: 10px;
   }
   footer .second {
     padding-right: 10px;
+  }
+
+  .node-photo-report .title-wrapper {
+    padding: 0 170px 0 5px;
   }
 }
 @media only screen and (min-width: 1000px) and (max-width: 1200px) {
@@ -6622,6 +7644,21 @@ form .NFI-wrapper .NFI-filename {
     width: 100%;
     float: left;
   }
+
+  .block-comments .comment-title .btn-subscribe {
+    padding: 0 15px;
+    font-size: 15px;
+  }
+
+  .node-photo-report .bottom-wrapper .article-info .author {
+    margin: 0 0 20px;
+  }
+  .node-photo-report .bottom-wrapper .article-info .edit {
+    margin: 0 0 20px;
+  }
+  .node-photo-report .bottom-wrapper .article-info .text-center {
+    text-align: left !important;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 940px) {
   .block-poster-date .date-list li a {
@@ -6782,6 +7819,13 @@ form .NFI-wrapper .NFI-filename {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
+  }
+
+  .block-search-form .block-sorting {
+    display: block;
+    float: left;
+    clear: both;
+    margin: 20px 0 0;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 768px) {
@@ -7045,6 +8089,22 @@ form .NFI-wrapper .NFI-filename {
   .block-comments .block-title {
     font-size: 20px;
   }
+  .block-comments .comment-title {
+    height: inherit;
+    padding: 20px 30px;
+    border-bottom: 2px solid #e5e5e5;
+  }
+  .block-comments .comment-title .block-title {
+    margin: 0 0 20px;
+  }
+  .block-comments .comment-title .btn-subscribe {
+    clear: both;
+    float: left;
+    margin: 0 0;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 15px;
+  }
   .block-comments .comment-row {
     padding: 15px 0 15px 52px;
   }
@@ -7140,14 +8200,16 @@ form .NFI-wrapper .NFI-filename {
     border-right: 20px solid #F2F2F2;
   }
 
-  .page-poster .right-sidebar {
+  .page-poster .right-sidebar,
+  .page-photo-report .right-sidebar {
     background: transparent;
     float: left;
     margin-left: 0px;
     position: relative;
     width: 100%;
   }
-  .page-poster .main-content .content {
+  .page-poster .main-content .content,
+  .page-photo-report .main-content .content {
     padding: 0 0 0 0;
   }
 
@@ -7416,6 +8478,60 @@ form .NFI-wrapper .NFI-filename {
     width: 100%;
     margin: 10px 0 !important;
   }
+
+  .block-search-form .block-sorting {
+    display: block;
+    float: left;
+    clear: both;
+    margin: 20px 0 0;
+  }
+
+  .list-places-restaurants li .restaurant .field-rating-comment .field-comment {
+    display: block;
+    clear: both;
+    float: left;
+  }
+
+  .node-photo-report .title-wrapper {
+    padding: 0 5px 0 5px;
+  }
+  .node-photo-report .title-wrapper .slider-controls {
+    display: block;
+    height: 30px;
+    position: relative;
+    right: inherit;
+    top: inherit;
+    clear: both;
+    float: right;
+    margin: 15px 0 -10px;
+  }
+  .node-photo-report .photo-wrapper .box-info-wrapper .box-share {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cdcece;
+  }
+  .node-photo-report .photo-wrapper .box-info-wrapper .box-share:after {
+    display: none;
+  }
+  .node-photo-report .photo-wrapper .box-info-wrapper .box-info {
+    padding-top: 20px;
+  }
+  .node-photo-report .photo-wrapper .box-info-wrapper .box-info:after {
+    display: none;
+  }
+  .node-photo-report .bottom-wrapper .article-info .author {
+    margin: 0 0 20px;
+  }
+  .node-photo-report .bottom-wrapper .article-info .edit {
+    margin: 0 0 20px;
+  }
+  .node-photo-report .bottom-wrapper .article-info .text-center {
+    text-align: left !important;
+  }
+
+  .reveal-modal.place-map {
+    padding: 0 0;
+    min-height: auto;
+  }
 }
 @media only screen and (min-width: 300px) and (max-width: 767px) {
   body {
@@ -7584,6 +8700,12 @@ form .NFI-wrapper .NFI-filename {
   .node-place-full .place-bottom-wrapper .tabs .tab-title a {
     padding: 0 2px;
     font-size: 8px;
+  }
+
+  .places-restaurants-filter form #cuisine-wrapper ul li, .places-restaurants-filter form #additionally-wrapper ul li {
+    line-height: 1;
+    padding-bottom: 10px;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 440px) {

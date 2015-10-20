@@ -672,24 +672,32 @@
         <div class="row">
             <div class="main-content">
                 <div class="content">
-                    <div class="places-category">
-                        <div class="control-panel">
-                            <ul class="tags-list">
-                                <li class="active"><a href="#">Концерты</a></li>
-                                <li><a href="#">В Городе</a></li>
-                                <li><a href="#">Спектакли</a></li>
-                                <li><a href="#">Вечеринки</a></li>
-                                <li><a href="#">Выставки</a></li>
-                                <li>
-                                    <a data-dropdown="drop-1" aria-controls="drop" aria-expanded="false" class="round button dropdown">Другое</a>
-                                    <ul id="drop-1" data-dropdown-content class="f-dropdown" role="menu" aria-hidden="false" tabindex="-1">
-                                        <li><a href="#">This is a link</a></li>
-                                        <li><a href="#">This is another</a></li>
-                                        <li><a href="#">Yet another</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="places-list-filter">
+                        <form action="#">
+                            <div class="switch round small">
+                                <input id="switch1" type="checkbox">
+                                <label for="switch1"></label>
+                                <p>Сейчас работает</p>
+                            </div>
+                            <div class="switch round small">
+                                <input id="switch2" type="checkbox">
+                                <label for="switch2"></label>
+                                <p>Есть фото</p>
+                            </div>
+                            <div class="switch round small">
+                                <input id="switch3" type="checkbox">
+                                <label for="switch3"></label>
+                                <p>Расчет по картам</p>
+                            </div>
+                            <div class="switch round small">
+                                <input id="switch4" type="checkbox">
+                                <label for="switch4"></label>
+                                <p>Есть сайт</p>
+                            </div>
+                            <div class="btn-reset">
+                                <button type="reset">Очистить</button>
+                            </div>
+                        </form>
                     </div>
                     <div class="places-wrapper">
                         <div class="places-category">
@@ -786,18 +794,32 @@
                                         <button type="submit"><span class="fa fa-search"></span></button>
                                     </div>
                                 </form>
+                                <div class="block-sorting">
+                                    <span class="sorting-label">Сортировать по:</span>
+                                    <div class="box-drop">
+                                        <a data-dropdown="sorting" aria-controls="sorting" aria-expanded="false">Алфавиту <i class="fa fa-arrow-down"></i></a>
+                                        <ul id="sorting" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                            <li><a href="#">Алфавиту <i class="fa fa-arrow-down"></i></a></li>
+                                            <li><a href="#">Алфавиту <i class="fa fa-arrow-up"></i></a></li>
+                                            <li><a href="#">По пулярности</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <ul class="list-places">
                                 <li>
                                     <div class="place">
                                         <span class="number">1.</span>
-                                        <div class="field-title">
+                                        <div class="field field-title">
+                                            <span class="working">
+                                                <span class="icon-blocked"></span>
+                                            </span>
                                             <a class="title" href="#">Баргузин, кинотеатр</a>
                                             <span class="field-comment">
                                                 <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
                                             </span>
                                         </div>
-                                        <div class="field-rating">
+                                        <div class="field field-rating">
                                             <div class="rating-results">
                                                 <div class="box-stars stars-1">
                                                     <div class="star"></div>
@@ -809,23 +831,61 @@
                                             </div>
                                             <span class="all-votes">24 голоса</span>
                                         </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                        <div class="field field-address">
+                                            <span class="icon">
+                                                <i class="fa fa-map-signs"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><span><a href="#" data-reveal-id="place-map-1">Иркутск, Байкальская, 107</a></span> <strong>Октябрьский район, ост. «Диагностический центр», «6-я Советская»</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-phones">
+                                            <span class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><strong>(3952) 55-04-54</strong> (автоответчик),</p>
+                                                <p><strong>22-98-55</strong> (заказ билетов).</p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-ticket">
+                                            <span class="icon">
+                                                <i class="fa fa-ticket"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p>Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <ul class="services-list">
+                                                <li>
+                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Есть Wi-Fi"><i class="fa fa-globe"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Танцпол"><i class="fa fa-picture-o"></i></span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="place">
                                         <span class="number">2.</span>
-                                        <div class="field-title">
+                                        <div class="field field-title">
+                                            <span class="closed">
+                                                <span class="icon-clock2"></span>
+                                            </span>
                                             <a class="title" href="#">Баргузин, кинотеатр</a>
                                             <span class="field-comment">
                                                 <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
                                             </span>
                                         </div>
-                                        <div class="field-rating">
+                                        <div class="field field-rating">
                                             <div class="rating-results">
-                                                <div class="box-stars stars-2">
+                                                <div class="box-stars stars-1">
                                                     <div class="star"></div>
                                                     <div class="star"></div>
                                                     <div class="star"></div>
@@ -835,23 +895,61 @@
                                             </div>
                                             <span class="all-votes">24 голоса</span>
                                         </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                        <div class="field field-address">
+                                            <span class="icon">
+                                                <i class="fa fa-map-marker"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><span>Иркутск, Байкальская, 107</span> <strong>Октябрьский район, ост. «Диагностический центр», «6-я Советская»</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-phones">
+                                            <span class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><strong>(3952) 55-04-54</strong> (автоответчик),</p>
+                                                <p><strong>22-98-55</strong> (заказ билетов).</p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-ticket">
+                                            <span class="icon">
+                                                <i class="fa fa-ticket"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p>Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <ul class="services-list">
+                                                <li>
+                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Есть Wi-Fi"><i class="fa fa-globe"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Танцпол"><i class="fa fa-picture-o"></i></span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="place">
                                         <span class="number">3.</span>
-                                        <div class="field-title">
+                                        <div class="field field-title">
+                                            <span class="working">
+                                                <i class="fa fa-clock-o"></i>
+                                            </span>
                                             <a class="title" href="#">Баргузин, кинотеатр</a>
                                             <span class="field-comment">
                                                 <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
                                             </span>
                                         </div>
-                                        <div class="field-rating">
+                                        <div class="field field-rating">
                                             <div class="rating-results">
-                                                <div class="box-stars stars-3">
+                                                <div class="box-stars stars-1">
                                                     <div class="star"></div>
                                                     <div class="star"></div>
                                                     <div class="star"></div>
@@ -861,23 +959,61 @@
                                             </div>
                                             <span class="all-votes">24 голоса</span>
                                         </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                        <div class="field field-address">
+                                            <span class="icon">
+                                                <i class="fa fa-map-marker"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><span>Иркутск, Байкальская, 107</span> <strong>Октябрьский район, ост. «Диагностический центр», «6-я Советская»</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-phones">
+                                            <span class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><strong>(3952) 55-04-54</strong> (автоответчик),</p>
+                                                <p><strong>22-98-55</strong> (заказ билетов).</p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-ticket">
+                                            <span class="icon">
+                                                <i class="fa fa-ticket"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p>Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <ul class="services-list">
+                                                <li>
+                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Есть Wi-Fi"><i class="fa fa-globe"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Танцпол"><i class="fa fa-picture-o"></i></span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="place">
                                         <span class="number">4.</span>
-                                        <div class="field-title">
+                                        <div class="field field-title">
+                                            <span class="working">
+                                                <i class="fa fa-clock-o"></i>
+                                            </span>
                                             <a class="title" href="#">Баргузин, кинотеатр</a>
                                             <span class="field-comment">
                                                 <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
                                             </span>
                                         </div>
-                                        <div class="field-rating">
+                                        <div class="field field-rating">
                                             <div class="rating-results">
-                                                <div class="box-stars stars-4">
+                                                <div class="box-stars stars-1">
                                                     <div class="star"></div>
                                                     <div class="star"></div>
                                                     <div class="star"></div>
@@ -887,23 +1023,61 @@
                                             </div>
                                             <span class="all-votes">24 голоса</span>
                                         </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                        <div class="field field-address">
+                                            <span class="icon">
+                                                <i class="fa fa-map-marker"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><span>Иркутск, Байкальская, 107</span> <strong>Октябрьский район, ост. «Диагностический центр», «6-я Советская»</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-phones">
+                                            <span class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><strong>(3952) 55-04-54</strong> (автоответчик),</p>
+                                                <p><strong>22-98-55</strong> (заказ билетов).</p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-ticket">
+                                            <span class="icon">
+                                                <i class="fa fa-ticket"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p>Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <ul class="services-list">
+                                                <li>
+                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Есть Wi-Fi"><i class="fa fa-globe"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Танцпол"><i class="fa fa-picture-o"></i></span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="place">
                                         <span class="number">5.</span>
-                                        <div class="field-title">
+                                        <div class="field field-title">
+                                            <span class="working">
+                                                <i class="fa fa-clock-o"></i>
+                                            </span>
                                             <a class="title" href="#">Баргузин, кинотеатр</a>
                                             <span class="field-comment">
                                                 <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
                                             </span>
                                         </div>
-                                        <div class="field-rating">
+                                        <div class="field field-rating">
                                             <div class="rating-results">
-                                                <div class="box-stars stars-5">
+                                                <div class="box-stars stars-1">
                                                     <div class="star"></div>
                                                     <div class="star"></div>
                                                     <div class="star"></div>
@@ -913,23 +1087,61 @@
                                             </div>
                                             <span class="all-votes">24 голоса</span>
                                         </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                        <div class="field field-address">
+                                            <span class="icon">
+                                                <i class="fa fa-map-marker"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><span>Иркутск, Байкальская, 107</span> <strong>Октябрьский район, ост. «Диагностический центр», «6-я Советская»</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-phones">
+                                            <span class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><strong>(3952) 55-04-54</strong> (автоответчик),</p>
+                                                <p><strong>22-98-55</strong> (заказ билетов).</p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-ticket">
+                                            <span class="icon">
+                                                <i class="fa fa-ticket"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p>Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <ul class="services-list">
+                                                <li>
+                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Есть Wi-Fi"><i class="fa fa-globe"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Танцпол"><i class="fa fa-picture-o"></i></span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="place">
                                         <span class="number">6.</span>
-                                        <div class="field-title">
+                                        <div class="field field-title">
+                                            <span class="working">
+                                                <i class="fa fa-clock-o"></i>
+                                            </span>
                                             <a class="title" href="#">Баргузин, кинотеатр</a>
                                             <span class="field-comment">
                                                 <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
                                             </span>
                                         </div>
-                                        <div class="field-rating">
+                                        <div class="field field-rating">
                                             <div class="rating-results">
-                                                <div class="box-stars stars-3">
+                                                <div class="box-stars stars-1">
                                                     <div class="star"></div>
                                                     <div class="star"></div>
                                                     <div class="star"></div>
@@ -939,23 +1151,61 @@
                                             </div>
                                             <span class="all-votes">24 голоса</span>
                                         </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                        <div class="field field-address">
+                                            <span class="icon">
+                                                <i class="fa fa-map-marker"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><span>Иркутск, Байкальская, 107</span> <strong>Октябрьский район, ост. «Диагностический центр», «6-я Советская»</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-phones">
+                                            <span class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><strong>(3952) 55-04-54</strong> (автоответчик),</p>
+                                                <p><strong>22-98-55</strong> (заказ билетов).</p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-ticket">
+                                            <span class="icon">
+                                                <i class="fa fa-ticket"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p>Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <ul class="services-list">
+                                                <li>
+                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Есть Wi-Fi"><i class="fa fa-globe"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Танцпол"><i class="fa fa-picture-o"></i></span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="place">
                                         <span class="number">7.</span>
-                                        <div class="field-title">
+                                        <div class="field field-title">
+                                            <span class="working">
+                                                <i class="fa fa-clock-o"></i>
+                                            </span>
                                             <a class="title" href="#">Баргузин, кинотеатр</a>
                                             <span class="field-comment">
                                                 <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
                                             </span>
                                         </div>
-                                        <div class="field-rating">
+                                        <div class="field field-rating">
                                             <div class="rating-results">
-                                                <div class="box-stars stars-4">
+                                                <div class="box-stars stars-1">
                                                     <div class="star"></div>
                                                     <div class="star"></div>
                                                     <div class="star"></div>
@@ -965,23 +1215,61 @@
                                             </div>
                                             <span class="all-votes">24 голоса</span>
                                         </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                        <div class="field field-address">
+                                            <span class="icon">
+                                                <i class="fa fa-map-marker"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><span>Иркутск, Байкальская, 107</span> <strong>Октябрьский район, ост. «Диагностический центр», «6-я Советская»</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-phones">
+                                            <span class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><strong>(3952) 55-04-54</strong> (автоответчик),</p>
+                                                <p><strong>22-98-55</strong> (заказ билетов).</p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-ticket">
+                                            <span class="icon">
+                                                <i class="fa fa-ticket"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p>Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <ul class="services-list">
+                                                <li>
+                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Есть Wi-Fi"><i class="fa fa-globe"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Танцпол"><i class="fa fa-picture-o"></i></span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="place">
                                         <span class="number">8.</span>
-                                        <div class="field-title">
+                                        <div class="field field-title">
+                                            <span class="working">
+                                                <i class="fa fa-clock-o"></i>
+                                            </span>
                                             <a class="title" href="#">Баргузин, кинотеатр</a>
                                             <span class="field-comment">
                                                 <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
                                             </span>
                                         </div>
-                                        <div class="field-rating">
+                                        <div class="field field-rating">
                                             <div class="rating-results">
-                                                <div class="box-stars stars-5">
+                                                <div class="box-stars stars-1">
                                                     <div class="star"></div>
                                                     <div class="star"></div>
                                                     <div class="star"></div>
@@ -991,23 +1279,61 @@
                                             </div>
                                             <span class="all-votes">24 голоса</span>
                                         </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                        <div class="field field-address">
+                                            <span class="icon">
+                                                <i class="fa fa-map-marker"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><span>Иркутск, Байкальская, 107</span> <strong>Октябрьский район, ост. «Диагностический центр», «6-я Советская»</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-phones">
+                                            <span class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><strong>(3952) 55-04-54</strong> (автоответчик),</p>
+                                                <p><strong>22-98-55</strong> (заказ билетов).</p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-ticket">
+                                            <span class="icon">
+                                                <i class="fa fa-ticket"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p>Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <ul class="services-list">
+                                                <li>
+                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Есть Wi-Fi"><i class="fa fa-globe"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Танцпол"><i class="fa fa-picture-o"></i></span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="place">
                                         <span class="number">9.</span>
-                                        <div class="field-title">
+                                        <div class="field field-title">
+                                            <span class="working">
+                                                <i class="fa fa-clock-o"></i>
+                                            </span>
                                             <a class="title" href="#">Баргузин, кинотеатр</a>
                                             <span class="field-comment">
                                                 <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
                                             </span>
                                         </div>
-                                        <div class="field-rating">
+                                        <div class="field field-rating">
                                             <div class="rating-results">
-                                                <div class="box-stars stars-4">
+                                                <div class="box-stars stars-1">
                                                     <div class="star"></div>
                                                     <div class="star"></div>
                                                     <div class="star"></div>
@@ -1017,23 +1343,61 @@
                                             </div>
                                             <span class="all-votes">24 голоса</span>
                                         </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                        <div class="field field-address">
+                                            <span class="icon">
+                                                <i class="fa fa-map-marker"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><span>Иркутск, Байкальская, 107</span> <strong>Октябрьский район, ост. «Диагностический центр», «6-я Советская»</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-phones">
+                                            <span class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><strong>(3952) 55-04-54</strong> (автоответчик),</p>
+                                                <p><strong>22-98-55</strong> (заказ билетов).</p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-ticket">
+                                            <span class="icon">
+                                                <i class="fa fa-ticket"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p>Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <ul class="services-list">
+                                                <li>
+                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Есть Wi-Fi"><i class="fa fa-globe"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Танцпол"><i class="fa fa-picture-o"></i></span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="place">
                                         <span class="number">10.</span>
-                                        <div class="field-title">
+                                        <div class="field field-title">
+                                            <span class="working">
+                                                <i class="fa fa-clock-o"></i>
+                                            </span>
                                             <a class="title" href="#">Баргузин, кинотеатр</a>
                                             <span class="field-comment">
                                                 <i class="fa fa-comment-o"></i> Коментариев <span>24</span>
                                             </span>
                                         </div>
-                                        <div class="field-rating">
+                                        <div class="field field-rating">
                                             <div class="rating-results">
-                                                <div class="box-stars stars-2">
+                                                <div class="box-stars stars-1">
                                                     <div class="star"></div>
                                                     <div class="star"></div>
                                                     <div class="star"></div>
@@ -1043,8 +1407,43 @@
                                             </div>
                                             <span class="all-votes">24 голоса</span>
                                         </div>
-                                        <div class="body">
-                                            <p><span>Иркутск, Байкальская, 107</span> Октябрьский район, ост. «Диагностический центр», «6-я Советская» (3952) 55-04-54 (автоответчик), 22-98-55 (заказ билетов). Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                        <div class="field field-address">
+                                            <span class="icon">
+                                                <i class="fa fa-map-marker"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><span>Иркутск, Байкальская, 107</span> <strong>Октябрьский район, ост. «Диагностический центр», «6-я Советская»</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-phones">
+                                            <span class="icon">
+                                                <i class="fa fa-phone"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p><strong>(3952) 55-04-54</strong> (автоответчик),</p>
+                                                <p><strong>22-98-55</strong> (заказ билетов).</p>
+                                            </div>
+                                        </div>
+                                        <div class="field field-ticket">
+                                            <span class="icon">
+                                                <i class="fa fa-ticket"></i>
+                                            </span>
+                                            <div class="field-content">
+                                                <p>Купить билеты также можно онлайн на официальном сайте кинотеатра.</p>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <ul class="services-list">
+                                                <li>
+                                                    <span title="Есть безналичный расчет"><i class="fa fa-credit-card"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Есть Wi-Fi"><i class="fa fa-globe"></i></span>
+                                                </li>
+                                                <li>
+                                                    <span title="Танцпол"><i class="fa fa-picture-o"></i></span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li>
@@ -1234,6 +1633,13 @@
 
 <div id="widget-overlay"></div>
 <div id="widget-overlay-scroll-bar"></div>
+
+<div id="place-map-1" class="reveal-modal place-map" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <div class="map">
+        <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=WzGn_wz3v33WxhRGyzBNk5uBZUKFLpoe&width=100%&height=400&lang=ru_UA&sourceType=constructor"></script>
+    </div>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/modernizr/modernizr.js"></script>
