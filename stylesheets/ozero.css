@@ -115,7 +115,9 @@
   height: 24px;
 }
 [class*="w-icons"].w-icons-soc-3 {
-  background-position: -261px -18px;
+  background-image: url("../icon/instagram.png");
+  background-position: 0 0;
+  background-size: cover;
   width: 24px;
   height: 24px;
 }
@@ -125,8 +127,10 @@
   height: 24px;
 }
 [class*="w-icons"].w-icons-soc-5 {
-  background-position: -319px -18px;
-  width: 25px;
+  background-image: url("../icon/odnoklassniki.png");
+  background-position: 0 0;
+  background-size: cover;
+  width: 24px;
   height: 24px;
 }
 

@@ -1,0 +1,1031 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>OZERO</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!--[if gte IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="stylesheets/calendar.css" />
+    <link rel="stylesheet" href="stylesheets/custom_2.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="stylesheets/ozero.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<div class="scroll-bar" id="scroll-bar">
+    <div class="topbar-scroll">
+        <div class="row">
+            <div class="box-logo">
+                <a id="show-widget" class="logo" href="/"></a>
+            </div>
+            <nav role="navigation" class="box-menu">
+                <ul class="main-nav">
+                    <li>
+                        <a href="#">Новости</a>
+                    </li>
+                    <li>
+                        <a href="#">Афиша</a>
+                    </li>
+                    <li>
+                        <a href="#">Дневники</a>
+                    </li>
+                </ul>
+                <ul class="nav-categories">
+                    <li>
+                        <a href="#">Карьера</a>
+                    </li>
+                    <li>
+                        <a href="#">Бизнес</a>
+                    </li>
+                    <li>
+                      <a href="#">Творчество</a>
+                    </li>
+                    <li>
+                      <a href="#">Отношения</a>
+                  </li>
+                </ul>
+            </nav>
+            <div class="box-btn-menu">
+                <!--<a id="drop-menu-scroll" class="drop-menu-scroll" href="#" ><i class="fa fa-bars"></i></a>-->
+                <a class="drop-menu-scroll right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="block-pulse white">
+                <div class="items-pulse">5</div>
+                <div class="box-right">
+                    <div class="item">
+                        <a class="title" href="#">Сегодня ночью украли все ямы с дорог Сегодня ночью украли все ямы с дорог</a>
+                        <div class="box-info">
+                            <div class="date-time">
+                                <div class="date">17.07</div>
+                                <div class="time">18:34</div>
+                            </div>
+                            <div class="puls-tegs">
+                                <a href="#">#ночь</a>
+                                <a href="#">#кража</a>
+                                <a href="#">#дороги</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tools">
+                <div id="sb-search-scroll" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="fa fa-search sb-icon-search"></span>
+                    </form>
+                </div>
+                <div class="my-ozero">
+                    <!--<a class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>-->
+                    <!--<a class="cabinet" href="#" >Мое озеро<span>9</span></a>-->
+                    <a class="user-cabinet">
+                                <span class="box-photo-message">
+                                    <img class="user-photo" src="img/user.jpg" alt="user"/>
+                                    <span class="item-message">9</span>
+                                </span>
+                        <span class="title">Кабинет</span>
+                    </a>
+                </div>
+            </div>
+            <div class="widget white">
+                <div class="item home">
+                    <a class="circle" href="#">
+                        <span class="help home-ico"><i class="fa fa-home"></i></span>
+                    </a>
+                </div>
+                <div class="item radio">
+                    <div class="circle">
+                        <span class="help radio-ico"></span>
+                    </div>
+                    <div class="info">mcm</div>
+                </div>
+                <div class="item weather">
+                    <div class="circle">
+                        <span class="help weather-thunder-dry"></span>
+                    </div>
+                    <div class="info">+32°</div>
+                </div>
+                <div class="item points">
+                    <div class="circle">
+                                <span class="help color green">
+                                    <span class="number">6</span>
+                                </span>
+                    </div>
+                    <div class="info">баллов</div>
+                </div>
+                <div class="item currency">
+                    <div class="circle">
+                        <span class="help dollar"></span>
+                    </div>
+                    <div class="info">56.25</div>
+                </div>
+                <div class="item fuel">
+                    <div class="circle">
+                        <span class="help fuel-92"></span>
+                    </div>
+                    <div class="info">35.21</div>
+                </div>
+                <div class="item btn-close">
+                    <a id="close-widget" class="circle">
+                        <span class="help close-ico"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="drop-menu-container" id="scroll-drop-menu-container">
+                <span class="close-drop-menu-container" id="close-scroll-drop-menu-container"></span>
+                <div class="search-form">
+                    <form action="#">
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="search-btn"><i class="fa fa-search"></i></span>
+                    </form>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <header role="presentation" class="header" id="header">
+        <div class="topbar">
+            <div class="row">
+                <nav role="navigation" class="box-menu">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="tools">
+                    <!--<a class="drop-menu right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>-->
+                    <a class="drop-menu right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
+                    <div id="sb-search" class="sb-search">
+                        <form>
+                            <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="fa fa-search sb-icon-search"></span>
+                        </form>
+                    </div>
+                    <div class="my-ozero">
+                        <!--<a class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>-->
+                        <a class="cabinet" href="#" >Мое озеро<span>9</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo-large-blue.svg" alt="ozero"/></a>
+                    </div>
+                    <div class="block-pulse">
+                        <div class="items-pulse pulse">5</div>
+                        <div class="box-right">
+                            <div class="item">
+                                <a class="title" href="#">Сегодня ночью украли все ямы с дорог Сегодня</a>
+                                <div class="box-info">
+                                    <div class="date-time">
+                                        <div class="date">17.07</div>
+                                        <div class="time">18:34</div>
+                                    </div>
+                                    <div class="puls-tegs">
+                                        <a href="#">#ночь</a>
+                                        <a href="#">#кража</a>
+                                        <a href="#">#дороги</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="item radio">
+                            <div class="circle">
+                                <span class="help radio-ico"></span>
+                            </div>
+                            <div class="info">mcm</div>
+                        </div>
+                        <div class="item weather">
+                            <div class="circle">
+                                <span class="help weather-thunder-dry"></span>
+                            </div>
+                            <div class="info">+32°</div>
+                        </div>
+                        <div class="item points">
+                            <div class="circle">
+                                <span class="help color green">
+                                    <span class="number">6</span>
+                                </span>
+                            </div>
+                            <div class="info">баллов</div>
+                        </div>
+                        <div class="item currency">
+                            <div class="circle">
+                                <span class="help dollar"></span>
+                            </div>
+                            <div class="info">56.25</div>
+                        </div>
+                        <div class="item fuel">
+                            <div class="circle">
+                                <span class="help fuel-92"></span>
+                            </div>
+                            <div class="info">35.21</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" class="page-item-news">
+        <div class="row">
+            <div class="main-content">
+                <div class="content">
+                    <article class="node-news">
+                        <div class="news-header-3" style="background-image: url('img/expert.jpg');">
+                            <div class="news-header-top">
+                                <div class="category">НАЗВАНИЕ РУБРИКИ</div>
+                                <div class="page-info">
+                                    <h1 class="page-title">ВЫСТУПЛЕНИЕ ПУТИНА НА МЕДИА-ФОРУМЕ</h1>
+                                    <a class="back-news-list" href="#">вернуться к новостям</a>
+                                </div>
+                                <div class="description">
+                                    <p>Если бы Петр I оказался в России сегодня, он бы сильно удивился: то, с чем он боролся три века назад, обретает все большую популярность. Великий государь устал бы собирать налог на бороду: куда ни глянь, везде сплошные бородачи. И, кажется, их дамы сердца не особо-то и против…</p>
+                                </div>
+                                <div class="box-author-date-category">
+                                    <div class="fields">
+                                        <span class="author">Василий Владимирович</span> <span class="date">20/04/2015</span> <span class="time">15:09</span>
+                                    </div>
+                                    <div class="statistic">
+                                        <i class="fa fa-eye"></i><span class="views">1937</span>
+                                        <i class="fa fa-comment-o"></i><span class="comment-items">27</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="row">
+                                <div class="box-img hide-for-small-only hide-for-medium-only small-12 medium-4 large-4 columns">
+                                    <div id="column-img" class="column-img">
+                                        <img src="img/baner.gif" alt="baner"/>
+                                    </div>
+                                </div>
+                                <div class="body-content small-12 medium-12 large-8 columns">
+                                    <img class="right" src="img/articles/article-1.jpg" alt="img"/>
+                                    <p>Взрыв прогремел в саду местного культурного центра Амара, где находились около 300 делегатов молодежных ассоциаций левого толка.</p>
+                                    <p>Город Суруч расположен рядом с сирийским приграничным городом Кобани, который стал ареной ожесточенных сражений между боевиками экстремистской группировки «Исламское государство»  и курдскими ополченцами. Подвергавшийся воздушным ударам со стороны западной антитеррористической коалиции Кобани несколько раз переходил от боевиков ИГИЛ к ополченцам и обратно. Многие жители сирийского города перебрались через границу и нашли убежище в Суруче. В январе здесь был открыт лагерь для беженцев, где живут около 35 тыс людей, бежавших из Кобани.</p>
+                                    <img class="left" src="img/articles/article-2.jpg" alt="img"/>
+                                    <p>Взрыв прогремел в саду местного культурного центра Амара, где находились около 300 делегатов молодежных ассоциаций левого толка.</p>
+                                    <p>Город Суруч расположен рядом с сирийским приграничным городом Кобани, который стал ареной ожесточенных сражений между боевиками экстремистской группировки «Исламское государство»  и курдскими ополченцами. Подвергавшийся воздушным ударам со стороны западной антитеррористической коалиции Кобани несколько раз переходил от боевиков ИГИЛ к ополченцам и обратно. Многие жители сирийского города перебрались через границу и нашли убежище в Суруче. В январе здесь был открыт лагерь для беженцев, где живут около 35 тыс людей, бежавших из Кобани.</p>
+                                    <p>Взрыв прогремел в саду местного культурного центра Амара, где находились около 300 делегатов молодежных ассоциаций левого толка.</p>
+                                    <p>Город Суруч расположен рядом с сирийским приграничным городом Кобани, который стал ареной ожесточенных сражений между боевиками экстремистской группировки «Исламское государство»  и курдскими ополченцами. Подвергавшийся воздушным ударам со стороны западной антитеррористической коалиции Кобани несколько раз переходил от боевиков ИГИЛ к ополченцам и обратно. Многие жители сирийского города перебрались через границу и нашли убежище в Суруче. В январе здесь был открыт лагерь для беженцев, где живут около 35 тыс людей, бежавших из Кобани.</p>
+                                    <p>Город Суруч расположен рядом с сирийским приграничным городом Кобани, который стал ареной ожесточенных сражений между боевиками экстремистской группировки «Исламское государство»  и курдскими ополченцами. Подвергавшийся воздушным ударам со стороны западной антитеррористической коалиции Кобани несколько раз переходил от боевиков ИГИЛ к ополченцам и обратно. Многие жители сирийского города перебрались через границу и нашли убежище в Суруче. В январе здесь был открыт лагерь для беженцев, где живут около 35 тыс людей, бежавших из Кобани.</p>
+                                    <p>Город Суруч расположен рядом с сирийским приграничным городом Кобани, который стал ареной ожесточенных сражений между боевиками экстремистской группировки «Исламское государство»  и курдскими ополченцами. Подвергавшийся воздушным ударам со стороны западной антитеррористической коалиции Кобани несколько раз переходил от боевиков ИГИЛ к ополченцам и обратно. Многие жители сирийского города перебрались через границу и нашли убежище в Суруче. В январе здесь был открыт лагерь для беженцев, где живут около 35 тыс людей, бежавших из Кобани.</p>
+                                    <div class="views-expert">
+                                        <h2 class="title">НАШ ЭКСПЕРТ:</h2>
+                                        <div class="view-row row">
+                                            <div class="text-center small-4 medium-3 large-3 columns">
+                                                <img src="img/kazakov2.png" alt="img"/>
+                                            </div>
+                                            <div class="small-8 medium-9 large-9 columns">
+                                                <div class="box">
+                                                    <div class="info">
+                                                        <div class="name">ИЛЬЯ КАЗАКОВ</div>
+                                                        <div class="post">PR-менеджер компании Gameloft</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Город Суруч расположен рядом с сирийским приграничным городом Кобани, который стал ареной ожесточенных сражений между боевиками экстремистской группировки «Исламское государство»  и курдскими ополченцами. Подвергавшийся воздушным ударам со стороны западной антитеррористической коалиции Кобани несколько раз переходил от боевиков ИГИЛ к ополченцам и обратно. Многие жители сирийского города перебрались через границу и нашли убежище в Суруче. В январе здесь был открыт лагерь для беженцев, где живут около 35 тыс людей, бежавших из Кобани.</p>
+                                    <p>Город Суруч расположен рядом с сирийским приграничным городом Кобани, который стал ареной ожесточенных сражений между боевиками экстремистской группировки «Исламское государство»  и курдскими ополченцами. Подвергавшийся воздушным ударам со стороны западной антитеррористической коалиции Кобани несколько раз переходил от боевиков ИГИЛ к ополченцам и обратно. Многие жители сирийского города перебрались через границу и нашли убежище в Суруче. В январе здесь был открыт лагерь для беженцев, где живут около 35 тыс людей, бежавших из Кобани.</p>
+                                    <p>Город Суруч расположен рядом с сирийским приграничным городом Кобани, который стал ареной ожесточенных сражений между боевиками экстремистской группировки «Исламское государство»  и курдскими ополченцами. Подвергавшийся воздушным ударам со стороны западной антитеррористической коалиции Кобани несколько раз переходил от боевиков ИГИЛ к ополченцам и обратно. Многие жители сирийского города перебрались через границу и нашли убежище в Суруче. В январе здесь был открыт лагерь для беженцев, где живут около 35 тыс людей, бежавших из Кобани.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="block-hash-tags">
+                        <ul class="list">
+                            <li>
+                                <a href="#">#ночь</a>
+                            </li>
+                            <li>
+                                <a href="#">#кража</a>
+                            </li>
+                            <li>
+                                <a href="#">#дороги</a>
+                            </li>
+                        </ul>
+                        <div class="discussion">
+                            <a href="#block-comments" id="scroll-to-comment">обсуждение <span>(15)</span></a>
+                        </div>
+                    </div>
+                    <div class="block-delivery-shared">
+                        <div class="delivery-form">
+                            <h3 class="title">подпишитесь на рассылку:</h3>
+                            <form action="#">
+                                <div class="row">
+                                    <div class="small-12 medium-7 columns">
+                                        <input type="email" placeholder="Ваш e-mail"/>
+                                    </div>
+                                    <div class="small-12 medium-5 columns">
+                                        <button type="submit">Подписаться</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="block-shared">
+                            <h3 class="title">Расскажите друзьям:</h3>
+                            <div class="share42init"></div>
+                        </div>
+                    </div>
+                    <div class="block-other-news">
+                        <h2 class="block-title">Другие новости</h2>
+                        <div class="other-news-slider" id="other-news-slider">
+                            <div class="item">
+                                <div class="news-item">
+                                    <div class="news-info">
+                                        <div class="time-publishing">18:50</div>
+                                        <div class="news-category"><a href="#">в Иркутске</a></div>
+                                    </div>
+                                    <a class="news-title" href="#">Патриарх Кирилл: Развращение жизни имеет огромную инерционную силу</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="news-item">
+                                    <div class="news-info">
+                                        <div class="time-publishing">18:50</div>
+                                        <div class="news-category"><a href="#">в Иркутске</a></div>
+                                    </div>
+                                    <a class="news-title" href="#">Патриарх Кирилл: Развращение жизни имеет огромную инерционную силу</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="news-item">
+                                    <div class="news-info">
+                                        <div class="time-publishing">18:50</div>
+                                        <div class="news-category"><a href="#">в Иркутске</a></div>
+                                    </div>
+                                    <a class="news-title" href="#">Патриарх Кирилл: Развращение жизни имеет огромную инерционную силу</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="news-item">
+                                    <div class="news-info">
+                                        <div class="time-publishing">18:50</div>
+                                        <div class="news-category"><a href="#">в Иркутске</a></div>
+                                    </div>
+                                    <a class="news-title" href="#">Патриарх Кирилл: Развращение жизни имеет огромную инерционную силу</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="news-item">
+                                    <div class="news-info">
+                                        <div class="time-publishing">18:50</div>
+                                        <div class="news-category"><a href="#">в Иркутске</a></div>
+                                    </div>
+                                    <a class="news-title" href="#">Патриарх Кирилл: Развращение жизни имеет огромную инерционную силу</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-recommended-articles">
+                        <h2 class="block-title">Рекомендованные статьи</h2>
+                        <div class="recommended-articles" id="recommended-articles">
+                            <div class="item">
+                                <a href="#" class="double-link">
+                                    <span class="img"><img src="./img/items/img-13.jpg" alt="img"></span>
+                                    <span class="description">
+                                        <span class="title">Террористке, взорвавшей себя в Турции, было 18 лет</span>
+                                        <span class="info">Кабинет на тёплой лоджии, мебель по авторским эскизам архитектора и яркая ванная комната в отделке из травертина</span>
+                                        <span class="statistic">
+                                            <i class="fa fa-comment-o"></i>27
+                                            <i class="fa fa-eye"></i>1937
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="double-link">
+                                    <span class="img"><img src="./img/items/img-14.jpg" alt="img"></span>
+                                    <span class="description">
+                                        <span class="title">12 забавных животных, которые обожают клубнику</span>
+                                        <span class="statistic">
+                                            <i class="fa fa-comment-o"></i>27
+                                            <i class="fa fa-eye"></i>1937
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="double-link">
+                                    <span class="img"><img src="./img/items/img-15.jpg" alt="img"></span>
+                                    <span class="description">
+                                        <span class="title">«Съедобная» мода: забавные эскизы одежды, выполненные из настоящих продуктов</span>
+                                        <span class="info">«Бессмертного полка» — о брошенных плакатах и о том, собирали ли платных статистов на</span>
+                                        <span class="statistic">
+                                            <i class="fa fa-comment-o"></i>27
+                                            <i class="fa fa-eye"></i>1937
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-comments" id="block-comments">
+                        <h2 class="block-title">Комментарии пользователей</h2>
+                        <div class="all-comments">
+                            <div class="comment-row no-sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                                <div class="box-reply">
+                                    <a class="last-reply-user" href="#">
+                                        <span class="user-img"><img src="img/user/avatar-2.jpg" alt="img"/></span>
+                                        <span class="user-name">Ульяна</span>
+                                        <span class="desc">ответил(-а)</span>
+                                        <span class="item-reply"> - 2 ответа</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="comment-row sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                                <div class="comment-sublevel">
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Юля_88</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Ирина</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-row sublevel active">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                                <div class="comment-sublevel">
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Юля_88</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Ирина</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-row no-sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="box-btn">
+                            <a class="all-comments" href="#">Все коментарии (76)</a>
+                        </div>
+                        <div class="block-form-comment">
+                            <h2 class="block-title">Оставить комментарий</h2>
+                            <form action="#">
+                                <textarea></textarea>
+                                <button type="submit">Комментировать</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="right-sidebar">
+                <div class="block-blogs">
+                    <h2 class="block-title">Блоги по теме</h2>
+                    <div class="blog-list" id="blog-list-mobile">
+                        <div class="item">
+                            <div class="img">
+                                <a href="#"><img src="./img/blog-img-1.jpg" alt=""/></a>
+                            </div>
+                            <div class="info">город без пробок</div>
+                            <a class="title" href="#">Террористке, взорвавшей себя в Турции, было 18 лет</a>
+                            <div class="desc">
+                                <p>Президент России Владимир Путин «решительно осудил это варварское преступление и подчеркнул, что борьба с терроризмом требует активной координации усилий всего мирового сообщества», сообщается <a href="#">на сайте Кремля.</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#"><img src="./img/blog-img-2.jpg" alt=""/></a>
+                            </div>
+                            <div class="info">город без пробок</div>
+                            <a class="title" href="#">Террористке, взорвавшей себя в Турции, было 18 лет</a>
+                            <div class="desc">
+                                <p>Президент России Владимир Путин «решительно осудил это варварское преступление и подчеркнул</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <a href="#"><img src="./img/blog-img-3.jpg" alt=""/></a>
+                            </div>
+                            <div class="info">город без пробок</div>
+                            <a class="title" href="#">Террористке, взорвавшей себя в Турции, было 18 лет</a>
+                            <div class="desc">
+                                <p>Президент России Владимир Путин «решительно осудил это варварское преступление и подчеркнул</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="all-posts"><a href="#">Все записи в блогах</a></div>
+                </div>
+                <div class="tabulation">
+                    <ul class="tabs" data-tab>
+                        <li class="tab-title active"><a href="#panel1-1"><i class="fa fa-instagram"></i><span class="help"> Инста дня</span></a></li>
+                        <li class="tab-title"><a href="#panel1-2"><i class="fa fa-twitter"></i> <span class="help">Tweet дня</span></a></li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel1-1">
+                            <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+                        </div>
+                        <div class="content" id="panel1-2">
+                            <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-shared-tab">
+                    <p>Мы в социальных сетях</p>
+                    <ul class="tabs" data-tab>
+                        <li class="tab-title active"><a href="#panel1"><span class="w-icons-soc-1"></span></a></li>
+                        <li class="tab-title"><a href="#panel2"><span class="w-icons-soc-2"></span></a></li>
+                        <li class="tab-title"><a href="#panel3"><span class="w-icons-soc-3"></span></a></li>
+                        <li class="tab-title"><a href="#panel4"><span class="w-icons-soc-4"></span></a></li>
+                        <li class="tab-title"><a href="#panel5"><span class="w-icons-soc-5"></span></a></li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel1">
+                            <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+                        </div>
+                        <div class="content" id="panel2">
+                            <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                        </div>
+                        <div class="content" id="panel3">
+                            <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+                        </div>
+                        <div class="content" id="panel4">
+                            <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+                        </div>
+                        <div class="content" id="panel5">
+                            <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-newest-publications newest-publications clearfix">
+                    <div class="item slick-item poster">
+                        <a href="#" class="double-link">
+                            <img src="./img/items/poster2.jpg" alt=""/>
+                            <span class="caption">
+                                <span class="sub-title">праздники</span>
+                                <span class="title">Чудеса фуд-арта: 14 креативных идей, как украсить пирог</span>
+                                <span class="info">Кабинет на тёплой лоджии, мебель по авторским эскизам архитектора и яркая ванная комната в отделке из травертина</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="block-calendar">
+                    <div class="custom-calendar-wrap">
+                        <div id="custom-inner" class="custom-inner">
+                            <div class="custom-header clearfix">
+                                <div class="month-img">
+                                    <img src="img/calendar/9.jpg" alt="img"/>
+                                </div>
+                                <nav>
+                                    <span id="custom-prev" class="custom-prev"><i class="fa fa-angle-left"></i></span>
+                                    <span id="custom-next" class="custom-next"><i class="fa fa-angle-right"></i></span>
+                                </nav>
+                                <h2 id="custom-month" class="custom-month"></h2>
+                                <h3 id="custom-year" class="custom-year"></h3>
+                            </div>
+                            <div id="calendar" class="fc-calendar-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+</div>
+
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+        <!-- Off Canvas Menu -->
+        <aside class="right-off-canvas-menu">
+            <!-- whatever you want goes here -->
+            <div class="drop-menu-container" id="drop-menu-container">
+                <a class="exit-off-canvas"></a>
+                <div class="search-form">
+                    <form action="#">
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="search-btn"><i class="fa fa-search"></i></span>
+                    </form>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- main content goes here -->
+        <section class="main-section">
+
+
+        </section>
+
+        <!-- close the off-canvas menu -->
+        <a class="exit-off-canvas layout"></a>
+    </div>
+</div>
+
+<footer role="contentinfo" id="footer">
+    <div class="row">
+        <div class="first small-12 medium-7 columns">
+            <div class="copyright">
+                <p>© 2010–2015 Ozero.ru</p>
+            </div>
+            <div class="site-info">
+                <p>Новости Москвы, Санкт-Петербурга, Киева. Люди, места, события. Использование материалов The Village разрешено только с предварительного согласия правообладателей. Все права на картинки и тексты в разделе Новости принадлежат их авторам.</p>
+            </div>
+        </div>
+        <div class="second small-12 medium-4 columns">
+            <ul class="footer-menu">
+                <li>
+                    <a href="#">Расписание электричек и автобусов</a>
+                </li>
+                <li>
+                    <a href="#">Online табло аэропорта</a>
+                </li>
+                <li>
+                    <a href="#">Заказ тура</a>
+                </li>
+                <li>
+                    <a href="#">Водный транспорт</a>
+                </li>
+                <li>
+                    <a href="#">Клуб путешественников</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/plugins/slick-1.3.15/slick/slick.min.js"></script>
+    <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/uisearch.js"></script>
+    <!--<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>-->
+    <script src="js/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*$('#column-baner').scrollToFixed({
+                marginTop: 86,
+                limit: function() {
+                    return $('.block-hash-tags').offset().top;
+                }
+            });*/
+
+            $('#column-img').scrollToFixed({
+                marginTop: 86,
+                limit: function() {
+                    var limit = $('.node-news .body').offset().top + $('.node-news .body').outerHeight(true) - $('#column-img').outerHeight(true);
+                    return limit;
+                },
+                zIndex: 999,
+                removeOffsets: true
+            });
+
+        });
+    </script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/jquery.calendario.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script src="js/calendar-init.js"></script>
+    <script type="text/javascript" src="js/share42/share42.js"></script>
+</body>
+</html>

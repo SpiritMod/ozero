@@ -1,0 +1,1449 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OZERO</title>
+    <!--[if gte IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="stylesheets/calendar.css" />
+    <link rel="stylesheet" href="stylesheets/custom_2.css" />
+    <link rel="stylesheet" href="js/jquery.rating/styles/jquery.rating.css" media="screen"/>
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!--<link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.skinHTML5.css" />-->
+    <link rel="stylesheet" href="stylesheets/ozero.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<div class="scroll-bar" id="scroll-bar">
+    <div class="topbar-scroll">
+        <div class="row">
+            <div class="box-logo">
+                <a id="show-widget" class="logo" href="/"></a>
+            </div>
+            <nav role="navigation" class="box-menu">
+                <ul class="main-nav">
+                    <li>
+                        <a href="#">Новости</a>
+                    </li>
+                    <li>
+                        <a href="#">Афиша</a>
+                    </li>
+                    <li>
+                        <a href="#">Дневники</a>
+                    </li>
+                </ul>
+                <ul class="nav-categories">
+                    <li>
+                        <a href="#">Карьера</a>
+                    </li>
+                    <li>
+                        <a href="#">Бизнес</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="box-btn-menu">
+                <!--<a id="drop-menu-scroll" class="drop-menu-scroll" href="#" ><i class="fa fa-bars"></i></a>-->
+                <a class="drop-menu-scroll right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="block-pulse white pulse">
+                <a href="#" class="items-pulse pulse"><span class="text">Пульс</span></a>
+                <div class="box-right">
+                    <div class="item">
+                        <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
+                        <div class="box-info">
+                            <div class="date-time">
+                                <div class="date">17.07</div>
+                                <div class="time">18:34</div>
+                            </div>
+                            <div class="puls-tegs">
+                                <a href="#">#ночь</a>
+                                <a href="#">#кража</a>
+                                <a href="#">#дороги</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tools">
+                <div id="sb-search-scroll" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="fa fa-search sb-icon-search"></span>
+                    </form>
+                </div>
+                <div class="my-ozero">
+                    <a class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>
+                    <!--<a class="cabinet" href="#" >Мое озеро<span>9</span></a>-->
+                    <!--<a class="user-cabinet">
+                                <span class="box-photo-message">
+                                    <img class="user-photo" src="img/user.jpg" alt="user"/>
+                                    <span class="item-message">9</span>
+                                </span>
+                        <span class="title">Кабинет</span>
+                    </a>-->
+                    <div class="box-form-login">
+                        <div class="box-top">
+                            <form action="#">
+                                <div class="item">
+                                    <input type="text" placeholder="Логин"/>
+                                </div>
+                                <div class="item">
+                                    <input type="password" placeholder="Пароль"/>
+                                </div>
+                                <div class="box-btn">
+                                    <a class="forgot-pass" href="#">Забыли пароль?</a>
+                                    <button type="submit">Войти</button>
+                                </div>
+                            </form>
+                            <div class="registered">
+                                <p>У Вас нет аккаунта? <a href="#">Зарегистрируйтесь!</a></p>
+                            </div>
+                        </div>
+                        <div class="login-social">
+                            <p>Войти с помощью:</p>
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-vk"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-odnoklassniki"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">@</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget white">
+                <div class="item home">
+                    <a class="circle" href="#">
+                        <span class="help home-ico"><i class="fa fa-home"></i></span>
+                    </a>
+                </div>
+                <div class="item radio">
+                    <div class="circle">
+                        <span class="help radio-ico"></span>
+                    </div>
+                    <div class="info">mcm</div>
+                </div>
+                <div class="item weather">
+                    <div class="weather-wrapper">
+                        <div class="circle">
+                            <span class="help weather-thunder-dry"></span>
+                        </div>
+                        <div class="info">+32°</div>
+                    </div>
+                    <div class="weather-informer">
+                        <div class="weather-row">
+                            <div class="city left">Иркутск</div>
+                            <div class="temperature right"><span>+27</span> <span class="icon-Celsius"></span></div>
+                            <div class="ico-weather">
+                                <img src="img/weather/4.png" alt="img"/>
+                            </div>
+                        </div>
+                        <div class="weather-info">
+                            <p>Малооблачьно, небольшой дождь, гроза</p>
+                            <p>2 м/с, сз 747 мм.рт.ст., 70% влажн.</p>
+                        </div>
+                        <table>
+                            <tr>
+                                <td colspan="2">Сб, 24 сентября</td>
+                                <td colspan="2">Вс, 25 сентября</td>
+                            </tr>
+                            <tr>
+                                <td>Днем</td>
+                                <td>Вечером</td>
+                                <td>Ночью</td>
+                                <td>Утром</td>
+                            </tr>
+                            <tr class="icon">
+                                <td><img src="img/weather/4.png" alt="img"/></td>
+                                <td><img src="img/weather/2.png" alt="img"/></td>
+                                <td><img src="img/weather/10.png" alt="img"/></td>
+                                <td><img src="img/weather/3.png" alt="img"/></td>
+                            </tr>
+                            <tr>
+                                <td>+23</td>
+                                <td>+17</td>
+                                <td>+15</td>
+                                <td>+18</td>
+                            </tr>
+                            <tr>
+                                <td>штиль</td>
+                                <td>2 м/с</td>
+                                <td>3 м/с</td>
+                                <td>1 м/с</td>
+                            </tr>
+                            <tr>
+                                <td>747</td>
+                                <td>743</td>
+                                <td>743</td>
+                                <td>745</td>
+                            </tr>
+                            <tr>
+                                <td>40%</td>
+                                <td>63%</td>
+                                <td>77%</td>
+                                <td>65%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="item points">
+                    <div class="traffic-wrapper">
+                        <div class="circle">
+                            <span class="help color green">
+                                <span class="number">6</span>
+                            </span>
+                        </div>
+                        <div class="info">баллов</div>
+                    </div>
+                    <div class="traffic-informer">
+                        <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=tBG9bVRQsDeHvrtOIoOiYH2F2Jc8Acpd&width=100%&height=320px&lang=ru_UA&sourceType=constructor"></script>
+                    </div>
+                </div>
+                <div class="item currency">
+                    <div class="cash-wrapper">
+                        <div class="circle">
+                            <span class="help dollar"></span>
+                        </div>
+                        <div class="info">56.25</div>
+                    </div>
+                    <div class="cash-informer">
+                        <div class="cash-row">
+                            <div class="usd">
+                                <i class="fa fa-usd"></i>
+                                <div class="course-info">
+                                    <span class="course">65.5034</span>
+                                    <span class="change">+0.567</span>
+                                </div>
+                            </div>
+                            <div class="eur">
+                                <i class="fa fa-eur"></i>
+                                <div class="course-info">
+                                    <span class="course">67.5034</span>
+                                    <span class="change">+0.567</span>
+                                </div>
+                            </div>
+                            <div class="cny">
+                                <i class="fa fa-jpy"></i>
+                                <div class="course-info">
+                                    <span class="course">40.5034</span>
+                                    <span class="change">+0.567</span>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe src="course.html" frameborder="0" width="300" height="348"></iframe>
+                    </div>
+                </div>
+                <div class="item fuel">
+                    <div class="fuel-wrapper">
+                        <div class="circle">
+                            <span class="help fuel-92"></span>
+                        </div>
+                        <div class="info">35.21</div>
+                    </div>
+                    <div class="fuel-informer">
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <img src="img/fuel/fuel-1.png" alt="img"/>
+                                </th>
+                                <th>
+                                    <img src="img/fuel/fuel-2.png" alt="img"/>
+                                </th>
+                                <th>
+                                    <img src="img/fuel/fuel-3.png" alt="img"/>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>92</th>
+                                <td><span class="cheap">39.60</span></td>
+                                <td><span>39.60</span></td>
+                                <td><span>39.60</span></td>
+                            </tr>
+                            <tr>
+                                <th>95</th>
+                                <td><span>39.60</span></td>
+                                <td><span>39.60</span></td>
+                                <td><span class="cheap">39.60</span></td>
+                            </tr>
+                            <tr>
+                                <th>98</th>
+                                <td><span>39.60</span></td>
+                                <td><span class="cheap">39.60</span></td>
+                                <td><span>39.60</span></td>
+                            </tr>
+                            <tr>
+                                <th>ДП</th>
+                                <td><span class="cheap">39.60</span></td>
+                                <td><span>39.60</span></td>
+                                <td><span>39.60</span></td>
+                            </tr>
+                        </table>
+                        <div class="box-btn">
+                            <a href="#">Button</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item btn-close">
+                    <a id="close-widget" class="circle">
+                        <span class="help close-ico"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="drop-menu-container" id="scroll-drop-menu-container">
+                <span class="close-drop-menu-container" id="close-scroll-drop-menu-container"></span>
+                <div class="search-form">
+                    <form action="#">
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="search-btn"><i class="fa fa-search"></i></span>
+                    </form>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <header role="presentation" class="header" id="header">
+        <div class="topbar">
+            <div class="row">
+                <nav role="navigation" class="box-menu">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="tools">
+                    <!--<a class="drop-menu right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>-->
+                    <a class="drop-menu right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
+                    <div id="sb-search" class="sb-search">
+                        <form>
+                            <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="fa fa-search sb-icon-search"></span>
+                        </form>
+                    </div>
+                    <div class="my-ozero">
+                        <a id="sign-in" class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>
+                        <!--<a class="cabinet" href="#" >Мое озеро<span>9</span></a>-->
+                        <div class="box-form-login">
+                            <div class="box-top">
+                                <form action="#">
+                                    <div class="item">
+                                        <input type="text" placeholder="Логин"/>
+                                    </div>
+                                    <div class="item">
+                                        <input type="password" placeholder="Пароль"/>
+                                    </div>
+                                    <div class="box-btn">
+                                        <a class="forgot-pass" href="#">Забыли пароль?</a>
+                                        <button type="submit">Войти</button>
+                                    </div>
+                                </form>
+                                <div class="registered">
+                                    <p>У Вас нет аккаунта? <a href="#">Зарегистрируйтесь!</a></p>
+                                </div>
+                            </div>
+                            <div class="login-social">
+                                <p>Войти с помощью:</p>
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-vk"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-odnoklassniki"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">@</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo.png" alt="ozero"/></a>
+                    </div>
+                    <div class="block-pulse">
+                        <a href="#" class="items-pulse pulse"><span class="text">Пульс</span></a>
+                        <div class="box-right">
+                            <div class="item">
+                                <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
+                                <div class="box-info">
+                                    <div class="date-time">
+                                        <div class="date">17.07</div>
+                                        <div class="time">18:34</div>
+                                    </div>
+                                    <div class="puls-tegs">
+                                        <a href="#">#ночь</a>
+                                        <a href="#">#кража</a>
+                                        <a href="#">#дороги</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="item radio">
+                            <div class="circle">
+                                <span class="help radio-ico"></span>
+                            </div>
+                            <div class="info">mcm</div>
+                        </div>
+                        <div class="item weather">
+                            <div class="weather-wrapper">
+                                <div class="circle">
+                                    <span class="help weather-thunder-dry"></span>
+                                </div>
+                                <div class="info">+32°</div>
+                            </div>
+                            <div class="weather-informer">
+                                <div class="weather-row">
+                                    <div class="city left">Иркутск</div>
+                                    <div class="temperature right"><span>+27</span> <span class="icon-Celsius"></span></div>
+                                    <div class="ico-weather">
+                                        <img src="img/weather/4.png" alt="img"/>
+                                    </div>
+                                </div>
+                                <div class="weather-info">
+                                    <p>Малооблачьно, небольшой дождь, гроза</p>
+                                    <p>2 м/с, сз 747 мм.рт.ст., 70% влажн.</p>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td colspan="2">Сб, 24 сентября</td>
+                                        <td colspan="2">Вс, 25 сентября</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Днем</td>
+                                        <td>Вечером</td>
+                                        <td>Ночью</td>
+                                        <td>Утром</td>
+                                    </tr>
+                                    <tr class="icon">
+                                        <td><img src="img/weather/4.png" alt="img"/></td>
+                                        <td><img src="img/weather/2.png" alt="img"/></td>
+                                        <td><img src="img/weather/10.png" alt="img"/></td>
+                                        <td><img src="img/weather/3.png" alt="img"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>+23</td>
+                                        <td>+17</td>
+                                        <td>+15</td>
+                                        <td>+18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>штиль</td>
+                                        <td>2 м/с</td>
+                                        <td>3 м/с</td>
+                                        <td>1 м/с</td>
+                                    </tr>
+                                    <tr>
+                                        <td>747</td>
+                                        <td>743</td>
+                                        <td>743</td>
+                                        <td>745</td>
+                                    </tr>
+                                    <tr>
+                                        <td>40%</td>
+                                        <td>63%</td>
+                                        <td>77%</td>
+                                        <td>65%</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="item points">
+                            <div class="traffic-wrapper">
+                                <div class="circle">
+                                    <span class="help color green">
+                                        <span class="number">6</span>
+                                    </span>
+                                </div>
+                                <div class="info">баллов</div>
+                            </div>
+                            <div class="traffic-informer">
+                                <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=tBG9bVRQsDeHvrtOIoOiYH2F2Jc8Acpd&width=100%&height=320px&lang=ru_UA&sourceType=constructor"></script>
+                            </div>
+                        </div>
+                        <div class="item currency">
+                            <div class="cash-wrapper">
+                                <div class="circle">
+                                    <span class="help dollar"></span>
+                                </div>
+                                <div class="info">56.25</div>
+                            </div>
+                            <div class="cash-informer">
+                                <div class="cash-row">
+                                    <div class="usd">
+                                        <i class="fa fa-usd"></i>
+                                        <div class="course-info">
+                                            <span class="course">65.5034</span>
+                                            <span class="change">+0.567</span>
+                                        </div>
+                                    </div>
+                                    <div class="eur">
+                                        <i class="fa fa-eur"></i>
+                                        <div class="course-info">
+                                            <span class="course">67.5034</span>
+                                            <span class="change">+0.567</span>
+                                        </div>
+                                    </div>
+                                    <div class="cny">
+                                        <i class="fa fa-jpy"></i>
+                                        <div class="course-info">
+                                            <span class="course">40.5034</span>
+                                            <span class="change">+0.567</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <iframe src="course.html" frameborder="0" width="300" height="348"></iframe>
+                            </div>
+                        </div>
+                        <div class="item fuel">
+                            <div class="fuel-wrapper">
+                                <div class="circle">
+                                    <span class="help fuel-92"></span>
+                                </div>
+                                <div class="info">35.21</div>
+                            </div>
+                            <div class="fuel-informer">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>
+                                            <img src="img/fuel/fuel-1.png" alt="img"/>
+                                        </th>
+                                        <th>
+                                            <img src="img/fuel/fuel-2.png" alt="img"/>
+                                        </th>
+                                        <th>
+                                            <img src="img/fuel/fuel-3.png" alt="img"/>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>92</th>
+                                        <td><span class="cheap">39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>95</th>
+                                        <td><span>39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                        <td><span class="cheap">39.60</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>98</th>
+                                        <td><span>39.60</span></td>
+                                        <td><span class="cheap">39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>ДП</th>
+                                        <td><span class="cheap">39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                    </tr>
+                                </table>
+                                <div class="box-btn">
+                                    <a href="#">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" class="page-blog-post">
+        <div class="row">
+            <div class="main-content">
+                <div class="content">
+                    <article class="node-post">
+                        <header>
+                            <div class="post-info">
+                                <h2 class="title">Погода в походах и не только</h2>
+                                <div class="info">
+                                    <span class="field">
+                                        <i class="fa fa-calendar"></i>
+                                        <span class="date">26 Марта <strong>ПН</strong>, 2015,</span>
+                                    </span>
+                                    <span class="field">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span class="time">18:00</span>
+                                    </span>
+                                    <span class="statistic">
+                                        <span class="field">
+                                            <i class="fa fa-eye"></i>
+                                            <span class="views">1345</span>
+                                        </span>
+                                        <span class="field">
+                                            <a href="#block-comments" id="scroll-to-comments"><i class="fa fa-comment-o"></i> Коментариев <span>8</span></a>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="post-author">
+                                <div class="author-info">
+                                    <div class="author-img">
+                                        <img src="img/blogs/author-4.jpg" alt="img"/>
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Василий Правда</div>
+                                        <div class="field-posts">
+                                            <span class="field-label">Постов:</span>
+                                            <span>13</span>
+                                        </div>
+                                        <div class="field-reviews">
+                                            <span class="field-label">Отзыв к постам:</span>
+                                            <span>3</span>
+                                        </div>
+                                        <a class="all-post" href="#">Все записи</a>
+                                    </div>
+                                </div>
+                                <div class="btn-follow two-btn">
+                                    <a href="#" class="author-btn"><i class="fa fa-user"></i>Подписаться<br/><span class="txt">на автора</span></a>
+                                    <a href="#" class="island-btn"><i class="fa fa-users"></i>Подписаться<br/><span class="txt">на остров</span></a>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="body">
+                            <div class="row">
+                                <div class="box-img hide-for-small-only hide-for-medium-only small-12 medium-4 large-4 columns">
+                                    <div id="column-img" class="column-img">
+                                        <img src="img/baner.gif" alt="baner"/>
+                                    </div>
+                                </div>
+                                <div class="node-content small-12 medium-12 large-8 columns">
+                                    <img class="left" src="img/blogs/post-img.jpg" alt="img"/>
+                                    <p>Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой. Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой. Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой. Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.+26-28, атмосферное давление останется немного повышенным.солнечной и Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется</p>
+                                    <p>Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.+26-28, атмосферное давление останется немного повышенным.солнечной и Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется. Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.+26-28, атмосферное давление останется немного повышенным.солнечной и Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется</p>
+                                    <p>Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.+26-28, атмосферное давление останется немного повышенным.солнечной и Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется. Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.+26-28, атмосферное давление останется немного повышенным.солнечной и Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется</p>
+                                    <p>Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.+26-28, атмосферное давление останется немного повышенным.солнечной и Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется. Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.+26-28, атмосферное давление останется немного повышенным.солнечной и Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется</p>
+                                    <p>Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.+26-28, атмосферное давление останется немного повышенным.солнечной и Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется. Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону.+26-28, атмосферное давление останется немного повышенным.солнечной и Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="block-hash-tags">
+                        <ul class="list">
+                            <li>
+                                <a href="#">#ночь</a>
+                            </li>
+                            <li>
+                                <a href="#">#кража</a>
+                            </li>
+                            <li>
+                                <a href="#">#дороги</a>
+                            </li>
+                        </ul>
+                        <div class="discussion">
+                            <a href="#block-comments" id="scroll-to-comment">обсуждение <span>(15)</span></a>
+                        </div>
+                    </div>
+                    <div class="block-delivery-shared">
+                        <div class="delivery-form">
+                            <h3 class="title">подпишитесь на рассылку:</h3>
+                            <form action="#">
+                                <div class="row">
+                                    <div class="small-12 medium-7 columns">
+                                        <input type="email" placeholder="Ваш e-mail"/>
+                                    </div>
+                                    <div class="small-12 medium-5 columns">
+                                        <button type="submit">Подписаться</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="block-shared">
+                            <h3 class="title">Расскажите друзьям:</h3>
+                            <div class="share42init"></div>
+                        </div>
+                    </div>
+                    <div class="block-others-posts">
+                        <h2 class="block-title">Читать на эту тему</h2>
+                        <div class="blogs-list">
+                            <article class="blog-post">
+                                <div class="row">
+                                    <div class="small-12 medium-12 large-4 columns">
+                                        <div class="field-img">
+                                            <a href="#"><img src="img/blogs/blog-img-1.jpg" alt="img"/></a>
+                                        </div>
+                                    </div>
+                                    <div class="small-12 medium-12 large-8 columns">
+                                        <header>
+                                            <a class="post-title" href="#">Погода в походах и не только</a>
+                                            <ul class="category-post">
+                                                <li><a href="#">Путешествия</a></li>
+                                                <li><a href="#">Отдых</a></li>
+                                            </ul>
+                                            <div class="box-shared">
+                                                <a class="buttons-shared" data-dropdown="sharedLink3" aria-controls="autoCloseExample" aria-expanded="false"><i class="fa fa-share-square-o"></i></a>
+                                                <ul id="sharedLink3" class="f-dropdown" data-dropdown-content tabindex="-1" aria-hidden="true" aria-autoclose="false" tabindex="-1">
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-vk"></i> VK</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-link"></i> Ссылка</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </header>
+                                        <div class="body">
+                                            <p>Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-footer row">
+                                    <div class="small-12 columns">
+                                        <div class="bloger-info">
+                                            <a class="user-name" href="#">
+                                                <span class="user-avatar"><img src="img/user/avatar-1.jpg" alt="img"></span>
+                                                <span class="name">Вася Петров</span>
+                                            </a>
+                                            <i class="fa fa-chevron-right"></i>
+                                            <a class="island" href="#">Пешие походы</a>
+                                        </div>
+                                        <div class="statistic">
+                                            <span class="field">
+                                                <i class="fa fa-eye"></i> 1345
+                                            </span>
+                                            <span class="field">
+                                                <a href="#"><i class="fa fa-comment-o"></i> Коментариев <span>8</span></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="blog-post">
+                                <div class="row">
+                                    <div class="small-12 medium-12 large-4 columns">
+                                        <div class="field-img">
+                                            <a href="#"><img src="img/blogs/blog-img-2.jpg" alt="img"/></a>
+                                        </div>
+                                    </div>
+                                    <div class="small-12 medium-12 large-8 columns">
+                                        <header>
+                                            <a class="post-title" href="#">Погода в походах и не только</a>
+                                            <ul class="category-post">
+                                                <li><a href="#">Путешествия</a></li>
+                                                <li><a href="#">Отдых</a></li>
+                                            </ul>
+                                            <div class="box-shared">
+                                                <a class="buttons-shared" data-dropdown="sharedLink2" aria-controls="autoCloseExample" aria-expanded="false"><i class="fa fa-share-square-o"></i></a>
+                                                <ul id="sharedLink2" class="f-dropdown" data-dropdown-content tabindex="-1" aria-hidden="true" aria-autoclose="false" tabindex="-1">
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-vk"></i> VK</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fa fa-link"></i> Ссылка</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </header>
+                                        <div class="body">
+                                            <p>Cуббота продолжит радовать нас сухой, солнечной и по-настоящему летней погодой – спасибо за это антициклону. При переменной облачности воздух в столице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и по-настоящему летней погодой – спасибо за это антициклону. толице прогреется до +26-28, атмосферное давление останется немного повышенным.солнечной и </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-footer row">
+                                    <div class="small-12 columns">
+                                        <div class="bloger-info">
+                                            <a class="user-name" href="#">
+                                                <span class="user-avatar"><img src="img/user/avatar-1.jpg" alt="img"></span>
+                                                <span class="name">Вася Петров</span>
+                                            </a>
+                                            <i class="fa fa-chevron-right"></i>
+                                            <a class="island" href="#">Пешие походы</a>
+                                        </div>
+                                        <div class="statistic">
+                                            <span class="field">
+                                                <i class="fa fa-eye"></i> 1345
+                                            </span>
+                                            <span class="field">
+                                                <a href="#"><i class="fa fa-comment-o"></i> Коментариев <span>8</span></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="block-comments" id="block-comments">
+                        <h2 class="block-title">Комментарии пользователей</h2>
+                        <div class="all-comments">
+                            <div class="comment-row no-sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                                <div class="box-reply">
+                                    <a class="last-reply-user" href="#">
+                                        <span class="user-img"><img src="img/user/avatar-2.jpg" alt="img"/></span>
+                                        <span class="user-name">Ульяна</span>
+                                        <span class="desc">ответил(-а)</span>
+                                        <span class="item-reply"> - 2 ответа</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="comment-row sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                                <div class="comment-sublevel">
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Юля_88</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Ирина</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-row sublevel active">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                                <div class="comment-sublevel">
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Юля_88</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment-row">
+                                        <div class="user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="user"/></a></div>
+                                        <div class="user-name-and-reply">
+                                            <a class="user" href="#">Ирина</a>
+                                            <a href="#" class="parent-user">Ирина</a>
+                                        </div>
+                                        <div class="text-comment">
+                                            <p>Два дивана что за диваны?</p>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li class="posted-time">10 июля в 12:44</li>
+                                            <li>
+                                                <a href="#" class="comment-link">#</a>
+                                            </li>
+                                            <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                                <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                                <i class="icon-rating"></i>
+                                                <span class="count">0</span>
+                                                <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                            </li>
+                                            <li class="item-meta meta-actions reply">
+                                                <a href="#" class="comment-it">Ответить</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-row no-sublevel">
+                                <div class="user-avatar"><a href="#"><img src="img/user/avatar-2.jpg" alt="user"/></a></div>
+                                <div class="user-name-and-reply"><a class="user" href="#">Ирина</a></div>
+                                <div class="text-comment">
+                                    <p>Два дивана что за диваны?</p>
+                                </div>
+                                <ul class="post-meta">
+                                    <li class="posted-time">10 июля в 12:44</li>
+                                    <li>
+                                        <a href="#" class="comment-link">#</a>
+                                    </li>
+                                    <li role="comment-rating" class="item-meta meta-rating comment-rating">
+                                        <a href="#" class="entry-rating-action plus"><i class="fa fa-plus"></i></a>
+                                        <i class="icon-rating"></i>
+                                        <span class="count">0</span>
+                                        <a href="#" class="entry-rating-action minus"><i class="fa fa-minus"></i></a>
+                                    </li>
+                                    <li class="item-meta meta-actions reply">
+                                        <a href="#" class="comment-it">Ответить</a>
+                                    </li>
+                                </ul>
+                                <form class="form-reply" action="#">
+                                    <div class="reply-user-avatar"><a href="#"><img src="img/user/avatar-1.jpg" alt="#"/></a></div>
+                                    <input type="text" placeholder="Ваш ответ..."/>
+                                    <button type="submit">Ответить</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="box-btn">
+                            <a class="all-comments" href="#">Все коментарии (76)</a>
+                        </div>
+                        <div class="block-form-comment">
+                            <h2 class="block-title">Оставить комментарий</h2>
+                            <form action="#">
+                                <textarea></textarea>
+                                <button type="submit">Комментировать</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="right-sidebar">
+                <div class="block-popular-island">
+                    <h2 class="block-title">Популярные острова</h2>
+                    <div class="list-popular-island" id="list-popular-island">
+                        <div class="item">
+                            <a class="img" href="#"><img src="img/blogs/island-1.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="img" href="#"><img src="img/blogs/island-2.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="img" href="#"><img src="img/blogs/island-3.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="img" href="#"><img src="img/blogs/island-4.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-popular-authors">
+                    <h2 class="block-title">Популярные авторы</h2>
+                    <div class="list-popular-authors" id="list-popular-authors">
+                        <div class="item">
+                            <div class="field-photo">
+                                <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                            </div>
+                            <a class="author" href="#">Дмитрий блогов</a>
+                            <div class="description">
+                                <p>“Слово моё как топор”</p>
+                            </div>
+                            <div class="author-info">
+                                <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-photo">
+                                <a class="img" href="#"><img src="img/blogs/author-2.jpg" alt="img"/></a>
+                            </div>
+                            <a class="author" href="#">Дмитрий блогов</a>
+                            <div class="description">
+                                <p>“Слово моё как топор”</p>
+                            </div>
+                            <div class="author-info">
+                                <span class="views"><a class="red" href="#">3</a>/<a href="#">10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-photo">
+                                <a class="img" href="#"><img src="img/blogs/author-3.jpg" alt="img"/></a>
+                            </div>
+                            <a class="author" href="#">Дмитрий блогов</a>
+                            <div class="description">
+                                <p>“Слово моё как топор”</p>
+                            </div>
+                            <div class="author-info">
+                                <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-popular-themes">
+                    <h2 class="block-title">Популярные темы</h2>
+                    <ul class="list-themes small-block-grid-2">
+                        <li>
+                            <a class="theme" href="#">Автомобили</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Юмор</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Путешествия</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Творчество</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Политика</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Автомобили</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Путешествия</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Творчество</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Политика</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Автомобили</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+</div>
+
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+        <!-- Off Canvas Menu -->
+        <aside class="right-off-canvas-menu">
+            <!-- whatever you want goes here -->
+            <div class="drop-menu-container" id="drop-menu-container">
+                <a class="exit-off-canvas"></a>
+                <div class="search-form">
+                    <form action="#">
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="search-btn"><i class="fa fa-search"></i></span>
+                    </form>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- main content goes here -->
+        <section class="main-section">
+
+
+        </section>
+
+        <!-- close the off-canvas menu -->
+        <a class="exit-off-canvas layout"></a>
+    </div>
+</div>
+
+<footer role="contentinfo" id="footer">
+    <div class="row">
+        <div class="first small-12 medium-7 columns">
+            <div class="copyright">
+                <p>© 2010–2015 Ozero.ru</p>
+            </div>
+            <div class="site-info">
+                <p>Новости Москвы, Санкт-Петербурга, Киева. Люди, места, события. Использование материалов The Village разрешено только с предварительного согласия правообладателей. Все права на картинки и тексты в разделе Новости принадлежат их авторам.</p>
+            </div>
+        </div>
+        <div class="second small-12 medium-4 columns">
+            <ul class="footer-menu">
+                <li>
+                    <a href="#">Расписание электричек и автобусов</a>
+                </li>
+                <li>
+                    <a href="#">Online табло аэропорта</a>
+                </li>
+                <li>
+                    <a href="#">Заказ тура</a>
+                </li>
+                <li>
+                    <a href="#">Водный транспорт</a>
+                </li>
+                <li>
+                    <a href="#">Клуб путешественников</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<div id="widget-overlay"></div>
+<div id="widget-overlay-scroll-bar"></div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <!--<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>-->
+    <script src="js/plugins/slick-1.3.15/slick/slick.min.js"></script>
+    <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/uisearch.js"></script>
+    <!--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+    <!--<script src="js/ion.rangeSlider-2.1.1/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>-->
+    <script src="js/jquery.rating/js/jquery.rating-2.0.min.js"></script>
+    <script src="js/app.js"></script>
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script src="js/currency.js"></script>-->
+    <!--<script src="js/main.js"></script>-->
+    <!--<script type="text/javascript" src="js/jquery.calendario.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>-->
+    <!--<script src="js/calendar-init.js"></script>-->
+    <script src="js/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*$('#column-baner').scrollToFixed({
+             marginTop: 86,
+             limit: function() {
+             return $('.block-hash-tags').offset().top;
+             }
+             });*/
+
+            $('#column-img').scrollToFixed({
+                marginTop: 86,
+                limit: function() {
+                    var limit = $('.node-post .body').offset().top + $('.node-post .body').outerHeight(true) - $('#column-img').outerHeight(true) - 30;
+                    return limit;
+                },
+                zIndex: 999,
+                removeOffsets: true
+            });
+
+        });
+    </script>
+    <script type="text/javascript" src="js/share42/share42.js"></script>
+</body>
+</html>
