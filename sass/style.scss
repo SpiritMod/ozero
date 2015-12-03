@@ -1373,6 +1373,7 @@ a {
   &.fade {
     top: 0;
     z-index: 1001;
+    opacity: 1;
   }
   &.mobile {
     top: 0;
@@ -2669,6 +2670,9 @@ main {
 .node-news-slider {
   margin: 20px -30px 30px!important;
   position: relative;
+  &.not-margin {
+    margin: 20px 0 30px!important;
+  }
   .item {
     img {
       width: 100%;
@@ -2843,12 +2847,13 @@ main {
     border-width: 6px 0px 6px;
     @include border-image(url('../img/opinions-border.png') 6 0 fill repeat);
     img {
+      width: 120px;
       margin: 0 0 0;
       border: 1px solid #c8c8c8;
       @include border-radius(50%);
     }
     .box {
-      height: 160px;
+      height: 120px;
       font-size: 0px;
       &:after {
         content: "";

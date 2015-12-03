@@ -1342,6 +1342,7 @@ a {
 #scroll-bar.fade {
   top: 0;
   z-index: 1001;
+  opacity: 1;
 }
 #scroll-bar.mobile {
   top: 0;
@@ -2677,6 +2678,9 @@ main .right-sidebar .block-newest-publications .item .double-link {
   margin: 20px -30px 30px !important;
   position: relative;
 }
+.node-news-slider.not-margin {
+  margin: 20px 0 30px !important;
+}
 .node-news-slider .item img {
   width: 100%;
   margin: 0 0 0;
@@ -2867,6 +2871,7 @@ main .right-sidebar .block-newest-publications .item .double-link {
   border-image: url("../img/opinions-border.png") 6 0 fill repeat;
 }
 .views-expert .view-row img {
+  width: 120px;
   margin: 0 0 0;
   border: 1px solid #c8c8c8;
   -moz-border-radius: 50%;
@@ -2874,7 +2879,7 @@ main .right-sidebar .block-newest-publications .item .double-link {
   border-radius: 50%;
 }
 .views-expert .view-row .box {
-  height: 160px;
+  height: 120px;
   font-size: 0px;
 }
 .views-expert .view-row .box:after {
