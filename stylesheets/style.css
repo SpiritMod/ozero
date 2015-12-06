@@ -2040,6 +2040,10 @@ main .right-sidebar .block-promo-sidebar {
   width: 100%;
 }
 
+.board-advertise {
+  margin-bottom: 20px;
+}
+
 .page-news .content .page-info {
   display: inline-block;
   width: 100%;
@@ -9746,6 +9750,13 @@ form.new-article button[type="submit"]:hover {
   bottom: 16px;
 }
 
+.block-grid .right-aside.front-promo {
+  padding: 0 0 0;
+}
+.block-grid .right-aside.front-promo img {
+  width: 100%;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 1380px) {
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(3),
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(4) {
@@ -10019,6 +10030,13 @@ form.new-article button[type="submit"]:hover {
   }
   .block-article-list .double-link {
     min-height: 540px;
+  }
+
+  .block-grid .right-aside.front-promo {
+    display: none;
+  }
+  .block-grid .right-aside.front-promo .block-promo-sidebar {
+    display: none;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 900px) {

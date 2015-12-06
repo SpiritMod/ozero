@@ -2029,6 +2029,10 @@ main {
   }
 }
 
+.board-advertise {
+  margin-bottom: 20px;
+}
+
 .page-news {
   .content {
     .page-info {
@@ -9375,6 +9379,17 @@ form.new-article {
   }
 }
 
+.block-grid {
+  .right-aside {
+    &.front-promo {
+      padding: 0 0 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 0px) and (max-width: 1380px) {
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(3),
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(4) {
@@ -9680,6 +9695,16 @@ form.new-article {
     }
     .double-link {
       min-height: 540px;
+    }
+  }
+  .block-grid {
+    .right-aside {
+      &.front-promo {
+        display: none;
+        .block-promo-sidebar {
+          display: none;
+        }
+      }
     }
   }
 }
