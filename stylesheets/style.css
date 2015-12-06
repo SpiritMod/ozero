@@ -2026,9 +2026,18 @@ main .right-sidebar .block-newest-publications {
 main .right-sidebar .block-newest-publications .item {
   width: 100%;
   padding: 0 0;
+  margin-bottom: 0;
 }
 main .right-sidebar .block-newest-publications .item .double-link {
   min-height: 450px;
+}
+main .right-sidebar .block-promo-sidebar {
+  margin-bottom: 20px;
+}
+
+.block-promo-sidebar img,
+.block-promo-full img {
+  width: 100%;
 }
 
 .page-news .content .page-info {

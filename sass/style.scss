@@ -2010,11 +2010,22 @@ main {
       .item {
         width: 100%;
         padding: 0 0;
+        margin-bottom: 0;
         .double-link {
           min-height: 450px;
         }
       }
     }
+    .block-promo-sidebar {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.block-promo-sidebar,
+.block-promo-full {
+  img {
+    width: 100%;
   }
 }
 
