@@ -281,6 +281,56 @@ $(document).ready(function(){
         });
     }
 
+    //slider other news
+    if (document.getElementById('list-recommended-read')){
+        $("#list-recommended-read").slick({
+            slide: '.item',
+            arrows: true,
+            dots: false,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 960,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 820,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+
+        });
+    }
+
     //afisha datepicker
     if (document.getElementById('datepicker')){
         $(function() {
