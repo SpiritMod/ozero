@@ -32,8 +32,21 @@
     width:  33.3333%
     font-size: 0
   .m-item:not(.high)
+    &:hover
+      .link-overlay
+        opacity: 0.8
     img
       @include transition(all 2s linear 0s)
+      z-index: 1
+    .link-overlay
+      position: absolute
+      z-index: 2
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      opacity: 0.4
+      @include transition(all 0.4s ease 0s)
     &.white:hover
       .caption
         .title
@@ -115,7 +128,6 @@
         @extend %light
         .caption
           height: 100%
-
           .title
             font-size: 20px
             margin-bottom: 16px
@@ -139,6 +151,7 @@
       left: 45px
       color: inherit
       font-size: 11px
+      z-index: 3
       .fa
         font-size: 14px
         margin-right: 6px
@@ -147,6 +160,7 @@
       left: 0
       bottom: 0
       width: 100%
+      z-index: 3
       line-height: 1.2
       text-align: left
       @extend %light

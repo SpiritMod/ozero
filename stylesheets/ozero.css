@@ -415,12 +415,30 @@ h2 a:hover {
   width: 33.3333%;
   font-size: 0;
 }
+.masonry .m-item:not(.high):hover .link-overlay {
+  opacity: 0.8;
+}
 .masonry .m-item:not(.high) img {
   -moz-transition: all 2s linear 0s;
   -o-transition: all 2s linear 0s;
   -webkit-transition: all 2s linear;
   -webkit-transition-delay: 0s;
   transition: all 2s linear 0s;
+  z-index: 1;
+}
+.masonry .m-item:not(.high) .link-overlay {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.4;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
 }
 .masonry .m-item:not(.high).white:hover .caption .title {
   text-decoration: underline;
@@ -542,6 +560,7 @@ h2 a:hover {
   left: 45px;
   color: inherit;
   font-size: 11px;
+  z-index: 3;
 }
 .masonry .m-item .statistic .fa {
   font-size: 14px;
@@ -552,6 +571,7 @@ h2 a:hover {
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: 3;
   line-height: 1.2;
   text-align: left;
   padding: 15px 21px 29px 31px;
