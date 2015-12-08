@@ -10541,17 +10541,23 @@ form.new-article button[type="submit"]:hover {
   .widget .item.weather .weather-informer {
     width: auto;
     right: 0;
-    left: -53px;
+    left: 0;
+    top: 66px;
+    position: fixed;
   }
   .widget .item.points .traffic-informer {
     width: auto;
     right: 0;
-    left: -53px;
+    left: 0;
+    top: 66px;
+    position: fixed;
   }
   .widget .item.currency .cash-informer {
     width: auto;
     right: 0;
-    left: -53px;
+    left: 0;
+    top: 66px;
+    position: fixed;
   }
   .widget .item.currency #chart-1, .widget .item.currency #chart-2 {
     width: 320px;
@@ -10560,7 +10566,9 @@ form.new-article button[type="submit"]:hover {
   .widget .item.fuel .fuel-informer {
     width: auto;
     right: 0;
-    left: -53px;
+    left: 0;
+    top: 66px;
+    position: fixed;
   }
 
   .block-news-list ul.list li {

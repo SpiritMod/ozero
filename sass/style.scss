@@ -10318,21 +10318,27 @@ form.new-article {
         .weather-informer {
           width: auto;
           right: 0;
-          left: -53px;
+          left: 0;
+          top: 66px;
+          position: fixed;
         }
       }
       &.points {
         .traffic-informer {
           width: auto;
           right: 0;
-          left: -53px;
+          left: 0;
+          top: 66px;
+          position: fixed;
         }
       }
       &.currency {
         .cash-informer {
           width: auto;
           right: 0;
-          left: -53px;
+          left: 0;
+          top: 66px;
+          position: fixed;
         }
         #chart-1, #chart-2 {
           width: 320px;
@@ -10343,7 +10349,9 @@ form.new-article {
         .fuel-informer {
           width: auto;
           right: 0;
-          left: -53px;
+          left: 0;
+          top: 66px;
+          position: fixed;
         }
       }
     }
