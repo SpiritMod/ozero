@@ -1169,7 +1169,7 @@ a {
 }
 .my-ozero .box-form-login {
   background: #023366;
-  position: absolute;
+  position: fixed;
   top: 66px;
   right: 0;
   padding: 0 0 30px;
