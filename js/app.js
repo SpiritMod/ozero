@@ -901,7 +901,11 @@ $(document).ready(function(){
         return false;
     });
 
-
+    if (document.getElementById('theme-island')){
+        $(function() {
+            $("#theme-island").selectbox();
+        });
+    }
 });
 
 

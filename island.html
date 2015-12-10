@@ -1,0 +1,1412 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OZERO</title>
+    <!--[if gte IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="stylesheets/calendar.css" />
+    <link rel="stylesheet" href="stylesheets/custom_2.css" />
+    <link rel="stylesheet" href="js/jquery.rating/styles/jquery.rating.css" media="screen"/>
+    <link rel="stylesheet" href="js/jquery.selectbox-0.2/css/jquery.selectbox.css"/>
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!--<link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="js/ion.rangeSlider-2.1.1/css/ion.rangeSlider.skinHTML5.css" />-->
+    <link rel="stylesheet" href="stylesheets/ozero.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<div class="scroll-bar" id="scroll-bar">
+    <div class="topbar-scroll">
+        <div class="row">
+            <div class="box-logo">
+                <a id="show-widget" class="logo" href="/"></a>
+            </div>
+            <nav role="navigation" class="box-menu">
+                <ul class="main-nav">
+                    <li>
+                        <a href="#">Новости</a>
+                    </li>
+                    <li>
+                        <a href="#">Афиша</a>
+                    </li>
+                    <li>
+                        <a href="#">Дневники</a>
+                    </li>
+                </ul>
+                <ul class="nav-categories">
+                    <li>
+                        <a href="#">Карьера</a>
+                    </li>
+                    <li>
+                        <a href="#">Бизнес</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="box-btn-menu">
+                <!--<a id="drop-menu-scroll" class="drop-menu-scroll" href="#" ><i class="fa fa-bars"></i></a>-->
+                <a class="drop-menu-scroll right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="block-pulse white pulse">
+                <div class="items-pulse">5</div>
+                <div class="box-right">
+                    <div class="item">
+                        <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
+                        <div class="box-info">
+                            <div class="date-time">
+                                <div class="date">17.07</div>
+                                <div class="time">18:34</div>
+                            </div>
+                            <div class="puls-tegs">
+                                <a href="#">#ночь</a>
+                                <a href="#">#кража</a>
+                                <a href="#">#дороги</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tools">
+                <div id="sb-search-scroll" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="fa fa-search sb-icon-search"></span>
+                    </form>
+                </div>
+                <div class="my-ozero">
+                    <a class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>
+                    <!--<a class="cabinet" href="#" >Мое озеро<span>9</span></a>-->
+                    <!--<a class="user-cabinet">
+                                <span class="box-photo-message">
+                                    <img class="user-photo" src="img/user.jpg" alt="user"/>
+                                    <span class="item-message">9</span>
+                                </span>
+                        <span class="title">Кабинет</span>
+                    </a>-->
+                    <div class="box-form-login">
+                        <div class="box-top">
+                            <form action="#">
+                                <div class="item">
+                                    <input type="text" placeholder="Логин"/>
+                                </div>
+                                <div class="item">
+                                    <input type="password" placeholder="Пароль"/>
+                                </div>
+                                <div class="box-btn">
+                                    <a class="forgot-pass" href="#">Забыли пароль?</a>
+                                    <button type="submit">Войти</button>
+                                </div>
+                            </form>
+                            <div class="registered">
+                                <p>У Вас нет аккаунта? <a href="#">Зарегистрируйтесь!</a></p>
+                            </div>
+                        </div>
+                        <div class="login-social">
+                            <p>Войти с помощью:</p>
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-vk"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-odnoklassniki"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">@</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget white">
+                <div class="item home">
+                    <a class="circle" href="#">
+                        <span class="help home-ico"><i class="fa fa-home"></i></span>
+                    </a>
+                </div>
+                <div class="item radio">
+                    <div class="circle">
+                        <span class="help radio-ico"></span>
+                    </div>
+                    <div class="info">mcm</div>
+                </div>
+                <div class="item weather">
+                    <div class="weather-wrapper">
+                        <div class="circle">
+                            <span class="help weather-thunder-dry"></span>
+                        </div>
+                        <div class="info">+32°</div>
+                    </div>
+                    <div class="weather-informer">
+                        <div class="weather-row">
+                            <div class="city left">Иркутск</div>
+                            <div class="temperature right"><span>+27</span> <span class="icon-Celsius"></span></div>
+                            <div class="ico-weather">
+                                <img src="img/weather/4.png" alt="img"/>
+                            </div>
+                        </div>
+                        <div class="weather-info">
+                            <p>Малооблачьно, небольшой дождь, гроза</p>
+                            <p>2 м/с, сз 747 мм.рт.ст., 70% влажн.</p>
+                        </div>
+                        <table>
+                            <tr>
+                                <td colspan="2">Сб, 24 сентября</td>
+                                <td colspan="2">Вс, 25 сентября</td>
+                            </tr>
+                            <tr>
+                                <td>Днем</td>
+                                <td>Вечером</td>
+                                <td>Ночью</td>
+                                <td>Утром</td>
+                            </tr>
+                            <tr class="icon">
+                                <td><img src="img/weather/4.png" alt="img"/></td>
+                                <td><img src="img/weather/2.png" alt="img"/></td>
+                                <td><img src="img/weather/10.png" alt="img"/></td>
+                                <td><img src="img/weather/3.png" alt="img"/></td>
+                            </tr>
+                            <tr>
+                                <td>+23</td>
+                                <td>+17</td>
+                                <td>+15</td>
+                                <td>+18</td>
+                            </tr>
+                            <tr>
+                                <td>штиль</td>
+                                <td>2 м/с</td>
+                                <td>3 м/с</td>
+                                <td>1 м/с</td>
+                            </tr>
+                            <tr>
+                                <td>747</td>
+                                <td>743</td>
+                                <td>743</td>
+                                <td>745</td>
+                            </tr>
+                            <tr>
+                                <td>40%</td>
+                                <td>63%</td>
+                                <td>77%</td>
+                                <td>65%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="item points">
+                    <div class="traffic-wrapper">
+                        <div class="circle">
+                            <span class="help color green">
+                                <span class="number">6</span>
+                            </span>
+                        </div>
+                        <div class="info">баллов</div>
+                    </div>
+                    <div class="traffic-informer">
+                        <iframe src="traffic.html" frameborder="0" width="100%" height="320px"></iframe>
+                    </div>
+                </div>
+                <div class="item currency">
+                    <div class="cash-wrapper">
+                        <div class="circle">
+                            <span class="help dollar"></span>
+                        </div>
+                        <div class="info">56.25</div>
+                    </div>
+                    <div class="cash-informer">
+                        <div class="cash-row">
+                            <div class="usd">
+                                <i class="fa fa-usd"></i>
+                                <div class="course-info">
+                                    <span class="course">65.5034</span>
+                                    <span class="change">+0.567</span>
+                                </div>
+                            </div>
+                            <div class="eur">
+                                <i class="fa fa-eur"></i>
+                                <div class="course-info">
+                                    <span class="course">67.5034</span>
+                                    <span class="change">+0.567</span>
+                                </div>
+                            </div>
+                            <div class="cny">
+                                <i class="fa fa-jpy"></i>
+                                <div class="course-info">
+                                    <span class="course">40.5034</span>
+                                    <span class="change">+0.567</span>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe src="course.html" frameborder="0" width="300" height="348"></iframe>
+                    </div>
+                </div>
+                <div class="item fuel">
+                    <div class="fuel-wrapper">
+                        <div class="circle">
+                            <span class="help fuel-92"></span>
+                        </div>
+                        <div class="info">35.21</div>
+                    </div>
+                    <div class="fuel-informer">
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <img src="img/fuel/fuel-1.png" alt="img"/>
+                                </th>
+                                <th>
+                                    <img src="img/fuel/fuel-2.png" alt="img"/>
+                                </th>
+                                <th>
+                                    <img src="img/fuel/fuel-3.png" alt="img"/>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>92</th>
+                                <td><span class="cheap">39.60</span></td>
+                                <td><span>39.60</span></td>
+                                <td><span>39.60</span></td>
+                            </tr>
+                            <tr>
+                                <th>95</th>
+                                <td><span>39.60</span></td>
+                                <td><span>39.60</span></td>
+                                <td><span class="cheap">39.60</span></td>
+                            </tr>
+                            <tr>
+                                <th>98</th>
+                                <td><span>39.60</span></td>
+                                <td><span class="cheap">39.60</span></td>
+                                <td><span>39.60</span></td>
+                            </tr>
+                            <tr>
+                                <th>ДП</th>
+                                <td><span class="cheap">39.60</span></td>
+                                <td><span>39.60</span></td>
+                                <td><span>39.60</span></td>
+                            </tr>
+                        </table>
+                        <div class="box-btn">
+                            <a href="#">Button</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item btn-close">
+                    <a id="close-widget" class="circle">
+                        <span class="help close-ico"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="drop-menu-container" id="scroll-drop-menu-container">
+                <span class="close-drop-menu-container" id="close-scroll-drop-menu-container"></span>
+                <div class="search-form">
+                    <form action="#">
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="search-btn"><i class="fa fa-search"></i></span>
+                    </form>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <header role="presentation" class="header" id="header">
+        <div class="topbar">
+            <div class="row">
+                <nav role="navigation" class="box-menu">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="tools">
+                    <!--<a class="drop-menu right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>-->
+                    <a class="drop-menu right-off-canvas-toggle" href="#" ><i class="fa fa-bars"></i></a>
+                    <div id="sb-search" class="sb-search">
+                        <form>
+                            <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="fa fa-search sb-icon-search"></span>
+                        </form>
+                    </div>
+                    <div class="my-ozero">
+                        <a id="sign-in" class="sign-in" href="#"><i class="fa fa-sign-in"></i><br><span>Вход</span></a>
+                        <!--<a class="cabinet" href="#" >Мое озеро<span>9</span></a>-->
+                        <div class="box-form-login">
+                            <div class="box-top">
+                                <form action="#">
+                                    <div class="item">
+                                        <input type="text" placeholder="Логин"/>
+                                    </div>
+                                    <div class="item">
+                                        <input type="password" placeholder="Пароль"/>
+                                    </div>
+                                    <div class="box-btn">
+                                        <a class="forgot-pass" href="#">Забыли пароль?</a>
+                                        <button type="submit">Войти</button>
+                                    </div>
+                                </form>
+                                <div class="registered">
+                                    <p>У Вас нет аккаунта? <a href="#">Зарегистрируйтесь!</a></p>
+                                </div>
+                            </div>
+                            <div class="login-social">
+                                <p>Войти с помощью:</p>
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-vk"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-odnoklassniki"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">@</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo-large-blue.svg" alt="ozero"/></a>
+                    </div>
+                    <div class="block-pulse">
+                        <div class="items-pulse pulse">5</div>
+                        <div class="box-right">
+                            <div class="item">
+                                <a class="title" href="#">Сегодня ночью украли все ямы с дорог</a>
+                                <div class="box-info">
+                                    <div class="date-time">
+                                        <div class="date">17.07</div>
+                                        <div class="time">18:34</div>
+                                    </div>
+                                    <div class="puls-tegs">
+                                        <a href="#">#ночь</a>
+                                        <a href="#">#кража</a>
+                                        <a href="#">#дороги</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="item radio">
+                            <div class="circle">
+                                <span class="help radio-ico"></span>
+                            </div>
+                            <div class="info">mcm</div>
+                        </div>
+                        <div class="item weather">
+                            <div class="weather-wrapper">
+                                <div class="circle">
+                                    <span class="help weather-thunder-dry"></span>
+                                </div>
+                                <div class="info">+32°</div>
+                            </div>
+                            <div class="weather-informer">
+                                <div class="weather-row">
+                                    <div class="city left">Иркутск</div>
+                                    <div class="temperature right"><span>+27</span> <span class="icon-Celsius"></span></div>
+                                    <div class="ico-weather">
+                                        <img src="img/weather/4.png" alt="img"/>
+                                    </div>
+                                </div>
+                                <div class="weather-info">
+                                    <p>Малооблачьно, небольшой дождь, гроза</p>
+                                    <p>2 м/с, сз 747 мм.рт.ст., 70% влажн.</p>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td colspan="2">Сб, 24 сентября</td>
+                                        <td colspan="2">Вс, 25 сентября</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Днем</td>
+                                        <td>Вечером</td>
+                                        <td>Ночью</td>
+                                        <td>Утром</td>
+                                    </tr>
+                                    <tr class="icon">
+                                        <td><img src="img/weather/4.png" alt="img"/></td>
+                                        <td><img src="img/weather/2.png" alt="img"/></td>
+                                        <td><img src="img/weather/10.png" alt="img"/></td>
+                                        <td><img src="img/weather/3.png" alt="img"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>+23</td>
+                                        <td>+17</td>
+                                        <td>+15</td>
+                                        <td>+18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>штиль</td>
+                                        <td>2 м/с</td>
+                                        <td>3 м/с</td>
+                                        <td>1 м/с</td>
+                                    </tr>
+                                    <tr>
+                                        <td>747</td>
+                                        <td>743</td>
+                                        <td>743</td>
+                                        <td>745</td>
+                                    </tr>
+                                    <tr>
+                                        <td>40%</td>
+                                        <td>63%</td>
+                                        <td>77%</td>
+                                        <td>65%</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="item points">
+                            <div class="traffic-wrapper">
+                                <div class="circle">
+                                    <span class="help color green">
+                                        <span class="number">6</span>
+                                    </span>
+                                </div>
+                                <div class="info">баллов</div>
+                            </div>
+                            <div class="traffic-informer">
+                                <iframe src="traffic.html" frameborder="0" width="100%" height="320px"></iframe>
+                            </div>
+                        </div>
+                        <div class="item currency">
+                            <div class="cash-wrapper">
+                                <div class="circle">
+                                    <span class="help dollar"></span>
+                                </div>
+                                <div class="info">56.25</div>
+                            </div>
+                            <div class="cash-informer">
+                                <div class="cash-row">
+                                    <div class="usd">
+                                        <i class="fa fa-usd"></i>
+                                        <div class="course-info">
+                                            <span class="course">65.5034</span>
+                                            <span class="change">+0.567</span>
+                                        </div>
+                                    </div>
+                                    <div class="eur">
+                                        <i class="fa fa-eur"></i>
+                                        <div class="course-info">
+                                            <span class="course">67.5034</span>
+                                            <span class="change">+0.567</span>
+                                        </div>
+                                    </div>
+                                    <div class="cny">
+                                        <i class="fa fa-jpy"></i>
+                                        <div class="course-info">
+                                            <span class="course">40.5034</span>
+                                            <span class="change">+0.567</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <iframe src="course.html" frameborder="0" width="300" height="348"></iframe>
+                            </div>
+                        </div>
+                        <div class="item fuel">
+                            <div class="fuel-wrapper">
+                                <div class="circle">
+                                    <span class="help fuel-92"></span>
+                                </div>
+                                <div class="info">35.21</div>
+                            </div>
+                            <div class="fuel-informer">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>
+                                            <img src="img/fuel/fuel-1.png" alt="img"/>
+                                        </th>
+                                        <th>
+                                            <img src="img/fuel/fuel-2.png" alt="img"/>
+                                        </th>
+                                        <th>
+                                            <img src="img/fuel/fuel-3.png" alt="img"/>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>92</th>
+                                        <td><span class="cheap">39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>95</th>
+                                        <td><span>39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                        <td><span class="cheap">39.60</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>98</th>
+                                        <td><span>39.60</span></td>
+                                        <td><span class="cheap">39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>ДП</th>
+                                        <td><span class="cheap">39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                        <td><span>39.60</span></td>
+                                    </tr>
+                                </table>
+                                <div class="box-btn">
+                                    <a href="#">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" class="page-island">
+        <div class="row">
+            <div class="main-content">
+                <div class="content">
+                    <div class="island-top-navigation">
+                        <ul>
+                            <li>
+                                <a href="#">Дневники</a>
+                            </li>
+                            <li>
+                                <a href="#">Острова</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="island-header">
+                        <h2 class="page-title">Острова</h2>
+                        <div class="filter-island">
+                            <form action="#">
+                                <div class="row">
+                                    <div class="item small-12 medium-4 large-5 columns">
+                                        <select name="theme-island" id="theme-island">
+                                            <option value="">Фильтр по темам</option>
+                                            <option value="1">Тема-1</option>
+                                            <option value="2">Тема-2</option>
+                                            <option value="3">Тема-3</option>
+                                            <option value="4">Тема-4</option>
+                                        </select>
+                                    </div>
+                                    <div class="item small-12 medium-4 large-5 columns">
+                                        <input type="search" placeholder="Поиск по островам"/>
+                                    </div>
+                                    <div class="item text-right small-12 medium-4 large-2 columns">
+                                        <button type="submit">Искать</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="filter-island-sorting">
+                        <ul class="filter-links">
+                            <li><a href="#">Все</a></li>
+                            <li class="active"><a href="#">Популярные</a></li>
+                            <li><a href="#">Мои подписки<span class="new">9</span></a></li>
+                            <li><a href="#">Читаемые</a></li>
+                            <li><a href="#">Обсужд</a></li>
+                        </ul>
+                        <div class="block-sorting">
+                            <span class="sorting-label">Сортировать по:</span>
+                            <div class="box-drop">
+                                <a data-dropdown="sorting" aria-controls="sorting" aria-expanded="false">Алфавиту <i class="fa fa-arrow-down"></i></a>
+                                <ul id="sorting" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+                                    <li><a href="#">Алфавиту <i class="fa fa-arrow-down"></i></a></li>
+                                    <li><a href="#">Алфавиту <i class="fa fa-arrow-up"></i></a></li>
+                                    <li><a href="#">По пулярности</a></li>
+                                    <li><a href="#">Кол-ву постов</a></li>
+                                    <li><a href="#">Подписчикам</a></li>
+                                    <li><a href="#">Просмотрам</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="link-interval button-group radius">
+                            <li class="active"><a href="#" class="button">за 3 дня</a></li>
+                            <li><a href="#" class="button">за неделю</a></li>
+                            <li><a href="#" class="button">за месяц</a></li>
+                        </ul>
+                    </div>
+                    <div class="island-wrapper">
+                        <div class="island-items">
+                            <ul class="island-list small-block-grid-3 medium-block-grid-3 large-block-grid-5">
+                                <li>
+                                    <div class="island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block-recommended-read">
+                            <div class="wrapper">
+                                <h2 class="block-title">Рекомендуемые острова:</h2>
+                                <div class="list-recommended-read" id="list-recommended-read">
+                                    <div class="item island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="island-items">
+                            <ul class="island-list small-block-grid-3 medium-block-grid-3 large-block-grid-5">
+                                <li>
+                                    <div class="island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="island-item">
+                                        <div class="field-photo">
+                                            <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                                        </div>
+                                        <div class="field-title">
+                                            <a href="#">Название острова</a>
+                                        </div>
+                                        <div class="field-category">
+                                            <a href="#">Путешествия</a>
+                                        </div>
+                                        <div class="island-info">
+                                            <div class="new-all">
+                                                <a class="red" href="#">3</a>/<a href="#">10</a>
+                                                <span class="description">новых/всего постов</span>
+                                            </div>
+                                            <div class="subscribers">
+                                                <a class="read" href="#"><i class="fa fa-user-plus"></i>45</a>
+                                                <span class="description">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box-load-more">
+                            <a href="#">показать еще</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <aside class="right-sidebar">
+                <div class="block-popular-island">
+                    <h2 class="block-title">Популярные острова</h2>
+                    <div class="list-popular-island" id="list-popular-island">
+                        <div class="item">
+                            <a class="img" href="#"><img src="img/blogs/island-1.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="img" href="#"><img src="img/blogs/island-2.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="img" href="#"><img src="img/blogs/island-3.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="img" href="#"><img src="img/blogs/island-4.jpg" alt="img"/></a>
+                            <div class="box-fields">
+                                <div class="vertical">
+                                    <a class="title" href="#">Пешие походы</a>
+                                    <div class="description">
+                                        <p>Все о походах и не только</p>
+                                    </div>
+                                    <div class="blog-info">
+                                        <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-popular-authors">
+                    <h2 class="block-title">Популярные авторы</h2>
+                    <div class="list-popular-authors" id="list-popular-authors">
+                        <div class="item">
+                            <div class="field-photo">
+                                <a class="img" href="#"><img src="img/blogs/author-1.jpg" alt="img"/></a>
+                            </div>
+                            <a class="author" href="#">Дмитрий блогов</a>
+                            <div class="description">
+                                <p>“Слово моё как топор”</p>
+                            </div>
+                            <div class="author-info">
+                                <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-photo">
+                                <a class="img" href="#"><img src="img/blogs/author-2.jpg" alt="img"/></a>
+                            </div>
+                            <a class="author" href="#">Дмитрий блогов</a>
+                            <div class="description">
+                                <p>“Слово моё как топор”</p>
+                            </div>
+                            <div class="author-info">
+                                <span class="views"><a class="red" href="#">3</a>/<a href="#">10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-photo">
+                                <a class="img" href="#"><img src="img/blogs/author-3.jpg" alt="img"/></a>
+                            </div>
+                            <a class="author" href="#">Дмитрий блогов</a>
+                            <div class="description">
+                                <p>“Слово моё как топор”</p>
+                            </div>
+                            <div class="author-info">
+                                <span class="views"><a class="red" href="#">3</a>/<a href="#"></i>10</a><a class="read" href="#"><i class="fa fa-user-plus"></i>45</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-popular-themes">
+                    <h2 class="block-title">Популярные темы</h2>
+                    <ul class="list-themes small-block-grid-2">
+                        <li>
+                            <a class="theme" href="#">Автомобили</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Юмор</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Путешествия</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Творчество</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Политика</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Автомобили</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Путешествия</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Творчество</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Политика</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                        <li>
+                            <a class="theme" href="#">Автомобили</a> (<a class="red" href="#">3</a>/<a href="#">15</a>)
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+</div>
+
+<div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+        <!-- Off Canvas Menu -->
+        <aside class="right-off-canvas-menu">
+            <!-- whatever you want goes here -->
+            <div class="drop-menu-container" id="drop-menu-container">
+                <a class="exit-off-canvas"></a>
+                <div class="search-form">
+                    <form action="#">
+                        <input class="sb-search-input" placeholder="Поиск..." type="search" value="" name="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="search-btn"><i class="fa fa-search"></i></span>
+                    </form>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Афиша</a>
+                        </li>
+                        <li>
+                            <a href="#">Дневники</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-categories">
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                        <li>
+                            <a href="#">Карьера</a>
+                        </li>
+                        <li>
+                            <a href="#">Бизнес</a>
+                        </li>
+                        <li>
+                            <a href="#">Авто</a>
+                        </li>
+                        <li>
+                            <a href="#">Отдых</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Общество</a>
+                        </li>
+                        <li>
+                            <a href="#">Персоны</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">Еда</a>
+                        </li>
+                        <li>
+                            <a href="#">Отношения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- main content goes here -->
+        <section class="main-section">
+
+
+        </section>
+
+        <!-- close the off-canvas menu -->
+        <a class="exit-off-canvas layout"></a>
+    </div>
+</div>
+
+<footer role="contentinfo" id="footer">
+    <div class="row">
+        <div class="first small-12 medium-7 columns">
+            <div class="copyright">
+                <p>© 2010–2015 Ozero.ru</p>
+            </div>
+            <div class="site-info">
+                <p>Новости Москвы, Санкт-Петербурга, Киева. Люди, места, события. Использование материалов The Village разрешено только с предварительного согласия правообладателей. Все права на картинки и тексты в разделе Новости принадлежат их авторам.</p>
+            </div>
+        </div>
+        <div class="second small-12 medium-4 columns">
+            <ul class="footer-menu">
+                <li>
+                    <a href="#">Расписание электричек и автобусов</a>
+                </li>
+                <li>
+                    <a href="#">Online табло аэропорта</a>
+                </li>
+                <li>
+                    <a href="#">Заказ тура</a>
+                </li>
+                <li>
+                    <a href="#">Водный транспорт</a>
+                </li>
+                <li>
+                    <a href="#">Клуб путешественников</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<div id="widget-overlay"></div>
+<div id="widget-overlay-scroll-bar"></div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <!--<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>-->
+    <script src="js/plugins/slick-1.3.15/slick/slick.min.js"></script>
+    <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/uisearch.js"></script>
+
+    <!--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+    <!--<script src="js/ion.rangeSlider-2.1.1/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>-->
+    <!--<script src="js/jquery.rating/js/jquery.rating-2.0.min.js"></script>-->
+    <script src="js/jquery.selectbox-0.2/js/jquery.selectbox-0.2.min.js"></script>
+    <script src="js/app.js"></script>
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script src="js/currency.js"></script>-->
+    <!--<script src="js/main.js"></script>-->
+    <!--<script type="text/javascript" src="js/jquery.calendario.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>-->
+    <!--<script src="js/calendar-init.js"></script>
+    <script type="text/javascript" src="js/share42/share42.js"></script>-->
+</body>
+</html>
