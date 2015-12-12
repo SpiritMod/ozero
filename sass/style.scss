@@ -10190,6 +10190,30 @@ form.new-article {
   }
 }
 
+h1.island-theme-title {
+  color: #000;
+  font-family: "helvetica-medium", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.1;
+  padding: 0 0;
+  margin: 0 0 10px;
+}
+
+.island-theme {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin: 0 0 20px;
+  .island-header,
+  .authors-header {
+    .page-title {
+      font-size: 22px;
+      white-space: nowrap;
+    }
+  }
+}
+
 @media only screen and (min-width: 0px) and (max-width: 1380px) {
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(3),
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(4) {
@@ -10255,6 +10279,9 @@ form.new-article {
     .author-header {
       padding-left: 10px;
     }
+  }
+  h1.island-theme-title {
+    padding: 0 0 0 10px;
   }
 }
 
@@ -11579,7 +11606,8 @@ form.new-article {
   .page-blogs,
   .page-blog-post,
   .page-island,
-  .page-authors {
+  .page-authors,
+  .page-day-book {
     .right-sidebar {
       background: transparent;
       float: left;
