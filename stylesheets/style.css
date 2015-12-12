@@ -10486,21 +10486,37 @@ form.new-article button[type="submit"]:hover {
   color: #014183;
 }
 
-.item-island-header .island-header {
+.item-island-header,
+.item-author-header {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+.item-island-header .island-header,
+.item-island-header .author-header,
+.item-author-header .island-header,
+.item-author-header .author-header {
   display: inline-block;
   width: 100%;
   vertical-align: top;
   margin-bottom: 15px;
   position: relative;
   padding: 0 222px 0 0;
+  min-height: 60px;
 }
-.item-island-header .island-header .field-title-category {
+.item-island-header .island-header .field-title-category,
+.item-island-header .author-header .field-title-category,
+.item-author-header .island-header .field-title-category,
+.item-author-header .author-header .field-title-category {
   display: inline-block;
   width: 100%;
   vertical-align: top;
   margin-bottom: 15px;
 }
-.item-island-header .island-header .field-title-category .page-title {
+.item-island-header .island-header .field-title-category .page-title,
+.item-island-header .author-header .field-title-category .page-title,
+.item-author-header .island-header .field-title-category .page-title,
+.item-author-header .author-header .field-title-category .page-title {
   display: inline-block;
   width: 100%;
   color: #000;
@@ -10509,35 +10525,64 @@ form.new-article button[type="submit"]:hover {
   font-weight: 500;
   line-height: 1.1;
 }
-.item-island-header .island-header .field-title-category .category {
+.item-island-header .island-header .field-title-category .category,
+.item-island-header .author-header .field-title-category .category,
+.item-author-header .island-header .field-title-category .category,
+.item-author-header .author-header .field-title-category .category {
   text-align: left;
   line-height: 1;
   margin: 0 0 0;
 }
-.item-island-header .island-header .field-title-category .category li {
+.item-island-header .island-header .field-title-category .category li,
+.item-island-header .author-header .field-title-category .category li,
+.item-author-header .island-header .field-title-category .category li,
+.item-author-header .author-header .field-title-category .category li {
   display: inline;
   margin-right: 10px;
 }
-.item-island-header .island-header .field-title-category .category li:last-child {
+.item-island-header .island-header .field-title-category .category li:last-child,
+.item-island-header .author-header .field-title-category .category li:last-child,
+.item-author-header .island-header .field-title-category .category li:last-child,
+.item-author-header .author-header .field-title-category .category li:last-child {
   margin-right: 0;
 }
-.item-island-header .island-header .field-title-category .category li a {
+.item-island-header .island-header .field-title-category .category li a,
+.item-island-header .author-header .field-title-category .category li a,
+.item-author-header .island-header .field-title-category .category li a,
+.item-author-header .author-header .field-title-category .category li a {
   color: #014183;
   font-family: "helvetica-roman", sans-serif;
   font-size: 12px;
   text-decoration: underline;
 }
-.item-island-header .island-header .field-title-category .category li a:hover {
+.item-island-header .island-header .field-title-category .category li a:hover,
+.item-island-header .author-header .field-title-category .category li a:hover,
+.item-author-header .island-header .field-title-category .category li a:hover,
+.item-author-header .author-header .field-title-category .category li a:hover {
   text-decoration: none;
 }
-.item-island-header .island-header .box-island-info {
+.item-island-header .island-header .box-island-info,
+.item-island-header .island-header .box-author-info,
+.item-island-header .author-header .box-island-info,
+.item-island-header .author-header .box-author-info,
+.item-author-header .island-header .box-island-info,
+.item-author-header .island-header .box-author-info,
+.item-author-header .author-header .box-island-info,
+.item-author-header .author-header .box-author-info {
   display: block;
   width: 212px;
   position: absolute;
   right: 0;
   top: 0;
 }
-.item-island-header .island-header .box-island-info .subscribe {
+.item-island-header .island-header .box-island-info .subscribe,
+.item-island-header .island-header .box-author-info .subscribe,
+.item-island-header .author-header .box-island-info .subscribe,
+.item-island-header .author-header .box-author-info .subscribe,
+.item-author-header .island-header .box-island-info .subscribe,
+.item-author-header .island-header .box-author-info .subscribe,
+.item-author-header .author-header .box-island-info .subscribe,
+.item-author-header .author-header .box-author-info .subscribe {
   display: inline-block;
   width: 100%;
   margin-bottom: 5px;
@@ -10558,11 +10603,33 @@ form.new-article button[type="submit"]:hover {
   -webkit-transition-delay: 0s;
   transition: all 0.4s ease 0s;
 }
-.item-island-header .island-header .box-island-info .subscribe:hover {
+.item-island-header .island-header .box-island-info .subscribe:hover,
+.item-island-header .island-header .box-author-info .subscribe:hover,
+.item-island-header .author-header .box-island-info .subscribe:hover,
+.item-island-header .author-header .box-author-info .subscribe:hover,
+.item-author-header .island-header .box-island-info .subscribe:hover,
+.item-author-header .island-header .box-author-info .subscribe:hover,
+.item-author-header .author-header .box-island-info .subscribe:hover,
+.item-author-header .author-header .box-author-info .subscribe:hover {
   background: #c51f2a;
   color: #fff;
 }
-.item-island-header .island-header .box-island-info .island-info {
+.item-island-header .island-header .box-island-info .island-info,
+.item-island-header .island-header .box-island-info .author-info,
+.item-island-header .island-header .box-author-info .island-info,
+.item-island-header .island-header .box-author-info .author-info,
+.item-island-header .author-header .box-island-info .island-info,
+.item-island-header .author-header .box-island-info .author-info,
+.item-island-header .author-header .box-author-info .island-info,
+.item-island-header .author-header .box-author-info .author-info,
+.item-author-header .island-header .box-island-info .island-info,
+.item-author-header .island-header .box-island-info .author-info,
+.item-author-header .island-header .box-author-info .island-info,
+.item-author-header .island-header .box-author-info .author-info,
+.item-author-header .author-header .box-island-info .island-info,
+.item-author-header .author-header .box-island-info .author-info,
+.item-author-header .author-header .box-author-info .island-info,
+.item-author-header .author-header .box-author-info .author-info {
   display: inline-block;
   width: 100%;
   vertical-align: top;
@@ -10570,34 +10637,113 @@ form.new-article button[type="submit"]:hover {
   font-size: 12px;
   color: #000;
 }
-.item-island-header .island-header .box-island-info .island-info .subscribers {
+.item-island-header .island-header .box-island-info .island-info .subscribers,
+.item-island-header .island-header .box-island-info .author-info .subscribers,
+.item-island-header .island-header .box-author-info .island-info .subscribers,
+.item-island-header .island-header .box-author-info .author-info .subscribers,
+.item-island-header .author-header .box-island-info .island-info .subscribers,
+.item-island-header .author-header .box-island-info .author-info .subscribers,
+.item-island-header .author-header .box-author-info .island-info .subscribers,
+.item-island-header .author-header .box-author-info .author-info .subscribers,
+.item-author-header .island-header .box-island-info .island-info .subscribers,
+.item-author-header .island-header .box-island-info .author-info .subscribers,
+.item-author-header .island-header .box-author-info .island-info .subscribers,
+.item-author-header .island-header .box-author-info .author-info .subscribers,
+.item-author-header .author-header .box-island-info .island-info .subscribers,
+.item-author-header .author-header .box-island-info .author-info .subscribers,
+.item-author-header .author-header .box-author-info .island-info .subscribers,
+.item-author-header .author-header .box-author-info .author-info .subscribers {
   margin-right: 5px;
 }
-.item-island-header .island-header .box-island-info .island-info i {
+.item-island-header .island-header .box-island-info .island-info i,
+.item-island-header .island-header .box-island-info .author-info i,
+.item-island-header .island-header .box-author-info .island-info i,
+.item-island-header .island-header .box-author-info .author-info i,
+.item-island-header .author-header .box-island-info .island-info i,
+.item-island-header .author-header .box-island-info .author-info i,
+.item-island-header .author-header .box-author-info .island-info i,
+.item-island-header .author-header .box-author-info .author-info i,
+.item-author-header .island-header .box-island-info .island-info i,
+.item-author-header .island-header .box-island-info .author-info i,
+.item-author-header .island-header .box-author-info .island-info i,
+.item-author-header .island-header .box-author-info .author-info i,
+.item-author-header .author-header .box-island-info .island-info i,
+.item-author-header .author-header .box-island-info .author-info i,
+.item-author-header .author-header .box-author-info .island-info i,
+.item-author-header .author-header .box-author-info .author-info i {
   color: #a8a8a8;
 }
-.item-island-header .island-header .box-island-info .island-info a {
+.item-island-header .island-header .box-island-info .island-info a,
+.item-island-header .island-header .box-island-info .author-info a,
+.item-island-header .island-header .box-author-info .island-info a,
+.item-island-header .island-header .box-author-info .author-info a,
+.item-island-header .author-header .box-island-info .island-info a,
+.item-island-header .author-header .box-island-info .author-info a,
+.item-island-header .author-header .box-author-info .island-info a,
+.item-island-header .author-header .box-author-info .author-info a,
+.item-author-header .island-header .box-island-info .island-info a,
+.item-author-header .island-header .box-island-info .author-info a,
+.item-author-header .island-header .box-author-info .island-info a,
+.item-author-header .island-header .box-author-info .author-info a,
+.item-author-header .author-header .box-island-info .island-info a,
+.item-author-header .author-header .box-island-info .author-info a,
+.item-author-header .author-header .box-author-info .island-info a,
+.item-author-header .author-header .box-author-info .author-info a {
   font-family: "helvetica-roman", sans-serif;
   font-size: 12px;
   color: #014183;
   line-height: 1.1;
   text-decoration: underline;
 }
-.item-island-header .island-header .box-island-info .island-info a:hover {
+.item-island-header .island-header .box-island-info .island-info a:hover,
+.item-island-header .island-header .box-island-info .author-info a:hover,
+.item-island-header .island-header .box-author-info .island-info a:hover,
+.item-island-header .island-header .box-author-info .author-info a:hover,
+.item-island-header .author-header .box-island-info .island-info a:hover,
+.item-island-header .author-header .box-island-info .author-info a:hover,
+.item-island-header .author-header .box-author-info .island-info a:hover,
+.item-island-header .author-header .box-author-info .author-info a:hover,
+.item-author-header .island-header .box-island-info .island-info a:hover,
+.item-author-header .island-header .box-island-info .author-info a:hover,
+.item-author-header .island-header .box-author-info .island-info a:hover,
+.item-author-header .island-header .box-author-info .author-info a:hover,
+.item-author-header .author-header .box-island-info .island-info a:hover,
+.item-author-header .author-header .box-island-info .author-info a:hover,
+.item-author-header .author-header .box-author-info .island-info a:hover,
+.item-author-header .author-header .box-author-info .author-info a:hover {
   text-decoration: none;
 }
-.item-island-header .island-header .box-island-info .island-info a.red {
+.item-island-header .island-header .box-island-info .island-info a.red,
+.item-island-header .island-header .box-island-info .author-info a.red,
+.item-island-header .island-header .box-author-info .island-info a.red,
+.item-island-header .island-header .box-author-info .author-info a.red,
+.item-island-header .author-header .box-island-info .island-info a.red,
+.item-island-header .author-header .box-island-info .author-info a.red,
+.item-island-header .author-header .box-author-info .island-info a.red,
+.item-island-header .author-header .box-author-info .author-info a.red,
+.item-author-header .island-header .box-island-info .island-info a.red,
+.item-author-header .island-header .box-island-info .author-info a.red,
+.item-author-header .island-header .box-author-info .island-info a.red,
+.item-author-header .island-header .box-author-info .author-info a.red,
+.item-author-header .author-header .box-island-info .island-info a.red,
+.item-author-header .author-header .box-island-info .author-info a.red,
+.item-author-header .author-header .box-author-info .island-info a.red,
+.item-author-header .author-header .box-author-info .author-info a.red {
   color: #D13F4A;
 }
 
-.item-about-island {
+.item-about-island,
+.item-about-author {
   display: inline-block;
   width: 100%;
   background: #fff;
   padding: 30px;
   margin-bottom: 20px;
 }
-.item-about-island .about-island {
+.item-about-island .about-island,
+.item-about-island .about-author,
+.item-about-author .about-island,
+.item-about-author .about-author {
   display: inline-block;
   vertical-align: top;
   width: 100%;
@@ -10605,12 +10751,22 @@ form.new-article button[type="submit"]:hover {
   padding: 30px;
   margin: 0 0;
 }
-.item-about-island .about-island .img img {
+.item-about-island .about-island .img img,
+.item-about-island .about-author .img img,
+.item-about-author .about-island .img img,
+.item-about-author .about-author .img img {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-.item-about-island .about-island .info .title-island {
+.item-about-island .about-island .info .title-island,
+.item-about-island .about-island .info .title-author,
+.item-about-island .about-author .info .title-island,
+.item-about-island .about-author .info .title-author,
+.item-about-author .about-island .info .title-island,
+.item-about-author .about-island .info .title-author,
+.item-about-author .about-author .info .title-island,
+.item-about-author .about-author .info .title-author {
   padding: 0 0 0;
   color: #000;
   font-family: "helvetica-medium", sans-serif;
@@ -10619,26 +10775,41 @@ form.new-article button[type="submit"]:hover {
   line-height: 1.1;
   margin: 0 0 15px;
 }
-.item-about-island .about-island .info .body {
+.item-about-island .about-island .info .body,
+.item-about-island .about-author .info .body,
+.item-about-author .about-island .info .body,
+.item-about-author .about-author .info .body {
   margin-bottom: 15px;
 }
-.item-about-island .about-island .info .body p {
+.item-about-island .about-island .info .body p,
+.item-about-island .about-author .info .body p,
+.item-about-author .about-island .info .body p,
+.item-about-author .about-author .info .body p {
   color: #000;
   font-family: "helvetica-roman", sans-serif;
   font-size: 14px;
   line-height: 1.5;
   margin: 0 0 0;
 }
-.item-about-island .about-island .info .read {
+.item-about-island .about-island .info .read,
+.item-about-island .about-author .info .read,
+.item-about-author .about-island .info .read,
+.item-about-author .about-author .info .read {
   text-align: right;
 }
-.item-about-island .about-island .info .read a {
+.item-about-island .about-island .info .read a,
+.item-about-island .about-author .info .read a,
+.item-about-author .about-island .info .read a,
+.item-about-author .about-author .info .read a {
   color: #014183;
   font-family: "helvetica-roman", sans-serif;
   font-size: 14px;
   text-decoration: underline;
 }
-.item-about-island .about-island .info .read a:hover {
+.item-about-island .about-island .info .read a:hover,
+.item-about-island .about-author .info .read a:hover,
+.item-about-author .about-island .info .read a:hover,
+.item-about-author .about-author .info .read a:hover {
   text-decoration: none;
 }
 
@@ -10699,7 +10870,9 @@ form.new-article button[type="submit"]:hover {
   }
 
   .item-island-header .island-header,
-  .item-island-header .author-header {
+  .item-island-header .author-header,
+  .item-author-header .island-header,
+  .item-author-header .author-header {
     padding-left: 10px;
   }
 }
@@ -11169,10 +11342,20 @@ form.new-article button[type="submit"]:hover {
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 960px) {
-  .item-island-header .island-header {
+  .item-island-header .island-header,
+  .item-island-header .author-header,
+  .item-author-header .island-header,
+  .item-author-header .author-header {
     padding: 0 0 0 10px;
   }
-  .item-island-header .island-header .box-island-info {
+  .item-island-header .island-header .box-island-info,
+  .item-island-header .island-header .box-author-info,
+  .item-island-header .author-header .box-island-info,
+  .item-island-header .author-header .box-author-info,
+  .item-author-header .island-header .box-island-info,
+  .item-author-header .island-header .box-author-info,
+  .item-author-header .author-header .box-island-info,
+  .item-author-header .author-header .box-author-info {
     position: relative;
     top: inherit;
     right: inherit;
@@ -12475,16 +12658,30 @@ form.new-article button[type="submit"]:hover {
     padding: 20px;
   }
 
-  .item-about-island {
+  .item-about-island,
+  .item-about-author {
     padding: 20px;
   }
-  .item-about-island .about-island {
+  .item-about-island .about-island,
+  .item-about-island .about-author,
+  .item-about-author .about-island,
+  .item-about-author .about-author {
     padding: 20px;
   }
-  .item-about-island .about-island .img {
+  .item-about-island .about-island .img,
+  .item-about-island .about-author .img,
+  .item-about-author .about-island .img,
+  .item-about-author .about-author .img {
     padding-bottom: 20px;
   }
-  .item-about-island .about-island .info .title-island {
+  .item-about-island .about-island .info .title-island,
+  .item-about-island .about-island .info .title-author,
+  .item-about-island .about-author .info .title-island,
+  .item-about-island .about-author .info .title-author,
+  .item-about-author .about-island .info .title-island,
+  .item-about-author .about-island .info .title-author,
+  .item-about-author .about-author .info .title-island,
+  .item-about-author .about-author .info .title-author {
     text-align: center;
   }
 }
