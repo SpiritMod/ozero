@@ -253,6 +253,34 @@ $(document).ready(function(){
         });
     }
 
+    //mobile slider list-island-authors
+    if (document.getElementById('list-island-authors')){
+        $(function(){
+            if (window.matchMedia("(min-width: 769px)").matches) {
+                /* the viewport is at least >940 pixels wide */
+                $('#list-island-authors').unslick();
+            } else {
+                /* the viewport is less than <940 pixels wide */
+                $("#list-island-authors").slick({
+                    slide: '.item',
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+
+                });
+            }
+        });
+    }
+
     //mobile slider list-popular-authors
     if (document.getElementById('list-popular-authors')){
         $(function(){

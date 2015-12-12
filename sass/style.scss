@@ -9848,6 +9848,329 @@ form.new-article {
 
 }
 
+.breadcrumbs {
+  margin: 30px 0 20px;
+  padding: 0 0 0;
+  border: none;
+  background: transparent;
+  @include border-radius(0);
+  > * {
+    display: inline-block;
+    float: none;
+    color: #2D0014;
+    font-family: "helvetica-light", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+    text-transform: none;
+  }
+  > *:before {
+    color: #2D0014;
+    content: "|";
+    margin: 0 8px 0 5px;
+    position: relative;
+    font-size: 14px;
+    top: 0;
+  }
+  > * a {
+    color: #2D0014;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  > *.current a {
+    color: #2D0014;
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
+.block-island-authors {
+  background: #fff;
+  display: inline-block;
+  width: 100%;
+  padding: 40px 25px;
+  margin: 0 0 20px;
+  .block-title {
+    font-family: "helvetica-light", sans-serif;
+    color: #014183;
+    font-size: 22px;
+    line-height: 1.1;
+    text-decoration: underline;
+    margin: 0 0 30px;
+    padding: 0 0;
+    text-align: center;
+  }
+  .list-island-authors {
+    .item {
+      padding: 0 0 0 75px;
+      position: relative;
+      min-height: 60px;
+      margin: 0 0 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .img {
+        width: 64px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        border: 2px solid transparent;
+        @include border-radius(50%);
+        @include transition(all 0.3s ease 0s);
+        &:hover {
+          border: 2px solid #014183;
+        }
+      }
+      a.author {
+        color: #000;
+        font-family: "helvetica-bold", sans-serif;
+        font-size: 11px;
+        line-height: 1.1;
+        text-transform: uppercase;
+        &:hover {
+          color: #014183;
+        }
+      }
+      .island-info {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        font-size: 12px;
+        color: #014183;
+        margin: 10px 0 0 0;
+        text-align: center;
+        .new-all {
+          display: block;
+          float: left;
+          max-width: 71px;
+          padding-right: 4px;
+          line-height: 1;
+        }
+        .subscribers {
+          display: block;
+          float: left;
+          width: 50%;
+          max-width: 71px;
+          padding-left: 4px;
+          line-height: 1;
+        }
+        a {
+          font-family: "helvetica-roman", sans-serif;
+          font-size: 12px;
+          color: #014183;
+          line-height: 1.1;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+          &.red {
+            color: #D13F4A;
+          }
+          &.read {
+            i {
+              color: #a8a8a8;
+              margin-right: 3px;
+            }
+          }
+        }
+        .description {
+          display: inline-block;
+          width: 100%;
+          line-height: 1.1;
+          font-family: "helvetica-roman", sans-serif;
+          font-size: 10px;
+          color: #000;
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+  .box-btn {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin: 25px 0 0;
+    text-align: center;
+    a {
+      display: inline-block;
+      width: 100%;
+      max-width: 218px;
+      height: 32px;
+      text-align: center;
+      line-height: 32px;
+      color: #FFF;
+      font-family: "helvetica-roman", sans-serif;
+      font-size: 14px;
+      background: #014183;
+      @include border-radius(5px);
+      @include transition(all 0.4s ease 0s);
+      &:hover {
+        background: #e0ecf6;
+        color: #014183;
+      }
+    }
+  }
+}
+
+.item-island-header {
+  .island-header {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 15px;
+    position: relative;
+    padding: 0 222px 0 0;
+    .field-title-category {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+      margin-bottom: 15px;
+      .page-title {
+        display: inline-block;
+        width: 100%;
+        color: #000;
+        font-family: "helvetica-medium", sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.1;
+      }
+      .category {
+        text-align: left;
+        line-height: 1;
+        margin: 0 0 0;
+        li {
+          display: inline;
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            color: #014183;
+            font-family: "helvetica-roman", sans-serif;
+            font-size: 12px;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    .box-island-info {
+      display: block;
+      width: 212px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      .subscribe {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 5px;
+        max-width: 212px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        color: #FFF;
+        font-family: "helvetica-roman", sans-serif;
+        font-size: 14px;
+        background: #d1404a;
+        @include border-radius(5px);
+        @include transition(all 0.4s ease 0s);
+        &:hover {
+          background: #c51f2a;
+          color: #fff;
+        }
+      }
+      .island-info {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+        font-family: "helvetica-roman";
+        font-size: 12px;
+        color: #000;
+        .subscribers {
+          margin-right: 5px;
+        }
+        i {
+          color: #a8a8a8;
+        }
+        a {
+          font-family: "helvetica-roman", sans-serif;
+          font-size: 12px;
+          color: #014183;
+          line-height: 1.1;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+          &.red {
+            color: #D13F4A;
+          }
+        }
+      }
+    }
+  }
+}
+
+.item-about-island {
+  display: inline-block;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  margin-bottom: 20px;
+  .about-island {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    border: 1px solid #e7ebef;
+    padding: 30px;
+    margin: 0 0;
+    .img {
+      img {
+        @include border-radius(50%);
+      }
+    }
+    .info {
+      .title-island {
+        padding: 0 0 0;
+        color: #000;
+        font-family: "helvetica-medium", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.1;
+        margin: 0 0 15px;
+      }
+      .body {
+        margin-bottom: 15px;
+        p {
+          color: #000;
+          font-family: "helvetica-roman", sans-serif;
+          font-size: 14px;
+          line-height: 1.5;
+          margin: 0 0 0;
+        }
+      }
+      .read {
+        text-align: right;
+        a {
+          color: #014183;
+          font-family: "helvetica-roman", sans-serif;
+          font-size: 14px;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 0px) and (max-width: 1380px) {
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(3),
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(4) {
@@ -9899,6 +10222,14 @@ form.new-article {
   }
   .filter-island-sorting .block-sorting {
     margin: 3px 0 0 15px;
+  }
+  .breadcrumbs {
+    padding: 0 0 0 10px;
+  }
+  .item-island-header {
+    .island-header {
+      padding-left: 10px;
+    }
   }
 }
 
@@ -10447,6 +10778,23 @@ form.new-article {
     }
     .filter-island {
       width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 960px) {
+  .item-island-header {
+    .island-header {
+      padding: 0 0 0 10px;
+      .box-island-info {
+        position: relative;
+        top: inherit;
+        right: inherit;
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+        margin: 5px 0 0 0;
+      }
     }
   }
 }
@@ -11891,6 +12239,20 @@ form.new-article {
   }
   .island-wrapper {
     padding: 20px;
+  }
+  .item-about-island {
+    padding: 20px;
+    .about-island {
+      padding: 20px;
+      .img {
+        padding-bottom: 20px;
+      }
+      .info {
+        .title-island {
+          text-align: center;
+        }
+      }
+    }
   }
 }
 

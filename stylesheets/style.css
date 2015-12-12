@@ -10248,6 +10248,341 @@ form.new-article button[type="submit"]:hover {
   margin-top: 3px;
 }
 
+.breadcrumbs {
+  margin: 30px 0 20px;
+  padding: 0 0 0;
+  border: none;
+  background: transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.breadcrumbs > * {
+  display: inline-block;
+  float: none;
+  color: #2D0014;
+  font-family: "helvetica-light", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: none;
+}
+.breadcrumbs > *:before {
+  color: #2D0014;
+  content: "|";
+  margin: 0 8px 0 5px;
+  position: relative;
+  font-size: 14px;
+  top: 0;
+}
+.breadcrumbs > * a {
+  color: #2D0014;
+  text-decoration: underline;
+}
+.breadcrumbs > * a:hover {
+  text-decoration: none;
+}
+.breadcrumbs > *.current a {
+  color: #2D0014;
+  cursor: default;
+  text-decoration: none;
+}
+
+.block-island-authors {
+  background: #fff;
+  display: inline-block;
+  width: 100%;
+  padding: 40px 25px;
+  margin: 0 0 20px;
+}
+.block-island-authors .block-title {
+  font-family: "helvetica-light", sans-serif;
+  color: #014183;
+  font-size: 22px;
+  line-height: 1.1;
+  text-decoration: underline;
+  margin: 0 0 30px;
+  padding: 0 0;
+  text-align: center;
+}
+.block-island-authors .list-island-authors .item {
+  padding: 0 0 0 75px;
+  position: relative;
+  min-height: 60px;
+  margin: 0 0 30px;
+}
+.block-island-authors .list-island-authors .item:last-child {
+  margin-bottom: 0;
+}
+.block-island-authors .list-island-authors .item .img {
+  width: 64px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  border: 2px solid transparent;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.3s ease 0s;
+}
+.block-island-authors .list-island-authors .item .img:hover {
+  border: 2px solid #014183;
+}
+.block-island-authors .list-island-authors .item a.author {
+  color: #000;
+  font-family: "helvetica-bold", sans-serif;
+  font-size: 11px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.block-island-authors .list-island-authors .item a.author:hover {
+  color: #014183;
+}
+.block-island-authors .list-island-authors .item .island-info {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  font-size: 12px;
+  color: #014183;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+.block-island-authors .list-island-authors .item .island-info .new-all {
+  display: block;
+  float: left;
+  max-width: 71px;
+  padding-right: 4px;
+  line-height: 1;
+}
+.block-island-authors .list-island-authors .item .island-info .subscribers {
+  display: block;
+  float: left;
+  width: 50%;
+  max-width: 71px;
+  padding-left: 4px;
+  line-height: 1;
+}
+.block-island-authors .list-island-authors .item .island-info a {
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 12px;
+  color: #014183;
+  line-height: 1.1;
+  text-decoration: underline;
+}
+.block-island-authors .list-island-authors .item .island-info a:hover {
+  text-decoration: none;
+}
+.block-island-authors .list-island-authors .item .island-info a.red {
+  color: #D13F4A;
+}
+.block-island-authors .list-island-authors .item .island-info a.read i {
+  color: #a8a8a8;
+  margin-right: 3px;
+}
+.block-island-authors .list-island-authors .item .island-info .description {
+  display: inline-block;
+  width: 100%;
+  line-height: 1.1;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 10px;
+  color: #000;
+  margin-top: 3px;
+}
+.block-island-authors .box-btn {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin: 25px 0 0;
+  text-align: center;
+}
+.block-island-authors .box-btn a {
+  display: inline-block;
+  width: 100%;
+  max-width: 218px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  color: #FFF;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  background: #014183;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.block-island-authors .box-btn a:hover {
+  background: #e0ecf6;
+  color: #014183;
+}
+
+.item-island-header .island-header {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin-bottom: 15px;
+  position: relative;
+  padding: 0 222px 0 0;
+}
+.item-island-header .island-header .field-title-category {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin-bottom: 15px;
+}
+.item-island-header .island-header .field-title-category .page-title {
+  display: inline-block;
+  width: 100%;
+  color: #000;
+  font-family: "helvetica-medium", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.item-island-header .island-header .field-title-category .category {
+  text-align: left;
+  line-height: 1;
+  margin: 0 0 0;
+}
+.item-island-header .island-header .field-title-category .category li {
+  display: inline;
+  margin-right: 10px;
+}
+.item-island-header .island-header .field-title-category .category li:last-child {
+  margin-right: 0;
+}
+.item-island-header .island-header .field-title-category .category li a {
+  color: #014183;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 12px;
+  text-decoration: underline;
+}
+.item-island-header .island-header .field-title-category .category li a:hover {
+  text-decoration: none;
+}
+.item-island-header .island-header .box-island-info {
+  display: block;
+  width: 212px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.item-island-header .island-header .box-island-info .subscribe {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+  max-width: 212px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  color: #FFF;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  background: #d1404a;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.item-island-header .island-header .box-island-info .subscribe:hover {
+  background: #c51f2a;
+  color: #fff;
+}
+.item-island-header .island-header .box-island-info .island-info {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  font-family: "helvetica-roman";
+  font-size: 12px;
+  color: #000;
+}
+.item-island-header .island-header .box-island-info .island-info .subscribers {
+  margin-right: 5px;
+}
+.item-island-header .island-header .box-island-info .island-info i {
+  color: #a8a8a8;
+}
+.item-island-header .island-header .box-island-info .island-info a {
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 12px;
+  color: #014183;
+  line-height: 1.1;
+  text-decoration: underline;
+}
+.item-island-header .island-header .box-island-info .island-info a:hover {
+  text-decoration: none;
+}
+.item-island-header .island-header .box-island-info .island-info a.red {
+  color: #D13F4A;
+}
+
+.item-about-island {
+  display: inline-block;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+.item-about-island .about-island {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  border: 1px solid #e7ebef;
+  padding: 30px;
+  margin: 0 0;
+}
+.item-about-island .about-island .img img {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.item-about-island .about-island .info .title-island {
+  padding: 0 0 0;
+  color: #000;
+  font-family: "helvetica-medium", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 15px;
+}
+.item-about-island .about-island .info .body {
+  margin-bottom: 15px;
+}
+.item-about-island .about-island .info .body p {
+  color: #000;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 0;
+}
+.item-about-island .about-island .info .read {
+  text-align: right;
+}
+.item-about-island .about-island .info .read a {
+  color: #014183;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.item-about-island .about-island .info .read a:hover {
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 1380px) {
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(3),
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(4) {
@@ -10296,6 +10631,14 @@ form.new-article button[type="submit"]:hover {
 
   .filter-island-sorting .block-sorting {
     margin: 3px 0 0 15px;
+  }
+
+  .breadcrumbs {
+    padding: 0 0 0 10px;
+  }
+
+  .item-island-header .island-header {
+    padding-left: 10px;
   }
 }
 @media only screen and (min-width: 1000px) and (max-width: 1200px) {
@@ -10745,6 +11088,20 @@ form.new-article button[type="submit"]:hover {
   }
   .island-header .filter-island {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 960px) {
+  .item-island-header .island-header {
+    padding: 0 0 0 10px;
+  }
+  .item-island-header .island-header .box-island-info {
+    position: relative;
+    top: inherit;
+    right: inherit;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin: 5px 0 0 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 940px) {
@@ -12018,6 +12375,19 @@ form.new-article button[type="submit"]:hover {
 
   .island-wrapper {
     padding: 20px;
+  }
+
+  .item-about-island {
+    padding: 20px;
+  }
+  .item-about-island .about-island {
+    padding: 20px;
+  }
+  .item-about-island .about-island .img {
+    padding-bottom: 20px;
+  }
+  .item-about-island .about-island .info .title-island {
+    text-align: center;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 767px) {

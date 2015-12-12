@@ -1573,7 +1573,7 @@ html {
   }
 }
 @media (max-width: 767px) {
-  .slick-dots {
+  .block-grid .left-aside .slick-dots {
     padding-right: 29px;
   }
 
