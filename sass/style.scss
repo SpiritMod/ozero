@@ -9544,7 +9544,8 @@ form.new-article {
   }
 }
 
-.island-header {
+.island-header,
+.authors-header {
   display: inline-block;
   vertical-align: top;
   width: 100%;
@@ -9560,13 +9561,15 @@ form.new-article {
     float: left;
     width: 20%;
   }
-  .filter-island {
+  .filter-island,
+  .filter-authors {
     float: left;
     width: 80%;
   }
 }
 
-.filter-island {
+.filter-island,
+.filter-authors {
   form {
     .row {
       margin: 0 -5px;
@@ -9615,7 +9618,8 @@ form.new-article {
   }
 }
 
-.filter-island-sorting {
+.filter-island-sorting,
+.filter-authors-sorting {
   display: inline-block;
   width: 100%;
   vertical-align: top;
@@ -9730,7 +9734,8 @@ form.new-article {
   }
 }
 
-.island-wrapper {
+.island-wrapper,
+.authors-wrapper {
   display: inline-block;
   width: 100%;
   padding: 30px;
@@ -9742,17 +9747,20 @@ form.new-article {
     margin: 30px 0 30px;
   }
 }
-.island-items {
+.island-items,
+.authors-items {
   display: inline-block;
   width: 100%;
   vertical-align: top;
-  .island-list {
+  .island-list,
+  .authors-list {
     li {
       padding-bottom: 30px;
     }
   }
 }
-.island-item {
+.island-item,
+.author-item {
   text-align: center;
   .field-photo {
     margin-bottom: 15px;
@@ -9795,7 +9803,8 @@ form.new-article {
       }
     }
   }
-  .island-info {
+  .island-info,
+  .author-info {
     display: inline-block;
     vertical-align: top;
     width: 100%;
@@ -9845,7 +9854,6 @@ form.new-article {
       margin-top: 3px;
     }
   }
-
 }
 
 .breadcrumbs {
@@ -10211,7 +10219,8 @@ form.new-article {
       padding: 5px 0 32px 0!important;
     }
   }
-  .island-header {
+  .island-header,
+  .authors-header {
     padding: 0 10px;
   }
   .link-interval li a {
@@ -10220,14 +10229,18 @@ form.new-article {
   .filter-links li a {
     padding: 2px 8px;
   }
-  .filter-island-sorting .block-sorting {
-    margin: 3px 0 0 15px;
+  .filter-island-sorting,
+  .filter-authors-sorting {
+    .block-sorting {
+      margin: 3px 0 0 15px;
+    }
   }
   .breadcrumbs {
     padding: 0 0 0 10px;
   }
   .item-island-header {
-    .island-header {
+    .island-header,
+    .author-header {
       padding-left: 10px;
     }
   }
@@ -10356,7 +10369,8 @@ form.new-article {
   .node-news .body.small-body {
     padding: 0 70px;
   }
-  .filter-island-sorting {
+  .filter-island-sorting,
+  .filter-authors-sorting {
     .filter-links {
       display: inline-block;
       float: none;
@@ -10369,13 +10383,15 @@ form.new-article {
       margin: 3px 0 0 10px;
     }
   }
-  .island-item {
+  .island-item,
+  .author-item {
     .field-title {
       a {
         font-size: 14px;
       }
     }
-    .island-info {
+    .island-info,
+    .author-info {
       .new-all {
         padding-right: 2px;
       }
@@ -10772,11 +10788,13 @@ form.new-article {
       margin: 0 -20px 30px;
     }
   }
-  .island-header {
+  .island-header,
+  .authors-header {
     .page-title {
       width: 100%;
     }
-    .filter-island {
+    .filter-island,
+    .filter-authors {
       width: 100%;
     }
   }
@@ -10817,7 +10835,8 @@ form.new-article {
       width: 100%;
     }
   }
-  .filter-island-sorting {
+  .filter-island-sorting,
+  .filter-authors-sorting {
     .filter-links {
       display: inline-block;
       float: none;
@@ -11544,7 +11563,8 @@ form.new-article {
   .page-place-full,
   .page-blogs,
   .page-blog-post,
-  .page-island {
+  .page-island,
+  .page-authors {
     .right-sidebar {
       background: transparent;
       float: left;
@@ -12199,18 +12219,21 @@ form.new-article {
       }
     }
   }
-  .island-header {
+  .island-header,
+  .authors-header {
     .page-title {
       width: 100%;
     }
-    .filter-island {
+    .filter-island,
+    .filter-authors {
       width: 100%;
       button[type="submit"] {
         max-width: 200px;
       }
     }
   }
-  .filter-island-sorting {
+  .filter-island-sorting,
+  .filter-authors-sorting {
     .filter-links {
       display: inline-block;
       float: none;
@@ -12237,7 +12260,8 @@ form.new-article {
       }
     }
   }
-  .island-wrapper {
+  .island-wrapper,
+  .authors-wrapper {
     padding: 20px;
   }
   .item-about-island {
@@ -12387,8 +12411,10 @@ form.new-article {
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 600px) {
-  .island-items {
-    .island-list {
+  .island-items,
+  .authors-items {
+    .island-list,
+    .authors-list {
       li {
         width: 50%;
         &:nth-of-type(3n+1) {
@@ -12402,8 +12428,10 @@ form.new-article {
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 500px) {
-  .island-items {
-    .island-list {
+  .island-items,
+  .authors-items {
+    .island-list,
+    .authors-list {
       li {
         width: 100%;
       }

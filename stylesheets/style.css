@@ -9914,12 +9914,14 @@ form.new-article button[type="submit"]:hover {
   width: 100%;
 }
 
-.island-header {
+.island-header,
+.authors-header {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
-.island-header .page-title {
+.island-header .page-title,
+.authors-header .page-title {
   color: #000;
   font-family: "helvetica-medium", sans-serif;
   font-size: 26px;
@@ -9931,18 +9933,24 @@ form.new-article button[type="submit"]:hover {
   float: left;
   width: 20%;
 }
-.island-header .filter-island {
+.island-header .filter-island,
+.island-header .filter-authors,
+.authors-header .filter-island,
+.authors-header .filter-authors {
   float: left;
   width: 80%;
 }
 
-.filter-island form .row {
+.filter-island form .row,
+.filter-authors form .row {
   margin: 0 -5px;
 }
-.filter-island form .row .columns {
+.filter-island form .row .columns,
+.filter-authors form .row .columns {
   padding: 0 5px;
 }
-.filter-island input[type="search"] {
+.filter-island input[type="search"],
+.filter-authors input[type="search"] {
   border: 1px solid #e6e6e6;
   height: 40px;
   -moz-border-radius: 3px;
@@ -9959,22 +9967,28 @@ form.new-article button[type="submit"]:hover {
   font-family: "helvetica-roman", sans-serif;
   font-size: 14px;
 }
-.filter-island input[type="search"]:-moz-placeholder {
+.filter-island input[type="search"]:-moz-placeholder,
+.filter-authors input[type="search"]:-moz-placeholder {
   color: #BFBDBD;
 }
-.filter-island input[type="search"]::-moz-placeholder {
+.filter-island input[type="search"]::-moz-placeholder,
+.filter-authors input[type="search"]::-moz-placeholder {
   color: #BFBDBD;
 }
-.filter-island input[type="search"]:-ms-input-placeholder {
+.filter-island input[type="search"]:-ms-input-placeholder,
+.filter-authors input[type="search"]:-ms-input-placeholder {
   color: #BFBDBD;
 }
-.filter-island input[type="search"]::-webkit-input-placeholder {
+.filter-island input[type="search"]::-webkit-input-placeholder,
+.filter-authors input[type="search"]::-webkit-input-placeholder {
   color: #BFBDBD;
 }
-.filter-island input[type="search"]:focus {
+.filter-island input[type="search"]:focus,
+.filter-authors input[type="search"]:focus {
   border: 1px solid #014183;
 }
-.filter-island button[type="submit"] {
+.filter-island button[type="submit"],
+.filter-authors button[type="submit"] {
   height: 40px;
   width: 100%;
   line-height: 40px;
@@ -9996,27 +10010,32 @@ form.new-article button[type="submit"]:hover {
   -webkit-transition-delay: 0s;
   transition: all 0.4s ease 0s;
 }
-.filter-island button[type="submit"]:hover {
+.filter-island button[type="submit"]:hover,
+.filter-authors button[type="submit"]:hover {
   background: #014183;
 }
 
-.filter-island-sorting {
+.filter-island-sorting,
+.filter-authors-sorting {
   display: inline-block;
   width: 100%;
   vertical-align: top;
   padding: 20px 0;
   margin: 0 0 20px;
 }
-.filter-island-sorting .filter-links {
+.filter-island-sorting .filter-links,
+.filter-authors-sorting .filter-links {
   display: block;
   float: left;
   margin-top: 3px;
 }
-.filter-island-sorting .block-sorting {
+.filter-island-sorting .block-sorting,
+.filter-authors-sorting .block-sorting {
   float: left;
   margin: 3px 0 0 25px;
 }
-.filter-island-sorting .link-interval {
+.filter-island-sorting .link-interval,
+.filter-authors-sorting .link-interval {
   display: block;
   float: right;
   margin: 0 0;
@@ -10125,7 +10144,8 @@ form.new-article button[type="submit"]:hover {
   color: #fff;
 }
 
-.island-wrapper {
+.island-wrapper,
+.authors-wrapper {
   display: inline-block;
   width: 100%;
   padding: 30px;
@@ -10133,43 +10153,54 @@ form.new-article button[type="submit"]:hover {
   background: #fff;
   margin-bottom: 20px;
 }
-.island-wrapper .block-recommended-read {
+.island-wrapper .block-recommended-read,
+.authors-wrapper .block-recommended-read {
   padding: 0 0 0;
   margin: 30px 0 30px;
 }
 
-.island-items {
+.island-items,
+.authors-items {
   display: inline-block;
   width: 100%;
   vertical-align: top;
 }
-.island-items .island-list li {
+.island-items .island-list li,
+.island-items .authors-list li,
+.authors-items .island-list li,
+.authors-items .authors-list li {
   padding-bottom: 30px;
 }
 
-.island-item {
+.island-item,
+.author-item {
   text-align: center;
 }
-.island-item .field-photo {
+.island-item .field-photo,
+.author-item .field-photo {
   margin-bottom: 15px;
 }
-.island-item .field-photo a {
+.island-item .field-photo a,
+.author-item .field-photo a {
   display: inline-block;
   outline: none;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-.island-item .field-photo a img {
+.island-item .field-photo a img,
+.author-item .field-photo a img {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-.island-item .field-title {
+.island-item .field-title,
+.author-item .field-title {
   line-height: 1;
   margin-bottom: 5px;
 }
-.island-item .field-title a {
+.island-item .field-title a,
+.author-item .field-title a {
   display: inline-block;
   outline: none;
   font-family: "helvetica-medium", sans-serif;
@@ -10182,13 +10213,16 @@ form.new-article button[type="submit"]:hover {
   -webkit-transition-delay: 0s;
   transition: all 0.4s ease 0s;
 }
-.island-item .field-title a:hover {
+.island-item .field-title a:hover,
+.author-item .field-title a:hover {
   color: #014183;
 }
-.island-item .field-category {
+.island-item .field-category,
+.author-item .field-category {
   line-height: 1;
 }
-.island-item .field-category a {
+.island-item .field-category a,
+.author-item .field-category a {
   display: inline-block;
   outline: none;
   font-family: "helvetica-roman";
@@ -10196,10 +10230,14 @@ form.new-article button[type="submit"]:hover {
   font-size: 12px;
   text-decoration: underline;
 }
-.island-item .field-category a:hover {
+.island-item .field-category a:hover,
+.author-item .field-category a:hover {
   text-decoration: none;
 }
-.island-item .island-info {
+.island-item .island-info,
+.island-item .author-info,
+.author-item .island-info,
+.author-item .author-info {
   display: inline-block;
   vertical-align: top;
   width: 100%;
@@ -10207,38 +10245,59 @@ form.new-article button[type="submit"]:hover {
   color: #014183;
   margin: 10px 0 0 0;
 }
-.island-item .island-info .new-all {
+.island-item .island-info .new-all,
+.island-item .author-info .new-all,
+.author-item .island-info .new-all,
+.author-item .author-info .new-all {
   display: block;
   float: left;
   width: 50%;
   padding-right: 8px;
   line-height: 1;
 }
-.island-item .island-info .subscribers {
+.island-item .island-info .subscribers,
+.island-item .author-info .subscribers,
+.author-item .island-info .subscribers,
+.author-item .author-info .subscribers {
   display: block;
   float: left;
   width: 50%;
   padding-left: 8px;
   line-height: 1;
 }
-.island-item .island-info a {
+.island-item .island-info a,
+.island-item .author-info a,
+.author-item .island-info a,
+.author-item .author-info a {
   font-family: "helvetica-roman", sans-serif;
   font-size: 12px;
   color: #014183;
   line-height: 1.1;
   text-decoration: underline;
 }
-.island-item .island-info a:hover {
+.island-item .island-info a:hover,
+.island-item .author-info a:hover,
+.author-item .island-info a:hover,
+.author-item .author-info a:hover {
   text-decoration: none;
 }
-.island-item .island-info a.red {
+.island-item .island-info a.red,
+.island-item .author-info a.red,
+.author-item .island-info a.red,
+.author-item .author-info a.red {
   color: #D13F4A;
 }
-.island-item .island-info a.read i {
+.island-item .island-info a.read i,
+.island-item .author-info a.read i,
+.author-item .island-info a.read i,
+.author-item .author-info a.read i {
   color: #a8a8a8;
   margin-right: 3px;
 }
-.island-item .island-info .description {
+.island-item .island-info .description,
+.island-item .author-info .description,
+.author-item .island-info .description,
+.author-item .author-info .description {
   display: inline-block;
   width: 100%;
   line-height: 1.1;
@@ -10617,7 +10676,8 @@ form.new-article button[type="submit"]:hover {
     padding: 5px 0 32px 0 !important;
   }
 
-  .island-header {
+  .island-header,
+  .authors-header {
     padding: 0 10px;
   }
 
@@ -10629,7 +10689,8 @@ form.new-article button[type="submit"]:hover {
     padding: 2px 8px;
   }
 
-  .filter-island-sorting .block-sorting {
+  .filter-island-sorting .block-sorting,
+  .filter-authors-sorting .block-sorting {
     margin: 3px 0 0 15px;
   }
 
@@ -10637,7 +10698,8 @@ form.new-article button[type="submit"]:hover {
     padding: 0 0 0 10px;
   }
 
-  .item-island-header .island-header {
+  .item-island-header .island-header,
+  .item-island-header .author-header {
     padding-left: 10px;
   }
 }
@@ -10751,28 +10813,40 @@ form.new-article button[type="submit"]:hover {
     padding: 0 70px;
   }
 
-  .filter-island-sorting .filter-links {
+  .filter-island-sorting .filter-links,
+  .filter-authors-sorting .filter-links {
     display: inline-block;
     float: none;
     width: 100%;
     vertical-align: top;
     margin: 0 0 20px;
   }
-  .filter-island-sorting .block-sorting {
+  .filter-island-sorting .block-sorting,
+  .filter-authors-sorting .block-sorting {
     float: left;
     margin: 3px 0 0 10px;
   }
 
-  .island-item .field-title a {
+  .island-item .field-title a,
+  .author-item .field-title a {
     font-size: 14px;
   }
-  .island-item .island-info .new-all {
+  .island-item .island-info .new-all,
+  .island-item .author-info .new-all,
+  .author-item .island-info .new-all,
+  .author-item .author-info .new-all {
     padding-right: 2px;
   }
-  .island-item .island-info .subscribers {
+  .island-item .island-info .subscribers,
+  .island-item .author-info .subscribers,
+  .author-item .island-info .subscribers,
+  .author-item .author-info .subscribers {
     padding-left: 2px;
   }
-  .island-item .island-info .description {
+  .island-item .island-info .description,
+  .island-item .author-info .description,
+  .author-item .island-info .description,
+  .author-item .author-info .description {
     font-size: 8px;
   }
 }
@@ -11083,10 +11157,14 @@ form.new-article button[type="submit"]:hover {
     margin: 0 -20px 30px;
   }
 
-  .island-header .page-title {
+  .island-header .page-title,
+  .authors-header .page-title {
     width: 100%;
   }
-  .island-header .filter-island {
+  .island-header .filter-island,
+  .island-header .filter-authors,
+  .authors-header .filter-island,
+  .authors-header .filter-authors {
     width: 100%;
   }
 }
@@ -11116,18 +11194,21 @@ form.new-article button[type="submit"]:hover {
     width: 100%;
   }
 
-  .filter-island-sorting .filter-links {
+  .filter-island-sorting .filter-links,
+  .filter-authors-sorting .filter-links {
     display: inline-block;
     float: none;
     width: 100%;
     vertical-align: top;
     margin: 0 0 15px;
   }
-  .filter-island-sorting .block-sorting {
+  .filter-island-sorting .block-sorting,
+  .filter-authors-sorting .block-sorting {
     float: left;
     margin: 3px 0 25px 10px;
   }
-  .filter-island-sorting .link-interval {
+  .filter-island-sorting .link-interval,
+  .filter-authors-sorting .link-interval {
     display: inline-block;
     width: 100%;
     vertical-align: top;
@@ -11135,10 +11216,12 @@ form.new-article button[type="submit"]:hover {
     margin: 0 0;
     padding: 0 0 0 10px;
   }
-  .filter-island-sorting .link-interval li {
+  .filter-island-sorting .link-interval li,
+  .filter-authors-sorting .link-interval li {
     width: 33.333%;
   }
-  .filter-island-sorting .link-interval li a {
+  .filter-island-sorting .link-interval li a,
+  .filter-authors-sorting .link-interval li a {
     width: 100%;
   }
 }
@@ -11753,7 +11836,8 @@ form.new-article button[type="submit"]:hover {
   .page-place-full .right-sidebar,
   .page-blogs .right-sidebar,
   .page-blog-post .right-sidebar,
-  .page-island .right-sidebar {
+  .page-island .right-sidebar,
+  .page-authors .right-sidebar {
     background: transparent;
     float: left;
     margin-left: 0px;
@@ -11764,7 +11848,8 @@ form.new-article button[type="submit"]:hover {
   .page-place-full .main-content .content,
   .page-blogs .main-content .content,
   .page-blog-post .main-content .content,
-  .page-island .main-content .content {
+  .page-island .main-content .content,
+  .page-authors .main-content .content {
     padding: 0 0 0 0;
   }
 
@@ -12337,28 +12422,38 @@ form.new-article button[type="submit"]:hover {
     margin: 0 -100% 4px 10px;
   }
 
-  .island-header .page-title {
+  .island-header .page-title,
+  .authors-header .page-title {
     width: 100%;
   }
-  .island-header .filter-island {
+  .island-header .filter-island,
+  .island-header .filter-authors,
+  .authors-header .filter-island,
+  .authors-header .filter-authors {
     width: 100%;
   }
-  .island-header .filter-island button[type="submit"] {
+  .island-header .filter-island button[type="submit"],
+  .island-header .filter-authors button[type="submit"],
+  .authors-header .filter-island button[type="submit"],
+  .authors-header .filter-authors button[type="submit"] {
     max-width: 200px;
   }
 
-  .filter-island-sorting .filter-links {
+  .filter-island-sorting .filter-links,
+  .filter-authors-sorting .filter-links {
     display: inline-block;
     float: none;
     width: 100%;
     vertical-align: top;
     margin: 0 0 15px;
   }
-  .filter-island-sorting .block-sorting {
+  .filter-island-sorting .block-sorting,
+  .filter-authors-sorting .block-sorting {
     float: left;
     margin: 3px 0 25px 10px;
   }
-  .filter-island-sorting .link-interval {
+  .filter-island-sorting .link-interval,
+  .filter-authors-sorting .link-interval {
     display: inline-block;
     width: 100%;
     vertical-align: top;
@@ -12366,14 +12461,17 @@ form.new-article button[type="submit"]:hover {
     margin: 0 0;
     padding: 0 0 0 10px;
   }
-  .filter-island-sorting .link-interval li {
+  .filter-island-sorting .link-interval li,
+  .filter-authors-sorting .link-interval li {
     width: 33.333%;
   }
-  .filter-island-sorting .link-interval li a {
+  .filter-island-sorting .link-interval li a,
+  .filter-authors-sorting .link-interval li a {
     width: 100%;
   }
 
-  .island-wrapper {
+  .island-wrapper,
+  .authors-wrapper {
     padding: 20px;
   }
 
@@ -12514,18 +12612,30 @@ form.new-article button[type="submit"]:hover {
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 600px) {
-  .island-items .island-list li {
+  .island-items .island-list li,
+  .island-items .authors-list li,
+  .authors-items .island-list li,
+  .authors-items .authors-list li {
     width: 50%;
   }
-  .island-items .island-list li:nth-of-type(3n+1) {
+  .island-items .island-list li:nth-of-type(3n+1),
+  .island-items .authors-list li:nth-of-type(3n+1),
+  .authors-items .island-list li:nth-of-type(3n+1),
+  .authors-items .authors-list li:nth-of-type(3n+1) {
     clear: none;
   }
-  .island-items .island-list li:nth-of-type(2n+1) {
+  .island-items .island-list li:nth-of-type(2n+1),
+  .island-items .authors-list li:nth-of-type(2n+1),
+  .authors-items .island-list li:nth-of-type(2n+1),
+  .authors-items .authors-list li:nth-of-type(2n+1) {
     clear: both;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 500px) {
-  .island-items .island-list li {
+  .island-items .island-list li,
+  .island-items .authors-list li,
+  .authors-items .island-list li,
+  .authors-items .authors-list li {
     width: 100%;
   }
 }
