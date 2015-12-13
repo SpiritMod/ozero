@@ -9854,6 +9854,47 @@ form.new-article {
       margin-top: 3px;
     }
   }
+  .user-status {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    color: #000;
+    font-family: "helvetica-roman", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: center;
+    padding: 10px 0;
+    .status {
+      font-family: "helvetica-medium", sans-serif;
+      font-weight: 500;
+    }
+  }
+  .field-edit-btn {
+    a {
+      display: inline-block;
+      height: 32px;
+      width: 100%;
+      line-height: 32px;
+      text-align: center;
+      padding: 0 2px;
+      margin: 0 0 6px;
+      outline: none;
+      color: #FFF;
+      font-family: "helvetica-medium", sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      background: #b3cedf;
+      @include border-radius(3px);
+      @include transition(all 0.4s ease 0s);
+      &:hover, &:focus {
+        background: #014183;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .breadcrumbs {
@@ -10214,6 +10255,106 @@ h1.island-theme-title {
   }
 }
 
+.user-islands {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  padding: 20px 20px 0 20px;
+  .user-island-header {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 40px;
+    .title {
+      color: #000;
+      font-family: "helvetica-medium", sans-serif;
+      font-size: 23px;
+      font-weight: 500;
+      line-height: 40px;
+      padding: 0 0;
+      margin: 0 0 0;
+      display: block;
+      float: left;
+      width: 34%;
+    }
+    .box-form {
+      float: left;
+      display: block;
+      width: 66%;
+      form {
+        .row {
+          margin: 0 -5px;
+          .columns {
+            padding: 0 5px;
+          }
+        }
+      }
+      .create-island {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 10px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: #FFF;
+        outline: none;
+        font-family: "helvetica-roman", sans-serif;
+        font-size: 14px;
+        background: #d1404a;
+        @include border-radius(5px);
+        @include transition(all 0.4s ease 0s);
+        &:hover {
+          background: #c51f2a;
+          color: #fff;
+        }
+      }
+      input[type="search"] {
+        border: 1px solid #e6e6e6;
+        height: 40px;
+        @include border-radius(3px);
+        @include box-shadow(0 0 0 #fff);
+        background: #fff;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 0 10px;
+        color: #000;
+        font-family: "helvetica-roman", sans-serif;
+        font-size: 14px;
+        @include input-placeholder {
+          color: #BFBDBD;
+        }
+        &:focus {
+          border: 1px solid #014183;
+        }
+      }
+      button[type="submit"] {
+        height: 40px;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+        padding: 0 8px;
+        margin: 0 0 10px;
+        outline: none;
+        color: #FFF;
+        font-family: "helvetica-medium", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        background: #b3cedf;
+        @include border-radius(3px);
+        @include transition(all 0.4s ease 0s);
+        &:hover {
+          background: #014183;
+        }
+      }
+    }
+  }
+  .island-list {
+    li {
+      padding-bottom: 40px;
+    }
+  }
+}
+
 @media only screen and (min-width: 0px) and (max-width: 1380px) {
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(3),
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(4) {
@@ -10441,6 +10582,25 @@ h1.island-theme-title {
         font-size: 8px;
       }
     }
+    .user-status {
+      font-size: 12px;
+    }
+    .field-edit-btn {
+      a {
+        font-size: 11px;
+      }
+    }
+  }
+  .user-islands {
+    .user-island-header {
+      .title {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .box-form {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -10583,6 +10743,9 @@ h1.island-theme-title {
         }
       }
     }
+  }
+  .user-account .tabs .tab-title a {
+    padding: 0 15px;
   }
 }
 
@@ -10774,7 +10937,7 @@ h1.island-theme-title {
     }
     .tabs {
       .tab-title {
-        width: 25%;
+        width: 20%;
         a {
           padding: 0 5px;
           span {
@@ -11968,11 +12131,11 @@ h1.island-theme-title {
       margin: 0 -10px;
       width: initial;
       .tab-title {
-        width: 25%;
+        width: 20%;
         a {
-          padding: 0 5px;
+          padding: 0 3px;
           span {
-            font-size: 11px;
+            font-size: 9px;
           }
         }
       }
@@ -12324,6 +12487,16 @@ h1.island-theme-title {
       }
     }
   }
+  .user-islands {
+    padding: 10px 10px 0 10px;
+    .user-island-header {
+      .box-form {
+        button[type="submit"] {
+          max-width: 200px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
@@ -12472,12 +12645,32 @@ h1.island-theme-title {
       }
     }
   }
+  .user-islands {
+    .island-list {
+      li {
+        width: 50%;
+        &:nth-of-type(3n+1) {
+          clear: none;
+        }
+        &:nth-of-type(2n+1) {
+          clear: both;
+        }
+      }
+    }
+  }
 }
 @media only screen and (min-width: 300px) and (max-width: 500px) {
   .island-items,
   .authors-items {
     .island-list,
     .authors-list {
+      li {
+        width: 100%;
+      }
+    }
+  }
+  .user-islands {
+    .island-list {
       li {
         width: 100%;
       }

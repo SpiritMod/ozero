@@ -10306,6 +10306,57 @@ form.new-article button[type="submit"]:hover {
   color: #000;
   margin-top: 3px;
 }
+.island-item .user-status,
+.author-item .user-status {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  color: #000;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  padding: 10px 0;
+}
+.island-item .user-status .status,
+.author-item .user-status .status {
+  font-family: "helvetica-medium", sans-serif;
+  font-weight: 500;
+}
+.island-item .field-edit-btn a,
+.author-item .field-edit-btn a {
+  display: inline-block;
+  height: 32px;
+  width: 100%;
+  line-height: 32px;
+  text-align: center;
+  padding: 0 2px;
+  margin: 0 0 6px;
+  outline: none;
+  color: #FFF;
+  font-family: "helvetica-medium", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background: #b3cedf;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.island-item .field-edit-btn a:hover, .island-item .field-edit-btn a:focus,
+.author-item .field-edit-btn a:hover,
+.author-item .field-edit-btn a:focus {
+  background: #014183;
+}
+.island-item .field-edit-btn a:last-child,
+.author-item .field-edit-btn a:last-child {
+  margin-bottom: 0;
+}
 
 .breadcrumbs {
   margin: 30px 0 20px;
@@ -10835,6 +10886,127 @@ h1.island-theme-title {
   white-space: nowrap;
 }
 
+.user-islands {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  padding: 20px 20px 0 20px;
+}
+.user-islands .user-island-header {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin-bottom: 40px;
+}
+.user-islands .user-island-header .title {
+  color: #000;
+  font-family: "helvetica-medium", sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 40px;
+  padding: 0 0;
+  margin: 0 0 0;
+  display: block;
+  float: left;
+  width: 34%;
+}
+.user-islands .user-island-header .box-form {
+  float: left;
+  display: block;
+  width: 66%;
+}
+.user-islands .user-island-header .box-form form .row {
+  margin: 0 -5px;
+}
+.user-islands .user-island-header .box-form form .row .columns {
+  padding: 0 5px;
+}
+.user-islands .user-island-header .box-form .create-island {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #FFF;
+  outline: none;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+  background: #d1404a;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.user-islands .user-island-header .box-form .create-island:hover {
+  background: #c51f2a;
+  color: #fff;
+}
+.user-islands .user-island-header .box-form input[type="search"] {
+  border: 1px solid #e6e6e6;
+  height: 40px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 0 0 #fff;
+  -webkit-box-shadow: 0 0 0 #fff;
+  box-shadow: 0 0 0 #fff;
+  background: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  color: #000;
+  font-family: "helvetica-roman", sans-serif;
+  font-size: 14px;
+}
+.user-islands .user-island-header .box-form input[type="search"]:-moz-placeholder {
+  color: #BFBDBD;
+}
+.user-islands .user-island-header .box-form input[type="search"]::-moz-placeholder {
+  color: #BFBDBD;
+}
+.user-islands .user-island-header .box-form input[type="search"]:-ms-input-placeholder {
+  color: #BFBDBD;
+}
+.user-islands .user-island-header .box-form input[type="search"]::-webkit-input-placeholder {
+  color: #BFBDBD;
+}
+.user-islands .user-island-header .box-form input[type="search"]:focus {
+  border: 1px solid #014183;
+}
+.user-islands .user-island-header .box-form button[type="submit"] {
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  padding: 0 8px;
+  margin: 0 0 10px;
+  outline: none;
+  color: #FFF;
+  font-family: "helvetica-medium", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  background: #b3cedf;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
+}
+.user-islands .user-island-header .box-form button[type="submit"]:hover {
+  background: #014183;
+}
+.user-islands .island-list li {
+  padding-bottom: 40px;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 1380px) {
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(3),
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(4) {
@@ -11048,6 +11220,22 @@ h1.island-theme-title {
   .author-item .author-info .description {
     font-size: 8px;
   }
+  .island-item .user-status,
+  .author-item .user-status {
+    font-size: 12px;
+  }
+  .island-item .field-edit-btn a,
+  .author-item .field-edit-btn a {
+    font-size: 11px;
+  }
+
+  .user-islands .user-island-header .title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .user-islands .user-island-header .box-form {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .block-news-list ul.list li {
@@ -11175,6 +11363,10 @@ h1.island-theme-title {
   }
   .block-grid .right-aside.front-promo .block-promo-sidebar {
     display: none;
+  }
+
+  .user-account .tabs .tab-title a {
+    padding: 0 15px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 900px) {
@@ -11312,7 +11504,7 @@ h1.island-theme-title {
     margin: 5px 0 0;
   }
   .user-account .tabs .tab-title {
-    width: 25%;
+    width: 20%;
   }
   .user-account .tabs .tab-title a {
     padding: 0 5px;
@@ -12371,13 +12563,13 @@ h1.island-theme-title {
     width: initial;
   }
   .user-account .tabs .tab-title {
-    width: 25%;
+    width: 20%;
   }
   .user-account .tabs .tab-title a {
-    padding: 0 5px;
+    padding: 0 3px;
   }
   .user-account .tabs .tab-title a span {
-    font-size: 11px;
+    font-size: 9px;
   }
 
   .user-discussions .discussion {
@@ -12712,6 +12904,13 @@ h1.island-theme-title {
   .item-about-author .about-author .info .title-author {
     text-align: center;
   }
+
+  .user-islands {
+    padding: 10px 10px 0 10px;
+  }
+  .user-islands .user-island-header .box-form button[type="submit"] {
+    max-width: 200px;
+  }
 }
 @media only screen and (min-width: 300px) and (max-width: 767px) {
   body {
@@ -12855,12 +13054,26 @@ h1.island-theme-title {
   .authors-items .authors-list li:nth-of-type(2n+1) {
     clear: both;
   }
+
+  .user-islands .island-list li {
+    width: 50%;
+  }
+  .user-islands .island-list li:nth-of-type(3n+1) {
+    clear: none;
+  }
+  .user-islands .island-list li:nth-of-type(2n+1) {
+    clear: both;
+  }
 }
 @media only screen and (min-width: 300px) and (max-width: 500px) {
   .island-items .island-list li,
   .island-items .authors-list li,
   .authors-items .island-list li,
   .authors-items .authors-list li {
+    width: 100%;
+  }
+
+  .user-islands .island-list li {
     width: 100%;
   }
 }
