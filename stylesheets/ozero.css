@@ -544,7 +544,7 @@ h2 a:hover {
   width: 66.6666%;
 }
 .masonry .m-item.m-large .caption {
-  padding: 25px 39px 41px 39px;
+  padding: 25px 39px 25px 39px;
 }
 .masonry .m-item.m-large .caption .title {
   font-size: 24px;
@@ -562,6 +562,9 @@ h2 a:hover {
   font-size: 11px;
   z-index: 3;
 }
+.masonry .m-item .statistic.black {
+  color: #000;
+}
 .masonry .m-item .statistic .fa {
   font-size: 14px;
   margin-right: 6px;
@@ -574,8 +577,38 @@ h2 a:hover {
   z-index: 3;
   line-height: 1.2;
   text-align: left;
-  padding: 15px 21px 29px 31px;
+  padding: 18px 21px 18px 21px;
   display: block;
+}
+.masonry .m-item .caption.bg-1 {
+  background: transparent;
+  background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.71) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, transparent), color-stop(85%, rgba(0, 0, 0, 0.71)), color-stop(100%, rgba(0, 0, 0, 0.83)));
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.71) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.71) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: -ms-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.71) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.71) 85%, rgba(0, 0, 0, 0.83) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+}
+.masonry .m-item .caption.bg-2 {
+  background: rgba(4, 4, 4, 0);
+  background: -moz-linear-gradient(top, rgba(4, 4, 4, 0) 0%, rgba(4, 4, 4, 0.71) 89%, rgba(4, 4, 4, 0.8) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(4, 4, 4, 0)), color-stop(89%, rgba(4, 4, 4, 0.71)), color-stop(100%, rgba(4, 4, 4, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(4, 4, 4, 0) 0%, rgba(4, 4, 4, 0.71) 89%, rgba(4, 4, 4, 0.8) 100%);
+  background: -o-linear-gradient(top, rgba(4, 4, 4, 0) 0%, rgba(4, 4, 4, 0.71) 89%, rgba(4, 4, 4, 0.8) 100%);
+  background: -ms-linear-gradient(top, rgba(4, 4, 4, 0) 0%, rgba(4, 4, 4, 0.71) 89%, rgba(4, 4, 4, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(4, 4, 4, 0) 0%, rgba(4, 4, 4, 0.71) 89%, rgba(4, 4, 4, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#040404', endColorstr='#040404', GradientType=0 );
+}
+.masonry .m-item .caption.bg {
+  background: rgba(175, 50, 54, 0);
+  background: -moz-linear-gradient(top, rgba(175, 50, 54, 0) 0%, rgba(175, 50, 54, 0.71) 89%, rgba(175, 50, 54, 0.8) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(175, 50, 54, 0)), color-stop(89%, rgba(175, 50, 54, 0.71)), color-stop(100%, rgba(175, 50, 54, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(175, 50, 54, 0) 0%, rgba(175, 50, 54, 0.71) 89%, rgba(175, 50, 54, 0.8) 100%);
+  background: -o-linear-gradient(top, rgba(175, 50, 54, 0) 0%, rgba(175, 50, 54, 0.71) 89%, rgba(175, 50, 54, 0.8) 100%);
+  background: -ms-linear-gradient(top, rgba(175, 50, 54, 0) 0%, rgba(175, 50, 54, 0.71) 89%, rgba(175, 50, 54, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(175, 50, 54, 0) 0%, rgba(175, 50, 54, 0.71) 89%, rgba(175, 50, 54, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#af3236', endColorstr='#af3236', GradientType=0 );
 }
 .masonry .m-item .caption .title {
   display: block;
@@ -636,7 +669,7 @@ h2 a:hover {
   width: 50%;
 }
 .w-masonry .m-item.m-large .caption {
-  padding: 25px 39px 41px 39px;
+  padding: 25px 39px 25px 39px;
 }
 .w-masonry .m-item.m-large .caption .title {
   font-size: 24px;
@@ -664,8 +697,38 @@ h2 a:hover {
   width: 100%;
   line-height: 1.2;
   text-align: left;
-  padding: 15px 21px 29px 31px;
+  padding: 18px 21px 18px 31px;
   display: block;
+}
+.w-masonry .m-item .caption.bg-1 {
+  background: transparent;
+  background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.71) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, transparent), color-stop(85%, rgba(0, 0, 0, 0.71)), color-stop(100%, rgba(0, 0, 0, 0.83)));
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.71) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.71) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: -ms-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.71) 85%, rgba(0, 0, 0, 0.83) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.71) 85%, rgba(0, 0, 0, 0.83) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+}
+.w-masonry .m-item .caption.bg-2 {
+  background: rgba(4, 4, 4, 0);
+  background: -moz-linear-gradient(top, rgba(4, 4, 4, 0) 0%, rgba(4, 4, 4, 0.71) 89%, rgba(4, 4, 4, 0.8) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(4, 4, 4, 0)), color-stop(89%, rgba(4, 4, 4, 0.71)), color-stop(100%, rgba(4, 4, 4, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(4, 4, 4, 0) 0%, rgba(4, 4, 4, 0.71) 89%, rgba(4, 4, 4, 0.8) 100%);
+  background: -o-linear-gradient(top, rgba(4, 4, 4, 0) 0%, rgba(4, 4, 4, 0.71) 89%, rgba(4, 4, 4, 0.8) 100%);
+  background: -ms-linear-gradient(top, rgba(4, 4, 4, 0) 0%, rgba(4, 4, 4, 0.71) 89%, rgba(4, 4, 4, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(4, 4, 4, 0) 0%, rgba(4, 4, 4, 0.71) 89%, rgba(4, 4, 4, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#040404', endColorstr='#040404', GradientType=0 );
+}
+.w-masonry .m-item .caption.bg {
+  background: rgba(175, 50, 54, 0);
+  background: -moz-linear-gradient(top, rgba(175, 50, 54, 0) 0%, rgba(175, 50, 54, 0.71) 89%, rgba(175, 50, 54, 0.8) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(175, 50, 54, 0)), color-stop(89%, rgba(175, 50, 54, 0.71)), color-stop(100%, rgba(175, 50, 54, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(175, 50, 54, 0) 0%, rgba(175, 50, 54, 0.71) 89%, rgba(175, 50, 54, 0.8) 100%);
+  background: -o-linear-gradient(top, rgba(175, 50, 54, 0) 0%, rgba(175, 50, 54, 0.71) 89%, rgba(175, 50, 54, 0.8) 100%);
+  background: -ms-linear-gradient(top, rgba(175, 50, 54, 0) 0%, rgba(175, 50, 54, 0.71) 89%, rgba(175, 50, 54, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(175, 50, 54, 0) 0%, rgba(175, 50, 54, 0.71) 89%, rgba(175, 50, 54, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#af3236', endColorstr='#af3236', GradientType=0 );
 }
 .w-masonry .m-item .caption .title {
   display: block;
