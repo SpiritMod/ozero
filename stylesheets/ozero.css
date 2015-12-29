@@ -622,6 +622,15 @@ h2 a:hover {
   font-size: 14px;
   margin: 0;
 }
+.masonry .m-item .caption .statistic {
+  position: relative;
+  margin: 15px 0 0;
+  text-align: right;
+  left: inherit;
+  width: 100%;
+  top: inherit;
+  display: inline-block;
+}
 .masonry .white {
   color: #ffffff;
 }
