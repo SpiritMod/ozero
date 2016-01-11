@@ -1351,7 +1351,6 @@ a {
   height: 66px;
   background: #014183;
   position: relative;
-  overflow: hidden;
 }
 #scroll-bar .topbar-scroll .box-logo {
   display: block;
