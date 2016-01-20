@@ -1355,6 +1355,12 @@ html {
   vertical-align: middle;
   margin: 0 40px 0 0;
 }
+.control-panel p a {
+  color: inherit;
+}
+.control-panel p a:hover {
+  text-decoration: underline;
+}
 .control-panel .tags-list {
   vertical-align: middle;
   display: inline-block;
@@ -1467,6 +1473,13 @@ html {
 .newest-publications {
   margin: 0 -20px 10px;
   clear: both;
+}
+.newest-publications.slick-initialized .slick-item .double-link .description {
+  padding-bottom: 60px;
+  position: relative;
+}
+.newest-publications.slick-initialized .slick-item .double-link .description .statistic {
+  bottom: 25px;
 }
 .newest-publications .item {
   width: 25%;
@@ -1621,6 +1634,10 @@ html {
     text-align: left;
     font-size: 0;
   }
+  .block-grid .right-aside .blog-list.slick-initialized .slick-dots li {
+    width: inherit;
+    margin-bottom: 0;
+  }
   .block-grid .right-aside .blog-list li {
     width: 33.3333%;
     display: inline-block;
@@ -1697,6 +1714,10 @@ html {
   .block-grid .masSection {
     width: 100%;
   }
+  .block-grid .right-aside .blog-list.slick-initialized .slick-dots li {
+    width: inherit;
+    margin-bottom: 0;
+  }
   .block-grid .right-aside .blog-list li {
     padding-right: 0;
   }
@@ -1713,6 +1734,10 @@ html {
     clear: none !important;
   }
 
+  .block-grid .right-aside .blog-list.slick-initialized .slick-dots li {
+    width: inherit;
+    margin-bottom: 0;
+  }
   .block-grid .right-aside .blog-list li {
     width: 100%;
   }

@@ -36,17 +36,6 @@ $(document).ready(function(){
                             slidesToScroll: 1
                         }
                     }
-                    //{
-                    //    breakpoint: 480,
-                    //    settings: {
-                    //        centerMode: false,
-                    //        slidesToShow: 1,
-                    //        slidesToScroll: 1
-                    //    }
-                    //}
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
                 ]
 
             });
@@ -54,32 +43,21 @@ $(document).ready(function(){
                 slide: '.slick-item',
                 centerMode: true,
                 centerPadding: '130px',
-                customPaging: '20px',
                 arrows: false,
+                dots: true,
                 slidesToShow: 1,
+                adaptiveHeight: true,
                 responsive: [
                     {
                         breakpoint: 520,
                         settings: {
                             slide: '.slick-item',
                             centerMode: true,
-                            centerPadding: '0',
-                            customPaging: '20px',
-                            //arrows: true,
+                            centerPadding: '40px',
+                            //customPaging: '20px',
                             slidesToShow: 1
                         }
                     }
-                    //{
-                    //    breakpoint: 480,
-                    //    settings: {
-                    //        centerMode: false,
-                    //        slidesToShow: 1,
-                    //        slidesToScroll: 1
-                    //    }
-                    //}
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
                 ]
             });
             $("#newest-publications-2").slick({
@@ -87,34 +65,60 @@ $(document).ready(function(){
                 centerMode: true,
                 centerPadding: '130px',
                 arrows: false,
-                //dots: true,
-                customPaging: '20px',
+                dots: true,
                 slidesToShow: 1,
+                adaptiveHeight: true,
                 responsive: [
                     {
                         breakpoint: 520,
                         settings: {
                             slide: '.slick-item',
                             centerMode: true,
-                            //dots: true,
-                            centerPadding: '0',
-                            customPaging: '20px',
-                            //arrows: true,
+                            centerPadding: '40px',
                             slidesToShow: 1
                         }
                     }
-                    //{
-                    //    breakpoint: 480,
-                    //    settings: {
-                    //        centerMode: false,
-                    //        slidesToShow: 1,
-                    //        slidesToScroll: 1
-                    //    }
-                    //}
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
                 ]
+            });
+            $("#newest-publications-3").slick({
+              slide: '.slick-item',
+              centerMode: true,
+              centerPadding: '130px',
+              arrows: false,
+              dots: true,
+              slidesToShow: 1,
+              adaptiveHeight: true,
+              responsive: [
+                {
+                  breakpoint: 520,
+                  settings: {
+                    slide: '.slick-item',
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                  }
+                }
+              ]
+            });
+            $("#newest-publications-4").slick({
+              slide: '.slick-item',
+              centerMode: true,
+              centerPadding: '130px',
+              arrows: false,
+              dots: true,
+              slidesToShow: 1,
+              adaptiveHeight: true,
+              responsive: [
+                {
+                  breakpoint: 520,
+                  settings: {
+                    slide: '.slick-item',
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                  }
+                }
+              ]
             });
             $(".blog-list").slick({
                 slide: '.item',

@@ -179,6 +179,10 @@ html
     display: inline-block
     vertical-align: middle
     margin: 0 40px 0 0
+    a
+      color: inherit
+      &:hover
+        text-decoration: underline
   .tags-list
     vertical-align: middle
     display: inline-block
@@ -266,6 +270,14 @@ html
 .newest-publications
   margin: 0 -20px 10px
   clear: both
+  &.slick-initialized
+    .slick-item
+      .double-link
+        .description
+          padding-bottom: 60px
+          position: relative
+          .statistic
+            bottom: 25px
   //&.slick-slider
     padding: 0 30px
   .item
@@ -401,6 +413,11 @@ html
       .blog-list
         text-align: left
         font-size: 0
+        &.slick-initialized
+          .slick-dots
+            li
+              width: inherit
+              margin-bottom: 0
         li
           width: 33.3333%
           display: inline-block
@@ -462,6 +479,11 @@ html
       width: 100%
     .right-aside
       .blog-list
+        &.slick-initialized
+          .slick-dots
+            li
+              width: inherit
+              margin-bottom: 0
         li
           padding-right: 0
           a
@@ -479,6 +501,11 @@ html
   .block-grid
     .right-aside
       .blog-list
+        &.slick-initialized
+          .slick-dots
+            li
+              width: inherit
+              margin-bottom: 0
         li
           width: 100%
           .img
