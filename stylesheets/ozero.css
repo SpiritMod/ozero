@@ -1766,29 +1766,100 @@ html {
   .masonry .m-item, .w-masonry .m-item, .s-masonry .m-item, .t-masonry .m-item {
     width: 100% !important;
   }
-  .masonry .m-item.high.topTheme .description, .masonry .m-item.high.bottomTheme .description, .w-masonry .m-item.high.topTheme .description, .w-masonry .m-item.high.bottomTheme .description, .s-masonry .m-item.high.topTheme .description, .s-masonry .m-item.high.bottomTheme .description, .t-masonry .m-item.high.topTheme .description, .t-masonry .m-item.high.bottomTheme .description {
+  .masonry .m-item.high.topTheme .statistic, .w-masonry .m-item.high.topTheme .statistic, .s-masonry .m-item.high.topTheme .statistic, .t-masonry .m-item.high.topTheme .statistic {
+    left: inherit;
+    top: inherit;
+    right: 21px;
+    bottom: 10px;
+    z-index: 105;
+    color: #fff;
+  }
+  .masonry .m-item.high.topTheme .description, .w-masonry .m-item.high.topTheme .description, .s-masonry .m-item.high.topTheme .description, .t-masonry .m-item.high.topTheme .description {
     background: transparent;
     width: 100%;
-    height: 100%;
     z-index: 100;
+    bottom: 0;
+    right: 0;
+    top: auto !important;
+    display: block;
+  }
+  .masonry .m-item.high.topTheme .description .caption, .w-masonry .m-item.high.topTheme .description .caption, .s-masonry .m-item.high.topTheme .description .caption, .t-masonry .m-item.high.topTheme .description .caption {
+    display: block;
+    height: inherit;
+    bottom: 0;
+    top: inherit;
+    padding: 25px 15px 50px 25px;
+    background: transparent;
+    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.9)));
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: -o-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: -ms-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  }
+  .masonry .m-item.high.topTheme .description .title, .w-masonry .m-item.high.topTheme .description .title, .s-masonry .m-item.high.topTheme .description .title, .t-masonry .m-item.high.topTheme .description .title {
+    padding-top: 40px;
+  }
+  .masonry .m-item.high.topTheme .description .title, .masonry .m-item.high.topTheme .description .text, .w-masonry .m-item.high.topTheme .description .title, .w-masonry .m-item.high.topTheme .description .text, .s-masonry .m-item.high.topTheme .description .title, .s-masonry .m-item.high.topTheme .description .text, .t-masonry .m-item.high.topTheme .description .title, .t-masonry .m-item.high.topTheme .description .text {
+    color: #ffffff;
+  }
+  .masonry .m-item.high.topTheme .description:after, .w-masonry .m-item.high.topTheme .description:after, .s-masonry .m-item.high.topTheme .description:after, .t-masonry .m-item.high.topTheme .description:after {
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
   }
-  .masonry .m-item.high.topTheme .description .caption, .masonry .m-item.high.bottomTheme .description .caption, .w-masonry .m-item.high.topTheme .description .caption, .w-masonry .m-item.high.bottomTheme .description .caption, .s-masonry .m-item.high.topTheme .description .caption, .s-masonry .m-item.high.bottomTheme .description .caption, .t-masonry .m-item.high.topTheme .description .caption, .t-masonry .m-item.high.bottomTheme .description .caption {
-    display: block;
+  .masonry .m-item.high.topTheme .description img, .w-masonry .m-item.high.topTheme .description img, .s-masonry .m-item.high.topTheme .description img, .t-masonry .m-item.high.topTheme .description img {
+    display: none;
   }
-  .masonry .m-item.high.topTheme .description .title, .masonry .m-item.high.bottomTheme .description .title, .w-masonry .m-item.high.topTheme .description .title, .w-masonry .m-item.high.bottomTheme .description .title, .s-masonry .m-item.high.topTheme .description .title, .s-masonry .m-item.high.bottomTheme .description .title, .t-masonry .m-item.high.topTheme .description .title, .t-masonry .m-item.high.bottomTheme .description .title {
+  .masonry .m-item.high.bottomTheme .description, .w-masonry .m-item.high.bottomTheme .description, .s-masonry .m-item.high.bottomTheme .description, .t-masonry .m-item.high.bottomTheme .description {
+    background: transparent;
+    width: 100%;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+    top: auto !important;
+    display: block;
+    position: absolute;
+  }
+  .masonry .m-item.high.bottomTheme .description:after, .w-masonry .m-item.high.bottomTheme .description:after, .s-masonry .m-item.high.bottomTheme .description:after, .t-masonry .m-item.high.bottomTheme .description:after {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .masonry .m-item.high.bottomTheme .description img, .w-masonry .m-item.high.bottomTheme .description img, .s-masonry .m-item.high.bottomTheme .description img, .t-masonry .m-item.high.bottomTheme .description img {
+    display: none;
+  }
+  .masonry .m-item.high.bottomTheme .description .caption, .w-masonry .m-item.high.bottomTheme .description .caption, .s-masonry .m-item.high.bottomTheme .description .caption, .t-masonry .m-item.high.bottomTheme .description .caption {
+    display: block;
+    height: inherit;
+    bottom: 0;
+    top: inherit;
+    padding: 25px 15px 50px 25px;
+    background: transparent;
+    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.9)));
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: -o-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: -ms-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  }
+  .masonry .m-item.high.bottomTheme .description .title, .w-masonry .m-item.high.bottomTheme .description .title, .s-masonry .m-item.high.bottomTheme .description .title, .t-masonry .m-item.high.bottomTheme .description .title {
     padding-top: 40px;
   }
-  .masonry .m-item.high.topTheme .description .title, .masonry .m-item.high.topTheme .description .text, .masonry .m-item.high.bottomTheme .description .title, .masonry .m-item.high.bottomTheme .description .text, .w-masonry .m-item.high.topTheme .description .title, .w-masonry .m-item.high.topTheme .description .text, .w-masonry .m-item.high.bottomTheme .description .title, .w-masonry .m-item.high.bottomTheme .description .text, .s-masonry .m-item.high.topTheme .description .title, .s-masonry .m-item.high.topTheme .description .text, .s-masonry .m-item.high.bottomTheme .description .title, .s-masonry .m-item.high.bottomTheme .description .text, .t-masonry .m-item.high.topTheme .description .title, .t-masonry .m-item.high.topTheme .description .text, .t-masonry .m-item.high.bottomTheme .description .title, .t-masonry .m-item.high.bottomTheme .description .text {
+  .masonry .m-item.high.bottomTheme .description .title, .masonry .m-item.high.bottomTheme .description .text, .w-masonry .m-item.high.bottomTheme .description .title, .w-masonry .m-item.high.bottomTheme .description .text, .s-masonry .m-item.high.bottomTheme .description .title, .s-masonry .m-item.high.bottomTheme .description .text, .t-masonry .m-item.high.bottomTheme .description .title, .t-masonry .m-item.high.bottomTheme .description .text {
     color: #ffffff;
   }
-  .masonry .m-item.high.topTheme .description:after, .masonry .m-item.high.bottomTheme .description:after, .w-masonry .m-item.high.topTheme .description:after, .w-masonry .m-item.high.bottomTheme .description:after, .s-masonry .m-item.high.topTheme .description:after, .s-masonry .m-item.high.bottomTheme .description:after, .t-masonry .m-item.high.topTheme .description:after, .t-masonry .m-item.high.bottomTheme .description:after {
-    display: none;
-  }
-  .masonry .m-item.high.topTheme .description img, .masonry .m-item.high.bottomTheme .description img, .w-masonry .m-item.high.topTheme .description img, .w-masonry .m-item.high.bottomTheme .description img, .s-masonry .m-item.high.topTheme .description img, .s-masonry .m-item.high.bottomTheme .description img, .t-masonry .m-item.high.topTheme .description img, .t-masonry .m-item.high.bottomTheme .description img {
-    display: none;
+  .masonry .m-item.high.bottomTheme .statistic, .w-masonry .m-item.high.bottomTheme .statistic, .s-masonry .m-item.high.bottomTheme .statistic, .t-masonry .m-item.high.bottomTheme .statistic {
+    left: inherit;
+    top: inherit;
+    right: 21px;
+    bottom: 10px;
+    z-index: 105;
+    color: #fff;
   }
   .masonry .m-item.m-large .caption .title, .w-masonry .m-item.m-large .caption .title, .s-masonry .m-item.m-large .caption .title, .t-masonry .m-item.m-large .caption .title {
     font-size: 16px;
