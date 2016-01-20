@@ -3932,6 +3932,9 @@ main {
             font-family: "helvetica-bold", sans-serif;
             font-size: 11px;
             text-transform: uppercase;
+            text-overflow: ellipsis;
+            width: 100%;
+            overflow: hidden;
           }
         }
       }
@@ -11021,6 +11024,31 @@ h1.island-theme-title {
   }
 }
 
+.pulse-prev-messages {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  a.pulse-prev-messages {
+    display: inline-block;
+    background: #a9c2d7;
+    margin: 0 0 0;
+    padding: 0 25px;
+    height: 40px;
+    max-width: 200px;
+    line-height: 40px;
+    color: #fff;
+    font-family: "helvetica-roman", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    @include border-radius(20px);
+    @include transition(all 0.4s ease 0s);
+    &:hover {
+      background: #014183;
+      color: #fff;
+    }
+  }
+}
+
 @media only screen and (min-width: 0px) and (max-width: 1380px) {
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(3),
   #scroll-bar .topbar-scroll .box-menu ul.nav-categories li:nth-child(4) {
@@ -13421,6 +13449,10 @@ h1.island-theme-title {
         }
       }
     }
+  }
+  .block-all-posts .post .post-footer .controls-comments-post .show-form-comment {
+    float: left;
+    margin: 8px 0 20px;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 500px) {
